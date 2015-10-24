@@ -1,0 +1,530 @@
+Starting serial execution
+NOTE: Binary only licensed for use at AlgoSB2015
+keyword> WARNING - temperature unspecified for NEWRESTART. Default for high T MD is 1000K
+ reallocating MSBCOORDS
+ reallocating MSBE
+Initial coordinates:
+       -0.3135987312        0.2631416011        1.6588263555
+       -1.3195224775        0.8779256565        1.4394112403
+       -1.3761527789       -0.4888660089        1.1775383368
+        1.6481942975        1.4709825883        0.8359562610
+       -1.1009636544        0.5175947264        0.6472927254
+       -1.4105827430        1.6877306911        1.5212705319
+       -0.0357390214       -0.6609768859        0.6474250253
+        1.5571103727        1.6104527625        0.6539816251
+        1.3346886105        0.8067296414        0.3959005165
+       -1.6943369163        1.7087821413        0.2041453592
+        0.8047590551       -0.2276506734       -1.3650427889
+       -0.4792716987       -1.0831842187       -0.6392215943
+        0.4742991159       -1.2182273777        0.8554114136
+        1.2623429920        0.2113614773       -1.1211668021
+       -0.9952547877       -0.1440405447        0.3353576765
+        1.7074166990        0.2816865438        0.4708442358
+        0.2568290179        1.5160851476       -0.1252519307
+       -0.3550944647       -1.0368725940        1.2069628110
+       -0.2874574084       -1.4237255752       -0.9336690766
+       -1.1012577480       -1.1349795104        0.9366265354
+        0.4780203250       -1.0884048959        1.0044411712
+       -1.2190588232        0.2546907161        1.0995440265
+       -1.2231761656        0.8324348632       -1.0427308579
+        1.6560553145       -0.2688841865       -0.3835154935
+       -1.6403360921       -0.0653203145       -1.6104413773
+        1.6257005893       -1.5461849388       -0.4390225948
+       -0.3073701888        0.9600499494        1.0755944667
+        0.6159081371       -0.4379462099        1.7290547603
+       -0.1163099589       -0.4615793332       -1.4176023777
+        0.9482061466        0.2689424355       -0.7736772856
+        0.5292266133       -1.6301275093        1.2390000442
+       -0.7348072692       -1.6623084115       -0.5029370387
+        0.3108773107       -1.7184502362       -0.1031653248
+        1.1589340370        1.0433241989       -0.5370947183
+        1.6152945811       -0.9456631040        1.6332764815
+        0.4477461482       -0.7325471576        0.3062742806
+        0.0916658959       -1.7313687478       -0.8965065939
+       -1.7037499046        0.0898629104       -0.4728124735
+  38 LJ atoms
+Searching for approximate symmetry elements every      1 steps
+Distance tolerances:         0.02000        0.04000        0.09000        0.10000        0.50000
+Threshold for distinguishing transformation matrices:         0.32000
+Exponential factor in core-weighted centre of mass calculation:         2.00000
+Maximum number of quenches for floater/hole permutations=   18
+Container radius=        4.3305271907
+Sloppy quench tolerance for RMS gradient .5000000000E-02
+In run   1 temperature will be fixed - see below for value
+Step size and angular threshold will be adjusted for acceptance ratio       0.5000 initial values=      0.4000      0.5100
+Configuration will be reset to quench geometry
+Sampling using Boltzmann weights
+Nocedal LBFGS minimisation
+Number of updates before reset in LBFGS=     4
+Maximum step size=        0.4000000000
+Guess for initial diagonal elements in LBFGS=  0.1000    
+Final quench tolerance for RMS gradient .1000000000E-02
+Energy difference criterion for minima=   0.0030000000
+Maximum number of iterations: sloppy quenches   600 final quenches   500
+Run   1:  90000000 steps with temperature scaled by  0.10000000E+01
+Maximum allowed energy rise during a minimisation=    0.1000000000E-09
+Target energies:      -173.9284264418 
+Steps will be rejected and taboo list populated if the energy decrease <      0.00300 within     40 steps
+Steps will be rejected if the current minimum comes within       4.00 of up to     20 previous minima
+Calculating initial energy
+Qu          0 E=    -162.6856732     steps=  149 RMS= 0.43789E-02 Markov E=    -162.6856732     t=        0.0
+Starting MC run of   90000000 steps
+Temperature will be multiplied by      1.00000000 at every step
+Qu          1 E=    -167.2367822     steps=  209 RMS= 0.47990E-02 Markov E=    -162.6856732     t=        0.0
+Qu          2 E=    -168.2698790     steps=  120 RMS= 0.45912E-02 Markov E=    -167.2367822     t=        0.0
+Qu          3 E=    -166.6187069     steps=  171 RMS= 0.33116E-02 Markov E=    -168.2698790     t=        0.0
+Qu          4 E=    -168.6097467     steps=  120 RMS= 0.43918E-02 Markov E=    -168.2698790     t=        0.0
+Qu          5 E=    -171.3573080     steps=  166 RMS= 0.46425E-02 Markov E=    -168.6097467     t=        0.0
+symmetry> symmetry analysis for point group T h number of generators=  14
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    11 was     5
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=       6 core symmetry T h  after        5 quenches
+Qu          6 E=    -171.3573248     steps=  112 RMS= 0.39506E-02 Markov E=    -171.3573080     t=        0.0
+Qu          7 E=    -169.8374691     steps=  116 RMS= 0.26421E-02 Markov E=    -171.3573248     t=        0.0
+Qu          8 E=    -169.7709800     steps=   69 RMS= 0.34446E-02 Markov E=    -171.3573248     t=        0.0
+symmetry> symmetry analysis for point group T h number of generators=  14
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     3 was    42
+symmetry> after adding the remaining     5 non-identity elements there are    47 in total
+Qu          9 E=     -169.3439114849 steps=  164 RMS= 0.48123E-02                               t=        0.0
+Qu         10 E=     -164.0704196581 steps=  187 RMS= 0.39544E-02                               t=        0.0
+Qu         11 E=     -166.7841185830 steps=  226 RMS= 0.47158E-02                               t=        0.0
+Qu         12 E=     -165.8919228866 steps=  394 RMS= 0.48005E-02                               t=        0.0
+Qu         13 E=     -167.8036382570 steps=  208 RMS= 0.42046E-02                               t=        0.1
+Qu         14 E=     -162.1067285248 steps=  213 RMS= 0.47365E-02                               t=        0.1
+symmetry> number of core atoms=       6 core symmetry T h  after       14 quenches
+Qu         15 E=    -169.7709818     steps=   41 RMS= 0.39140E-02 Markov E=    -169.7709800     t=        0.1
+Qu         16 E=    -170.0259904     steps=   41 RMS= 0.34025E-02 Markov E=    -169.7709818     t=        0.1
+symmetry> symmetry analysis for point group T h number of generators=  14
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     2 was    42
+symmetry> after adding the remaining     5 non-identity elements there are    47 in total
+symmetry> no possibilities with complete orbits filled, number in core=      18
+symmetry> number of core atoms=       6 core symmetry T h  after       16 quenches
+Qu         17 E=    -170.0259494     steps=   44 RMS= 0.31351E-02 Markov E=    -170.0259904     t=        0.1
+Qu         18 E=    -169.7709522     steps=   52 RMS= 0.41083E-02 Markov E=    -170.0259494     t=        0.1
+symmetry> symmetry analysis for point group T h number of generators=  14
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     3 was    42
+symmetry> after adding the remaining     5 non-identity elements there are    47 in total
+Qu         19 E=     -167.3442564534 steps=  134 RMS= 0.49699E-02                               t=        0.1
+Qu         20 E=     -164.0704142626 steps=  176 RMS= 0.39663E-02                               t=        0.1
+Qu         21 E=     -169.7514642723 steps=  376 RMS= 0.44854E-02                               t=        0.1
+Qu         22 E=     -164.3201232953 steps=  261 RMS= 0.40773E-02                               t=        0.1
+Qu         23 E=     -166.4543626022 steps=  279 RMS= 0.45129E-02                               t=        0.1
+Qu         24 E=     -170.9619927068 steps=  366 RMS= 0.48240E-02                               t=        0.1
+symmetry> number of core atoms=       6 core symmetry T h  after       24 quenches
+Qu         25 E=    -168.2060434     steps=   65 RMS= 0.48540E-02 Markov E=    -170.9619927     t=        0.1
+symmetry> symmetry analysis for point group D4h number of generators=   8
+symmetry> using point group of order    16 constructed from generators, time taken=           0.00
+symmetry> symmetry of core is consistent with the overall symmetry
+Qu         26 E=    -170.9620230     steps=   26 RMS= 0.44608E-02 Markov E=    -170.9619927     t=        0.1
+Qu         27 E=    -170.9620206     steps=   23 RMS= 0.39944E-02 Markov E=    -170.9620230     t=        0.1
+Qu         28 E=    -170.9620075     steps=   21 RMS= 0.41506E-02 Markov E=    -170.9620206     t=        0.1
+Qu         29 E=    -170.9620181     steps=   41 RMS= 0.48829E-02 Markov E=    -170.9620075     t=        0.1
+Qu         30 E=    -170.9619836     steps=   20 RMS= 0.45421E-02 Markov E=    -170.9620181     t=        0.1
+Qu         31 E=    -170.9620221     steps=   47 RMS= 0.19394E-02 Markov E=    -170.9619836     t=        0.1
+Qu         32 E=    -170.9620093     steps=   32 RMS= 0.47266E-02 Markov E=    -170.9620221     t=        0.1
+Qu         33 E=    -170.9620176     steps=   38 RMS= 0.29949E-02 Markov E=    -170.9620093     t=        0.1
+Qu         34 E=    -170.9620149     steps=   28 RMS= 0.38714E-02 Markov E=    -170.9620176     t=        0.1
+Qu         35 E=    -170.9620223     steps=   22 RMS= 0.22056E-02 Markov E=    -170.9620149     t=        0.1
+Qu         36 E=    -170.9620097     steps=   27 RMS= 0.40232E-02 Markov E=    -170.9620223     t=        0.1
+Qu         37 E=    -170.9620127     steps=   27 RMS= 0.43477E-02 Markov E=    -170.9620097     t=        0.1
+Qu         38 E=    -170.9620235     steps=   31 RMS= 0.25613E-02 Markov E=    -170.9620127     t=        0.1
+Qu         39 E=    -170.9620167     steps=   31 RMS= 0.40160E-02 Markov E=    -170.9620235     t=        0.1
+Qu         40 E=    -170.9620161     steps=   23 RMS= 0.26911E-02 Markov E=    -170.9620167     t=        0.1
+Qu         41 E=    -170.9620192     steps=   33 RMS= 0.28495E-02 Markov E=    -170.9620161     t=        0.1
+Qu         42 E=    -170.9620074     steps=   26 RMS= 0.47486E-02 Markov E=    -170.9620192     t=        0.1
+Qu         43 E=    -170.9620117     steps=   25 RMS= 0.43533E-02 Markov E=    -170.9620074     t=        0.1
+Qu         44 E=    -170.9620167     steps=   21 RMS= 0.31928E-02 Markov E=    -170.9620117     t=        0.1
+Qu         45 E=    -170.9620122     steps=   35 RMS= 0.39386E-02 Markov E=    -170.9620167     t=        0.1
+Qu         46 E=    -170.9619972     steps=   28 RMS= 0.49636E-02 Markov E=    -170.9620122     t=        0.1
+Qu         47 E=    -170.9620238     steps=   18 RMS= 0.28259E-02 Markov E=    -170.9619972     t=        0.1
+Qu         48 E=    -170.9619975     steps=   24 RMS= 0.45585E-02 Markov E=    -170.9620238     t=        0.1
+Qu         49 E=    -170.9620083     steps=   29 RMS= 0.42567E-02 Markov E=    -170.9619975     t=        0.1
+Qu         50 E=    -170.9620135     steps=   36 RMS= 0.45867E-02 Markov E=    -170.9620083     t=        0.1
+Qu         51 E=    -170.9620195     steps=   27 RMS= 0.28369E-02 Markov E=    -170.9620135     t=        0.1
+Qu         52 E=    -170.9619783     steps=   20 RMS= 0.41444E-02 Markov E=    -170.9620195     t=        0.1
+Qu         53 E=    -170.9620219     steps=   31 RMS= 0.33686E-02 Markov E=    -170.9619783     t=        0.1
+Qu         54 E=    -170.9620043     steps=   70 RMS= 0.46669E-02 Markov E=    -170.9620219     t=        0.1
+Qu         55 E=    -170.9620195     steps=   22 RMS= 0.27911E-02 Markov E=    -170.9620043     t=        0.1
+Qu         56 E=    -170.9620100     steps=   42 RMS= 0.43432E-02 Markov E=    -170.9620195     t=        0.1
+Qu         57 E=    -170.9620032     steps=   24 RMS= 0.48302E-02 Markov E=    -170.9620100     t=        0.1
+Qu         58 E=    -170.9620224     steps=   46 RMS= 0.27836E-02 Markov E=    -170.9620032     t=        0.1
+newres> Moving current best minimum to position      1 in the AVOID list E=    -171.3573248    
+newres> Energy has not improved since step        5
+newres> Parallel run      1 has the highest energy      -171.3573247684
+newres> Resetting energy to a large value to reject this step (not reseeding)
+Qu         59 E=    -170.9620185     steps=   19 RMS= 0.31965E-02 Markov E=    -170.9620032     t=        0.1
+Qu         60 E=    -170.9620116     steps=   36 RMS= 0.40645E-02 Markov E=    -170.9620185     t=        0.1
+Qu         61 E=    -170.9620231     steps=   32 RMS= 0.23118E-02 Markov E=    -170.9620116     t=        0.1
+Qu         62 E=    -170.9620051     steps=   22 RMS= 0.38863E-02 Markov E=    -170.9620231     t=        0.1
+Acceptance ratio for previous     50 steps=  0.9200  FAC=  1.0500
+Steps are now:  STEP=    0.4200  ASTEP=    0.5355 Temperature is now:    3.3000
+Qu         63 E=    -170.9620173     steps=   30 RMS= 0.37555E-02 Markov E=    -170.9620051     t=        0.1
+Qu         64 E=    -170.9620078     steps=   32 RMS= 0.46367E-02 Markov E=    -170.9620173     t=        0.1
+Qu         65 E=    -170.9620032     steps=   32 RMS= 0.49512E-02 Markov E=    -170.9620078     t=        0.1
+Qu         66 E=    -170.9620114     steps=   25 RMS= 0.45071E-02 Markov E=    -170.9620032     t=        0.1
+Qu         67 E=    -170.9620083     steps=   30 RMS= 0.45864E-02 Markov E=    -170.9620114     t=        0.1
+Qu         68 E=    -170.9620016     steps=   26 RMS= 0.44252E-02 Markov E=    -170.9620083     t=        0.1
+Qu         69 E=    -170.9620133     steps=   35 RMS= 0.35689E-02 Markov E=    -170.9620016     t=        0.1
+Qu         70 E=    -170.9620093     steps=   26 RMS= 0.34522E-02 Markov E=    -170.9620133     t=        0.1
+Qu         71 E=    -170.9620135     steps=   28 RMS= 0.33332E-02 Markov E=    -170.9620093     t=        0.1
+Qu         72 E=    -170.9620126     steps=   36 RMS= 0.35952E-02 Markov E=    -170.9620135     t=        0.1
+Qu         73 E=    -170.9620220     steps=   31 RMS= 0.39650E-02 Markov E=    -170.9620126     t=        0.1
+Qu         74 E=    -170.9620137     steps=   53 RMS= 0.45976E-02 Markov E=    -170.9620220     t=        0.1
+Qu         75 E=    -170.9620158     steps=   43 RMS= 0.25097E-02 Markov E=    -170.9620137     t=        0.1
+Qu         76 E=    -170.9620110     steps=   42 RMS= 0.33055E-02 Markov E=    -170.9620158     t=        0.1
+Qu         77 E=    -170.9620179     steps=   49 RMS= 0.28466E-02 Markov E=    -170.9620110     t=        0.1
+Qu         78 E=    -170.9620201     steps=   38 RMS= 0.48008E-02 Markov E=    -170.9620179     t=        0.1
+Qu         79 E=    -170.9620106     steps=   33 RMS= 0.44765E-02 Markov E=    -170.9620201     t=        0.1
+Qu         80 E=    -170.9620179     steps=   27 RMS= 0.35863E-02 Markov E=    -170.9620106     t=        0.1
+Qu         81 E=    -170.9620139     steps=   38 RMS= 0.38478E-02 Markov E=    -170.9620179     t=        0.1
+Qu         82 E=    -170.9620029     steps=   42 RMS= 0.47292E-02 Markov E=    -170.9620139     t=        0.1
+Qu         83 E=    -170.9620061     steps=   38 RMS= 0.34089E-02 Markov E=    -170.9620029     t=        0.1
+Qu         84 E=    -170.9620111     steps=   23 RMS= 0.33818E-02 Markov E=    -170.9620061     t=        0.1
+Qu         85 E=    -170.9620069     steps=   35 RMS= 0.34579E-02 Markov E=    -170.9620111     t=        0.1
+Qu         86 E=    -170.9620091     steps=   34 RMS= 0.46029E-02 Markov E=    -170.9620069     t=        0.1
+Qu         87 E=    -170.9619792     steps=   28 RMS= 0.49202E-02 Markov E=    -170.9620091     t=        0.1
+Qu         88 E=    -170.9620042     steps=   27 RMS= 0.42371E-02 Markov E=    -170.9619792     t=        0.1
+Qu         89 E=    -170.9619894     steps=   26 RMS= 0.44130E-02 Markov E=    -170.9620042     t=        0.1
+Qu         90 E=    -170.9620123     steps=   27 RMS= 0.28353E-02 Markov E=    -170.9619894     t=        0.1
+Qu         91 E=    -170.9620104     steps=   42 RMS= 0.42241E-02 Markov E=    -170.9620123     t=        0.1
+Qu         92 E=    -170.9620158     steps=   26 RMS= 0.38900E-02 Markov E=    -170.9620104     t=        0.1
+Qu         93 E=    -170.9620023     steps=   56 RMS= 0.36911E-02 Markov E=    -170.9620158     t=        0.1
+Qu         94 E=    -170.9620135     steps=   26 RMS= 0.27067E-02 Markov E=    -170.9620023     t=        0.1
+Qu         95 E=    -170.9620207     steps=   25 RMS= 0.26919E-02 Markov E=    -170.9620135     t=        0.1
+Qu         96 E=    -170.9619949     steps=   33 RMS= 0.43275E-02 Markov E=    -170.9620207     t=        0.1
+Qu         97 E=    -170.9620148     steps=   30 RMS= 0.33707E-02 Markov E=    -170.9619949     t=        0.1
+Qu         98 E=    -170.9620072     steps=   43 RMS= 0.38889E-02 Markov E=    -170.9620148     t=        0.1
+Qu         99 E=    -170.9620133     steps=   21 RMS= 0.35499E-02 Markov E=    -170.9620072     t=        0.1
+newres> Moving current best minimum to position      2 in the AVOID list E=    -170.9620231    
+newres> Energy has not improved since step       46
+newres> Parallel run      1 has the highest energy      -170.9620230777
+newres> Resetting energy to a large value to reject this step (not reseeding)
+Qu        100 E=    -170.9620152     steps=   30 RMS= 0.49192E-02 Markov E=    -170.9620072     t=        0.1
+Qu        101 E=    -170.9620071     steps=   24 RMS= 0.45585E-02 Markov E=    -170.9620152     t=        0.1
+Qu        102 E=    -170.9620126     steps=   35 RMS= 0.33856E-02 Markov E=    -170.9620071     t=        0.1
+Qu        103 E=    -170.9619907     steps=   32 RMS= 0.47565E-02 Markov E=    -170.9620126     t=        0.2
+Qu        104 E=    -170.9620199     steps=   36 RMS= 0.30087E-02 Markov E=    -170.9619907     t=        0.2
+Qu        105 E=    -170.9620130     steps=   40 RMS= 0.40625E-02 Markov E=    -170.9620199     t=        0.2
+Qu        106 E=    -170.9619905     steps=   47 RMS= 0.44727E-02 Markov E=    -170.9620130     t=        0.2
+Qu        107 E=    -170.9620074     steps=   34 RMS= 0.33933E-02 Markov E=    -170.9619905     t=        0.2
+Qu        108 E=    -170.9619998     steps=   24 RMS= 0.45966E-02 Markov E=    -170.9620074     t=        0.2
+Qu        109 E=    -170.9620060     steps=   34 RMS= 0.37065E-02 Markov E=    -170.9619998     t=        0.2
+Qu        110 E=    -170.9620108     steps=   33 RMS= 0.39882E-02 Markov E=    -170.9620060     t=        0.2
+Qu        111 E=    -170.9619903     steps=   24 RMS= 0.45295E-02 Markov E=    -170.9620108     t=        0.2
+Qu        112 E=    -170.9620138     steps=   28 RMS= 0.33435E-02 Markov E=    -170.9619903     t=        0.2
+Acceptance ratio for previous     50 steps=  0.9800  FAC=  1.0500
+Steps are now:  STEP=    0.4410  ASTEP=    0.5623 Temperature is now:    3.3000
+Qu        113 E=    -170.9620170     steps=   34 RMS= 0.29385E-02 Markov E=    -170.9620138     t=        0.2
+Qu        114 E=    -170.9620113     steps=   36 RMS= 0.49695E-02 Markov E=    -170.9620170     t=        0.2
+Qu        115 E=    -170.9620022     steps=   37 RMS= 0.35972E-02 Markov E=    -170.9620113     t=        0.2
+Qu        116 E=    -170.9620014     steps=   38 RMS= 0.44666E-02 Markov E=    -170.9620022     t=        0.2
+Qu        117 E=    -170.9620106     steps=   25 RMS= 0.45202E-02 Markov E=    -170.9620014     t=        0.2
+Qu        118 E=    -170.9620079     steps=   27 RMS= 0.36323E-02 Markov E=    -170.9620106     t=        0.2
+Qu        119 E=    -170.9620186     steps=   36 RMS= 0.34189E-02 Markov E=    -170.9620079     t=        0.2
+Qu        120 E=    -170.9620022     steps=   22 RMS= 0.44382E-02 Markov E=    -170.9620186     t=        0.2
+Qu        121 E=    -170.9620002     steps=   47 RMS= 0.46901E-02 Markov E=    -170.9620022     t=        0.2
+Qu        122 E=    -170.9620104     steps=   47 RMS= 0.40005E-02 Markov E=    -170.9620002     t=        0.2
+Qu        123 E=    -170.9620153     steps=   37 RMS= 0.41399E-02 Markov E=    -170.9620104     t=        0.2
+Qu        124 E=    -170.9620169     steps=   30 RMS= 0.26680E-02 Markov E=    -170.9620153     t=        0.2
+Qu        125 E=    -170.9620081     steps=   25 RMS= 0.36255E-02 Markov E=    -170.9620169     t=        0.2
+Qu        126 E=    -170.9619965     steps=   31 RMS= 0.44271E-02 Markov E=    -170.9620081     t=        0.2
+Qu        127 E=    -170.9620150     steps=   41 RMS= 0.24952E-02 Markov E=    -170.9619965     t=        0.2
+Qu        128 E=    -170.9620142     steps=   33 RMS= 0.32098E-02 Markov E=    -170.9620150     t=        0.2
+Qu        129 E=    -170.9620007     steps=   32 RMS= 0.43265E-02 Markov E=    -170.9620142     t=        0.2
+Qu        130 E=    -170.9620099     steps=   28 RMS= 0.33383E-02 Markov E=    -170.9620007     t=        0.2
+Qu        131 E=    -170.9619971     steps=   34 RMS= 0.47244E-02 Markov E=    -170.9620099     t=        0.2
+Qu        132 E=    -170.9620126     steps=   46 RMS= 0.45728E-02 Markov E=    -170.9619971     t=        0.2
+Qu        133 E=    -165.7920328     steps=   36 RMS= 0.45661E-02 Markov E=    -170.9620126     t=        0.2
+Qu        134 E=    -170.9620036     steps=   28 RMS= 0.44048E-02 Markov E=    -170.9620126     t=        0.2
+Qu        135 E=    -170.9619725     steps=   29 RMS= 0.47352E-02 Markov E=    -170.9620036     t=        0.2
+Qu        136 E=    -170.9620078     steps=   26 RMS= 0.44875E-02 Markov E=    -170.9619725     t=        0.2
+Qu        137 E=    -170.9620126     steps=   34 RMS= 0.25946E-02 Markov E=    -170.9620078     t=        0.2
+Qu        138 E=    -170.9620042     steps=   25 RMS= 0.40101E-02 Markov E=    -170.9620126     t=        0.2
+Qu        139 E=    -170.9620094     steps=   29 RMS= 0.38411E-02 Markov E=    -170.9620042     t=        0.2
+Qu        140 E=    -170.9620186     steps=   37 RMS= 0.29433E-02 Markov E=    -170.9620094     t=        0.2
+newres> Moving current best minimum to position      3 in the AVOID list E=    -170.9620199    
+newres> Energy has not improved since step       87
+newres> Parallel run      1 has the highest energy      -170.9620199033
+newres> Resetting energy to a large value to reject this step (not reseeding)
+Qu        141 E=    -170.9619934     steps=   30 RMS= 0.41261E-02 Markov E=    -170.9620094     t=        0.2
+Qu        142 E=    -170.9620087     steps=   32 RMS= 0.31948E-02 Markov E=    -170.9619934     t=        0.2
+Qu        143 E=    -165.7919898     steps=   31 RMS= 0.49353E-02 Markov E=    -170.9620087     t=        0.2
+Qu        144 E=    -170.9620150     steps=   25 RMS= 0.37919E-02 Markov E=    -170.9620087     t=        0.2
+Qu        145 E=    -170.9620169     steps=   50 RMS= 0.24097E-02 Markov E=    -170.9620150     t=        0.2
+Qu        146 E=    -170.9620183     steps=   26 RMS= 0.22438E-02 Markov E=    -170.9620169     t=        0.2
+Qu        147 E=    -170.9619776     steps=   25 RMS= 0.48298E-02 Markov E=    -170.9620183     t=        0.2
+Qu        148 E=    -170.9619983     steps=   35 RMS= 0.48429E-02 Markov E=    -170.9619776     t=        0.2
+Qu        149 E=    -170.9619869     steps=   31 RMS= 0.39343E-02 Markov E=    -170.9619983     t=        0.2
+Qu        150 E=    -170.9620011     steps=   28 RMS= 0.44112E-02 Markov E=    -170.9619869     t=        0.2
+Qu        151 E=    -170.9619822     steps=   37 RMS= 0.40397E-02 Markov E=    -170.9620011     t=        0.2
+Qu        152 E=    -170.9620130     steps=   30 RMS= 0.40707E-02 Markov E=    -170.9619822     t=        0.2
+Qu        153 E=    -170.9620001     steps=   33 RMS= 0.31881E-02 Markov E=    -170.9620130     t=        0.2
+Qu        154 E=    -170.9619905     steps=   35 RMS= 0.46120E-02 Markov E=    -170.9620001     t=        0.2
+Qu        155 E=    -170.9619883     steps=   29 RMS= 0.48404E-02 Markov E=    -170.9619905     t=        0.2
+Qu        156 E=    -170.9619970     steps=   32 RMS= 0.45108E-02 Markov E=    -170.9619883     t=        0.2
+Qu        157 E=    -170.9620082     steps=   31 RMS= 0.36699E-02 Markov E=    -170.9619970     t=        0.2
+Qu        158 E=    -170.9619935     steps=   33 RMS= 0.39565E-02 Markov E=    -170.9620082     t=        0.2
+Qu        159 E=    -170.9620020     steps=   24 RMS= 0.42901E-02 Markov E=    -170.9619935     t=        0.2
+Qu        160 E=    -170.9620058     steps=   30 RMS= 0.38386E-02 Markov E=    -170.9620020     t=        0.2
+Qu        161 E=    -170.9620151     steps=   29 RMS= 0.32593E-02 Markov E=    -170.9620058     t=        0.2
+Qu        162 E=    -170.9619937     steps=   31 RMS= 0.42214E-02 Markov E=    -170.9620151     t=        0.2
+Acceptance ratio for previous     50 steps=  0.9400  FAC=  1.0500
+Steps are now:  STEP=    0.4631  ASTEP=    0.5904 Temperature is now:    3.3000
+Qu        163 E=    -170.9620141     steps=   32 RMS= 0.46262E-02 Markov E=    -170.9619937     t=        0.2
+Qu        164 E=    -170.9620149     steps=   26 RMS= 0.37229E-02 Markov E=    -170.9620141     t=        0.2
+Qu        165 E=    -170.9620020     steps=   35 RMS= 0.33748E-02 Markov E=    -170.9620149     t=        0.2
+Qu        166 E=    -170.9620007     steps=   30 RMS= 0.37372E-02 Markov E=    -170.9620020     t=        0.2
+Qu        167 E=    -170.9619947     steps=   37 RMS= 0.40062E-02 Markov E=    -170.9620007     t=        0.2
+Qu        168 E=    -170.9619855     steps=   29 RMS= 0.45499E-02 Markov E=    -170.9619947     t=        0.2
+Qu        169 E=    -170.9620134     steps=   24 RMS= 0.38271E-02 Markov E=    -170.9619855     t=        0.2
+Qu        170 E=    -170.9620123     steps=   35 RMS= 0.36163E-02 Markov E=    -170.9620134     t=        0.2
+Qu        171 E=    -170.9619824     steps=   33 RMS= 0.47601E-02 Markov E=    -170.9620123     t=        0.2
+Qu        172 E=    -170.9620114     steps=   42 RMS= 0.25855E-02 Markov E=    -170.9619824     t=        0.2
+Qu        173 E=    -170.9620126     steps=   26 RMS= 0.34995E-02 Markov E=    -170.9620114     t=        0.2
+Qu        174 E=    -170.9620116     steps=   23 RMS= 0.30012E-02 Markov E=    -170.9620126     t=        0.2
+Qu        175 E=    -170.9619872     steps=   34 RMS= 0.38849E-02 Markov E=    -170.9620116     t=        0.2
+Qu        176 E=    -170.9620126     steps=   30 RMS= 0.29090E-02 Markov E=    -170.9619872     t=        0.2
+Qu        177 E=    -170.9620135     steps=   38 RMS= 0.27370E-02 Markov E=    -170.9620126     t=        0.2
+Qu        178 E=    -170.9620126     steps=   33 RMS= 0.31991E-02 Markov E=    -170.9620135     t=        0.2
+Qu        179 E=    -170.9619915     steps=   31 RMS= 0.42833E-02 Markov E=    -170.9620126     t=        0.2
+Qu        180 E=    -170.9619810     steps=   24 RMS= 0.48962E-02 Markov E=    -170.9619915     t=        0.2
+Qu        181 E=    -170.9619754     steps=   27 RMS= 0.49085E-02 Markov E=    -170.9619810     t=        0.2
+newres> Moving current best minimum to position      4 in the AVOID list E=    -170.9620186    
+newres> Energy has not improved since step      128
+newres> Parallel run      1 has the highest energy      -170.9620185537
+newres> Resetting energy to a large value to reject this step (not reseeding)
+Qu        182 E=    -170.9620158     steps=   36 RMS= 0.28193E-02 Markov E=    -170.9619810     t=        0.2
+Qu        183 E=    -170.9620073     steps=   35 RMS= 0.37643E-02 Markov E=    -170.9620158     t=        0.2
+Qu        184 E=    -170.9620132     steps=   37 RMS= 0.29993E-02 Markov E=    -170.9620073     t=        0.2
+Qu        185 E=    -170.9620082     steps=   29 RMS= 0.35715E-02 Markov E=    -170.9620132     t=        0.2
+Qu        186 E=    -170.9620048     steps=   26 RMS= 0.46232E-02 Markov E=    -170.9620082     t=        0.2
+Qu        187 E=    -170.9619886     steps=   51 RMS= 0.48225E-02 Markov E=    -170.9620048     t=        0.2
+Qu        188 E=    -170.9620167     steps=   31 RMS= 0.23668E-02 Markov E=    -170.9619886     t=        0.2
+Qu        189 E=    -170.9620142     steps=   29 RMS= 0.27131E-02 Markov E=    -170.9620167     t=        0.2
+Qu        190 E=    -170.9619941     steps=   39 RMS= 0.48187E-02 Markov E=    -170.9620142     t=        0.2
+Qu        191 E=    -170.9620149     steps=   38 RMS= 0.26688E-02 Markov E=    -170.9619941     t=        0.2
+Qu        192 E=    -170.9620175     steps=   38 RMS= 0.23965E-02 Markov E=    -170.9620149     t=        0.2
+Qu        193 E=    -170.9619857     steps=   36 RMS= 0.44566E-02 Markov E=    -170.9620175     t=        0.2
+Qu        194 E=    -170.9620031     steps=   35 RMS= 0.36516E-02 Markov E=    -170.9619857     t=        0.2
+Qu        195 E=    -170.9620051     steps=   26 RMS= 0.43318E-02 Markov E=    -170.9620031     t=        0.2
+Qu        196 E=    -170.9620158     steps=   35 RMS= 0.37715E-02 Markov E=    -170.9620051     t=        0.2
+Qu        197 E=    -170.9620101     steps=   27 RMS= 0.31630E-02 Markov E=    -170.9620158     t=        0.2
+Qu        198 E=    -170.9620013     steps=   33 RMS= 0.40807E-02 Markov E=    -170.9620101     t=        0.2
+Qu        199 E=    -170.9619993     steps=   28 RMS= 0.47620E-02 Markov E=    -170.9620013     t=        0.2
+Qu        200 E=    -170.9620025     steps=   37 RMS= 0.42776E-02 Markov E=    -170.9619993     t=        0.2
+Qu        201 E=    -170.9620001     steps=   24 RMS= 0.35831E-02 Markov E=    -170.9620025     t=        0.2
+Qu        202 E=    -170.9620001     steps=   28 RMS= 0.44590E-02 Markov E=    -170.9620001     t=        0.2
+Qu        203 E=    -170.9619944     steps=   30 RMS= 0.49294E-02 Markov E=    -170.9620001     t=        0.2
+Qu        204 E=    -170.9620101     steps=   27 RMS= 0.36227E-02 Markov E=    -170.9619944     t=        0.2
+Qu        205 E=    -170.9619785     steps=   35 RMS= 0.44256E-02 Markov E=    -170.9620101     t=        0.2
+Qu        206 E=    -170.9620054     steps=   27 RMS= 0.39722E-02 Markov E=    -170.9619785     t=        0.2
+Qu        207 E=    -170.9620035     steps=   28 RMS= 0.42862E-02 Markov E=    -170.9620054     t=        0.2
+Qu        208 E=    -170.9620030     steps=   35 RMS= 0.44458E-02 Markov E=    -170.9620035     t=        0.2
+Qu        209 E=    -170.9619957     steps=   27 RMS= 0.39962E-02 Markov E=    -170.9620030     t=        0.2
+Qu        210 E=    -170.9620106     steps=   29 RMS= 0.46171E-02 Markov E=    -170.9619957     t=        0.2
+Qu        211 E=    -170.9620077     steps=   36 RMS= 0.37939E-02 Markov E=    -170.9620106     t=        0.2
+Qu        212 E=    -170.9620156     steps=   30 RMS= 0.28894E-02 Markov E=    -170.9620077     t=        0.2
+Acceptance ratio for previous     50 steps=  0.9800  FAC=  1.0500
+Steps are now:  STEP=    0.4862  ASTEP=    0.6199 Temperature is now:    3.3000
+Qu        213 E=    -170.9620090     steps=   24 RMS= 0.40569E-02 Markov E=    -170.9620156     t=        0.2
+Qu        214 E=    -170.9619829     steps=   28 RMS= 0.49905E-02 Markov E=    -170.9620090     t=        0.2
+Qu        215 E=    -170.9619690     steps=   34 RMS= 0.45544E-02 Markov E=    -170.9619829     t=        0.2
+Qu        216 E=    -170.9620095     steps=   33 RMS= 0.33898E-02 Markov E=    -170.9619690     t=        0.2
+Qu        217 E=    -170.9620007     steps=   35 RMS= 0.33833E-02 Markov E=    -170.9620095     t=        0.2
+Qu        218 E=    -170.9620092     steps=   35 RMS= 0.36498E-02 Markov E=    -170.9620007     t=        0.2
+Qu        219 E=    -170.9619948     steps=   39 RMS= 0.46552E-02 Markov E=    -170.9620092     t=        0.2
+Qu        220 E=    -170.9620175     steps=   36 RMS= 0.21731E-02 Markov E=    -170.9619948     t=        0.2
+Qu        221 E=    -170.9620035     steps=   29 RMS= 0.35513E-02 Markov E=    -170.9620175     t=        0.2
+Qu        222 E=    -170.9620146     steps=   27 RMS= 0.23271E-02 Markov E=    -170.9620035     t=        0.2
+newres> Moving current best minimum to position      5 in the AVOID list E=    -170.9620175    
+newres> Energy has not improved since step      169
+newres> Parallel run      1 has the highest energy      -170.9620174708
+newres> Resetting energy to a large value to reject this step (not reseeding)
+Qu        223 E=    -170.9620074     steps=   28 RMS= 0.30071E-02 Markov E=    -170.9620035     t=        0.2
+Qu        224 E=    -170.9619949     steps=   29 RMS= 0.45260E-02 Markov E=    -170.9620074     t=        0.2
+Qu        225 E=    -170.9620102     steps=   38 RMS= 0.33155E-02 Markov E=    -170.9619949     t=        0.2
+Qu        226 E=    -170.9620095     steps=   41 RMS= 0.40775E-02 Markov E=    -170.9620102     t=        0.2
+Qu        227 E=    -170.9619967     steps=   27 RMS= 0.34809E-02 Markov E=    -170.9620095     t=        0.2
+Qu        228 E=    -170.9620058     steps=   32 RMS= 0.38548E-02 Markov E=    -170.9619967     t=        0.2
+Qu        229 E=    -170.9619919     steps=   30 RMS= 0.47010E-02 Markov E=    -170.9620058     t=        0.2
+Qu        230 E=    -170.9620208     steps=   29 RMS= 0.19688E-02 Markov E=    -170.9619919     t=        0.2
+Qu        231 E=    -170.9619709     steps=   31 RMS= 0.46428E-02 Markov E=    -170.9620208     t=        0.2
+Qu        232 E=    -170.9620082     steps=   30 RMS= 0.32218E-02 Markov E=    -170.9619709     t=        0.2
+Qu        233 E=    -170.9619918     steps=   28 RMS= 0.43852E-02 Markov E=    -170.9620082     t=        0.2
+Qu        234 E=    -170.9620038     steps=   38 RMS= 0.42932E-02 Markov E=    -170.9619918     t=        0.2
+Qu        235 E=    -170.9619863     steps=   29 RMS= 0.43493E-02 Markov E=    -170.9620038     t=        0.2
+Qu        236 E=    -165.9517010     steps=  117 RMS= 0.43167E-02 Markov E=    -170.9619863     t=        0.2
+Qu        237 E=    -170.9620148     steps=   28 RMS= 0.34827E-02 Markov E=    -170.9619863     t=        0.2
+Qu        238 E=    -170.9620013     steps=   39 RMS= 0.41086E-02 Markov E=    -170.9620148     t=        0.2
+Qu        239 E=    -170.9619997     steps=   35 RMS= 0.40094E-02 Markov E=    -170.9620013     t=        0.3
+Qu        240 E=    -170.9619984     steps=   25 RMS= 0.43166E-02 Markov E=    -170.9619997     t=        0.3
+Qu        241 E=    -170.9620029     steps=   37 RMS= 0.45398E-02 Markov E=    -170.9619984     t=        0.3
+Qu        242 E=    -170.9620111     steps=   32 RMS= 0.25283E-02 Markov E=    -170.9620029     t=        0.3
+Qu        243 E=    -170.9620071     steps=   40 RMS= 0.45786E-02 Markov E=    -170.9620111     t=        0.3
+Qu        244 E=    -170.9620071     steps=   31 RMS= 0.36033E-02 Markov E=    -170.9620071     t=        0.3
+Qu        245 E=    -170.9620149     steps=   35 RMS= 0.28899E-02 Markov E=    -170.9620071     t=        0.3
+Qu        246 E=    -170.9619827     steps=   33 RMS= 0.39563E-02 Markov E=    -170.9620149     t=        0.3
+Qu        247 E=    -170.9620077     steps=   26 RMS= 0.32303E-02 Markov E=    -170.9619827     t=        0.3
+Qu        248 E=    -170.9619925     steps=   33 RMS= 0.38901E-02 Markov E=    -170.9620077     t=        0.3
+Qu        249 E=    -170.9620132     steps=   33 RMS= 0.47442E-02 Markov E=    -170.9619925     t=        0.3
+Qu        250 E=    -170.9619891     steps=   30 RMS= 0.41161E-02 Markov E=    -170.9620132     t=        0.3
+Qu        251 E=    -170.9619835     steps=   29 RMS= 0.48087E-02 Markov E=    -170.9619891     t=        0.3
+Qu        252 E=    -170.9619990     steps=   25 RMS= 0.46379E-02 Markov E=    -170.9619835     t=        0.3
+Qu        253 E=    -170.9619792     steps=   28 RMS= 0.49146E-02 Markov E=    -170.9619990     t=        0.3
+Qu        254 E=    -170.9620124     steps=   28 RMS= 0.34110E-02 Markov E=    -170.9619792     t=        0.3
+Qu        255 E=    -170.9620008     steps=   29 RMS= 0.48025E-02 Markov E=    -170.9620124     t=        0.3
+Qu        256 E=    -170.9620098     steps=   38 RMS= 0.39380E-02 Markov E=    -170.9620008     t=        0.3
+Qu        257 E=    -170.9620025     steps=   32 RMS= 0.31993E-02 Markov E=    -170.9620098     t=        0.3
+Qu        258 E=    -170.9619947     steps=   35 RMS= 0.47613E-02 Markov E=    -170.9620025     t=        0.3
+Qu        259 E=    -170.9620132     steps=   34 RMS= 0.30203E-02 Markov E=    -170.9619947     t=        0.3
+Qu        260 E=    -170.9620163     steps=   32 RMS= 0.22242E-02 Markov E=    -170.9620132     t=        0.3
+Qu        261 E=    -170.9620007     steps=   27 RMS= 0.48656E-02 Markov E=    -170.9620163     t=        0.3
+Qu        262 E=    -170.9619987     steps=   32 RMS= 0.49669E-02 Markov E=    -170.9620007     t=        0.3
+Acceptance ratio for previous     50 steps=  0.9600  FAC=  1.0500
+Steps are now:  STEP=    0.5105  ASTEP=    0.6509 Temperature is now:    3.3000
+Qu        263 E=    -170.9620094     steps=   33 RMS= 0.38729E-02 Markov E=    -170.9619987     t=        0.3
+newres> Moving current best minimum to position      6 in the AVOID list E=    -170.9620208    
+newres> Energy has not improved since step      210
+newres> Parallel run      1 has the highest energy      -170.9620207925
+newres> Resetting energy to a large value to reject this step (not reseeding)
+Qu        264 E=    -170.9620018     steps=   35 RMS= 0.44822E-02 Markov E=    -170.9619987     t=        0.3
+Qu        265 E=    -170.9619912     steps=   31 RMS= 0.49202E-02 Markov E=    -170.9620018     t=        0.3
+Qu        266 E=    -170.9620135     steps=   35 RMS= 0.41891E-02 Markov E=    -170.9619912     t=        0.3
+Qu        267 E=    -170.9620134     steps=   30 RMS= 0.45492E-02 Markov E=    -170.9620135     t=        0.3
+Qu        268 E=    -170.9619866     steps=   31 RMS= 0.48340E-02 Markov E=    -170.9620134     t=        0.3
+Qu        269 E=    -170.9620029     steps=   31 RMS= 0.43131E-02 Markov E=    -170.9619866     t=        0.3
+Qu        270 E=    -170.9620131     steps=   29 RMS= 0.32308E-02 Markov E=    -170.9620029     t=        0.3
+Qu        271 E=    -170.9619975     steps=   27 RMS= 0.45456E-02 Markov E=    -170.9620131     t=        0.3
+Qu        272 E=    -170.9620149     steps=   34 RMS= 0.32803E-02 Markov E=    -170.9619975     t=        0.3
+Qu        273 E=    -170.9620152     steps=   29 RMS= 0.32726E-02 Markov E=    -170.9620149     t=        0.3
+Qu        274 E=    -170.9619903     steps=   30 RMS= 0.45920E-02 Markov E=    -170.9620152     t=        0.3
+Qu        275 E=    -170.9619710     steps=   33 RMS= 0.46469E-02 Markov E=    -170.9619903     t=        0.3
+Qu        276 E=    -170.9619884     steps=   25 RMS= 0.43632E-02 Markov E=    -170.9619710     t=        0.3
+Qu        277 E=    -170.9619937     steps=   32 RMS= 0.40354E-02 Markov E=    -170.9619884     t=        0.3
+Qu        278 E=    -170.9619997     steps=   30 RMS= 0.35387E-02 Markov E=    -170.9619937     t=        0.3
+Qu        279 E=    -170.9620083     steps=   29 RMS= 0.32594E-02 Markov E=    -170.9619997     t=        0.3
+Qu        280 E=    -170.9620047     steps=   24 RMS= 0.48637E-02 Markov E=    -170.9620083     t=        0.3
+Qu        281 E=    -170.9620146     steps=   38 RMS= 0.34434E-02 Markov E=    -170.9620047     t=        0.3
+Qu        282 E=    -170.9619971     steps=   28 RMS= 0.36795E-02 Markov E=    -170.9620146     t=        0.3
+Qu        283 E=    -170.9619654     steps=   32 RMS= 0.45368E-02 Markov E=    -170.9619971     t=        0.3
+Qu        284 E=    -170.9620049     steps=   31 RMS= 0.35256E-02 Markov E=    -170.9619654     t=        0.3
+Qu        285 E=    -170.9620114     steps=   32 RMS= 0.33279E-02 Markov E=    -170.9620049     t=        0.3
+Qu        286 E=    -170.9619878     steps=   28 RMS= 0.42149E-02 Markov E=    -170.9620114     t=        0.3
+Qu        287 E=    -170.9620029     steps=   30 RMS= 0.42111E-02 Markov E=    -170.9619878     t=        0.3
+Qu        288 E=    -170.9620213     steps=   29 RMS= 0.29583E-02 Markov E=    -170.9620029     t=        0.3
+Qu        289 E=    -170.9619647     steps=   29 RMS= 0.48787E-02 Markov E=    -170.9620213     t=        0.3
+Qu        290 E=    -170.9620147     steps=   34 RMS= 0.32035E-02 Markov E=    -170.9619647     t=        0.3
+Qu        291 E=    -170.9619757     steps=   28 RMS= 0.42736E-02 Markov E=    -170.9620147     t=        0.3
+Qu        292 E=    -170.9620102     steps=   36 RMS= 0.38895E-02 Markov E=    -170.9619757     t=        0.3
+Qu        293 E=    -170.9620011     steps=   31 RMS= 0.40385E-02 Markov E=    -170.9620102     t=        0.3
+Qu        294 E=    -170.9620050     steps=   34 RMS= 0.36583E-02 Markov E=    -170.9620011     t=        0.3
+Qu        295 E=    -170.9620087     steps=   26 RMS= 0.37871E-02 Markov E=    -170.9620050     t=        0.3
+Qu        296 E=    -170.9619981     steps=   27 RMS= 0.43200E-02 Markov E=    -170.9620087     t=        0.3
+Qu        297 E=    -170.9620120     steps=   40 RMS= 0.24840E-02 Markov E=    -170.9619981     t=        0.3
+Qu        298 E=    -170.9619996     steps=   32 RMS= 0.42183E-02 Markov E=    -170.9620120     t=        0.3
+Qu        299 E=    -170.9619900     steps=   30 RMS= 0.45977E-02 Markov E=    -170.9619996     t=        0.3
+Qu        300 E=    -170.9619999     steps=   28 RMS= 0.49220E-02 Markov E=    -170.9619900     t=        0.3
+Qu        301 E=    -170.9619953     steps=   29 RMS= 0.49000E-02 Markov E=    -170.9619999     t=        0.3
+Qu        302 E=    -170.9620099     steps=   31 RMS= 0.33954E-02 Markov E=    -170.9619953     t=        0.3
+Qu        303 E=    -170.9619938     steps=   25 RMS= 0.49962E-02 Markov E=    -170.9620099     t=        0.3
+Qu        304 E=    -170.9620064     steps=   26 RMS= 0.36364E-02 Markov E=    -170.9619938     t=        0.3
+newres> Moving current best minimum to position      7 in the AVOID list E=    -170.9620213    
+newres> Energy has not improved since step      251
+newres> Parallel run      1 has the highest energy      -170.9620212781
+newres> Resetting energy to a large value to reject this step (not reseeding)
+Qu        305 E=    -170.9620001     steps=   35 RMS= 0.45881E-02 Markov E=    -170.9619938     t=        0.3
+Qu        306 E=    -170.9620019     steps=   34 RMS= 0.39129E-02 Markov E=    -170.9620001     t=        0.3
+Qu        307 E=    -170.9620098     steps=   27 RMS= 0.28011E-02 Markov E=    -170.9620019     t=        0.3
+Qu        308 E=    -170.9620095     steps=   27 RMS= 0.36219E-02 Markov E=    -170.9620098     t=        0.3
+Qu        309 E=    -170.9620073     steps=   35 RMS= 0.31636E-02 Markov E=    -170.9620095     t=        0.3
+Qu        310 E=    -170.9619949     steps=   34 RMS= 0.43884E-02 Markov E=    -170.9620073     t=        0.3
+Qu        311 E=    -170.9620107     steps=   33 RMS= 0.35983E-02 Markov E=    -170.9619949     t=        0.3
+Qu        312 E=    -170.9619888     steps=   31 RMS= 0.45800E-02 Markov E=    -170.9620107     t=        0.3
+Acceptance ratio for previous     50 steps=  0.9600  FAC=  1.0500
+Steps are now:  STEP=    0.5360  ASTEP=    0.6834 Temperature is now:    3.3000
+Qu        313 E=    -170.9619887     steps=   28 RMS= 0.45298E-02 Markov E=    -170.9619888     t=        0.3
+Qu        314 E=    -170.9620002     steps=   34 RMS= 0.33707E-02 Markov E=    -170.9619887     t=        0.3
+Qu        315 E=    -170.9620065     steps=   29 RMS= 0.36827E-02 Markov E=    -170.9620002     t=        0.3
+Qu        316 E=    -170.9620108     steps=   40 RMS= 0.46992E-02 Markov E=    -170.9620065     t=        0.3
+Qu        317 E=    -170.9619900     steps=   31 RMS= 0.42433E-02 Markov E=    -170.9620108     t=        0.3
+Qu        318 E=    -170.9620036     steps=   28 RMS= 0.43845E-02 Markov E=    -170.9619900     t=        0.3
+Qu        319 E=    -170.9619959     steps=   30 RMS= 0.46238E-02 Markov E=    -170.9620036     t=        0.3
+Qu        320 E=    -170.9620128     steps=   34 RMS= 0.25589E-02 Markov E=    -170.9619959     t=        0.3
+Qu        321 E=    -170.9619935     steps=   40 RMS= 0.37921E-02 Markov E=    -170.9620128     t=        0.3
+Qu        322 E=    -170.9620049     steps=   33 RMS= 0.45853E-02 Markov E=    -170.9619935     t=        0.3
+Qu        323 E=    -170.9620109     steps=   56 RMS= 0.44279E-02 Markov E=    -170.9620049     t=        0.3
+Qu        324 E=    -170.9620198     steps=   46 RMS= 0.26445E-02 Markov E=    -170.9620109     t=        0.3
+Qu        325 E=    -170.9619861     steps=   35 RMS= 0.43997E-02 Markov E=    -170.9620198     t=        0.3
+Qu        326 E=    -170.9620017     steps=   29 RMS= 0.48057E-02 Markov E=    -170.9619861     t=        0.3
+Qu        327 E=    -170.9620097     steps=   32 RMS= 0.34391E-02 Markov E=    -170.9620017     t=        0.3
+Qu        328 E=    -170.9620070     steps=   31 RMS= 0.38352E-02 Markov E=    -170.9620097     t=        0.3
+Qu        329 E=    -170.9620029     steps=   31 RMS= 0.30812E-02 Markov E=    -170.9620070     t=        0.3
+Qu        330 E=    -170.9619984     steps=   40 RMS= 0.45889E-02 Markov E=    -170.9620029     t=        0.3
+Qu        331 E=    -170.9620138     steps=   29 RMS= 0.27328E-02 Markov E=    -170.9619984     t=        0.3
+Qu        332 E=    -170.9619968     steps=   32 RMS= 0.40082E-02 Markov E=    -170.9620138     t=        0.3
+Qu        333 E=    -170.9619908     steps=   42 RMS= 0.37853E-02 Markov E=    -170.9619968     t=        0.3
+Qu        334 E=    -170.9620105     steps=   35 RMS= 0.36021E-02 Markov E=    -170.9619908     t=        0.3
+Qu        335 E=    -170.9620072     steps=   34 RMS= 0.38609E-02 Markov E=    -170.9620105     t=        0.3
+Qu        336 E=    -170.9620065     steps=   30 RMS= 0.48936E-02 Markov E=    -170.9620072     t=        0.3
+Qu        337 E=    -170.9620025     steps=   37 RMS= 0.39943E-02 Markov E=    -170.9620065     t=        0.3
+Qu        338 E=    -170.9619935     steps=   34 RMS= 0.46065E-02 Markov E=    -170.9620025     t=        0.3
+Qu        339 E=    -170.9619984     steps=   31 RMS= 0.47952E-02 Markov E=    -170.9619935     t=        0.3
+Qu        340 E=    -170.9619940     steps=   35 RMS= 0.41247E-02 Markov E=    -170.9619984     t=        0.3
+Qu        341 E=    -170.9620041     steps=   28 RMS= 0.36682E-02 Markov E=    -170.9619940     t=        0.3
+Qu        342 E=    -170.9620059     steps=   39 RMS= 0.47074E-02 Markov E=    -170.9620041     t=        0.3
+Qu        343 E=    -170.9620103     steps=   44 RMS= 0.37885E-02 Markov E=    -170.9620059     t=        0.3
+Qu        344 E=    -170.9619920     steps=   30 RMS= 0.45475E-02 Markov E=    -170.9620103     t=        0.3
+Qu        345 E=    -170.9619854     steps=   36 RMS= 0.44300E-02 Markov E=    -170.9619920     t=        0.3
+newres> Moving current best minimum to position      8 in the AVOID list E=    -170.9620198    
+newres> Energy has not improved since step      292
+newres> Parallel run      1 has the highest energy      -170.9620198253
+newres> Resetting energy to a large value to reject this step (not reseeding)
+Qu        346 E=    -170.9619905     steps=   32 RMS= 0.44390E-02 Markov E=    -170.9619920     t=        0.3
+Qu        347 E=    -170.9620028     steps=   37 RMS= 0.45449E-02 Markov E=    -170.9619905     t=        0.3
+Qu        348 E=    -170.9620144     steps=   29 RMS= 0.30237E-02 Markov E=    -170.9620028     t=        0.3
+Qu        349 E=    -170.9619994     steps=   32 RMS= 0.41116E-02 Markov E=    -170.9620144     t=        0.3
+Qu        350 E=    -169.8445998     steps=  115 RMS= 0.46230E-02 Markov E=    -170.9619994     t=        0.3
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     8 was     1
+Qu        351 E=     -169.2911723697 steps=  211 RMS= 0.46993E-02                               t=        0.3
+Qu        352 E=     -167.7808562191 steps=  326 RMS= 0.39387E-02                               t=        0.3
+Qu        353 E=     -165.8679693616 steps=  131 RMS= 0.45692E-02                               t=        0.3
+Qu        354 E=     -169.6729960839 steps=  171 RMS= 0.48513E-02                               t=        0.3
+Qu        355 E=     -168.6666718593 steps=  109 RMS= 0.48128E-02                               t=        0.4
+Qu        356 E=     -164.3853239222 steps=   81 RMS= 0.40267E-02                               t=        0.4
+Qu        357 E=     -167.9248123113 steps=  155 RMS= 0.47029E-02                               t=        0.4
+Qu        358 E=     -167.5984018518 steps=  175 RMS= 0.49339E-02                               t=        0.4
+Qu        359 E=     -167.5204692419 steps=  133 RMS= 0.39753E-02                               t=        0.4
+Qu        360 E=     -166.5350791097 steps=   67 RMS= 0.48401E-02                               t=        0.4
+Qu        361 E=     -168.9201266455 steps=  138 RMS= 0.43070E-02                               t=        0.4
+Qu        362 E=     -167.5012923013 steps=  115 RMS= 0.40867E-02                               t=        0.4
+Qu        363 E=     -169.8446039151 steps=  104 RMS= 0.49755E-02                               t=        0.4
+Qu        364 E=     -165.9312902682 steps=  163 RMS= 0.34920E-02                               t=        0.4
+Qu        365 E=     -169.5944873027 steps=  108 RMS= 0.40745E-02                               t=        0.4
+Qu        366 E=     -166.4172181654 steps=  144 RMS= 0.45033E-02                               t=        0.4
+Qu        367 E=     -169.2142512190 steps=   86 RMS= 0.37185E-02                               t=        0.4
+Qu        368 E=     -168.5592026156 steps=  104 RMS= 0.37754E-02                               t=        0.4
+symmetry> number of core atoms=      10 core symmetry C s  after      368 quenches
+Qu        369 E=    -165.2592569     steps=  130 RMS= 0.45033E-02 Markov E=    -169.8445998     t=        0.4
+Qu        370 E=    -168.5613762     steps=  140 RMS= 0.43377E-02 Markov E=    -169.8445998     t=        0.4
+Qu        371 E=    -168.8930613     steps=  211 RMS= 0.40210E-02 Markov E=    -168.5613762     t=        0.4
+symmetry> symmetry analysis for point group T h number of generators=  15
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     2
+saveit> Target hit after             373 quenches           19449 function calls.
+saveit> Energy=     -173.9284182393 target=     -173.9284264418
+Qu        372 E=     -173.9284182393 steps=   67 RMS= 0.24376E-02                               t=        0.4
+Acceptance ratio for run=     0.95667 Step=     0.53604 Angular step factor=     0.68345 T=     3.30000
+1 373 19449         0.3920000000
+Tightly converging the SAVE lowest energy minima found
+NOTE: these may NOT match the other output files - see below for a sorted list of Lowest minima
+Final Quench      1 energy=    -173.9284260     steps=    6 RMS force=  0.6764084E-03 time=        0.39
+After re-sorting, the lowest found minima are (lowest free energy subtracted if applicable):
+Lowest Minimum      1 Energy=     -173.9284260    
+time elapsed                0.4 seconds
+Number of potential calls              19457

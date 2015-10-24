@@ -1,0 +1,2 @@
+for {set i 0} {$i<1000} {incr i} {after [expr 5000*$i] {mol delete [molinfo top]; source test.vmd}}
+

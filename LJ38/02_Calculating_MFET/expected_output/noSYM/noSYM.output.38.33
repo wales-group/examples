@@ -1,0 +1,95 @@
+Starting serial execution
+NOTE: Binary only licensed for use at AlgoSB2015
+keyword> WARNING - temperature unspecified for NEWRESTART. Default for high T MD is 1000K
+ reallocating MSBCOORDS
+ reallocating MSBE
+Initial coordinates:
+        1.3444316548       -0.2188912705        1.0579432707
+        1.5801880336       -1.1525956361       -0.1037170753
+        0.4030478683        1.3647247811       -0.0801258572
+       -0.1097167079        1.7068652001       -0.8039000949
+       -0.3372131909       -0.3810400575        0.2965564346
+        1.1126026325        0.2020824520        0.2919252866
+       -1.7241306834       -1.6105937457       -0.7590624869
+       -0.5434961268        0.7230313762        0.2413293397
+       -0.0631843872        0.7642277993        0.5717652889
+       -0.4407786778        0.9836399916       -0.9963638491
+        0.0428648432        1.2204051116       -0.0296679092
+        0.6744381873       -1.6921572111        1.5392002276
+       -0.4200038288       -0.6182284093        0.3756390246
+       -1.1066504218        0.8347415853        0.7421291114
+       -0.4538283278       -0.1474613820       -0.5121653095
+       -0.8650286088       -1.0198131227       -0.2545458115
+        0.8602465507       -1.1285700316       -0.7723637367
+        0.6252283739       -1.2659403571       -0.7297728177
+       -0.4720134415       -0.0671548699       -1.0347024416
+        1.5930816003        0.7143490036        1.5439233754
+        0.8286184846       -0.8437823932        1.6458929002
+        0.3301569162       -0.8366490641       -1.0522205506
+        1.4877559396       -0.4186237444       -0.5124951219
+       -0.0208642122       -0.7905519153       -0.4225379574
+        1.3424391739       -0.7120668086        0.3555396217
+       -0.6843124829       -0.6549530989        0.8438970635
+       -0.8531545669       -1.5962414996       -0.5726360505
+        1.7152030102       -0.4320486284        1.4361251500
+        0.1707394881       -0.7572542701        1.3459337636
+       -0.9046585912       -0.2718573907        0.8810728043
+       -1.0468019479       -0.1871383071        0.2986503294
+        0.1880130369       -0.3311675786        1.6934105544
+        0.5462939662        1.6705767422        1.4460623548
+        0.0923178649        0.0140407705        0.6936972855
+        0.9023783513       -0.8579098395        0.8081226419
+        0.5252180067        1.5461171500        0.4360793635
+        1.0478989529       -1.5507916403       -0.6251908920
+       -0.9631225414       -0.0071855717       -0.4376678747
+  38 LJ atoms
+Container radius=        4.3305271907
+Sloppy quench tolerance for RMS gradient .5000000000E-02
+In run   1 temperature will be fixed - see below for value
+Step size and angular threshold will be adjusted for acceptance ratio       0.5000 initial values=      0.4000      0.5100
+Configuration will be reset to quench geometry
+Sampling using Boltzmann weights
+Nocedal LBFGS minimisation
+Number of updates before reset in LBFGS=     4
+Maximum step size=        0.4000000000
+Guess for initial diagonal elements in LBFGS=  0.1000    
+Final quench tolerance for RMS gradient .1000000000E-02
+Energy difference criterion for minima=   0.0030000000
+Maximum number of iterations: sloppy quenches   600 final quenches   500
+Run   1:  90000000 steps with temperature scaled by  0.10000000E+01
+Maximum allowed energy rise during a minimisation=    0.1000000000E-09
+Target energies:      -173.9284264418 
+Steps will be rejected and taboo list populated if the energy decrease <      0.00300 within     40 steps
+Steps will be rejected if the current minimum comes within       4.00 of up to     20 previous minima
+Calculating initial energy
+Qu          0 E=    -163.5033018     steps=  134 RMS= 0.38576E-02 Markov E=    -163.5033018     t=        0.0
+Starting MC run of   90000000 steps
+Temperature will be multiplied by      1.00000000 at every step
+Qu          1 E=    -166.0410262     steps=  211 RMS= 0.43080E-02 Markov E=    -163.5033018     t=        0.0
+Qu          2 E=    -167.1730823     steps=  127 RMS= 0.41078E-02 Markov E=    -166.0410262     t=        0.0
+Qu          3 E=    -167.9995051     steps=  155 RMS= 0.42533E-02 Markov E=    -167.1730823     t=        0.0
+Qu          4 E=    -167.8625681     steps=  144 RMS= 0.34869E-02 Markov E=    -167.9995051     t=        0.0
+Qu          5 E=    -167.6064601     steps=  192 RMS= 0.44626E-02 Markov E=    -167.8625681     t=        0.0
+Qu          6 E=    -167.5266050     steps=  201 RMS= 0.46729E-02 Markov E=    -167.8625681     t=        0.0
+Qu          7 E=    -167.2800964     steps=  106 RMS= 0.48929E-02 Markov E=    -167.8625681     t=        0.0
+Qu          8 E=    -167.8411583     steps=  161 RMS= 0.33132E-02 Markov E=    -167.2800964     t=        0.0
+Qu          9 E=    -168.1421449     steps=  202 RMS= 0.41569E-02 Markov E=    -167.8411583     t=        0.0
+Qu         10 E=    -168.6771091     steps=  213 RMS= 0.45283E-02 Markov E=    -168.1421449     t=        0.0
+Qu         11 E=    -169.0344707     steps=  120 RMS= 0.49059E-02 Markov E=    -168.6771091     t=        0.0
+Qu         12 E=    -168.8949574     steps=  157 RMS= 0.42416E-02 Markov E=    -169.0344707     t=        0.0
+Qu         13 E=    -168.4828600     steps=  172 RMS= 0.49438E-02 Markov E=    -168.8949574     t=        0.0
+Qu         14 E=    -167.2439676     steps=  125 RMS= 0.40497E-02 Markov E=    -168.4828600     t=        0.1
+Qu         15 E=    -170.7665666     steps=  330 RMS= 0.48807E-02 Markov E=    -168.4828600     t=        0.1
+Qu         16 E=    -164.5675496     steps=  102 RMS= 0.49345E-02 Markov E=    -170.7665666     t=        0.1
+saveit> Target hit after              17 quenches            3285 function calls.
+saveit> Energy=     -173.9284137853 target=     -173.9284264418
+Qu         17 E=    -173.9284138     steps=  166 RMS= 0.33051E-02 Markov E=    -170.7665666     t=        0.1
+Acceptance ratio for run=     0.00000 Step=     0.40000 Angular step factor=     0.51000 T=     1.00000
+1 18 3285         0.0640000000
+Tightly converging the SAVE lowest energy minima found
+NOTE: these may NOT match the other output files - see below for a sorted list of Lowest minima
+Final Quench      1 energy=    -173.9284257     steps=    5 RMS force=  0.8717835E-03 time=        0.06
+After re-sorting, the lowest found minima are (lowest free energy subtracted if applicable):
+Lowest Minimum      1 Energy=     -173.9284257    
+time elapsed                0.1 seconds
+Number of potential calls               3292

@@ -1,0 +1,232 @@
+Starting serial execution
+NOTE: Binary only licensed for use at AlgoSB2015
+ keyword> Distance tolerance for distinguising atoms in the same orbit=        0.00100
+ keyword> Number of groups of permutable atoms=     1
+ keyword> group      1 contains     38 atoms with      0 additional atom sets:
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22
+    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38 
+keyword> WARNING - temperature unspecified for NEWRESTART. Default for high T MD is 1000K
+ reallocating MSBCOORDS
+ reallocating MSBE
+Initial coordinates:
+        1.4413578077        0.4737062701        1.5734859372
+       -0.9406608000       -0.9287040061        0.5182991292
+        0.5173440494       -0.7615886274        0.6982476092
+        1.4669918144        1.7202302269        1.1648813987
+       -1.3368621020       -0.7482820496       -0.5952059985
+       -0.2020238465        0.7084937642       -0.9946178189
+        0.5136470497       -0.1645931685        1.1123164463
+        0.7410198194       -1.0539040878       -1.0144449131
+       -0.3103442560        1.5374445076        0.1063839313
+        0.7688326635        1.2705517768        1.3332502223
+        1.0757707848       -0.4782726780        0.0135912824
+        0.9836169146        1.6375994245       -0.7095948617
+        1.0889640699       -0.2121981397       -1.5996373436
+        1.5015109603        1.2127128166        0.2914843366
+        0.7827233586        0.9565768478       -1.6131524240
+        0.0355372841       -1.5936951099        0.3835356411
+        0.6264168223        0.4380787421        0.5324947305
+       -0.1652449198        0.5346531283        0.9381290023
+        1.4399117879        1.4496561920       -1.6017600725
+        1.5085732986       -1.2478868528       -1.5246449651
+       -1.5631571577        0.6310444843        0.8666854315
+        0.5951522404       -0.9664955471       -1.1620971318
+        0.3247396621        1.4763337425       -0.2357000599
+        0.5930415855       -1.6387885681       -0.0855570179
+       -0.3546291359        1.0958911096        0.4163753148
+        0.8317080206       -0.6186584838        1.3702897515
+        0.7375613244        1.6105301170        1.0295811974
+       -0.8000232896        1.4998079869       -0.6265376272
+       -1.5571616288       -1.1144977645        1.5013304546
+       -1.0451935682        0.9811219569       -0.4955310282
+        0.8461954862       -0.6324401093       -0.1090099048
+       -1.4564102786       -1.6875446251        1.7163859369
+        1.6510410783        0.1954702261       -1.4264460312
+       -1.2494490834        1.5213402193        0.6096458051
+       -1.5698426618        0.3802843195       -1.6893204782
+       -0.1067536840        1.7242921981        1.2997591845
+        0.0722062992       -0.6095855301       -1.4542318058
+       -0.9598173616       -0.0475222314       -0.9597535927
+  38 LJ atoms
+Searching for approximate symmetry elements every      1 steps
+Distance tolerances:         0.10000        0.10000        0.10000        0.10000        0.10000
+Threshold for distinguishing transformation matrices:         0.10000
+Exponential factor in core-weighted centre of mass calculation:         0.00000
+Maximum number of quenches for floater/hole permutations=   20
+Container radius=        4.3305271907
+Sloppy quench tolerance for RMS gradient .5000000000E-02
+In run   1 temperature will be fixed - see below for value
+Step size and angular threshold will be adjusted for acceptance ratio       0.5000 initial values=      0.4000      0.5100
+Configuration will be reset to quench geometry
+Sampling using Boltzmann weights
+Nocedal LBFGS minimisation
+Number of updates before reset in LBFGS=     4
+Maximum step size=        0.4000000000
+Guess for initial diagonal elements in LBFGS=  0.1000    
+Final quench tolerance for RMS gradient .1000000000E-02
+Energy difference criterion for minima=   0.0030000000
+Maximum number of iterations: sloppy quenches   600 final quenches   500
+Run   1:  90000000 steps with temperature scaled by  0.10000000E+01
+Maximum allowed energy rise during a minimisation=    0.1000000000E-09
+Target energies:      -173.9284264418 
+Steps will be rejected and taboo list populated if the energy decrease <      0.00300 within     38 steps
+Steps will be rejected if the current minimum comes within       4.50 of up to     10 previous minima
+CSMinit> Calculating continuous symmetry measure for point group CI order=     2 normalisation=     502.8031900    
+Calculating initial energy
+Qu          0 E=    -167.3177727     steps=  229 RMS= 0.46950E-02 Markov E=    -167.3177727     t=        0.0
+Starting MC run of   90000000 steps
+Temperature will be multiplied by      1.00000000 at every step
+symmetrizecsm> accepted CSM geometry      1 for CSM=    0.2614850290E-01 iterations=    15
+symmetrizecsm> rejected CSM geometry      2 for CSM=    0.2614850290E-01 iterations=    14
+symmetrizecsm> rejected CSM geometry      3 for CSM=    0.2614850290E-01 iterations=    18
+symmetrizecsm> rejected CSM geometry      4 for CSM=    0.2614850290E-01 iterations=    17
+symmetrizecsm> rejected CSM geometry      5 for CSM=    0.2614850290E-01 iterations=    13
+symmetrizecsm> rejected CSM geometry      6 for CSM=    0.2614850290E-01 iterations=    12
+symmetrizecsm> rejected CSM geometry      7 for CSM=    0.2614850290E-01 iterations=    14
+symmetrizecsm> rejected CSM geometry      8 for CSM=    0.2614850290E-01 iterations=    17
+symmetrizecsm> accepted CSM geometry      9 for CSM=    0.2614850290E-01 iterations=    14
+symmetrizecsm> rejected CSM geometry     10 for CSM=    0.2614850290E-01 iterations=    17
+symmetrizecsm> accepted CSM geometry     11 for CSM=    0.2614850290E-01 iterations=     8
+symmetrizecsm> rejected CSM geometry     12 for CSM=    0.2614850290E-01 iterations=    14
+symmetrizecsm> rejected CSM geometry     13 for CSM=    0.2614850290E-01 iterations=     3
+symmetrizecsm> rejected CSM geometry     14 for CSM=    0.2614850290E-01 iterations=    10
+symmetrizecsm> rejected CSM geometry     15 for CSM=    0.2614850290E-01 iterations=    15
+symmetrizecsm> accepted CSM geometry     16 for CSM=    0.2614850290E-01 iterations=    13
+symmetrizecsm> accepted CSM geometry     17 for CSM=    0.2614850290E-01 iterations=    10
+symmetrizecsm> accepted CSM geometry     18 for CSM=    0.2614850290E-01 iterations=     9
+symmetrizecsm> rejected CSM geometry     19 for CSM=    0.2614850290E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry     20 for CSM=    0.2614850290E-01 iterations=     9
+symmetrizecsm> rejected CSM geometry     21 for CSM=    0.2614850290E-01 iterations=    10
+symmetrizecsm> rejected CSM geometry     22 for CSM=    0.2614850290E-01 iterations=     9
+symmetrizecsm> rejected CSM geometry     23 for CSM=    0.2614850290E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry     24 for CSM=    0.2614850290E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry     25 for CSM=    0.2614850290E-01 iterations=     6
+symmetrizecsm> rejected CSM geometry     26 for CSM=    0.2614850290E-01 iterations=    11
+symmetrizecsm> rejected CSM geometry     27 for CSM=    0.2614850290E-01 iterations=    16
+symmetrizecsm> rejected CSM geometry     28 for CSM=    0.2614850290E-01 iterations=    13
+symmetrizecsm> rejected CSM geometry     29 for CSM=    0.2614850290E-01 iterations=    12
+symmetrizecsm> rejected CSM geometry     30 for CSM=    0.2614850290E-01 iterations=    10
+Qu          1 E=     -168.8356775797 steps=   52 RMS= 0.42786E-02 t=    0.1200000000E-01 in CSM relaxation     1
+symmetrisecsm>     changing current minimum to energy     -168.8356776    
+Qu          2 E=    -168.5360372     steps=   95 RMS= 0.44634E-02 Markov E=    -168.8356776     t=        0.0
+symmetrizecsm> accepted CSM geometry      1 for CSM=    0.1939161389E-01 iterations=     9
+symmetrizecsm> rejected CSM geometry      2 for CSM=    0.1939161389E-01 iterations=     7
+symmetrizecsm> rejected CSM geometry      3 for CSM=    0.1939161389E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry      4 for CSM=    0.1939161389E-01 iterations=     7
+symmetrizecsm> accepted CSM geometry      5 for CSM=    0.1939161389E-01 iterations=    10
+symmetrizecsm> accepted CSM geometry      6 for CSM=    0.1939161389E-01 iterations=    12
+symmetrizecsm> rejected CSM geometry      7 for CSM=    0.1939161389E-01 iterations=    14
+symmetrizecsm> rejected CSM geometry      8 for CSM=    0.1939161389E-01 iterations=     7
+symmetrizecsm> rejected CSM geometry      9 for CSM=    0.1939161389E-01 iterations=    10
+symmetrizecsm> accepted CSM geometry     10 for CSM=    0.1939161389E-01 iterations=    10
+symmetrizecsm> rejected CSM geometry     11 for CSM=    0.1939161389E-01 iterations=     9
+symmetrizecsm> accepted CSM geometry     12 for CSM=    0.1939161389E-01 iterations=    10
+symmetrizecsm> rejected CSM geometry     13 for CSM=    0.1939161389E-01 iterations=    10
+symmetrizecsm> accepted CSM geometry     14 for CSM=    0.1939161389E-01 iterations=    15
+symmetrizecsm> rejected CSM geometry     15 for CSM=    0.1939161389E-01 iterations=    19
+symmetrizecsm> accepted CSM geometry     16 for CSM=    0.1939161389E-01 iterations=    11
+symmetrizecsm> rejected CSM geometry     17 for CSM=    0.1939161389E-01 iterations=     3
+symmetrizecsm> rejected CSM geometry     18 for CSM=    0.1939161389E-01 iterations=     9
+symmetrizecsm> accepted CSM geometry     19 for CSM=    0.1939161389E-01 iterations=    10
+symmetrizecsm> rejected CSM geometry     20 for CSM=    0.1939161389E-01 iterations=     8
+symmetrizecsm> accepted CSM geometry     21 for CSM=    0.1939161389E-01 iterations=    21
+symmetrizecsm> rejected CSM geometry     22 for CSM=    0.1939161389E-01 iterations=    21
+symmetrizecsm> rejected CSM geometry     23 for CSM=    0.1939161389E-01 iterations=    18
+symmetrizecsm> accepted CSM geometry     24 for CSM=    0.1939161389E-01 iterations=    16
+symmetrizecsm> rejected CSM geometry     25 for CSM=    0.1939161389E-01 iterations=    16
+symmetrizecsm> accepted CSM geometry     26 for CSM=    0.1939161389E-01 iterations=    18
+symmetrizecsm> rejected CSM geometry     27 for CSM=    0.1939161389E-01 iterations=    19
+symmetrizecsm> rejected CSM geometry     28 for CSM=    0.1939161389E-01 iterations=    21
+symmetrizecsm> rejected CSM geometry     29 for CSM=    0.1939161389E-01 iterations=    15
+symmetrizecsm> rejected CSM geometry     30 for CSM=    0.1939161389E-01 iterations=    21
+Qu          3 E=     -170.9619891459 steps=  117 RMS= 0.44919E-02 t=    0.2000000000E-01 in CSM relaxation     1
+symmetrisecsm>     changing current minimum to energy     -170.9619891    
+Qu          4 E=    -169.8446302     steps=  139 RMS= 0.38832E-02 Markov E=    -170.9619891     t=        0.0
+symmetrizecsm> accepted CSM geometry      1 for CSM=    0.1180217544E-01 iterations=     6
+symmetrizecsm> rejected CSM geometry      2 for CSM=    0.1180217544E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry      3 for CSM=    0.1180217544E-01 iterations=     7
+symmetrizecsm> rejected CSM geometry      4 for CSM=    0.1180217544E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry      5 for CSM=    0.1180217544E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry      6 for CSM=    0.1180217544E-01 iterations=     9
+symmetrizecsm> rejected CSM geometry      7 for CSM=    0.1180217544E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry      8 for CSM=    0.1180217544E-01 iterations=     8
+symmetrizecsm> rejected CSM geometry      9 for CSM=    0.1180217544E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry     10 for CSM=    0.1180217544E-01 iterations=     7
+symmetrizecsm> rejected CSM geometry     11 for CSM=    0.1180217544E-01 iterations=     9
+symmetrizecsm> rejected CSM geometry     12 for CSM=    0.1180217544E-01 iterations=     8
+symmetrizecsm> rejected CSM geometry     13 for CSM=    0.1180217544E-01 iterations=    10
+symmetrizecsm> accepted CSM geometry     14 for CSM=    0.1180217544E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry     15 for CSM=    0.1180217544E-01 iterations=     6
+symmetrizecsm> rejected CSM geometry     16 for CSM=    0.1180217544E-01 iterations=     6
+symmetrizecsm> rejected CSM geometry     17 for CSM=    0.1180217544E-01 iterations=     6
+symmetrizecsm> rejected CSM geometry     18 for CSM=    0.1180217544E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry     19 for CSM=    0.1180217544E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry     20 for CSM=    0.1180217544E-01 iterations=     7
+symmetrizecsm> rejected CSM geometry     21 for CSM=    0.1180217544E-01 iterations=     8
+symmetrizecsm> rejected CSM geometry     22 for CSM=    0.1180217544E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry     23 for CSM=    0.1180217544E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry     24 for CSM=    0.1180217544E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry     25 for CSM=    0.1180217544E-01 iterations=     7
+symmetrizecsm> rejected CSM geometry     26 for CSM=    0.1180217544E-01 iterations=     4
+symmetrizecsm> accepted CSM geometry     27 for CSM=    0.1180217544E-01 iterations=     7
+symmetrizecsm> rejected CSM geometry     28 for CSM=    0.1180217544E-01 iterations=     3
+symmetrizecsm> rejected CSM geometry     29 for CSM=    0.1180217544E-01 iterations=    11
+symmetrizecsm> rejected CSM geometry     30 for CSM=    0.1180217544E-01 iterations=     5
+Qu          5 E=     -170.9620047199 steps=   40 RMS= 0.48875E-02 t=    0.2800000000E-01 in CSM relaxation     1
+symmetrisecsm>     changing current minimum to energy     -170.9620047    
+Qu          6 E=    -169.8949782     steps=  180 RMS= 0.49179E-02 Markov E=    -170.9620047     t=        0.0
+symmetrizecsm> accepted CSM geometry      1 for CSM=     0.000000000     iterations=     6
+Qu          7 E=     -170.9620047199 steps=    0 RMS= 0.48875E-02 t=    0.3200000000E-01 in CSM relaxation     1
+symmetrisecsm> not changing current minimum energy         -170.9620047    
+Qu          8 E=    -167.8598229     steps=  252 RMS= 0.46993E-02 Markov E=    -170.9620047     t=        0.0
+symmetrizecsm> accepted CSM geometry      1 for CSM=     0.000000000     iterations=     6
+Qu          9 E=     -170.9620047199 steps=    0 RMS= 0.48875E-02 t=    0.3600000000E-01 in CSM relaxation     1
+symmetrisecsm> not changing current minimum energy         -170.9620047    
+Qu         10 E=    -168.4315114     steps=   79 RMS= 0.45580E-02 Markov E=    -170.9620047     t=        0.0
+symmetrizecsm> accepted CSM geometry      1 for CSM=   -0.1535230276E-15 iterations=     5
+Qu         11 E=     -170.9620047199 steps=    0 RMS= 0.48875E-02 t=    0.3600000000E-01 in CSM relaxation     1
+symmetrisecsm> not changing current minimum energy         -170.9620047    
+Qu         12 E=    -169.5857393     steps=  178 RMS= 0.41782E-02 Markov E=    -170.9620047     t=        0.0
+symmetrizecsm> accepted CSM geometry      1 for CSM=    0.1820587453E-01 iterations=    12
+symmetrizecsm> rejected CSM geometry      2 for CSM=    0.1820587453E-01 iterations=    14
+symmetrizecsm> accepted CSM geometry      3 for CSM=    0.1820587453E-01 iterations=    16
+symmetrizecsm> rejected CSM geometry      4 for CSM=    0.1820587453E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry      5 for CSM=    0.1820587453E-01 iterations=    23
+symmetrizecsm> rejected CSM geometry      6 for CSM=    0.1820587453E-01 iterations=    16
+symmetrizecsm> rejected CSM geometry      7 for CSM=    0.1820587453E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry      8 for CSM=    0.1820587453E-01 iterations=    19
+symmetrizecsm> rejected CSM geometry      9 for CSM=    0.1820587453E-01 iterations=    18
+symmetrizecsm> rejected CSM geometry     10 for CSM=    0.1820587453E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry     11 for CSM=    0.1820587453E-01 iterations=    16
+symmetrizecsm> rejected CSM geometry     12 for CSM=    0.1820587453E-01 iterations=    20
+symmetrizecsm> rejected CSM geometry     13 for CSM=    0.1820587453E-01 iterations=    18
+symmetrizecsm> rejected CSM geometry     14 for CSM=    0.1820587453E-01 iterations=     3
+symmetrizecsm> rejected CSM geometry     15 for CSM=    0.1820587453E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry     16 for CSM=    0.1820587453E-01 iterations=     2
+symmetrizecsm> rejected CSM geometry     17 for CSM=    0.1820587453E-01 iterations=     5
+symmetrizecsm> rejected CSM geometry     18 for CSM=    0.1820587453E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry     19 for CSM=    0.1820587453E-01 iterations=     3
+symmetrizecsm> rejected CSM geometry     20 for CSM=    0.1820587453E-01 iterations=    19
+symmetrizecsm> rejected CSM geometry     21 for CSM=    0.1820587453E-01 iterations=    18
+symmetrizecsm> rejected CSM geometry     22 for CSM=    0.1820587453E-01 iterations=    21
+symmetrizecsm> rejected CSM geometry     23 for CSM=    0.1820587453E-01 iterations=    16
+symmetrizecsm> rejected CSM geometry     24 for CSM=    0.1820587453E-01 iterations=    20
+symmetrizecsm> rejected CSM geometry     25 for CSM=    0.1820587453E-01 iterations=    17
+symmetrizecsm> rejected CSM geometry     26 for CSM=    0.1820587453E-01 iterations=    16
+symmetrizecsm> rejected CSM geometry     27 for CSM=    0.1820587453E-01 iterations=     6
+symmetrizecsm> rejected CSM geometry     28 for CSM=    0.1820587453E-01 iterations=    19
+symmetrizecsm> rejected CSM geometry     29 for CSM=    0.1820587453E-01 iterations=     4
+symmetrizecsm> rejected CSM geometry     30 for CSM=    0.1820587453E-01 iterations=    19
+saveit> Target hit after              14 quenches            1511 function calls.
+saveit> Energy=     -173.9283907295 target=     -173.9284264418
+Qu         13 E=     -173.9283907295 steps=   52 RMS= 0.40162E-02 t=    0.4800000000E-01 in CSM relaxation     1
+symmetrisecsm>     changing current minimum to energy     -173.9283907    
+Acceptance ratio for run=     0.00000 Step=     0.40000 Angular step factor=     0.51000 T=     3.00000
+1 14 1511         0.0480000000
+Tightly converging the SAVE lowest energy minima found
+NOTE: these may NOT match the other output files - see below for a sorted list of Lowest minima
+Final Quench      1 energy=    -173.9284256     steps=    8 RMS force=  0.9620753E-03 time=        0.05
+After re-sorting, the lowest found minima are (lowest free energy subtracted if applicable):
+Lowest Minimum      1 Energy=     -173.9284256    
+time elapsed                0.0 seconds
+Number of potential calls               1521

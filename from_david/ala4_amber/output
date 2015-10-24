@@ -1,0 +1,433 @@
+Starting serial execution
+
+ Here is the input file:
+
+STOP                                                                           
+ &cntrl                                                                        
+  imin   = 1,                                                                  
+  ncyc = 1,                                                                    
+  maxcyc = 1,                                                                  
+  igb = 0,                                                                     
+  ntb    = 0,                                                                  
+  cut    = 999.99,                                                             
+  rgbmax = 25.0,                                                               
+  ifswitch = 1                                                                 
+ /                                                                             
+| Flags:                                                                        
+|    NONPERIODIC   ntb=0 and igb=0: Setting up nonperiodic simulation
+|Largest sphere to fit in unit cell has radius =    63.452
+| New format PARM file being parsed.
+| Version =    1.000 Date = 08/04/11 Time = 11:49:36
+ keyword> AMBER group rotation moves enabled
+ keyword> Reading in atom groups for GROUPROTATION
+<GROUP CTER>
+Index:   1
+Size:    4
+Atoms defining axis:     5    2
+Rotation scaling: 1.00
+Selection probablity: 0.80
+Members:
+            1
+            2
+            3
+            4
+<GROUP ALA1>
+Index:   2
+Size:    4
+Atoms defining axis:     9   11
+Rotation scaling: 1.00
+Selection probablity: 0.80
+Members:
+           11
+           12
+           13
+           14
+<GROUP ALA2>
+Index:   3
+Size:    4
+Atoms defining axis:    19   21
+Rotation scaling: 1.00
+Selection probablity: 0.80
+Members:
+           21
+           22
+           23
+           24
+<GROUP ALA3>
+Index:   4
+Size:    4
+Atoms defining axis:    29   31
+Rotation scaling: 1.00
+Selection probablity: 0.80
+Members:
+           31
+           32
+           33
+           34
+<GROUP ALA4>
+Index:   5
+Size:    4
+Atoms defining axis:    39   41
+Rotation scaling: 1.00
+Selection probablity: 0.80
+Members:
+           41
+           42
+           43
+           44
+<GROUP NTER>
+Index:   6
+Size:    4
+Atoms defining axis:    47   49
+Rotation scaling: 1.00
+Selection probablity: 0.80
+Members:
+           49
+           50
+           51
+           52
+keyword> RADIUS set to 999 for AMBER9 run
+keywords> input coordinates for AMBER9 system will be read from 
+coords.inpcrd
+type: 
+inpcrd
+
+          -------------------------------------------------------
+          Amber 9  SANDER                              2006
+          -------------------------------------------------------
+
+| Run on 10/13/2015 at 16:23:16
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: min.in                                                                
+| MDOUT: min.out                                                               
+|INPCRD: coords.inpcrd                                                         
+|  PARM: coords.prmtop                                                         
+|RESTRT: coords.rst                                                            
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: coords.mdcrd                                                          
+|MDINFO: mdinfo                                                                
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+
+
+ Here is the input file:
+
+STOP                                                                           
+ &cntrl                                                                        
+  imin   = 1,                                                                  
+  ncyc = 1,                                                                    
+  maxcyc = 1,                                                                  
+  igb = 0,                                                                     
+  ntb    = 0,                                                                  
+  cut    = 999.99,                                                             
+  rgbmax = 25.0,                                                               
+  ifswitch = 1                                                                 
+ /                                                                             
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+|    NONPERIODIC   ntb=0 and igb=0: Setting up nonperiodic simulation
+|  *** cutoff > system size, list only builds once
+|Largest sphere to fit in unit cell has radius =    63.452
+ NATOM  =      52 NTYPES =       7 NBONH =      27 MBONA  =      24
+ NTHETH =      58 MTHETA =      32 NPHIH =     102 MPHIA  =      87
+ NHPARM =       0 NPARM  =       0 NNB   =     258 NRES   =       6
+ NBONA  =      24 NTHETA =      32 NPHIA =      87 NUMBND =       8
+ NUMANG =      16 NPTRA  =      19 NATYP =       7 NPHB   =       0
+ IFBOX  =       0 NMXRS  =      10 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+
+|     Memory Use     Allocated
+|     Real                5360
+|     Hollerith            320
+|     Integer            24723
+|     Max Pairs           1326
+|     nblistReal           624
+|     nblist Int       7222202
+|       Total            28361 kbytes
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+ACE                                                                             
+
+General flags:
+     imin    =       1, nmropt  =       0
+     ifswitch=       1, fswitchbeta=  10.000
+ mdread> force-shifting cutoff will be used for electrostatics, fswitchbeta=  10.000
+ mdread> Stoddard-Ford cutoff will be used for van der Waals interactions
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       1, ntpr    =      50, ntrx    =       1, ntwr    =     500
+     iwrap   =       0, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       0, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       1, ntb     =       0, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     = 999.99000, intdiel =   1.00000
+     scnb    =   2.00000, scee    =   1.20000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  =       1, ncyc    =       1, ntmin   =       1
+     dx0     =   0.01000, drms    =   0.00010
+|  INFO: Old style inpcrd file read
+
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+ACE                                                                             
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:        0
+
+     Sum of charges from parm topology file =   0.00000000
+     Forcing neutrality...
+keywords> reading AMBER inpcrd coordinate format
+RANSEED: Random seed is     2037
+Initial coordinates:
+       -2.7231017000        0.4115524000       -2.5966233000
+       -2.8943026000        1.4674786000       -2.3954483000
+       -3.9622134000        1.6759115000       -2.3741892000
+       -2.4226343000        2.0670752000       -3.1730389000
+       -2.2852634000        1.8301258000       -1.0615372000
+       -1.3993573000        2.6713347000       -1.0076937000
+       -2.7657809000        1.1804551000       -0.0015547000
+       -3.5146310000        0.5264747000       -0.1559025000
+       -2.3166274000        1.3711482000        1.3861575000
+       -1.5011864000        2.0965795000        1.3896185000
+       -3.4761044000        1.9750137000        2.1912604000
+       -3.1381140000        2.2057469000        3.2025839000
+       -3.8162384000        2.8965894000        1.7174455000
+       -4.3025172000        1.2657748000        2.2468613000
+       -1.7305928000        0.0891571000        2.0258699000
+       -1.6287018000       -0.0186718000        3.2463151000
+       -1.3683607000       -0.8944299000        1.1986029000
+       -1.4305318000       -0.7069294000        0.2101697000
+       -0.5689967000       -2.0567180000        1.5734858000
+       -0.0078618000       -1.8242158000        2.4804768000
+       -1.4943217000       -3.2461245000        1.8582676000
+       -2.0727597000       -3.4904292000        0.9661284000
+       -2.1755776000       -2.9937704000        2.6722533000
+       -0.9008489000       -4.1133177000        2.1488482000
+        0.4314469000       -2.3505995000        0.4431808000
+        0.0567255000       -2.3019948000       -0.7304225000
+        1.6925872000       -2.6312393000        0.7974423000
+        1.8764778000       -2.6649617000        1.7872205000
+        2.8861979000       -2.5983234000       -0.0695267000
+        3.7428442000       -2.7841478000        0.5798075000
+        2.8550557000       -3.7593880000       -1.0749806000
+        2.7133888000       -4.7035700000       -0.5482164000
+        2.0450478000       -3.6227506000       -1.7919932000
+        3.8009404000       -3.7947111000       -1.6168662000
+        3.1662389000       -1.2209886000       -0.7165188000
+        4.2596122000       -0.6846848000       -0.5564518000
+        2.1735804000       -0.6162244000       -1.3702853000
+        1.3065507000       -1.1332786000       -1.4493935000
+        2.0907080000        0.8295775000       -1.5610968000
+        3.0863389000        1.2169429000       -1.7833215000
+        1.1840406000        1.1065523000       -2.7669998000
+        0.1852908000        0.7118071000       -2.5765863000
+        1.5964049000        0.6300550000       -3.6571208000
+        1.1118385000        2.1809332000       -2.9392259000
+        1.5849442000        1.5251063000       -0.2768506000
+        0.9961981000        0.8826336000        0.5956122000
+        1.8069718000        2.8405490000       -0.1687387000
+        2.2731736000        3.3032384000       -0.9319049000
+        1.3366429000        3.6598863000        0.9463702000
+        1.8455461000        4.6242926000        0.9475252000
+        1.5309753000        3.1490528000        1.8918303000
+        0.2608574000        3.8204248000        0.8491544000
+  52 AMBER9 atoms
+Container radius=      999.0000000000
+Sloppy quench tolerance for RMS gradient    0.0010000000
+In run   1 temperature fixed at   0.7500    
+Step size and angular threshold will be adjusted for acceptance ratio       0.5000 initial values=      1.8000      0.0000
+Configuration will be reset to quench geometry
+Sampling using Boltzmann weights
+Nocedal LBFGS minimisation
+Number of updates before reset in LBFGS=  1000
+Maximum step size=        1.0000000000
+Guess for initial diagonal elements in LBFGS=  0.1000    
+Final quench tolerance for RMS gradient    0.0000010000
+Energy difference criterion for minima=   0.0100000000
+Maximum number of iterations: sloppy quenches 20000 final quenches 60000
+Run   1:      1000 steps with temperature scaled by  0.10000000E+01
+Maximum allowed energy rise during a minimisation=    0.1000000000E-03
+Target energies:       -15.3324100000 
+Calculating initial energy
+Qu          0 E=       -1.9089938038 steps=    0 RMS= 0.32074E-04 Markov E=    -1.908993804     t=        0.0
+Starting MC run of       1000 steps
+Temperature will be multiplied by      1.00000000 at every step
+Qu          1 E=       -2.4284258138 steps=  620 RMS= 0.97901E-03 Markov E=    -1.908993804     t=        0.4
+Qu          2 E=       -2.4284047034 steps=  286 RMS= 0.94762E-03 Markov E=    -2.428425814     t=        0.5
+Qu          3 E=        0.9100742265 steps=  462 RMS= 0.72176E-03 Markov E=    -2.428404703     t=        0.7
+Qu          4 E=       -9.3508104711 steps=  319 RMS= 0.78689E-03 Markov E=    -2.428404703     t=        0.8
+Qu          5 E=       -7.9392978861 steps=  440 RMS= 0.81411E-03 Markov E=    -9.350810471     t=        1.0
+Qu          6 E=       -7.1545355583 steps=  363 RMS= 0.98828E-03 Markov E=    -9.350810471     t=        1.2
+Qu          7 E=       -0.0795459294 steps=  398 RMS= 0.82024E-03 Markov E=    -9.350810471     t=        1.4
+Qu          8 E=       -9.2587909510 steps=  359 RMS= 0.89648E-03 Markov E=    -9.350810471     t=        1.5
+Qu          9 E=        3.5910832760 steps=  429 RMS= 0.59005E-03 Markov E=    -9.258790951     t=        1.7
+ GROUPROTATION> Rotating group CTER by     39.08592982539270     
+ GROUPROTATION> Rotating group ALA1 by    -149.3911653771289     
+ GROUPROTATION> Rotating group ALA2 by     50.44614462382710     
+ GROUPROTATION> Rotating group ALA3 by     18.97503480928658     
+ GROUPROTATION> Rotating group ALA4 by    -60.72193887141189     
+ GROUPROTATION> Rotating group NTER by    -131.6925002518024     
+Qu         10 E=       -7.6876425616 steps=  276 RMS= 0.87159E-03 Markov E=    -9.258790951     t=        1.8
+Qu         11 E=       -6.9046305901 steps=  398 RMS= 0.57518E-03 Markov E=    -7.687642562     t=        2.0
+Qu         12 E=       -6.6597155520 steps=  447 RMS= 0.93418E-03 Markov E=    -7.687642562     t=        2.2
+Qu         13 E=       -7.6876524583 steps=  443 RMS= 0.95805E-03 Markov E=    -7.687642562     t=        2.4
+Qu         14 E=       -3.5566276610 steps=  389 RMS= 0.85391E-03 Markov E=    -7.687652458     t=        2.5
+Qu         15 E=       -7.6876462152 steps=  256 RMS= 0.87286E-03 Markov E=    -7.687652458     t=        2.6
+Qu         16 E=       -2.6901630255 steps=  330 RMS= 0.91748E-03 Markov E=    -7.687646215     t=        2.8
+Qu         17 E=       -7.6876090342 steps=  306 RMS= 0.71112E-03 Markov E=    -7.687646215     t=        2.9
+Qu         18 E=       -5.9394311763 steps=  610 RMS= 0.74352E-03 Markov E=    -7.687609034     t=        3.2
+Qu         19 E=       -4.8639804287 steps=  386 RMS= 0.84742E-03 Markov E=    -7.687609034     t=        3.4
+ GROUPROTATION> Rotating group CTER by    -136.9440616357107     
+ GROUPROTATION> Rotating group ALA1 by     122.9914808832144     
+ GROUPROTATION> Rotating group ALA2 by    -61.43746169969381     
+ GROUPROTATION> Rotating group ALA3 by    -161.4274393911096     
+Qu         20 E=       -6.9046319323 steps=  522 RMS= 0.44235E-03 Markov E=    -7.687609034     t=        3.6
+Qu         21 E=        1.0467380281 steps=  416 RMS= 0.75237E-03 Markov E=    -7.687609034     t=        3.8
+Qu         22 E=       12.6388040688 steps=  331 RMS= 0.76250E-03 Markov E=    -7.687609034     t=        3.9
+Qu         23 E=       -8.2856376069 steps=  516 RMS= 0.73138E-03 Markov E=    -7.687609034     t=        4.2
+Qu         24 E=       -8.2856330762 steps=  342 RMS= 0.75510E-03 Markov E=    -8.285637607     t=        4.3
+Qu         25 E=       -8.2856321456 steps=  373 RMS= 0.70515E-03 Markov E=    -8.285633076     t=        4.5
+Qu         26 E=       -8.2856313683 steps=  308 RMS= 0.70164E-03 Markov E=    -8.285632146     t=        4.6
+Qu         27 E=        0.2089446471 steps=  320 RMS= 0.42566E-03 Markov E=    -8.285631368     t=        4.7
+Qu         28 E=       -8.2856251337 steps=  299 RMS= 0.96557E-03 Markov E=    -8.285631368     t=        4.8
+Qu         29 E=       -2.9090768667 steps=  523 RMS= 0.93464E-03 Markov E=    -8.285625134     t=        5.1
+ GROUPROTATION> Rotating group CTER by     4.065807238828874     
+ GROUPROTATION> Rotating group ALA1 by    -138.9497740212271     
+ GROUPROTATION> Rotating group ALA2 by    -21.92509554432624     
+ GROUPROTATION> Rotating group ALA3 by    -168.9337288987362     
+ GROUPROTATION> Rotating group NTER by     61.09515122871184     
+Qu         30 E=       -4.8847646579 steps=  766 RMS= 0.95184E-03 Markov E=    -8.285625134     t=        5.5
+Qu         31 E=       -9.3669251213 steps=  374 RMS= 0.32764E-03 Markov E=    -8.285625134     t=        5.7
+Qu         32 E=       -0.8656834226 steps=  353 RMS= 0.40524E-03 Markov E=    -9.366925121     t=        5.8
+Qu         33 E=       -9.3668012985 steps=  267 RMS= 0.95486E-03 Markov E=    -9.366925121     t=        5.9
+Qu         34 E=       -9.3669218350 steps=  332 RMS= 0.72099E-03 Markov E=    -9.366801299     t=        6.0
+Qu         35 E=       -5.9627755659 steps=  429 RMS= 0.96936E-03 Markov E=    -9.366921835     t=        6.2
+Qu         36 E=      -10.1716693250 steps=  680 RMS= 0.88551E-03 Markov E=    -9.366921835     t=        6.6
+Qu         37 E=      -12.8861654976 steps=  500 RMS= 0.42400E-03 Markov E=    -10.17166932     t=        6.8
+Qu         38 E=      -12.8861624178 steps=  329 RMS= 0.94970E-03 Markov E=    -12.88616550     t=        6.9
+Qu         39 E=      -12.8861621560 steps=  306 RMS= 0.84805E-03 Markov E=    -12.88616242     t=        7.1
+ GROUPROTATION> Rotating group CTER by     145.7258962581750     
+ GROUPROTATION> Rotating group ALA1 by    -37.46290203603666     
+ GROUPROTATION> Rotating group ALA2 by     113.2000002514842     
+ GROUPROTATION> Rotating group ALA3 by    -152.6896114473689     
+ GROUPROTATION> Rotating group ALA4 by     167.1607355236512     
+ GROUPROTATION> Rotating group NTER by     127.7662818685642     
+Qu         40 E=        1.3554698827 steps=  305 RMS= 0.98133E-03 Markov E=    -12.88616216     t=        7.2
+Qu         41 E=      -11.0685916615 steps=  329 RMS= 0.49671E-03 Markov E=    -12.88616216     t=        7.3
+Qu         42 E=      -11.0685916154 steps=  293 RMS= 0.94065E-03 Markov E=    -12.88616216     t=        7.4
+Qu         43 E=      -12.8861652087 steps=  319 RMS= 0.61376E-03 Markov E=    -12.88616216     t=        7.6
+Qu         44 E=      -11.1852208282 steps=  372 RMS= 0.75769E-03 Markov E=    -12.88616521     t=        7.7
+Qu         45 E=        0.3775424280 steps=  420 RMS= 0.92681E-03 Markov E=    -12.88616521     t=        7.9
+Qu         46 E=      -12.8861546681 steps=  324 RMS= 0.84094E-03 Markov E=    -12.88616521     t=        8.0
+Qu         47 E=      -11.8296500786 steps=  291 RMS= 0.97397E-03 Markov E=    -12.88615467     t=        8.2
+Qu         48 E=      -12.8861416643 steps=  293 RMS= 0.91294E-03 Markov E=    -12.88615467     t=        8.3
+Qu         49 E=      -12.8861621311 steps=  339 RMS= 0.62478E-03 Markov E=    -12.88614166     t=        8.4
+ GROUPROTATION> Rotating group ALA1 by    -60.96118739812383     
+ GROUPROTATION> Rotating group ALA2 by    -118.7670766551037     
+ GROUPROTATION> Rotating group ALA3 by     119.9557650179093     
+ GROUPROTATION> Rotating group ALA4 by    -159.2700833863994     
+ GROUPROTATION> Rotating group NTER by    -13.74016627680601     
+Qu         50 E=       -5.4673977536 steps=  502 RMS= 0.94590E-03 Markov E=    -12.88616213     t=        8.7
+Acceptance ratio for previous     50 steps=  0.4800  FAC=  0.9524
+Steps are now:  STEP=    1.7143 Temperature is now:    0.7500
+Qu         51 E=      -10.0340975297 steps=  390 RMS= 0.62351E-03 Markov E=    -12.88616213     t=        8.8
+Qu         52 E=       -3.5499103112 steps=  385 RMS= 0.81946E-03 Markov E=    -12.88616213     t=        9.0
+Qu         53 E=      -10.2303536291 steps=  442 RMS= 0.84884E-03 Markov E=    -12.88616213     t=        9.2
+Qu         54 E=       -8.6563752365 steps=  353 RMS= 0.68130E-03 Markov E=    -12.88616213     t=        9.3
+Qu         55 E=      -12.8860989376 steps=  286 RMS= 0.87284E-03 Markov E=    -12.88616213     t=        9.5
+Qu         56 E=      -12.8861601005 steps=  284 RMS= 0.69392E-03 Markov E=    -12.88609894     t=        9.6
+Qu         57 E=       -3.5340128824 steps=  272 RMS= 0.92400E-03 Markov E=    -12.88616010     t=        9.7
+Qu         58 E=       -8.4179120402 steps=  469 RMS= 0.72987E-03 Markov E=    -12.88616010     t=        9.9
+Qu         59 E=      -11.8296536794 steps=  329 RMS= 0.70053E-03 Markov E=    -12.88616010     t=       10.0
+ GROUPROTATION> Rotating group CTER by     3.549037461996374     
+ GROUPROTATION> Rotating group ALA1 by     156.5087019349456     
+ GROUPROTATION> Rotating group ALA2 by    -51.83713277922261     
+ GROUPROTATION> Rotating group ALA3 by     122.7210407072530     
+ GROUPROTATION> Rotating group ALA4 by    -117.9638065524008     
+ GROUPROTATION> Rotating group NTER by     171.1183532993826     
+Qu         60 E=       -3.8232744857 steps=  554 RMS= 0.59673E-03 Markov E=    -12.88616010     t=       10.3
+Qu         61 E=      -10.0340988700 steps=  479 RMS= 0.99800E-03 Markov E=    -12.88616010     t=       10.5
+Qu         62 E=      -12.8861369433 steps=  319 RMS= 0.97985E-03 Markov E=    -12.88616010     t=       10.6
+Qu         63 E=      -12.8861646785 steps=  314 RMS= 0.57796E-03 Markov E=    -12.88613694     t=       10.8
+Qu         64 E=       -0.3510271024 steps=  309 RMS= 0.79715E-03 Markov E=    -12.88616468     t=       10.9
+Qu         65 E=      -12.8861591755 steps=  299 RMS= 0.67674E-03 Markov E=    -12.88616468     t=       11.0
+Qu         66 E=      -12.8861591741 steps=  304 RMS= 0.64383E-03 Markov E=    -12.88615918     t=       11.1
+Qu         67 E=       -5.8567763513 steps=  426 RMS= 0.76480E-03 Markov E=    -12.88615917     t=       11.3
+Qu         68 E=      -12.8861581813 steps=  269 RMS= 0.93364E-03 Markov E=    -12.88615917     t=       11.4
+Qu         69 E=      -11.8296558676 steps=  287 RMS= 0.66650E-03 Markov E=    -12.88615818     t=       11.5
+ GROUPROTATION> Rotating group CTER by    -68.66701848781197     
+ GROUPROTATION> Rotating group ALA1 by    -8.687368347021920     
+ GROUPROTATION> Rotating group ALA2 by     127.6959306979595     
+ GROUPROTATION> Rotating group ALA3 by     40.03654667681727     
+ GROUPROTATION> Rotating group NTER by    -149.0088791796472     
+Qu         70 E=       -6.1853319995 steps=  481 RMS= 0.85923E-03 Markov E=    -12.88615818     t=       11.7
+Qu         71 E=      -12.8861603322 steps=  314 RMS= 0.75221E-03 Markov E=    -12.88615818     t=       11.9
+Qu         72 E=      -12.8861638614 steps=  318 RMS= 0.98870E-03 Markov E=    -12.88616033     t=       12.0
+Qu         73 E=      -12.8861521304 steps=  305 RMS= 0.90217E-03 Markov E=    -12.88616386     t=       12.1
+Qu         74 E=      -12.8861615742 steps=  338 RMS= 0.88092E-03 Markov E=    -12.88615213     t=       12.3
+Qu         75 E=      -12.8861605886 steps=  290 RMS= 0.85870E-03 Markov E=    -12.88616157     t=       12.4
+Qu         76 E=      -11.0685841440 steps=  259 RMS= 0.88757E-03 Markov E=    -12.88616059     t=       12.5
+Qu         77 E=      -13.8718592339 steps=  381 RMS= 0.80644E-03 Markov E=    -12.88616059     t=       12.6
+Qu         78 E=       -9.7959169232 steps=  559 RMS= 0.88150E-03 Markov E=    -13.87185923     t=       12.9
+Qu         79 E=        7.7437240498 steps=  404 RMS= 0.58090E-03 Markov E=    -13.87185923     t=       13.1
+ GROUPROTATION> Rotating group CTER by     114.1045548897176     
+ GROUPROTATION> Rotating group ALA1 by     82.07135456438210     
+ GROUPROTATION> Rotating group ALA2 by    -112.5686670556205     
+ GROUPROTATION> Rotating group ALA3 by     154.3903587584270     
+ GROUPROTATION> Rotating group ALA4 by    -117.1804212191412     
+ GROUPROTATION> Rotating group NTER by     127.3134240073450     
+Qu         80 E=        1.3099347492 steps=  447 RMS= 0.97151E-03 Markov E=    -13.87185923     t=       13.3
+Qu         81 E=      -12.7573749774 steps=  274 RMS= 0.99189E-03 Markov E=    -13.87185923     t=       13.4
+Qu         82 E=      -11.8296443245 steps=  295 RMS= 0.94078E-03 Markov E=    -12.75737498     t=       13.5
+Qu         83 E=      -10.7964899703 steps=  311 RMS= 0.94620E-03 Markov E=    -12.75737498     t=       13.6
+Qu         84 E=       -7.2173979856 steps=  440 RMS= 0.78246E-03 Markov E=    -12.75737498     t=       13.8
+Qu         85 E=      -11.7575543117 steps=  305 RMS= 0.60883E-03 Markov E=    -12.75737498     t=       14.0
+Qu         86 E=       -3.3712517711 steps=  434 RMS= 0.96172E-03 Markov E=    -12.75737498     t=       14.2
+Qu         87 E=        2.0499538616 steps=  352 RMS= 0.72873E-03 Markov E=    -12.75737498     t=       14.3
+Qu         88 E=       -6.7666840857 steps=  513 RMS= 0.79926E-03 Markov E=    -12.75737498     t=       14.6
+Qu         89 E=      -12.7574138355 steps=  274 RMS= 0.98524E-03 Markov E=    -12.75737498     t=       14.7
+ GROUPROTATION> Rotating group ALA1 by     159.5954693518492     
+ GROUPROTATION> Rotating group ALA2 by    -42.91832461444537     
+ GROUPROTATION> Rotating group ALA3 by     23.67230094718582     
+ GROUPROTATION> Rotating group ALA4 by    -28.65035187215172     
+ GROUPROTATION> Rotating group NTER by    -90.72002723704310     
+Qu         90 E=      -12.0998898292 steps=  356 RMS= 0.75036E-03 Markov E=    -12.75741384     t=       14.8
+Qu         91 E=       -9.6895136771 steps=  349 RMS= 0.85247E-03 Markov E=    -12.75741384     t=       14.9
+Qu         92 E=        2.9078371608 steps=  316 RMS= 0.77269E-03 Markov E=    -12.75741384     t=       15.1
+Qu         93 E=      -12.1042085875 steps=  279 RMS= 0.69634E-03 Markov E=    -12.75741384     t=       15.2
+Qu         94 E=      -13.8538067294 steps=  432 RMS= 0.92578E-03 Markov E=    -12.10420859     t=       15.4
+Qu         95 E=      -13.8537969355 steps=  320 RMS= 0.76102E-03 Markov E=    -13.85380673     t=       15.5
+Qu         96 E=      -13.8538003548 steps=  360 RMS= 0.85502E-03 Markov E=    -13.85379694     t=       15.7
+Qu         97 E=       -8.0001946644 steps=  392 RMS= 0.89297E-03 Markov E=    -13.85380035     t=       15.8
+Qu         98 E=        0.1075660255 steps=  510 RMS= 0.57032E-03 Markov E=    -13.85380035     t=       16.1
+saveit> Target hit after              99 quenches           37837 function calls.
+saveit> Energy=      -15.3324103520 target=      -15.3324100000
+Qu         99 E=      -15.3324103520 steps=  396 RMS= 0.87284E-03 Markov E=    -13.85380035     t=       16.2
+Acceptance ratio for run=     0.48000 Step=     1.71429 Angular step factor=     0.00000 T=     0.75000
+Final Quench      1 energy=      -15.3324109070 steps=  222 RMS force=      0.0000007 time=       16.31

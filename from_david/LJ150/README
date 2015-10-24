@@ -1,0 +1,15 @@
+Created a test2.vmd file with the required representations.
+
+Replaces top by [molinfo top] in all the clipplane lines for this to
+source cleanly in the Tk window.
+
+source refresh2.tcl in the Tk window.
+
+Must remove any loaded molecules before running the script.
+
+Can invoke vmd with
+
+xterm -e vmd -size 1024 768 -e refresh2.tcl
+
+Now we just need a startup script to create random coordinates from
+a seed based on the input date, start GMIN, and start vmd as above.

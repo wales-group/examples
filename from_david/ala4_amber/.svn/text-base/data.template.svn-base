@@ -1,0 +1,37 @@
+CENTRE
+MONITOR 5
+comment DEBUG
+SLOPPYCONV 1.0D-3
+TIGHTCONV 1.0D-6
+MAXERISE 1.0D-4
+EDIFF 0.01
+DUMPINT -1
+UPDATES 1000
+MAXIT 20000 60000
+MAXBFGS 1.0
+comment TRACKDATA
+comment DUMPSTRUCTURES
+comment DUMPQU
+comment TEMPERATURE 0.75
+TEMPERATURE 0.75
+SAVE 1
+STEPS 1000  1.0
+comment STEPS 500  1.0 -- takes 82 sec 
+comment dihedral moves
+comment AMCHNMAX 5  
+comment AMCHNMIN 1  
+comment AMCHPMAX 1
+comment AMCHPMIN .1  
+comment group rotation moves 
+GROUPROTATION 10 
+comment 
+STEP 1.8 0.0
+comment STEP 2.1 0.0
+comment RADIUS 300
+comment AMBERMDSTEPS
+AMBER9 coords.inpcrd inpcrd
+comment TARGET -12.946490
+TARGET -15.33241
+NOCHIRALCHECKS
+comment this turns OFF cis/trans check!
+CISTRANS 
