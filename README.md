@@ -1,4 +1,4 @@
-# workshop_examples
+# examples
 Curated examples for use in workshops teaching the use of the Wales Group codes
 
 This repository is initially intended to act as a place to maintain backups of examples as they are developed.
