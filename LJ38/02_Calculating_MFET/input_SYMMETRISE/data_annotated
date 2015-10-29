@@ -1,0 +1,56 @@
+! ALGORITHM SETUP
+
+! Specify the energy of the global minimum as the target to stop at
+TARGET  -173.9284264418
+
+! Specify the RMS force convergence criteria for:
+! quenches (Qu) during the basin-hopping (BH) run
+SLOPPYCONV 5.0D-3
+! final quenches for the SAVE lowest energy minima
+TIGHTCONV 1.0D-3 
+
+! Consider minima unique if they differ by less than 0.003 
+EDIFF 0.003
+
+! Set the max number of minimisation steps for sloppy and tight quenches
+MAXIT 600 500 
+
+! Tightly converge and output only the lowest energy structure
+SAVE 1
+
+! Centre the structure after each quench
+CENTRE
+
+! Sort the atoms by how strongly bound they are 
+SORT  
+
+! produce a GMIN dump file for use with RESTORE every 6000 BH steps
+DUMPINT 6000
+
+! SAMPLING PARAMETERS
+
+! Set the temperature used when accepting and rejecting minima into the Markov
+! chain (multiples of kT in the underlying energy units)
+TEMPERATURE 3.3
+
+! Do up to 90000000 BH steps multiplying the temperate by 1.0 each step
+! We hope to hit the TARGET long before needing this many!
+STEPS 90000000 1.0
+
+! Generate new geometries each BH step by apply a random Cartesian displacement
+! of up to 0.4 to each LJ atom and an angular step to each atom with binding
+! energy less than 0.51
+STEP 0.40 0.51
+
+! ADVANCED SAMPLING METHODS
+
+! If energy has not decreased in 40 BH steps, add the minimum we got stuck in 
+! to a cyclic AVOID list (see below)
+NEWRESTART 40
+
+! Reseed if the current minimum is within a distance of 4.0 of the 20 members
+! of the cyclic AVOID list populated by NEWRESTART
+AVOID 4.0 20 F
+
+!
+SYMMETRISE 1 0.02 0.040 0.09 0.1 0.5 18 0.32 2.0
