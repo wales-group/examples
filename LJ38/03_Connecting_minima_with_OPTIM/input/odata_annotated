@@ -1,38 +1,76 @@
 ! See OPTIM documentation or odata_annoted for keyword information
 
+! use the connection algorithm of Trygubenko and Wales to find a path between the endpoints specified with:
+! - a maximum of 100 connection cycles
+! - only 1 connection attempt for any pair of local minima
+! - DNEB image density of 20 (number of images = 20 x distance) 
+! - DNEB iteration density of 20 (optimisation iterations = 20 x number of images)
+! - a maximum of 30 DNEB images
+! - no additional images per connection attempt (only doing 1 per pair)
+! - a DNEB RMS force convergence condition of 0.025
+! for further details of the parameters, see the OPTIM documentation
 NEWCONNECT 100 1 20.0 20.0 30 0.0 0.025
 
+! specifies DNEB parameters for the double-ended transition state search in the first cycle ONLY
 NEWNEB 50 500 0.025 
+! specifies the value of the DNEB force constant to use between images 
 NEBK 10.0
 
+! specifies that a missing connection Dijkstra-based algorithm should be used to choose minima for connection in cycles of NEWCONNECT
+! the edge weights used are distances raised to the power of 1 
 DIJKSTRA 1
 
+! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
+! as we are nor providing a perm.allow file, all atoms are considered to be identical
 PERMDIST
+! try 5 random starting alignments as well as the standard one when using PERMDIST
 RANROT 5
 
+! define the energy and distance cutoffs below which we assume structures are identical
 EDIFFTOL 1.0D-6
 GEOMDIFFTOL 0.2
 
+! specify the RMS force convergence criterion for the L-BFGS minimiser 
 BFGSMIN  1.0D-6
+! set the history size of the L-BFGS algorithm to 10
 UPDATES 10 10
+! the size of step to take away from a stationary point of the wrong index if encountered
 PUSHOFF 0.02
+! if the provided endpoints have an RMS force greater than BFGSMIN, re-minimise them
 REOPTIMISEENDPOINTS
+! the maximum number of steps for any one L-BFGS minimisation
 BFGSSTEPS 5000
+! the maximum step size for both normal and Rayleigh-Ritz minimisation
 MAXBFGS 0.2 0.2
+! the maximum number of optimisation steps
 STEPS    200
 
+! transition states will be located using a hybrid BFGS/eigenvector following approach
 BFGSTS  50 3 25 0.0001
+! the maximum step size during hybrid eigenvector-following
 MAXSTEP 0.1
+! the upper limit for the maximum hybrid eigenvector following step size
 MAXMAX  0.2
+! set the trust radius used in eiganvector following
 TRAD 0.2
+! do not calculate the Hessian during geometry optimisation. Rayleigh-Ritz minimisation is used instead
+! to find the smallest eigenvalue and its eigenvector
 NOHESS
 
+! create a path.info file containing info on every min-ts-min triple found, on and off pathway
+! this is often used as input for PATHSAMPLE to create a database 
 DUMPALLPATHS
+! specify that we want up to 1000 additional frames to be printed between each min-ts-min triple
+! used mainly to produce smoothed path.xyz files for visualisation
 PATH   1000 0.0
+! calculate the pair energies for each structure along the pathway and assign atom types 
 PAIRCOLOUR 100
 
+! contains particles with a sphere of radius 5 (used to prevent evaporation)
 RADIUS 5.0
 
+! define the starting coordinates in the form atom type, x, y and z coordinate
+! using AX specifies the LJ potential in OPTIM
 POINTS
 AX         0.6299851998        0.3044874184       -1.6035162520
 AX         1.1252384555       -0.8376752902        1.0454755576

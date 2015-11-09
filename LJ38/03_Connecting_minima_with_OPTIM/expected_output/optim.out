@@ -125,7 +125,7 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
  OPTIM> Initial energy=    -173.9284266     RMS force=    0.7104901138E-06
  OPTIM> Final energy  =    -173.2523784     RMS force=    0.7113993280E-06
  KeyConnect> Maximum cycles = 100, maximum images = 30
- KeyConnect> Maximum attempts per pair of minima = 1, with increment image density of 5.00
+ KeyConnect> Maximum attempts per pair of minima = 1, with increment image density of 0.00
  KeyConnect> Image density = 20.00, iteration density = 20.00
  KeyNEB> Initial and final NEB force constants     10.00000000        10.00000000     factor=    1.010000000    
  KeyNEB> Number of images will vary depending on the separation of the endpoints
@@ -153,8 +153,8 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  tryconnect> 500-iteration DNEB run for minima 1_S and 2_F using 50 images  (DNEB attempt #1)  ...
  lbfgs> Final DNEB force constant      6.446089162    
- Time to go through NEB:   0.50800000000000001     
- Double-ended search iterations= 299 RMS= 0.0228 Dev= 7.85% S= 7.75 time= 0.51
+ Time to go through NEB:   0.48399999999999999     
+ Double-ended search iterations= 299 RMS= 0.0228 Dev= 7.85% S= 7.75 time= 0.48
  Following    5 images are candidates for TS:   12   22   29   33   44  
  Converged to TS (number of iterations):          5
  Converged to TS (number of iterations):         11
@@ -164,8 +164,8 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
  DNEB run yielded 5 true transition state(s) time=   0.08
 
  >>>>>  Path run for ts 1 ...
- Plus  side of path:                      74 steps. Energy=    -169.4031028       time=       0.02
- Minus side of path:                     103 steps. Energy=    -173.9284266       time=       0.02
+ Plus  side of path:                      74 steps. Energy=    -169.4031028       time=       0.01
+ Minus side of path:                     103 steps. Energy=    -173.9284266       time=       0.01
 
          E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
      -169.4031028 0.41157E-01     -169.3619460  4.5665         -173.9284266   3.456   1.263   4.326   8.785
@@ -183,7 +183,7 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  >>>>>  Path run for ts 3 ...
  Plus  side of path:                      97 steps. Energy=    -168.4153195       time=       0.02
- Minus side of path:                     203 steps. Energy=    -170.9924926       time=       0.04
+ Minus side of path:                     203 steps. Energy=    -170.9924926       time=       0.02
 
          E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
      -168.4153195 0.13821         -168.2771069  2.7154         -170.9924926   6.133   1.492   3.166  12.001
@@ -192,7 +192,7 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  >>>>>  Path run for ts 4 ...
  Plus  side of path:                     226 steps. Energy=    -169.3558662       time=       0.04
- Minus side of path:                     102 steps. Energy=    -168.4153195       time=       0.01
+ Minus side of path:                     102 steps. Energy=    -168.4153195       time=       0.02
 
          E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
      -169.3558662  1.0241         -168.3317674 0.83552E-01     -168.4153195   3.696   1.416   2.705  14.046
@@ -215,8 +215,8 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  tryconnect> 600-iteration DNEB run for minima 3_S and 9_F using 30 images  (DNEB attempt #1)  ...
  lbfgs> Final DNEB force constant      32.25099944    
- Time to go through NEB:   0.55600000000000005     
- Double-ended search iterations= 600 RMS= 0.1021 Dev= 9.76% S= 4.91 time= 0.56
+ Time to go through NEB:   0.54399999999999982     
+ Double-ended search iterations= 600 RMS= 0.1021 Dev= 9.76% S= 4.91 time= 0.54
  Following    2 images are candidates for TS:   10   29  
  Converged to TS (number of iterations):         14
  Converged to TS (number of iterations):          5
@@ -242,7 +242,7 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
      -170.9568946 0.16377         -170.7931234  2.0846         -172.8777364   2.374   1.043  12.352   3.076
         Known (#9)                                              *NEW* (Placed in 10)
  Unconnected minimum 10 found its way to F set.
- >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 3 >>>>>>>>>>>>>>>>>>>>> 10 minima and 7 ts are known >>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 3 >>>>>>>>>>>>>>>>>>>>> 10 minima and 6 ts are known >>>>>>>>>>>>>>>>>>>
  decide> Shortest path in Dijkstra has      4 steps with      1 missing connections, weight=     2.2699    
  decide> The unconnected minima in the chain and their distances are:
     10        2.27     3 
@@ -250,8 +250,8 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  tryconnect> 600-iteration DNEB run for minima 3_S and 10_F using 30 images  (DNEB attempt #1)  ...
  lbfgs> Final DNEB force constant      7.462153966    
- Time to go through NEB:   0.31599999999999984     
- Double-ended search iterations= 343 RMS= 0.0239 Dev= 8.24% S= 4.72 time= 0.32
+ Time to go through NEB:   0.31200000000000028     
+ Double-ended search iterations= 343 RMS= 0.0239 Dev= 8.24% S= 4.72 time= 0.31
  Following    2 images are candidates for TS:   11   16  
  Converged to TS (number of iterations):         14
  Converged to TS (number of iterations):         16
@@ -261,13 +261,13 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  >>>>>  Path run for ts 8 ...
  Plus  side of path:                     172 steps. Energy=    -170.9924926       time=       0.02
- Minus side of path:                     104 steps. Energy=    -169.1029417       time=       0.02
+ Minus side of path:                     104 steps. Energy=    -169.1029417       time=       0.01
 
          E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
      -170.9924926  1.9581         -169.0344300 0.68512E-01     -169.1029417   4.261   1.400   2.088  18.196
         Known (#7)                                              *NEW* (Placed in 11)
  Connection established between members of the U set.
- >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 4 >>>>>>>>>>>>>>>>>>>>> 11 minima and 8 ts are known >>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 4 >>>>>>>>>>>>>>>>>>>>> 11 minima and 7 ts are known >>>>>>>>>>>>>>>>>>>
  decide> Shortest path in Dijkstra has      5 steps with      2 missing connections, weight=     2.4835    
  decide> The unconnected minima in the chain and their distances are:
      9        2.00     4     5        0.49     3 
@@ -275,12 +275,12 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  tryconnect> 600-iteration DNEB run for minima 4_U and 9_F using 30 images  (DNEB attempt #1)  ...
  lbfgs> Final DNEB force constant      47.64941469    
- Time to go through NEB:    1.0040000000000000     
- Double-ended search iterations= 600 RMS= 0.2028 Dev= 8.53% S= 4.03 time= 1.00
+ Time to go through NEB:   0.98800000000000043     
+ Double-ended search iterations= 600 RMS= 0.2028 Dev= 8.53% S= 4.03 time= 0.99
  Following    2 images are candidates for TS:    7   29  
  Converged to TS (number of iterations):         11
  Converged to TS (number of iterations):          5
- DNEB run yielded 2 true transition state(s) time=   0.05
+ DNEB run yielded 2 true transition state(s) time=   0.04
  isnewts> transition state is the same as number        7 energy=     -170.7931234338
  tryconnect> Try the path again for ts      2 with pushoff=    0.2000000000E-02
 
@@ -305,7 +305,7 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  tryconnect> 180-iteration DNEB run for minima 3_S and 5_U using 9 images  (DNEB attempt #1)  ...
  lbfgs> Final DNEB force constant      9.523809524    
- Time to go through NEB:    0.0000000000000000     
+ Time to go through NEB:    4.0000000000004476E-003
  Double-ended search iterations= 9 RMS= 0.0174 Dev= 1.10% S= 0.49 time= 0.00
  Following    1 images are candidates for TS:    8  
  Converged to TS (number of iterations):          4
@@ -319,7 +319,7 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
      -169.2669205 0.13878E-02     -169.2655327 0.13757         -169.4031028   0.649   0.485   3.826   9.933
         Known (#5)                                              Known (#3)
  Unconnected minimum 5 found its way to S set.
- >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 5 >>>>>>>>>>>>>>>>>>>>> 12 minima and 11 ts are known >>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 5 >>>>>>>>>>>>>>>>>>>>> 12 minima and 9 ts are known >>>>>>>>>>>>>>>>>>>
  decide> Shortest path in Dijkstra has      8 steps with      2 missing connections, weight=     1.6337    
  decide> The unconnected minima in the chain and their distances are:
     10        0.99     7    12        0.64     4 
@@ -327,7 +327,7 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  tryconnect> 380-iteration DNEB run for minima 7_U and 10_F using 19 images  (DNEB attempt #1)  ...
  lbfgs> Final DNEB force constant      7.835261665    
- Time to go through NEB:    3.2000000000000028E-002
+ Time to go through NEB:    2.7999999999999581E-002
  Double-ended search iterations= 26 RMS= 0.0211 Dev= 7.04% S= 1.13 time= 0.03
  Following    1 images are candidates for TS:    2  
  Converged to TS (number of iterations):          4
@@ -344,14 +344,14 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
 
  tryconnect> 240-iteration DNEB run for minima 4_S and 12_F using 12 images  (DNEB attempt #1)  ...
  lbfgs> Final DNEB force constant      8.638375985    
- Time to go through NEB:    1.1999999999999567E-002
+ Time to go through NEB:    1.2000000000000455E-002
  Double-ended search iterations= 17 RMS= 0.0228 Dev= 3.06% S= 0.68 time= 0.01
  Following    1 images are candidates for TS:    3  
  Converged to TS (number of iterations):          6
- DNEB run yielded 1 true transition state(s) time=   0.01
+ DNEB run yielded 1 true transition state(s) time=   0.02
 
  >>>>>  Path run for ts 13 ...
- Plus  side of path:                     113 steps. Energy=    -169.3044657       time=       0.02
+ Plus  side of path:                     113 steps. Energy=    -169.3044657       time=       0.01
  Minus side of path:                     108 steps. Energy=    -169.2052539       time=       0.02
 
          E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
@@ -371,7 +371,7 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
  Number of TS in the path       =      8
  Number of cycles               =      5
 
- Elapsed time=                                 6.61
+ Elapsed time=                                 6.40
  OPTIM> # of energy calls=                          0 time=           0.00 %=  0.0
- OPTIM> # of energy+gradient calls=             75064 time=           1.26 %= 19.1
- OPTIM> # of energy+gradient+Hessian calls=        39 time=           0.03 %=  0.4
+ OPTIM> # of energy+gradient calls=             75064 time=           1.22 %= 19.1
+ OPTIM> # of energy+gradient+Hessian calls=        39 time=           0.04 %=  0.7
