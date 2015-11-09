@@ -1,6 +1,6 @@
 # LJ38
 
-# Plot the progress of the LJ38 basin-hopping run
+# Plot the energy along the initial discrete path found by OPTIM
 
 # Set plot parameters
 se xla "Integrated path length"
@@ -9,5 +9,5 @@ se tit "Initial discrete path between two LJ38 minima"
 se grid
 unset key
 
-# Plot 'best' (current lowest energy), 'markov' (energy of structure in Markov chain) and 'energy' (energy of each quench)
+# Plot 'EofS' containing the energy as a function of the integrated path length
 pl [:20.5][] 'EofS' w l lw 2 linecolor rgb "red"
