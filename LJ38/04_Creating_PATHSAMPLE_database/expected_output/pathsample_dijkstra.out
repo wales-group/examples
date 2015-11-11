@@ -1,0 +1,70 @@
+PATHSAMPLE version rUnversioned directory                                                 
+keywords> Distance tolerance for identifying atoms in the same orbit=        0.00100
+keywords> Number of groups of permutable atoms=     1
+keywords> group      1 contains     38 atoms with      0 additional atom sets:
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22
+    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38  
+main> WARNING - PERM set without perm.allow file in COPYFILES
+*************************************************************************************************
+debug printing is OFF
+Running on          1 processors for shared memory, single node setup
+Number of jobs per processor=         1
+Sleep times between OPTIM job submissions (s)=     1.000000000         1.000000000    
+finite system (not bulk)
+OPTIM system symbol: AX
+number of atoms=   38
+minimum number of connections for minima=         1
+maximum number of ts searches to achieve this minimum value=        10
+random number seed=         1
+initial perturbation parameter single-ended transition state searches=        0.90000
+energy difference  criterion for distinguishing stationary points=    0.1000000000E-05
+distance criterion for distinguishing stationary points=    0.2000000000E+00
+inertia difference criterion for setup check=    0.1000000000E+00
+sampling direction is a<-b
+OPTIM executable: /home/energy/workshop/binaries/OPTIM                                            
+Temperature=        0.10000
+Performing Dijkstra analysis to find the most important paths
+Rate calculation will iteratively remove minima with     0 connections or fewer
+path.info files will be read as min-sad-min triples
+*************************************************************************************************
+setup> locations read for          1 min of type A
+setup> locations read for          1 min of type B
+setup> parameters read for         12 min
+tsdouble> Maximum number of ts increased to       20
+setup> parameters read for         11 ts
+main> time spent in setup=        0.00000
+getnconn> max connections:          4 for min          6 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        5 cycles; maximum=       8 disconnected=       0
+Dijkstra> steps to B region converged in        4 cycles; maximum=       8 disconnected=       0
+Dijkstra> Best path for min        8 and any A minimum, k^SS A<-B    0.1078101912E-17
+       2       1       4       3      12       6      10       9       8
+Dijkstra> Best path between any B minimum and any A minimum:
+       2       1       4       3      12       6      10       9       8
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is     0.1078101912E-17 for      8 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       2     -173.9284265906       1     -169.3619459642       1     -169.4031027635
+       1     -169.4031027635       9     -169.2655326538       4     -169.2669204568
+       4     -169.2669204568       2     -168.7591077595       3     -169.2052539062
+       3     -169.2052539062      11     -169.1758050760      12     -169.3044656797
+      12     -169.3044656797       8     -168.9079300331       6     -170.9924926291
+       6     -170.9924926291      10     -170.9790671321      10     -172.8777364112
+      10     -172.8777364112       6     -170.7931234338       9     -170.9568946176
+       9     -170.9568946176       5     -170.8774926607       8     -173.2523784156
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                          5     2.374885755    
+                                          8     2.084562596    
+                                         10     1.898669279    
+                                          2    0.4461461467    
+                                          6    0.1637711838    
+                                         11    0.1286606037    
+                                          1    0.4115679933E-01
+                                          9    0.1387803054E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     8
+Dijkstra> detailed balance, ratio should be one if SS applies:      1.647605932    
+Dijkstra> MFPT for fastest path: A<-B value=    0.6445304551E+15 B<-A value=    0.8287945950E+16
+Dijkstra> rates without conditional probability: A<-B value=    0.1551517065E-14 B<-A value=    0.1206571575E-15
+Dijkstra> rates with    conditional probability: A<-B value=    0.1551517065E-14 B<-A value=    0.1206571575E-15
+main> CPU time spent in Dijkstra                    =    0.36000E-01 s
+main> total CPU time spent in PATHSAMPLE            =    0.36000E-01 s

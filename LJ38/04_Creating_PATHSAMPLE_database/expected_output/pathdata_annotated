@@ -1,0 +1,45 @@
+! PATHSAMPLE input to create an initial database from OPTIM path.info for LJ38
+! For further details, see the PATHSAMPLE documentation
+
+! the path to the OPTIM binary to use
+EXEC           /home/energy/workshop/binaries/OPTIM
+! run OPTIM locally on a single core - modify as appropriate
+CPUS           1
+! specifies the atom type to be used in OPTIM and thus the potential, in this case Lennard-Jones
+SYSTEM         AX
+! the number of atoms in the system
+NATOMS         38
+! specify the random number seed, used to make calculations repeatable
+SEED           1
+! specify the direction of the pathway using spectroscopic convention i.e. AB = A<-B where A and B are the endpoints
+! in min.A and min.B respectively
+DIRECTION      AB
+! minimum number of connected minima to be found for new minimum
+CONNECTIONS    1
+! specify the temperature to use when calculating rate constants 
+TEMPERATURE    0.1
+
+! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
+! as we are nor providing a perm.allow file, all atoms are considered to be identical
+PERMDIST 
+! try 5 random starting alignments as well as the standard one when using PERMDIST
+RANROT         5
+! define the energy and distance cutoffs below which we assume structures are identical - matches odata.connect
+ETOL           1.0D-6
+GEOMDIFFTOL    0.2
+! additionally use a principal moment of inertia tensor difference criterion for distinguishing stationary points
+ITOL           0.1D0
+
+! STEP 1: creating the initial database from OPTIM path.info file
+! use the stationary points in path.info.initial to create an initial PATHSAMPLE database
+! min.A and min.B are set to 1 and 2 as a baseline to be changed 
+STARTFROMPATH  path.info.initial 1 2
+! don't run any OPTIM connection cycles - we only want to set the database up at this point
+CYCLES         0
+
+! STEP 2: run a Dijkstra analysis to identify the 'fastest path' (initially commented) 
+! perform a Dijkstra analysis, ignoring any minima with 0 or less connections
+! DIJKSTRA       0
+! don't run any OPTIM connection cycles, we only want to identify the fastest path
+! CYCLES         0
+
