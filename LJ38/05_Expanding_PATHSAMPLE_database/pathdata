@@ -1,0 +1,22 @@
+! PATHSAMPLE input to expand the database for LJ38 using the UNTRAP approach
+! For further details, see pathdata_annotated and the PATHSAMPLE documentation
+
+EXEC           /home/energy/workshop/binaries/OPTIM
+CPUS           1
+SYSTEM         AX
+NATOMS         38
+SEED           1
+DIRECTION      AB
+CONNECTIONS    1
+TEMPERATURE    0.1
+
+PERMDIST 
+RANROT         5
+ETOL           1.0D-6
+GEOMDIFFTOL    0.2
+ITOL           0.1D0
+
+UNTRAP         0.035 3.0
+CYCLES         50
+
+NGT 0 T

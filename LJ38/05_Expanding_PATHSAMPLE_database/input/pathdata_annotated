@@ -1,0 +1,42 @@
+! PATHSAMPLE input to expand the database for LJ38 using the UNTRAP approach
+! For further details, see the PATHSAMPLE documentation
+
+! the path to the OPTIM binary to use
+EXEC           /home/energy/workshop/binaries/OPTIM
+! run OPTIM locally on a single core - modify as appropriate
+CPUS           1
+! specifies the atom type to be used in OPTIM and thus the potential, in this case Lennard-Jones
+SYSTEM         AX
+! the number of atoms in the system
+NATOMS         38
+! specify the random number seed, used to make calculations repeatable
+SEED           1
+! specify the direction of the pathway using spectroscopic convention i.e. AB = A<-B where A and B are the endpoints
+! in min.A and min.B respectively
+DIRECTION      AB
+! minimum number of connected minima to be found for new minimum
+CONNECTIONS    1
+! specify the temperature to use when calculating rate constants 
+TEMPERATURE    0.1
+
+! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
+! as we are nor providing a perm.allow file, all atoms are considered to be identical
+PERMDIST 
+! try 5 random starting alignments as well as the standard one when using PERMDIST
+RANROT         5
+! define the energy and distance cutoffs below which we assume structures are identical - matches odata.connect
+ETOL           1.0D-6
+GEOMDIFFTOL    0.2
+! additionally use a principal moment of inertia tensor difference criterion for distinguishing stationary points
+ITOL           0.1D0
+
+! choose minima to connect using a scheme designed to eliminate kinetic traps
+! details beyond the scope of this example - see the PATHSAMPLE documentation 
+UNTRAP         0.035 3.0
+! run 50 connection cycles (50 x CPUS OPTIM jobs)
+CYCLES         50
+
+! use a graph transformation approach to calculate the rate constants
+! - minima with 0 connections are ignored
+! - the kinetic monte-carlo rate constants are also calculated (T)
+NGT 0 T
