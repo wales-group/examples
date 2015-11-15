@@ -33,8 +33,9 @@ some keywords are commented out, starting with ' !'. These are optional values t
 ### Running GMIN
 
 Assuming you have a **GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
-```GMIN```
-
+```
+GMIN
+```
 As LJ38 is a relatively small system, this won't take long to finish - around 30 seconds - and will produce a few output files that we will look at in more detail. 
 
 First is *output*, containing a lot of information on how the job progressed. The basin-hopping procedure in **GMIN** can be broken down into three phases:
