@@ -142,7 +142,7 @@ final pathway) in min-ts-min triples. We will be using this file in Example 4
 
 ### Visualising the pathway using gnuplot
 
-The initial pathway found by **OPTIM** can be relative non-optimal, sometimes containing unphysically high barriers or structures. A sensible first sanity
+The initial pathway found by **OPTIM** can be relatively non-optimal, sometimes containing unphysically high barriers or structures. A sensible first sanity
 check for any pathway is to look at how the energy varies along it. In this case, we can plot the energy as a function of the integrated path length (contained
 in the *EofS* file) using **gnuplot**
 
@@ -160,9 +160,9 @@ We often want to investigate the mechanism involved in the pathway between endpo
 vmd -e view_pathway.tcl
 ```
 
-When you press play at the bottom right of the 'VMD Main' you will start to see the conformation of the cluster evolve along the pathway. The pathway appears smooth 
-as we are using the `PATH` keyword in *odata* to include intermediate structures between each station point in *path.xyz*. For this reason, you shouldn't use the
-coordinates in this file for anything else.
+When you press play at the bottom right of the 'VMD Main' window, you will start to see the conformation of the cluster evolve along the pathway. The pathway 
+appears smooth as we are using the `PATH` keyword in *odata* to include intermediate structures between each station point in *path.xyz*. For this reason, 
+you shouldn't use the coordinates in this file for anything else.
 
 ## Extension: connecting other minima
 
@@ -171,4 +171,4 @@ To connect other pairs of minima, you only need to substitute the coordinates in
 Run **GMIN** as in Example 1 with a high `TEMPERATURE` and `SAVE` to produce a range of high energy minima and connect some of these to the global minimum by
 replacing the coordinates in finish by those in the **GMIN** *lowest* file. 
 
-Don't forget to remove the atom names (SI) when you do this! *finish* should contain just the (x,y,z) coordinates for each atom, one per line.
+Don't forget to remove the atom names (SI) when you do this! *finish* should contain just the (x,y,z) coordinates for each atom, one atom per line.
