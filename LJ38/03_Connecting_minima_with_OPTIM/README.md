@@ -73,7 +73,7 @@ Once both have been optimised, the final energies of the endpoints are printed. 
 
 **OPTIM** forms a connected pathway through a series of 'CONNECT' cycles as defined by the `NEWCONNECT` keyword in *odata*. Each connection cycle can be further
 broken down as follows:
-- Use a Dijkstra analysis to identify gaps in the pathway and select minima to connect
+  - Use a Dijkstra analysis to identify gaps in the pathway and select minima to connect
 
 ```
 >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 1 >>>>>>>>>>>>>>>>>>>>> 2 minima and 0 ts are known >>>>>>>>>>>>>>>>>>>>
@@ -82,7 +82,7 @@ broken down as follows:
      2        3.14     1
 ``` 
 
-- Identify intervening transition states by finding initial candidates using the Doubly-Nudged Elastic Band (DNEB) approach from which true transition states are refined using a hybrid BFGS/eigenvector following approach and Rayleigh-Ritz minimisation. 
+  - Identify intervening transition states by finding initial candidates using the Doubly-Nudged Elastic Band (DNEB) approach from which true transition states are refined using a hybrid BFGS/eigenvector following approach and Rayleigh-Ritz minimisation. 
 
 ```
  tryconnect> First DNEB calculation will use parameters from the NEWNEB line in odata
@@ -100,7 +100,7 @@ broken down as follows:
  DNEB run yielded 5 true transition state(s) time=   0.08
 ``` 
 
-- Find the minima connected to each transition state by stepping off along the steepest descent paths
+  - Find the minima connected to each transition state by stepping off along the steepest descent paths
 
 ```
 >>>>>  Path run for ts 1 ...
