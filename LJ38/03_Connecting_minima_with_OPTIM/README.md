@@ -49,7 +49,7 @@ The **OPTIM** output file we have created, *optim.out*, can be broken down into 
 1. Check endpoints and reoptimise if needed
 
 It is possible that the endpoint structures you supply are not converged to a tight enough RMS force to satisfy the `BFGSCONV` value specified in *odata*. In this
-case, **OPTIM** first tightly minimised them:
+case, **OPTIM** first tightly minimises them:
 
 ```
  OPTIM> Initial energy=    -173.9284262     RMS force=    0.6150270245E-03
@@ -73,7 +73,7 @@ Once both have been optimised, the final energies of the endpoints are printed. 
 
 **OPTIM** forms a connected pathway through a series of 'CONNECT' cycles as defined by the `NEWCONNECT` keyword in *odata*. Each connection cycle can be further
 broken down as follows:
-  1. Use a Dijkstra analysis to identify gaps in the pathway and select minima to connect
+- Use a Dijkstra analysis to identify gaps in the pathway and select minima to connect
 
 ```
 >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 1 >>>>>>>>>>>>>>>>>>>>> 2 minima and 0 ts are known >>>>>>>>>>>>>>>>>>>>
@@ -82,7 +82,7 @@ broken down as follows:
      2        3.14     1
 ``` 
 
-  2. Identify intervening transition states by finding initial candidates using the Doubly-Nudged Elastic Band (DNEB) approach from which true transition states are refined using a hybrid BFGS/eigenvector following approach and Rayleigh-Ritz minimisation. 
+- Identify intervening transition states by finding initial candidates using the Doubly-Nudged Elastic Band (DNEB) approach from which true transition states are refined using a hybrid BFGS/eigenvector following approach and Rayleigh-Ritz minimisation. 
 
 ```
  tryconnect> First DNEB calculation will use parameters from the NEWNEB line in odata
@@ -100,7 +100,7 @@ broken down as follows:
  DNEB run yielded 5 true transition state(s) time=   0.08
 ``` 
 
-  3. Find the minima connected to each transition state by stepping off along the steepest descent paths
+- Find the minima connected to each transition state by stepping off along the steepest descent paths
 
 ```
 >>>>>  Path run for ts 1 ...
