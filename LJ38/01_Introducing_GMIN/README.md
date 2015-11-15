@@ -107,3 +107,5 @@ efficiency of the basin-hopping run. Some alternative values for each have been 
 examining the difference in the **gnuplot** plot as before.
 
 You can simply re-run GMIN as above once you have made a change as the output files will be overwritten. 
+<img src="progress_eg.png" width="100%", height="100%">
+
