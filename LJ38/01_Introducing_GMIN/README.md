@@ -1,6 +1,6 @@
 # Example 1 - Introducing GMIN
 
-**GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping methodology. 
+**GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping global optimisation methodology. 
 Here we use it to find the two lowest energy minima for a cluster of 38 Lennard-Jones particles, known as LJ38.
 
 ## Directory contents
@@ -52,7 +52,7 @@ Qu          2 E=    -167.5223376     steps=  109 RMS= 0.47082E-02 Markov E=    -
 
 The input coordinates (here in the file *coords*) are read in and the system is quenched to a local minimum, giving you ‘Qu 0’ which forms the first structure 
 in a Markov chain of states. **GMIN** then begins to take basin-hopping steps. A new geometry is generated according to the keywords we are using and is quenched. 
-The outcome of a metropolis test using the energy of the current 'Markov' minimum and `TEMPERATURE` specified in *data* then determines whether we accept the new 
+The outcome of a metropolis test using the energy of the current Markov minimum and `TEMPERATURE` specified in *data* then determines whether we accept the new 
 minimum into the Markov chain or not. If it was accepted, this minimum will be used as a starting point from which to generate the next new geometry, otherwise we 
 base it on the previous step.
  
@@ -64,7 +64,8 @@ Steps are now:  STEP=    0.4200  ASTEP=    0.5355 Temperature is now:    1.0000
 Qu         51 E=    -166.4647262     steps=  192 RMS= 0.43178E-02 Markov E=    -169.1284349     t=        0.1
 ```
 
-TO ADD
+Every 50 quenches, we compare the acceptance ratio for the metropolis test to that we are hoping to attain (0.5 by default) and scale the size of the change we 
+are making - here a random Cartesian perturbation to all particles of maximum size specified by `STEP` - to generate new geometries to move toward the target ratio.
 
 3. Final quenches and file output
 ```
@@ -72,5 +73,37 @@ Final Quench      1 energy=    -173.9284262     steps=    5 RMS force=  0.615027
 Final Quench      2 energy=    -173.2523776     steps=    7 RMS force=  0.9629919E-03 time=       11.44
 ```
 
-TO ADD  
+Finally, after we have done the number of `STEPS` specified in *data*, or have found the `TARGET` - the `SAVE` lowest energy minima found are tightly converged 
+and output to the lowest file.
 
+### Visualising the progress of the basin-hopping run using gnuplot
+
+To give us an idea of how **GMIN** is performing with the parameters we have specified in *data*, we have included the `TRACKDATA` keyword. The *best*, *markov* 
+and *energy* files it produces can be visualised with gnuplot:
+```
+gnuplot -persist plot_progress.plt
+```
+
+The energy of each quenched minimum is shown in black. Blue shows the energy of the structure in the Markov chain (used to generate new geometries) and red 
+shows the energy of the lowest energy minimum. For the default parameters included in this example, you can see that we quickly reduce the energy - locating the
+global minimum within the first few hundred `STEPS`. The Markov energy continues to fluctuate, showing that we are also successfully exploring higher energy minima. 
+
+### Visualising the lowest energy minimum with VMD
+
+**GMIN** produces PDB and **AMBER** restart files for biological systems, but for a Lennard-Jones system we can visualise the lowest energy structure with VMD,  
+colouring the atoms by their pair energies using some custom TCL scripting:
+
+```
+vmd -e view_best.tcl
+```
+
+In this colouring scheme, the symmetry of the global minimum is immediately apparent. 
+
+
+## Extension: effect of varying GMIN parameters
+
+As a learning exercise, it is interesting to investigate the effect of varying the maximum `STEP` size and `TEMPERATURE` in the **GMIN** *data* file on the
+efficiency of the basin-hopping run. Some alternative values for each have been included in *data* but left commented out. Try a few different combinations, 
+examining the difference in the **gnuplot** plot as before.
+
+You can simply re-run GMIN as above once you have made a change as the output files will be overwritten. 
