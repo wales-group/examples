@@ -140,18 +140,35 @@ final pathway) in min-ts-min triples. We will be using this file in Example 4
 
 - *EofS* containing the energy as a function of integrated path length
 
-### Visualise
+### Visualising the pathway using gnuplot
+
+The initial pathway found by **OPTIM** can be relative non-optimal, sometimes containing unphysically high barriers or structures. A sensible first sanity
+check for any pathway is to look at how the energy varies along it. In this case, we can plot the energy as a function of the integrated path length (contained
+in the *EofS* file) using **gnuplot**
+
+```
+gnuplot -persist plot_pathway.plt
+```
+
+It should look something like this:
 <img src="pathway_eg.png" width="100%", height="100%">
  
+### Examining the structures along the pathway using VMD
 
+We often want to investigate the mechanism involved in the pathway between endpoints, something we can do visually in this case using **VMD** to load path.xyz:
+```
+vmd -e view_pathway.tcl
+```
 
+When you press play at the bottom right of the 'VMD Main' you will start to see the conformation of the cluster evolve along the pathway. The pathway appears smooth 
+as we are using the `PATH` keyword in *odata* to include intermediate structures between each station point in *path.xyz*. For this reason, you shouldn't use the
+coordinates in this file for anything else.
 
-## Extension: using even more optimised input
+## Extension: connecting other minima
 
-The input files in *./input_SYMMETRISECSM* demonstrate just how fast we can find the global minimum for LJ38 with extremely optimised parameters. 
+To connect other pairs of minima, you only need to substitute the coordinates in *odata* under `POINTS` and/or in the *finish* file. 
 
-Copy the input into your working directory as before and run another 100 **GMIN** runs to calculate the MFET - remembering to change the directory you 
-save the output to when running the script.
+Run **GMIN** as in Example 1 with a high `TEMPERATURE` and `SAVE` to produce a range of high energy minima and connect some of these to the global minimum by
+replacing the coordinates in finish by those in the **GMIN** *lowest* file. 
 
-Feel free to alter both the `STEP` size and `TEMPERATURE` in the *data* file as in Example 1 to see how changing them (and thus the efficiency of basin-hopping) 
-affects the MFET. 
+Don't forget to remove the atom names (SI) when you do this! *finish* should contain just the (x,y,z) coordinates for each atom, one per line.
