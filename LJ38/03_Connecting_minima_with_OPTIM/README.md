@@ -46,7 +46,7 @@ OPTIM > optim.out & ; tail -f optim.out
 
 The **OPTIM** output file we have created, *optim.out*, can be broken down into sections as follows:
 
-1. Check endpoints and reoptimise if needed
+#### Check endpoints and reoptimise if needed
 It is possible that the endpoint structures you supply are not converged to a tight enough RMS force to satisfy the `BFGSCONV` value specified in *odata*. In this
 case, **OPTIM** first tightly minimises them:
 ```
@@ -65,8 +65,7 @@ Once both have been optimised, the final energies of the endpoints are printed. 
  OPTIM> Initial energy=    -173.9284266     RMS force=    0.7104901138E-06
  OPTIM> Final energy  =    -173.2523784     RMS force=    0.7113993280E-06
 ```
-
-2. Perform connection cycles to find a sequence of minima and transition states that form a connected pathway
+#### Perform connection cycles to find a sequence of minima and transition states that form a connected pathway
 **OPTIM** forms a connected pathway through a series of 'CONNECT' cycles as defined by the `NEWCONNECT` keyword in *odata*. Each connection cycle can be further
 broken down as follows:
   1. Use a Dijkstra analysis to identify gaps in the pathway and select minima to connect
@@ -118,7 +117,7 @@ Connected path found
    7     -172.8777364  2.0846        -170.7931234 0.16377        -170.9568946   2.374   1.043  12.352   3.076
    5     -170.9568946 0.79402E-01    -170.8774927  2.3749        -173.2523784   1.726   1.090   7.654   4.965
 ```
-3. Output the connected pathway and associated files
+#### Output the connected pathway and associated files
 Once **OPTIM** has identified a connected pathway, it produces a set of output files including:
   - *path.info* containing the coordinates and vibrational frequencies of all the minima and transition states found (not just those along the 
 final pathway) in min-ts-min triples. We will be using this file in Example 4
