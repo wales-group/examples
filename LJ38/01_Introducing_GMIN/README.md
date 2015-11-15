@@ -50,9 +50,13 @@ Qu          1 E=    -168.6121576     steps=  107 RMS= 0.39064E-02 Markov E=    -
 Qu          2 E=    -167.5223376     steps=  109 RMS= 0.47082E-02 Markov E=    -168.6121576     t=        0.0
 ```
 
-TO ADD
+The input coordinates (here in the file *coords*) are read in and the system is quenched to a local minimum, giving you ‘Qu 0’ which forms the first structure 
+in a Markov chain of states. **GMIN** then begins to take basin-hopping steps. A new geometry is generated according to the keywords we are using and is quenched. 
+The outcome of a metropolis test using the energy of the current 'Markov' minimum and `TEMPERATURE` specified in *data* then determines whether we accept the new 
+minimum into the Markov chain or not. If it was accepted, this minimum will be used as a starting point from which to generate the next new geometry, otherwise we 
+base it on the previous step.
  
-2. STEP size adjustment to satisfy target acceptance ratio
+2. `STEP` size adjustment to satisfy target acceptance ratio
 ```
 Qu         50 E=    -169.1284349     steps=  117 RMS= 0.23688E-02 Markov E=    -168.8944059     t=        0.1
 Acceptance ratio for previous     50 steps=  0.6200  FAC=  1.0500
