@@ -65,6 +65,7 @@ Once both have been optimised, the final energies of the endpoints are printed. 
  OPTIM> Initial energy=    -173.9284266     RMS force=    0.7104901138E-06
  OPTIM> Final energy  =    -173.2523784     RMS force=    0.7113993280E-06
 ```
+
 2. Perform connection cycles to find a sequence of minima and transition states that form a connected pathway
 **OPTIM** forms a connected pathway through a series of 'CONNECT' cycles as defined by the `NEWCONNECT` keyword in *odata*. Each connection cycle can be further
 broken down as follows:
