@@ -107,5 +107,9 @@ efficiency of the basin-hopping run. Some alternative values for each have been 
 examining the difference in the **gnuplot** plot as before.
 
 You can simply re-run GMIN as above once you have made a change as the output files will be overwritten. 
+
+By changing these parameters, it is possible to use **GMIN** for more than just finding the global minimum. For example, with a high `TEMPERATUEE` and `SAVE` 
+we can harvest high energy minima that can then be used to seed molecular dynamics runs, or serve as starting points for calculating the mean first encounter time
+(MFET) when random coordinates are not suitable. 
 <img src="progress_eg.png" width="100%", height="100%">
 
