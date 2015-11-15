@@ -68,14 +68,16 @@ Once both have been optimised, the final energies of the endpoints are printed. 
 #### Perform connection cycles to find a sequence of minima and transition states that form a connected pathway
 **OPTIM** forms a connected pathway through a series of 'CONNECT' cycles as defined by the `NEWCONNECT` keyword in *odata*. Each connection cycle can be further
 broken down as follows:
-  1. Use a Dijkstra analysis to identify gaps in the pathway and select minima to connect
+
+- Use a Dijkstra analysis to identify gaps in the pathway and select minima to connect
 ```
 >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 1 >>>>>>>>>>>>>>>>>>>>> 2 minima and 0 ts are known >>>>>>>>>>>>>>>>>>>>
  decide> Shortest path in Dijkstra has      1 steps with      1 missing connections, weight=     3.1410
  decide> The unconnected minima in the chain and their distances are:
      2        3.14     1
 ``` 
-  2. Identify intervening transition states by finding initial candidates using the Doubly-Nudged Elastic Band (DNEB) approach from which true transition 
+
+- Identify intervening transition states by finding initial candidates using the Doubly-Nudged Elastic Band (DNEB) approach from which true transition 
 states are refined using a hybrid BFGS/eigenvector following approach and Rayleigh-Ritz minimisation. 
 ```
  tryconnect> First DNEB calculation will use parameters from the NEWNEB line in odata
@@ -92,7 +94,8 @@ states are refined using a hybrid BFGS/eigenvector following approach and Raylei
  Converged to TS (number of iterations):          4
  DNEB run yielded 5 true transition state(s) time=   0.08
 ```
-  3. Find the minima connected to each transition state by stepping off along the steepest descent paths
+
+- Find the minima connected to each transition state by stepping off along the steepest descent paths
 ```
 >>>>>  Path run for ts 1 ...
  Plus  side of path:                      74 steps. Energy=    -169.4031028       time=       0.01
@@ -103,8 +106,10 @@ states are refined using a hybrid BFGS/eigenvector following approach and Raylei
         *NEW* (Placed in 3)                                     Known (#1)
  Unconnected minimum 3 found its way to S set.
 ```
+
 All the minima and transition states found are considered at the start of the next cycle when running the Dijkstra analysis and this continues
 until either we have exceeded the number of allowed connection cycles, run out of pairs of minima to connect or identified a connected pathway:
+
 ```
 Connected path found
   ts        E+         Ets - E+          Ets       Ets - E-          E-          S       D      gamma   ~N
@@ -117,6 +122,7 @@ Connected path found
    7     -172.8777364  2.0846        -170.7931234 0.16377        -170.9568946   2.374   1.043  12.352   3.076
    5     -170.9568946 0.79402E-01    -170.8774927  2.3749        -173.2523784   1.726   1.090   7.654   4.965
 ```
+
 #### Output the connected pathway and associated files
 Once **OPTIM** has identified a connected pathway, it produces a set of output files including:
   - *path.info* containing the coordinates and vibrational frequencies of all the minima and transition states found (not just those along the 
