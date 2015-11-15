@@ -78,7 +78,18 @@ Final Quench      2 energy=    -173.2523776     steps=    7 RMS force=  0.962991
 ```
 
 Finally, after we have done the number of `STEPS` specified in *data*, or have found the `TARGET` - the `SAVE` lowest energy minima found are tightly converged 
-and output to the lowest file.
+and output to the lowest file:
+
+```
+          38
+Energy of minimum      1=    -173.9284262     first found at step      108 after                14890 function calls
+SI         0.6299851998        0.3044874184       -1.6035162520
+SI         1.1252384555       -0.8376752902        1.0454755576
+SI        -0.0258273467       -1.6955955872        0.4303470738
+SI         1.1783957802       -0.9591345465       -0.8673414572
+SI        -1.6048179648       -0.6967336611       -0.0003749866
+SI        -0.0987361306        1.1034007222       -1.3541286680
+```
 
 ### Visualising the progress of the basin-hopping run using gnuplot
 

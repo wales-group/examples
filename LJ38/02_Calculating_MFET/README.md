@@ -42,8 +42,8 @@ succesful set of **GMIN** runs to give you an idea of what you will be producing
 
 ## Step-by-step
 
-Before you start producing output, take a minute to look through *data_annotated* and make sure you understand roughly the purpose of each keyword. You will find
-some keywords are commented out, starting with ' !'. It is also recommended that you read through the *100_LJ38_runs.csh* script as you go. 
+Before you start producing output, take a minute to look through *data_annotated* and make sure you understand roughly the purpose of each keyword. It is also 
+recommended that you read through the *100_LJ38_runs.csh* script as you go. 
 
 ### Calculating the MFET (basic input)
 
@@ -51,7 +51,7 @@ The input currently in the directory corresponds to the basic **GMIN** input fro
 **GMIN** from 100 random starting points is as simple as this:
 
 ```
-./100_LJ38_runs.sh basic 42
+./100_LJ38_runs.csh basic 42
 ```
 
 ‘*basic*’ is the name of the subdirectory that will contain the output for the runs and 42 is used to seed the random number generator that creates the initial 
@@ -80,7 +80,7 @@ the scope of this example - for more information see the [GMIN website](http://w
 Once we have copied the input into our working directory, we can start 100 **GMIN** runs as before, this time saving output in the *./sym* subdirectory:
 ```
 cp input_SYMMETRISE/* .
-./100_LJ38_runs.sh sym 42
+./100_LJ38_runs.csh sym 42
 ```
 
 This should run significantly faster, and the improvement will be reflected in the MFET stats printed at the end, for example:
