@@ -18,7 +18,10 @@ set radius=3.0
 set natoms=38
 
 # specify the binary to use
-set exec=~/workshop/binaries/GMIN
+# if GMIN is already in your $PATH
+set exec=GMIN
+# to specify a specific binary
+# set exec=~/workshop/binaries/GMIN
 
 # the first argument specifies the working directory, the second the seed to start at
 set directory=$1

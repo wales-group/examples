@@ -3,6 +3,10 @@
 **GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping global optimisation methodology. 
 Here we use it to find the two lowest energy minima for a cluster of 38 Lennard-Jones particles, known as LJ38.
 
+## Requirements
+In order to successfully follow this example, the following need to be in your *PATH*:
+- a **GMIN** binary
+
 ## Directory contents
 This directory, and the backup you can find in the *./input* subdirectory, contain all the files you need to run **GMIN** for LJ38. The *./expected_output*
 subdirectory contains output from a succesful **GMIN** run to give you an idea of what you will be producing, although your output may differ slightly.

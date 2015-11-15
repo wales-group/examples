@@ -9,7 +9,7 @@ gfortran -o rancoords rancoords.f
 ```
 
 ## gminconv2.f ##
-Applies a 1D Gaussian filter to convert a set of values into a continuous distribution. This is achieved via convolution with Gaussians.
+Applies a 1D Gaussian filter to convert a set of values into a continuous distribution. 
 ```
 gfortran -ffixed-line-length-132 -o gminconv2 gminconv2.f
 ``` 
