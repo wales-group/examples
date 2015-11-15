@@ -9,6 +9,8 @@ All should compile fine using **gfortran** and **cmake**.
 
 Visualisation is done with both **gnuplot** and **VMD** which can be obtained [here](http://www.ks.uiuc.edu/Research/vmd/)
 
+These examples are practically focussed and as such, we won't be covering the theoretical basis of basin-hopping global optimisation or discrete path sampling.
+
 ## Contents
 Each example is stand-alone - you do not need to do them in order, although it may aid understanding to do so.
 Expected output is provided for each, but bear in mind that it may not match yours 100% of the time.
