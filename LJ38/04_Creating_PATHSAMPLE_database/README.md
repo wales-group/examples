@@ -268,10 +268,15 @@ Dijkstra> Ordered downhill barriers,    ts        barrier
 
 #### Visualising the fastest path using gnuplot
 
-The Dijkstra analysis also produces a file *Epath* containing the energy of the minima and transition states along the fastest path.
+The Dijkstra analysis also produces an *Epath* file containing the energy of the minima and transition states along the fastest path. We can visualise this
+using **gnuplot** to check the pathway looks sensible. You should be able to see the similarity with the plot of **OPTIM**'s *EofS* file in Example 3. In this
+case no smoothing is done, hence the difference.
+
+<img src="Epath_eg.png" width="100%", height="100%">
 
 #### Create a disconnectivity graph, labelling the endpoints
 
+<img src="initialtree_eg.png" width="100%", height="100%">
 
 ## Extension: identifying other minima of interest on the disconnectivity graph
 
