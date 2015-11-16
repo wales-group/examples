@@ -125,10 +125,92 @@ tsdouble> Maximum number of ts increased to       20
 getallpaths> writing data for new ts to ts.data
 ```
 
+The **PATHSAMPLE** database we have created here resides in four key files:
+
+- *min.data* - 	contains the energy, log product of vibrational frequencies, symmetry and moments of inertia for each minimum:
+```
+     -169.403102763540545      520.527853268869080     1       58.8399774551       60.8497059222       67.7880496912
+     -173.928426590627964      538.668902793976144    48       61.0912066056       61.0912067955       61.0912072523
+     -169.205253906214921      512.433786480948584     1       56.5898755232       62.7391668556       69.2875369727
+```
+When we refer to minima by a number from here on our e.g. minimum 2, that corresponds to line 2 of *min.data*.
+
+- *ts.data* -	contains the energy, log product of vibrational frequencies, symmetry, minima numbers that it connects and moments of intertia for each
+		transition state:
+```
+     -169.361945964207905      519.008500698187277         1         1         2       59.0685138227       61.0553599196       66.9277053042
+     -168.759107759549806      512.074885626003038         1         3         4       58.1406754087       60.7602915863       70.0186500961
+     -168.277106889682727      513.484196133625346         1         5         6       58.0188384711       60.6742245147       71.6113255847
+```
+As for minima in *min.data*, transition states are identified by their line number in *ts.data*. This means that we can check how many minima and transition states
+we have in our database using `wc -l min.data ts.data`:
+```
+  12 min.data
+  11 ts.data
+  23 total
+```
+
+- *points.min* -	contains the coordinates for each minimum in a binary format to keep the file size low
+
+- *points.ts* -		contains the coordinates for each transition state in the same binary format
+
 #### Locating the endpoints in min.data and setting up min.A and min.B
 
+Two other files are also created with the database, *min.A* and *min.B*. These files define which minima **PATHSAMPLE** should consider to be in the product and
+reactant states when doing kinetic analysis and selecting minima to connect when growing the database. They can contain a single minimum, or a group according to some
+experimental observable or order parameter that defines the states of interest.
+
+The format is simple, the first line contains the number of minima in state A or B and each subsequent line contains the number of each minimum in that group, the
+corresponding *min.data* line number. In *min.A*, we currently have: 
+```
+         1
+         1
+```
+
+This is saying that group A contains a single minimum, minimum 1.
+
+The initial contents of these files are defined by the arguments to the `STARTFROMPATH` keyword in *pathdata* and do not correspond to the endpoint states for our
+**OPTIM** pathway. Lets fix that!
+
+To do so, we need to find the line in *min.data* that corresponds to our end point structures. This is usually done by matching their energies by looking at the
+**OPTIM** output for the creating of *path.info.initial* which has been provided for convenience as *optim.out.initial*. Looking in this file we see that the 
+energy of the endpoints appears twice. This is because they were reoptimised before being connected:
+```
+ OPTIM> Initial energy=    -173.9284262     RMS force=    0.6150270245E-03
+ OPTIM> Final energy  =    -173.2523776     RMS force=    0.9629889347E-03
+OPTIM> Bad endpoints supplied - RMS force too big!
+OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
+```
+
+As a result, we ignore this first set of energies and look for the output once the optimisation has finished:
+```
+ geopt>                          **** CONVERGED ****
+
+ OPTIM> Initial energy=    -173.9284266     RMS force=    0.7104901138E-06
+ OPTIM> Final energy  =    -173.2523784     RMS force=    0.7113993280E-06
+```
+
+These are the energies of our endpoints. Looking in min.data we can see that these match lines 2 and 8 so lets edit *min.A* and *min.B* to contain the correct 
+information:
+
+*min.A*
+```
+         1
+         2
+```
+
+*min.B*
+```
+         1
+         8
+```
+
+As well as defining the endpoint (product/reactant) states, we also need to define a direction between them. This is done using the `DIRECTION` keyword in
+*pathdata*. We are using `DIRECTION AB` which, according to spectroscopic convention implies 'A from B' or A<-B - hence the minima in *min.B are our reactants and
+those in *min.B* are our products.   
 
 #### Checking the connected path is still present with a Dijkstra analysis
+
 
 
 #### Visualising the fastest path using gnuplot
