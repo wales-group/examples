@@ -145,13 +145,13 @@ It should look something like this:
  
 ### Examining the structures along the pathway using VMD
 
-We often want to investigate the mechanism involved in the pathway between endpoints, something we can do visually in this case using **VMD** to load path.xyz:
+We often want to investigate the mechanism involved in the pathway between endpoints, something we can do visually in this case using **VMD** to load *path.xyz*:
 ```
 vmd -e view_pathway.tcl
 ```
 
 When you press play at the bottom right of the 'VMD Main' window, you will start to see the conformation of the cluster evolve along the pathway. The pathway 
-appears smooth as we are using the `PATH` keyword in *odata* to include intermediate structures between each station point in *path.xyz*. For this reason, 
+appears smooth as we are using the `PATH` keyword in *odata* to include intermediate structures between each stationary point in *path.xyz*. For this reason, 
 you shouldn't use the coordinates in this file for anything else.
 
 ## Extension: connecting other minima
