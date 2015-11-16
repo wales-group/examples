@@ -44,6 +44,15 @@ be using them as we are simply setting up the database, but they are included as
 				is not used in the current example as explained above. For information on the full set of keywords available, check the 
 				[OPTIM website](http://www-wales.ch.cam.ac.uk/OPTIM)
 
+### disconnectionDPS input files
+
+- *dinfo* -			Contains the keywords that control the appearence of the disconnectivty graph produced when **disconnectionDPS** is run in the
+				current directory
+
+- *dinfo_annotated* -		The **disconnectionDPS** keywords used in this example are detailed in *dinfo_annotated*. For more information and a full
+				keyword listing, see the top of the *disconnectionDPS.f90* source file, available in the source tar file on the
+				[Wales Group website](http://www-wales.ch.cam.ac.uk)
+
 ### Utility files
 
 - *plot_Epath.plt* - 		**gnuplot** input file to plot the energy of the stationary points along the fastest path
@@ -157,7 +166,7 @@ we have in our database using `wc -l min.data ts.data`:
 **TIP:** when using **PATHSAMPLE** it is a good idea to occasionally back up your database in case something goes wrong. It is these four files that you need to copy
 to do so!
 
-#### Locating the endpoints in min.data and setting up min.A and min.B
+#### Locating the endpoints in min.data
 
 Two other files are also created with the database, *min.A* and *min.B*. These files define which minima **PATHSAMPLE** should consider to be in the product and
 reactant states when doing kinetic analysis and selecting minima to connect when growing the database. They can contain a single minimum, or a group according to some
@@ -212,7 +221,7 @@ As well as defining the endpoint (product/reactant) states, we also need to defi
 *pathdata*. We are using `DIRECTION AB` which, according to spectroscopic convention implies 'A from B' or A<-B - hence the minima in *min.B* are our reactants and
 those in *min.A* are our products.   
 
-#### Checking the connected path is still present with a Dijkstra analysis
+#### Checking the connected path is still present
 
 Before we use **PATHSAMPLE** to further explore the landscape, we need to check that we have successfully imported the whole connected path. The easiest way to do 
 this is to perform a Dijkstra analysis to identify the path between the endpoints which makes the largest contribution to the steady state rate constant, often 
@@ -266,17 +275,45 @@ Dijkstra> Ordered downhill barriers,    ts        barrier
                                           9    0.1387803054E-02
 ```
 
-#### Visualising the fastest path using gnuplot
+#### Visualising the fastest path
 
 The Dijkstra analysis also produces an *Epath* file containing the energy of the minima and transition states along the fastest path. We can visualise this
-using **gnuplot** to check the pathway looks sensible. You should be able to see the similarity with the plot of **OPTIM**'s *EofS* file in Example 3. In this
-case no smoothing is done, hence the difference.
+using **gnuplot** to check the pathway looks sensible.
+
+Unlike in Example 3, no smoothing is added used so the plot is showing only the stationary points:
+
+```
+gnuplot -persist plot_Epath.png
+```
 
 <img src="Epath_eg.png" width="100%", height="100%">
 
-#### Create a disconnectivity graph, labelling the endpoints
+#### Create a disconnectivity graph
+
+In order to display the multidimensional potential energy surface of a system of any reasonable size without projecting along somewhat arbitrary order parameters, 
+we use the disconnectivity graph representation. To do this, we use **disconnectionDPS** with keywords specified in its input file, *dinfo*.
+
+Minima are divided into ‘superbasins’ at regular intervals specified by the `DELTA` keyword. Each minimum in the database is represented by a line that starts 
+from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged along the horizontal axis to produce 
+the clearest representation, so the horizontal axis has no physical meaning.
+
+To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
+```
+disconnectionDPS; gv tree.ps
+```
+
+You should produce something like this:
 
 <img src="initialtree_eg.png" width="100%", height="100%">
 
-## Extension: identifying other minima of interest on the disconnectivity graph
+Using the `IDMIN` keyword in the *dinfo* file, we have labelled out endpoints (minima 2 and 8). Using this representation we can start to gain an understanding
+of the underlying topology of the energy landscape for the system we are studying, and when combined with methods that colour branches by an order parameter, or
+committor probability - great insight can be gained!
 
+## Extension: identifying other minima of interest
+
+A very useful keyword for **disconnectionDPS** is `IDENTIFY`. This will label ALL minima on the disconnectivity graph, making it very easy to identify what might
+be an interesting structural feature, and then drill down to look at specific structures.
+
+Add the `IDENTIFY` keyword to your *dinfo* file and re-run **disconnectionDPS**. Take a look at the resulting tree and see if you can follow the steps of the
+fastest path between the endpoints across the landscape by matching the energies from your Dijkstra analysis to line numbers in min.data and hence minima on the tree.
