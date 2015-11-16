@@ -154,6 +154,9 @@ we have in our database using `wc -l min.data ts.data`:
 
 - *points.ts* -		contains the coordinates for each transition state in the same binary format
 
+**TIP:** when using **PATHSAMPLE** it is a good idea to occasionally back up your database in case something goes wrong. It is these four files that you need to copy
+to do so!
+
 #### Locating the endpoints in min.data and setting up min.A and min.B
 
 Two other files are also created with the database, *min.A* and *min.B*. These files define which minima **PATHSAMPLE** should consider to be in the product and
@@ -206,15 +209,66 @@ information:
 ```
 
 As well as defining the endpoint (product/reactant) states, we also need to define a direction between them. This is done using the `DIRECTION` keyword in
-*pathdata*. We are using `DIRECTION AB` which, according to spectroscopic convention implies 'A from B' or A<-B - hence the minima in *min.B are our reactants and
-those in *min.B* are our products.   
+*pathdata*. We are using `DIRECTION AB` which, according to spectroscopic convention implies 'A from B' or A<-B - hence the minima in *min.B* are our reactants and
+those in *min.A* are our products.   
 
 #### Checking the connected path is still present with a Dijkstra analysis
 
+Before we use **PATHSAMPLE** to further explore the landscape, we need to check that we have successfully imported the whole connected path. The easiest way to do 
+this is to perform a Dijkstra analysis to identify the path between the endpoints which makes the largest contribution to the steady state rate constant, often 
+termed the ‘fastest path’. 
 
+Do do this requires some editing of the *pathdata* file to uncomment the keywords involved in 'STEP 2' and comment out those in 'STEP 1'. The bottom of your 
+*pathdata* file after these changes should look like this:
+```
+! STEP 1: creating the initial database from OPTIM path.info file
+! STARTFROMPATH  path.info.initial 1 2
+! CYCLES         0
+
+! STEP 2: run a Dijkstra analysis to identify the 'fastest path' (initially commented) 
+DIJKSTRA       0
+CYCLES         0
+```
+
+We now run **PATHSAMPLE** again to perform the analysis:
+
+```
+PATHSAMPLE > pathsample_dijkstra.out
+```
+
+This should also be very fast as our database is very small. As we (hopefully!) have a connected path in our database between the A and B minima, the output will
+contain a summary in the form of sequential min-ts-min triples followed by a list of the downhill barriers in order of size:
+ 
+```
+Dijkstra> Best path for min        8 and any A minimum, k^SS A<-B    0.1078101912E-17
+       2       1       4       3      12       6      10       9       8
+Dijkstra> Best path between any B minimum and any A minimum:
+       2       1       4       3      12       6      10       9       8
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is     0.1078101912E-17 for      8 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       2     -173.9284265906       1     -169.3619459642       1     -169.4031027635
+       1     -169.4031027635       9     -169.2655326538       4     -169.2669204568
+       4     -169.2669204568       2     -168.7591077595       3     -169.2052539062
+       3     -169.2052539062      11     -169.1758050760      12     -169.3044656797
+      12     -169.3044656797       8     -168.9079300331       6     -170.9924926291
+       6     -170.9924926291      10     -170.9790671321      10     -172.8777364112
+      10     -172.8777364112       6     -170.7931234338       9     -170.9568946176
+       9     -170.9568946176       5     -170.8774926607       8     -173.2523784156
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                          5     2.374885755
+                                          8     2.084562596
+                                         10     1.898669279
+                                          2    0.4461461467
+                                          6    0.1637711838
+                                         11    0.1286606037
+                                          1    0.4115679933E-01
+                                          9    0.1387803054E-02
+```
 
 #### Visualising the fastest path using gnuplot
 
+The Dijkstra analysis also produces a file *Epath* containing the energy of the minima and transition states along the fastest path.
 
 #### Create a disconnectivity graph, labelling the endpoints
 
