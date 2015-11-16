@@ -275,12 +275,14 @@ Dijkstra> Ordered downhill barriers,    ts        barrier
                                           9    0.1387803054E-02
 ```
 
+As stated, this pathway is printed backwards, so start from the bottom right and read right to left - minimum 8 -> minimum 9 (via transition state 5) and so on.
+
 #### Visualising the fastest path
 
 The Dijkstra analysis also produces an *Epath* file containing the energy of the minima and transition states along the fastest path. We can visualise this
 using **gnuplot** to check the pathway looks sensible.
 
-Unlike in Example 3, no smoothing is added used so the plot is showing only the stationary points:
+Unlike in Example 3, no smoothing is used - the plot is showing only the stationary points:
 
 ```
 gnuplot -persist plot_Epath.png
@@ -306,9 +308,9 @@ You should produce something like this:
 
 <img src="initialtree_eg.png" width="100%", height="100%">
 
-Using the `IDMIN` keyword in the *dinfo* file, we have labelled out endpoints (minima 2 and 8). Using this representation we can start to gain an understanding
-of the underlying topology of the energy landscape for the system we are studying, and when combined with methods that colour branches by an order parameter, or
-committor probability - great insight can be gained!
+Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 2 and 8 and can start to gain an understanding
+of the underlying topology of the energy landscape for LJ38. When combined with keywords that colour branches by an experimentally interesting order parameter, or
+committor probability - great insight can be gained from exploring the structure of these trees!
 
 ## Extension: identifying other minima of interest
 
