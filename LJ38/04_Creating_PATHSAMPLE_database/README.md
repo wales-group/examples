@@ -166,7 +166,7 @@ we have in our database using `wc -l min.data ts.data`:
 **TIP:** when using **PATHSAMPLE** it is a good idea to occasionally back up your database in case something goes wrong. It is these four files that you need to copy
 to do so!
 
-#### Locating the endpoints in min.data
+### Locating the endpoints in min.data
 
 Two other files are also created with the database, *min.A* and *min.B*. These files define which minima **PATHSAMPLE** should consider to be in the product and
 reactant states when doing kinetic analysis and selecting minima to connect when growing the database. They can contain a single minimum, or a group according to some
@@ -221,7 +221,7 @@ As well as defining the endpoint (product/reactant) states, we also need to defi
 *pathdata*. We are using `DIRECTION AB` which, according to spectroscopic convention implies 'A from B' or A<-B - hence the minima in *min.B* are our reactants and
 those in *min.A* are our products.   
 
-#### Checking the connected path is still present
+### Checking the connected path is still present
 
 Before we use **PATHSAMPLE** to further explore the landscape, we need to check that we have successfully imported the whole connected path. The easiest way to do 
 this is to perform a Dijkstra analysis to identify the path between the endpoints which makes the largest contribution to the steady state rate constant, often 
@@ -277,7 +277,7 @@ Dijkstra> Ordered downhill barriers,    ts        barrier
 
 As stated, this pathway is printed backwards, so start from the bottom right and read right to left - minimum 8 -> minimum 9 (via transition state 5) and so on.
 
-#### Visualising the fastest path
+### Visualising the fastest path
 
 The Dijkstra analysis also produces an *Epath* file containing the energy of the minima and transition states along the fastest path. We can visualise this
 using **gnuplot** to check the pathway looks sensible.
@@ -290,7 +290,7 @@ gnuplot -persist plot_Epath.png
 
 <img src="Epath_eg.png" width="100%", height="100%">
 
-#### Creating a disconnectivity graph
+### Creating a disconnectivity graph
 
 In order to display the multidimensional potential energy surface of a system of any reasonable size without projecting along somewhat arbitrary order parameters, 
 we use the disconnectivity graph representation. To do this, we use **disconnectionDPS** with keywords specified in its input file, *dinfo*.
