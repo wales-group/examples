@@ -290,7 +290,7 @@ gnuplot -persist plot_Epath.png
 
 <img src="Epath_eg.png" width="100%", height="100%">
 
-#### Create a disconnectivity graph
+#### Creating a disconnectivity graph
 
 In order to display the multidimensional potential energy surface of a system of any reasonable size without projecting along somewhat arbitrary order parameters, 
 we use the disconnectivity graph representation. To do this, we use **disconnectionDPS** with keywords specified in its input file, *dinfo*.
