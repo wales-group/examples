@@ -93,7 +93,7 @@ of jobs run at once with little penalty as they do not depend on each other.
 As **OPTIM** jobs can be starting and finishing in close proximity, the **PATHSAMPLE** output can become slightly fragmented. For clarity, a cycle is broken down
 into the following stages:
 
-1. Identify pairs of minima to connect and start **OPTIM** jobs for each:
+- Identify pairs of minima to connect and start **OPTIM** jobs for each:
 
 ```
 getupair> connecting minima        7 and        9 pairs used=       5 remaining=       6 total pairs=       4
@@ -102,7 +102,7 @@ getupair> connecting minima        7 and        9 pairs used=       5 remaining=
 The order in which these pairs are selected depends on the metric being used. In this case, we select pairs according to the `UNTRAP` metric described above. As
 we are only using a single core (`CPUS 1`), only one pair is connected at a time. Feel free to change this if you have more cores available.
 
-2. Analyse the minima and transition states that each **OPTIM** job returns and add anything new to the stationary point database:
+- Analyse the minima and transition states that each **OPTIM** job returns and add anything new to the stationary point database:
 
 ```
 cycle2> analysing result of search        5 on CPU        1 for process id      737
@@ -111,7 +111,11 @@ getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 ```
 
-3. Print a smmmary of what was found during the cycle and the current database size:
+As each **OPTIM** run finishes, **PATHSAMPLE** analyses the minima and transition states found and checks to see if they match existing structures in the database
+using an energy (`ETOL`) and geometric (`GEOMDIFFTOL`) cutoff. If they are new, they are added to *min.data* and *ts.data* respectively and will be considered as
+possible endpoints for reconnection in subsequent cycles. 
+
+- Print a summary of what was found during the cycle and the current database size:
 
 ```
 --------------------------------------------------------------------------------------------------------------
