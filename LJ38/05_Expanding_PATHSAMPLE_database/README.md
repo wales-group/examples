@@ -76,37 +76,90 @@ As **PATHSAMPLE** acts as a driver for **OPTIM** (i.e. it starts **OPTIM** jobs)
 
 Before you start, take a minute to look through *pathdata_annotated* and *odata.connect_annotated* and make sure you understand roughly the purpose of each keyword.  
 
+You may also need to slightly alter your *pathdata* file to ensure that the `EXEC` keyword points to a valid **OPTIM** binary.
+
 ### Expanding the stationary point database
 
-TO ADD
+Starting **PATHSAMPLE** and following the output can be achieved as follows:
 
-- explain how many OPTIM jobs are run per cycle (CPUS)
+```
+PATHSAMPLE > pathsample_untrap.out & ; tail -f pathsample_untrap.out
+``` 
+
+Like **OPTIM**, **PATHSAMPLE** runs in `CYCLES` - each cycle starting the number of **OPTIM** jobs that fill the number of CPUs/GPUs available. This example is set up
+to run locally on a single core as specified by `CPUS 1` in *pathdata*. These **OPTIM** jobs are embarassingly parallel in that we can easily scale up the number 
+of jobs run at once with little penalty as they do not depend on each other. 
+
+As **OPTIM** jobs can be starting and finishing in close proximity, the **PATHSAMPLE** output can become slightly fragmented. For clarity, a cycle is broken down
+into the following stages:
+
+1. Identify pairs of minima to connect and start **OPTIM** jobs for each:
+
+```
+getupair> connecting minima        7 and        9 pairs used=       5 remaining=       6 total pairs=       4
+```
+
+The order in which these pairs are selected depends on the metric being used. In this case, we select pairs according to the `UNTRAP` metric described above. As
+we are only using a single core (`CPUS 1`), only one pair is connected at a time. Feel free to change this if you have more cores available.
+
+2. Analyse the minima and transition states that each **OPTIM** job returns and add anything new to the stationary point database:
+
+```
+cycle2> analysing result of search        5 on CPU        1 for process id      737
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+```
+
+3. Print a smmmary of what was found during the cycle and the current database size:
+
+```
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        5 new min=       1 new ts=       2 total min=      13 total ts=      13
+--------------------------------------------------------------------------------------------------------------
+```
+
+**PATHSAMPLE** will continue to run until either all possible pairs have been tried or it runs out of `CYCLES`. It is quite robust to being interupted and
+so can be stopped early and restarted as often as you like.
+
+**NOTE:** if you are using **PATHSAMPLE** on a compute cluster, take a look at the `PBS`/`SLURM` and `SSH` keywords on the 
+[PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE) for information on how to specify the number of **OPTIM** jobs to run in parallel.
 
 ### Creating a disconnectivity graph
 
-In order to display the multidimensional potential energy surface of a system of any reasonable size without projecting along somewhat arbitrary order parameters, 
-we use the disconnectivity graph representation. To do this, we use **disconnectionDPS** with keywords specified in its input file, *dinfo*.
+Now that we have expanded our initial stationary point database, we can visualise the energy landscape using a disconnectivity graph as we did in Example 4 for the
+initial **OPTIM** path to see how things have changed. 
 
-Minima are divided into ‘superbasins’ at regular intervals specified by the `DELTA` keyword. Each minimum in the database is represented by a line that starts 
-from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged along the horizontal axis to produce 
-the clearest representation, so the horizontal axis has no physical meaning.
+The disconnectivity graph representation allows us to display the multidimensional potential energy surface of a system of a reasonable size without projecting 
+along somewhat arbitrary order parameters. To create it, we use **disconnectionDPS** with keywords specified in its input file, *dinfo*.
+
+Recapping from Example 4, minima are divided into ‘superbasins’ at regular intervals specified by the `DELTA` keyword. Each minimum in the database is 
+represented by a line that starts from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged 
+along the horizontal axis to produce the clearest representation, so the horizontal axis has no physical meaning.
 
 To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
 ```
 disconnectionDPS; gv tree.ps
 ```
-
 You should produce something like this:
 
 <img src="expandedtree_eg.png" width="100%", height="100%">
 
-Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 2 and 8 and can start to gain an understanding
-of the underlying topology of the energy landscape for LJ38. When combined with keywords that colour branches by an experimentally interesting order parameter, or
-committor probability - great insight can be gained from exploring the structure of these trees!
+Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 2 and 8. If you have completed Example 4, you will note that the landscape
+appears significantly more populated with distinct funnels starting to appear. 
+
+It is likely that if you started `PATHSAMPLE` again, you could continue to find minima and transition states and further flesh out the landscape, which leads on to
+a really important question....
 
 ### Q: When do you stop?!
 
-- brief discussion about knowing when to stop running PATHSAMPLE i.e. you don't usually!
+Knowing when to stop running **PATHSAMPLE** can be quite tricky to judge. For a system of any reasonable size, it is unrealistic to attempt to sample every minimum
+and transition state on the energy landscape so we have to find a way to judge 'convergence'. How you go about doing this depends very much on the goal of your work.
+Are you attempting to gain insight into a specific mechanism that has a known experimental rate? Maybe you would continue until you have hit that target. There is no
+'right' answer to this question which is why it's such a tough one. The advice we can give is to consider carefully your criteria for 'success' and to leverage any
+experimental information e.g. melting point, rate or other experimental observable measureable that can be calculated using a structural order parameter.
+
+In this example, we're going to just stop after 50 `CYCLES` but will do so knowing that we have almost certainly not explored enough!
 
 ## Extension: understanding why minima are being selected for connection
 
