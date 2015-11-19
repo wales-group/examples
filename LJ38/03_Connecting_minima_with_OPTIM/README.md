@@ -1,8 +1,8 @@
 # Example 3 - Connecting minima with OPTIM
 
 Among many other things, **OPTIM** can construct discrete paths, sequences of minima and transition states between two specified minima termed ‘endpoints’. Here we 
-take the two lowest energy minima were identified using **GMIN** in Example 1 and connect them. This can give us information about the barriers between them and
-the rate of interconversion. 
+take the two lowest energy minima were identified using **GMIN** in [Example 1](../01_Introducing_GMIN) and connect them. This can give us information about 
+the barriers between them and the rate of interconversion. 
 
 ## Requirements
 In order to successfully follow this example, the following need to be in your *PATH*:
@@ -58,7 +58,8 @@ OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
  mylbfgs> Energy and RMS force=    -173.9284262        0.6150270245E-03 after      0 steps
  mylbfgs> Energy and RMS force=    -173.9284263        0.5144541252E-03 after      1 steps, step:  0.43121E-05
 ```
-Once both have been optimised, the final energies of the endpoints are printed. This will be useful when we want to identify them in Example 4.
+Once both have been optimised, the final energies of the endpoints are printed. This will be useful when we want to identify them in 
+[Example 4](../04_Creating_PATHSAMPLE_database).
 ```
  geopt>                          **** CONVERGED ***
 
@@ -126,7 +127,7 @@ Connected path found
 #### Output the connected pathway and associated files
 Once **OPTIM** has identified a connected pathway, it produces a set of output files including:
   - *path.info* containing the coordinates and vibrational frequencies of all the minima and transition states found (not just those along the 
-final pathway) in min-ts-min triples. We will be using this file in Example 4
+final pathway) in min-ts-min triples. We will be using this file in [Example 4](../04_Creating_PATHSAMPLE_database)
   - *path.xyz* containing the coordinates of just the minima and transition states along the pathway 
   - *EofS* containing the energy as a function of integrated path length
 
@@ -158,7 +159,7 @@ you shouldn't use the coordinates in this file for anything else.
 
 To connect other pairs of minima, you only need to substitute the coordinates in *odata* under `POINTS` and/or in the *finish* file. 
 
-Run **GMIN** as in Example 1 with a high `TEMPERATURE` and `SAVE` to produce a range of high energy minima and connect some of these to the global minimum by
-replacing the coordinates in finish by those in the **GMIN** *lowest* file. 
+Run **GMIN** as in [Example 1](../01_Introducing_GMIN) with a high `TEMPERATURE` and `SAVE` to produce a range of high energy minima and connect some of these 
+to the global minimum by replacing the coordinates in finish by those in the **GMIN** *lowest* file. 
 
 Don't forget to remove the atom names (SI) when you do this! *finish* should contain just the (x,y,z) coordinates for each atom, one atom per line.

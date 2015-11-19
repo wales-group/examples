@@ -19,8 +19,9 @@ In order to successfully follow this example, the following need to be in your *
 - a **disconnectionDPS** binary
 
 ## Directory contents
-Both this directory and the backup in *./input* contain all the files you need to run **PATHSAMPLE** to expand the database created in Example 4. 
-The *./expected_output* subdirectory contains output after all of the below steps have been followed. Your intermediate results may differ as a result.
+Both this directory and the backup in *./input* contain all the files you need to run **PATHSAMPLE** to expand the database created in 
+[Example 4](../04_Creating_PATHSAMPLE_database). The *./expected_output* subdirectory contains output after all of the below steps have been followed. Your 
+intermediate results may differ as a result.
 
 As **PATHSAMPLE** acts as a driver for **OPTIM** (i.e. it starts **OPTIM** jobs), there are also **OPTIM** input files present.
 
@@ -131,13 +132,13 @@ so can be stopped early and restarted as often as you like.
 
 ### Creating a disconnectivity graph
 
-Now that we have expanded our initial stationary point database, we can visualise the energy landscape using a disconnectivity graph as we did in Example 4 for the
-initial **OPTIM** path to see how things have changed. 
+Now that we have expanded our initial stationary point database, we can visualise the energy landscape using a disconnectivity graph as we did in 
+[Example 4](../04_Creating_PATHSAMPLE_database) for the initial **OPTIM** path to see how things have changed. 
 
 The disconnectivity graph representation allows us to display the multidimensional potential energy surface of a system of a reasonable size without projecting 
 along somewhat arbitrary order parameters. To create it, we use **disconnectionDPS** with keywords specified in its input file, *dinfo*.
 
-Recapping from Example 4, minima are divided into ‘superbasins’ at regular intervals specified by the `DELTA` keyword. Each minimum in the database is 
+To recap, minima are divided into ‘superbasins’ at regular intervals specified by the `DELTA` keyword. Each minimum in the database is 
 represented by a line that starts from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged 
 along the horizontal axis to produce the clearest representation, so the horizontal axis has no physical meaning.
 
@@ -149,10 +150,16 @@ You should produce something like this:
 
 <img src="expandedtree_eg.png" width="100%", height="100%">
 
-Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 2 and 8. If you have completed Example 4, you will note that the landscape
-appears significantly more populated, with distinct funnels starting to appear. 
+Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 2 and 8. If you have completed [Example 4](../04_Creating_PATHSAMPLE_database), 
+you will note that the landscape appears significantly more populated, with distinct funnels starting to appear. To get a quick summary of the size of our now 
+expanded database, we use `wc -l min.data ts.data`:
 
-It is likely that if you started `PATHSAMPLE` again, you could continue to find minima and transition states and further flesh out the landscape, which leads on to
+```
+  104 min.data
+  109 ts.data
+```
+
+It is likely that if you started `PATHSAMPLE` again, you would continue to find minima and transition states and further flesh out the landscape, which leads us to
 a really important question....
 
 ### Q: When do you stop?!

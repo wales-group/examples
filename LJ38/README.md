@@ -27,7 +27,7 @@ Covers the basics of using **GMIN** for the LJ38 cluster, including:
 - investigating the effect of changing the step size and temperature
 - visualising the global minimum using **VMD**
 
-### Example 2 - Calculating MFET
+### [Example 2 - Calculating MFET](./02_Calculating_MFET)
 
 Demonstrates calculating the mean first encounter time (MFET) for the global minimum of LJ38:
 
@@ -36,7 +36,7 @@ Demonstrates calculating the mean first encounter time (MFET) for the global min
 
 This example aims to show just how much the MFET time can vary with the approach used.
 
-### Example 3 - Connecting minima with OPTIM
+### [Example 3 - Connecting minima with OPTIM](./03_Connecting_minima_with_OPTIM)
 
 Using **OPTIM**, create an initial discrete path between the two lowest energy minima found in Example 1. 
 This includes:
@@ -46,7 +46,7 @@ This includes:
 - viewing the initial path using **VMD** where each LJ atoms is coloured by its pair energy
 - producing the output file (*path.info*) that can be used as a starting point for **PATHSAMPLE** (see Example 4)
 
-### Example 4 - Creating PATHSAMPLE database 
+### [Example 4 - Creating PATHSAMPLE database](./04_Creating_PATHSAMPLE_database) 
 
 Using an **OPTIM** *path.info* file, initialise a **PATHSAMPLE** database to use for further sampling and calculating rates.
 This involves:
@@ -55,7 +55,7 @@ This involves:
 - running a Dijkstra analysis to identify the 'fastest path' and visualising it using **gnuplot**
 - creating a disconnectivity graph for the intial database using **disconnectionDPS**
 
-### Example 5 - Expanding PATHSAMPLE database
+### [Example 5 - Expanding PATHSAMPLE database](./05_Expanding_PATHSAMPLE_database)
 
 Expand the initial LJ38 **PATHSAMPLE** database by smartly selecting minima to reconnect using the `UNTRAP` procedure.
 This involves:

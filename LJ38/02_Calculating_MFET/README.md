@@ -4,7 +4,7 @@ A frequently used measure of performance for global optimisation is the Mean Fir
 (measured say in the number of calls to the potential being used) to locate the global minimum for a range of random starting configurations. The MFET when using 
 **GMIN** is affected by many parameters, including the type and size of `STEP` used to generate new conformations and the `TEMPERATURE`.
 
-In this example, we compare the MFET of basic **GMIN** input like that used in Example 1, to some that has been highly optimised. 
+In this example, we compare the MFET of basic **GMIN** input like that used in [Example 1](../01_Introducing_GMIN), to some that has been highly optimised. 
 
 As we have identified the energy of the global minimum for this system, we can use the `TARGET` keyword in the *data* file to stop **GMIN** as soon as it has been 
 found.
@@ -19,7 +19,7 @@ In order to successfully follow this example, the following need to be in your *
 ## Directory contents
 This directory contains three sets of **GMIN** input:
 
-- *./input* 			- basic GMIN input as used in Example 1
+- *./input* 			- basic GMIN input as used in [Example 1](../01_Introducing_GMIN)
 - *./input_SYMMETRISE*		- input using symmetry adapted moves to generate new geometries
 - *./input_SYMMETRISECSM*	- input using symmetry adapted moves employing a continuous symmetry measure (CSM) 
 
@@ -47,7 +47,8 @@ recommended that you read through the *100_LJ38_runs.csh* script as you go.
 
 ### Calculating the MFET (basic input)
 
-The input currently in the directory corresponds to the basic **GMIN** input from Example 1. Assuming you have the binary somewhere in your *PATH*, running
+The input currently in the directory corresponds to the basic **GMIN** input from [Example 1](../01_Introducing_GMIN). Assuming you have the binary somewhere 
+in your *PATH*, running
 **GMIN** from 100 random starting points is as simple as this:
 
 ```
@@ -73,7 +74,8 @@ when running the script. It contains the **GMIN** output from each starting poin
 ### Computing the MFET with more optimised input
 
 By changing the **GMIN** parameters specified in the *data* file we can significantly affect the efficiency of the basin-hopping global optimisation procedure.
-In the extension to Example 1, we explored this by varying the Cartesian `STEP` size and `TEMPERATURE` used when accepting or rejecting minima into the Markov chain.
+In the extension to [Example 1](../01_Introducing_GMIN), we explored this by varying the Cartesian `STEP` size and `TEMPERATURE` used when accepting or 
+rejecting minima into the Markov chain.
 Here we take a different approach - generating new conformations in an entirely different way using symmetry adapted moves. The details of these moves are beyond
 the scope of this example - for more information see the [GMIN website](http://www-wales.ch.cam.ac.uk/GMIN).
 
@@ -103,5 +105,5 @@ The input files in *./input_SYMMETRISECSM* demonstrate just how fast we can find
 Copy the input into your working directory as before and run another 100 **GMIN** runs to calculate the MFET - remembering to change the directory you 
 save the output to when running the script.
 
-Feel free to alter both the `STEP` size and `TEMPERATURE` in the *data* file as in Example 1 to see how changing them (and thus the efficiency of basin-hopping) 
-affects the MFET. 
+Feel free to alter both the `STEP` size and `TEMPERATURE` in the *data* file as in [Example 1](../01_Introducing_GMIN) to see how changing them (and thus the 
+efficiency of basin-hopping) affects the MFET. 

@@ -3,8 +3,9 @@
 Once we have found an intial discrete pathway between minima (endpoints) of interest using **OPTIM**, we can create a **PATHSAMPLE** stationary point database
 and grow it using built in methods designed to create a kinetically relevent sample for further analysis.   
 
-In this example, we will take the *path.info* file from Example 3 (here renamed as *path.info.initial*) and create a **PATHSAMPLE** database. We will then check
-that the initial pathway is still present and create a disconnectivity graph to view the landscape it explores using **disconnectionDPS**.
+In this example, we will take the *path.info* file from [Example 3](../03_Connecting_minima_with_OPTIM) (here renamed as *path.info.initial*) and create a 
+**PATHSAMPLE** database. We will then check that the initial pathway is still present and create a disconnectivity graph to view the landscape it explores 
+using **disconnectionDPS**.
 
 ## Requirements
 In order to successfully follow this example, the following need to be in your *PATH*:
@@ -29,8 +30,9 @@ be using them as we are simply setting up the database, but they are included as
 				provided for reference only. For information on the full set of **PATHSAMPLE** keywords available, check the
 				[PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE)
 
-- *path.info.initial* -		The **OPTIM** output file from Example 3 that contains the energy, coordinates and vibration frequencies of the minims and transition
-				states found when making the initial connected pathway. We will be reading this file in to create the **PATHSAMPLE** database
+- *path.info.initial* -		The **OPTIM** output file from [Example 3](../03_Connecting_minima_with_OPTIM) that contains the energy, coordinates and vibrational 
+				frequencies of the minims and transition states found when making the initial connected pathway. We will be reading this file in to 
+				create the **PATHSAMPLE** database
 
 ### OPTIM input files
 
@@ -57,7 +59,8 @@ be using them as we are simply setting up the database, but they are included as
 
 - *plot_Epath.plt* - 		**gnuplot** input file to plot the energy of the stationary points along the fastest path
 
-- *optim.out.initial* -		The **OPTIM** output from Example 3 where *path.info.initial* was created. Used to identify the endpoints by their energy below
+- *optim.out.initial* -		The **OPTIM** output from [Example 3](../03_Connecting_minima_with_OPTIM) where *path.info.initial* was created. Used to identify 
+				the endpoints by their energy below
 
 ## Step-by-step
 
@@ -282,7 +285,7 @@ As stated, this pathway is printed backwards, so start from the bottom right and
 The Dijkstra analysis also produces an *Epath* file containing the energy of the minima and transition states along the fastest path. We can visualise this
 using **gnuplot** to check the pathway looks sensible.
 
-Unlike in Example 3, no smoothing is used - the plot is showing only the stationary points:
+Unlike in [Example 3](../03_Connecting_minima_with_OPTIM), no smoothing is used - the plot is showing only the stationary points:
 
 ```
 gnuplot -persist plot_Epath.png
