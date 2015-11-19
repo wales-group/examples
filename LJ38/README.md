@@ -18,7 +18,7 @@ Expected output is provided for each, but bear in mind that it may not match you
 Where appropriate, annotated versions of input files are provided (*FILE_annotated*) describing their contents.
 These descriptions are not exhaustive so for more detail, see the documentation. 
 
-### Example 1 - Introducing GMIN
+### [Example 1 - Introducing GMIN](./01_Introducing_GMIN)
 
 Covers the basics of using **GMIN** for the LJ38 cluster, including:
 
