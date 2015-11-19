@@ -150,7 +150,7 @@ You should produce something like this:
 <img src="expandedtree_eg.png" width="100%", height="100%">
 
 Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 2 and 8. If you have completed Example 4, you will note that the landscape
-appears significantly more populated with distinct funnels starting to appear. 
+appears significantly more populated, with distinct funnels starting to appear. 
 
 It is likely that if you started `PATHSAMPLE` again, you could continue to find minima and transition states and further flesh out the landscape, which leads on to
 a really important question....
@@ -159,11 +159,13 @@ a really important question....
 
 Knowing when to stop running **PATHSAMPLE** can be quite tricky to judge. For a system of any reasonable size, it is unrealistic to attempt to sample every minimum
 and transition state on the energy landscape so we have to find a way to judge 'convergence'. How you go about doing this depends very much on the goal of your work.
-Are you attempting to gain insight into a specific mechanism that has a known experimental rate? Maybe you would continue until you have hit that target. There is no
-'right' answer to this question which is why it's such a tough one. The advice we can give is to consider carefully your criteria for 'success' and to leverage any
-experimental information e.g. melting point, rate or other experimental observable measureable that can be calculated using a structural order parameter.
+Are you attempting to gain insight into a specific mechanism that has a known experimental rate? Maybe you would continue until you have hit that target. 
 
-In this example, we're going to just stop after 50 `CYCLES` but will do so knowing that we have almost certainly not explored enough!
+There is no 'right' answer to this question, which is why it's such a tough one. The advice we can give is to consider carefully your criteria for 'success' and 
+to leverage any experimental information e.g. melting point, rate or other experimental observable measureable that can be calculated using a structural order 
+parameter to construct a sensible measure for convergence.
+
+In this example, we're going to just stop after 50 `CYCLES` but will do so in the knowledge that we have almost certainly not explored enough!
 
 ## Extension: understanding why minima are being selected for connection
 
