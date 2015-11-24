@@ -1,0 +1,301 @@
+NOTE: Binary only licensed for use at AlgoSB2015
+
+ OPTIM version 29205, Copyright (C) David J. Wales
+ OPTIM comes with ABSOLUTELY NO WARRANTY; for details supply WARRANTY as an input keyword.
+ This is free software, and you are welcome to redistribute it
+ under certain conditions; provide keyword COPYRIGHT to see the details.
+
+ getparams> input coordinates for AMBER9 system will be read from 
+start
+start               
+
+          -------------------------------------------------------
+          Amber 9  SANDER                              2006
+          -------------------------------------------------------
+
+| Run on 11/23/2015 at 23:52:32
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: min.in                                                                
+| MDOUT: min.out                                                               
+|INPCRD: coords.inpcrd                                                         
+|  PARM: coords.prmtop                                                         
+|RESTRT: coords.rst                                                            
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: coords.mdcrd                                                          
+|MDINFO: mdinfo                                                                
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+
+
+ Here is the input file:
+
+AMBER input file used to return the energy from sander when running GMIN       
+ &cntrl                                                                        
+  imin   = 1,                                                                  
+  ncyc = 1,                                                                    
+  maxcyc = 1,                                                                  
+  igb = 0,                                                                     
+  ntb    = 0,                                                                  
+  cut    = 999.99                                                              
+ /                                                                             
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+|    NONPERIODIC   ntb=0 and igb=0: Setting up nonperiodic simulation
+|  *** cutoff > system size, list only builds once
+|Largest sphere to fit in unit cell has radius =    63.622
+| New format PARM file being parsed.
+| Version =    1.000 Date = 08/04/11 Time = 11:49:36
+ NATOM  =      52 NTYPES =       7 NBONH =      27 MBONA  =      24
+ NTHETH =      58 MTHETA =      32 NPHIH =     102 MPHIA  =      87
+ NHPARM =       0 NPARM  =       0 NNB   =     258 NRES   =       6
+ NBONA  =      24 NTHETA =      32 NPHIA =      87 NUMBND =       8
+ NUMANG =      16 NPTRA  =      19 NATYP =       7 NPHB   =       0
+ IFBOX  =       0 NMXRS  =      10 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+
+|     Memory Use     Allocated
+|     Real                5477
+|     Hollerith            320
+|     Integer            24723
+|     Max Pairs           1326
+|     nblistReal           624
+|     nblist Int       7222202
+|       Total            28362 kbytes
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+ACE                                                                             
+
+General flags:
+     imin    =       1, nmropt  =       0
+     ifswitch=       0, fswitchbeta=  10.000
+ mdread> no continuous cutoff will be used for non-bonded terms
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       1, ntpr    =      50, ntrx    =       1, ntwr    =     500
+     iwrap   =       0, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       0, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       1, ntb     =       0, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     = 999.99000, intdiel =   1.00000
+     scnb    =   2.00000, scee    =   1.20000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  =       1, ncyc    =       1, ntmin   =       1
+     dx0     =   0.01000, drms    =   0.00010
+|  INFO: Old style inpcrd file read
+
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+ACE                                                                             
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:        0
+
+     Sum of charges from parm topology file =  -0.00000000
+     Forcing neutrality...
+ getparams> Number of atoms (or variables)  determined as     52
+ keyword> Distance tolerance for distinguising atoms in the same orbit=        0.00100
+ keyword> Number of groups of permutable atoms=     6
+ fetchz> Hybrid EF/BFGS transition state search, maximum steps=5000
+         maximum tangent space steps=  20 or  200 when overlap is better than     0.999900
+ fetchz> Uphill mode is    0 for initial step and    0 after that
+ fetchz> No Hessian: Rayleigh-Ritz max steps=1000 RMS <       0.0100 and |% change|<     1.0    
+ fetchz> Hessian eigenvector in Rayleigh-Ritz scheme calculated using method    2
+
+ fetchz>  156 Cartesian coordinates will be optimised for   52 AMBER atoms
+
+ fetchz> Point group checked when RMS force <     0.00100000, highest symmetry axis tested for=  6
+ fetchz> Initial distance and eigenvalue tolerances in symmetry determination=     0.00010000     0.00010000
+ fetchz> Minimum number of optimization steps=     0
+ fetchz> Stationary point information will be printed to min.data
+ fetchz> Convergence criterion for LBFGS optimization: RMS force< 0.10000000E-05 maximum steps=  5000
+ fetchz> Maximum energy rise in LBFGS minimization=    0.1000000000E-03
+ fetchz> Number of updates in LBFGS=      100
+ fetchz> Number of updates in XLBFGS=   4
+ fetchz> Number of updates in mind=   4
+ fetchz> Initial guess for diagonal elements in LBFGS=     0.1000
+ fetchz> Initial guess for diagonal elements in XLBFGS=    0.1000
+ fetchz> Maximum step size in LBFGS energy minimization=     0.1000
+ fetchz> Maximum step size in XLBFGS=    0.2000
+ fetchz> Maximum step size in LBFGS neb image minimization=                 0.2000
+ fetchz> Step sizes will be scaled if the eigenvalue is positive in BFGSTS
+ fetchz> Warnings will be issued if atoms become closer than 0.5 units
+ fetchz> Coordinates for intermediate steps will not be dumped to file points
+
+
+ OPTIM> Using translational/rotational ev shift=     1000000.000    
+ OPTIM> Initial energy=    -1.045170480     RMS force=    0.2736274197E-04
+ OPTIM> Final energy  =    -12.94781157     RMS force=    0.3401318023E-04
+OPTIM> Bad endpoints supplied - RMS force too big!
+OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
+ mylbfgs> Resetting LBFGS minimiser
+ mylbfgs> Energy and RMS force=    -1.045170480        0.2736274197E-04 after      0 steps
+ mylbfgs> Energy and RMS force=    -1.045170480        0.2529051082E-04 after      1 steps, step:  0.11680E-07
+ mylbfgs> Energy and RMS force=    -1.045170480        0.4393029254E-05 after      2 steps, step:  0.16276E-06
+ mylbfgs> Energy and RMS force=    -1.045170480        0.3407177016E-05 after      3 steps, step:  0.28736E-07
+ mylbfgs> Energy and RMS force=    -1.045170480        0.3412859338E-05 after      4 steps, step:  0.10223E-06
+ mylbfgs> Energy and RMS force=    -1.045170480        0.4605657096E-05 after      5 steps, step:  0.62467E-07
+ mylbfgs> Energy and RMS force=    -1.045170480        0.1631534898E-05 after      6 steps, step:  0.19529E-07
+ mylbfgs> Energy and RMS force=    -1.045170480        0.1042108435E-05 after      7 steps, step:  0.14432E-07
+ mylbfgs> Energy and RMS force=    -1.045170480        0.1191990289E-05 after      8 steps, step:  0.31257E-07
+ mylbfgs> Energy and RMS force=    -1.045170480        0.9583873603E-06 after      9 steps, step:  0.33621E-07
+ mylbfgs> Final energy is   -1.0451704796970387    
+ geopt> X component of inertia tensor=          354.6566640379
+ geopt> Y component of inertia tensor=          531.4301680967
+ geopt> Z component of inertia tensor=          691.4167113002
+ rotcon> Rotational constants (in cm-1) and principal moments of inertia: 
+        0.01471         0.01943         0.03165      1901.81828      3098.42686      4092.51755
+ symmetry> The full molecular point group is C1  .
+ symmetry> The largest Abelian subgroup of the full molecular point group is C1  .
+ symmetry> Distance tolerance=     0.00010 Inertia tolerance=     0.00010
+ symmetry> Order of full point group=     1
+
+ geopt>                          **** CONVERGED ****
+
+ mylbfgs> Resetting LBFGS minimiser
+ mylbfgs> Energy and RMS force=    -12.94781157        0.3401318023E-04 after      0 steps
+ mylbfgs> Energy and RMS force=    -12.94781157        0.3081429615E-04 after      1 steps, step:  0.18048E-07
+ mylbfgs> Energy and RMS force=    -12.94781157        0.5523229513E-05 after      2 steps, step:  0.19520E-06
+ mylbfgs> Energy and RMS force=    -12.94781157        0.4318366252E-05 after      3 steps, step:  0.35960E-07
+ mylbfgs> Energy and RMS force=    -12.94781157        0.4907507997E-05 after      4 steps, step:  0.12966E-06
+ mylbfgs> Energy and RMS force=    -12.94781157        0.4695045369E-05 after      5 steps, step:  0.52880E-07
+ mylbfgs> Energy and RMS force=    -12.94781157        0.1623650653E-05 after      6 steps, step:  0.23778E-07
+ mylbfgs> Energy and RMS force=    -12.94781157        0.1136201124E-05 after      7 steps, step:  0.11825E-07
+ mylbfgs> Energy and RMS force=    -12.94781157        0.1295766628E-05 after      8 steps, step:  0.45713E-07
+ mylbfgs> Energy and RMS force=    -12.94781157        0.1075836448E-05 after      9 steps, step:  0.35911E-07
+ mylbfgs> Energy and RMS force=    -12.94781157        0.3073975431E-05 after     10 steps, step:  0.76471E-07
+ mylbfgs> Energy and RMS force=    -12.94781157        0.8299916790E-06 after     11 steps, step:  0.14780E-07
+ mylbfgs> Final energy is   -12.947811565448360    
+ geopt> X component of inertia tensor=          331.6022837539
+ geopt> Y component of inertia tensor=          478.7902474364
+ geopt> Z component of inertia tensor=          543.6544371572
+ rotcon> Rotational constants (in cm-1) and principal moments of inertia: 
+        0.01952         0.02314         0.03580      1681.43189      2601.76877      3083.83682
+ symmetry> The full molecular point group is C1  .
+ symmetry> The largest Abelian subgroup of the full molecular point group is C1  .
+ symmetry> Distance tolerance=     0.00010 Inertia tolerance=     0.00010
+ symmetry> Order of full point group=     1
+
+ geopt>                          **** CONVERGED ****
+
+ OPTIM> Initial energy=    -1.045170480     RMS force=    0.9583873603E-06
+ OPTIM> Final energy  =    -12.94781157     RMS force=    0.8299916790E-06
+ KeyConnect> Maximum cycles = 200, maximum images = 30
+ KeyConnect> Maximum attempts per pair of minima = 3, with increment image density of 0.50
+ KeyConnect> Image density = 2.00, iteration density = 20.00
+ KeyNEB> Initial and final NEB force constants     10.00000000        10.00000000     factor=    1.010000000    
+ KeyNEB> Number of images will vary depending on the separation of the endpoints
+ KeyGrad> Overall rotation and translation will NOT be removed
+ KeyGrad> Using doubly nudged elastic band gradient
+ KeyOutput> Transition state candidates will be optimized
+ KeyOutput> Concise printing during transition states optimization
+ KeyOutput> Transition state candidates are maxima along NEB
+ KeyMin> Maximal number of iterations will vary, depending on the number of images in the band
+ KeyMin> RMS convergence criterion is set to 0.01
+ KeyMin> L-BFGS minimization
+ KeyLBFGS> Maximum step size per image =     0.2000000000    
+ KeyLBFGS> 4 Hessian updates per iteration
+ KeyLBFGS> Guess for inverse Hessian diagonal elements =     0.1000000000E-02
+ KeyTau> Using Henkelman and Jonsson's improved tangent
+ KeyDecide> Cost function in Dijkstra algorithm is Exp[D]
+
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 1 >>>>>>>>>>>>>>>>>>>>> 2 minima and 0 ts are known >>>>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      1 steps with      1 missing connections, weight=    0.30196E+07
+ decide> The unconnected minima in the chain and their distances are:
+     2       14.92     1 
+ 
+
+ tryconnect> 580-iteration DNEB run for minima 1_S and 2_F using 29 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      2.812407350    
+ Time to go through NEB:    7.6760000000000002     
+ Double-ended search iterations= 580 RMS= 2.7632 Dev= 7.59% S= 25.78 time= 7.68
+ Following    2 images are candidates for TS:    8   23  
+ Converged to TS (number of iterations):         10
+ Converged to TS (number of iterations):         16
+ DNEB run yielded 2 true transition state(s) time=   2.82
+
+ >>>>>  Path run for ts 1 ...
+ Plus  side of path:                     751 steps. Energy=    -10.23035521       time=       0.37
+ Minus side of path:                     637 steps. Energy=    -1.045170480       time=       0.32
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -10.2303552  17.342            7.1114665  8.1566           -1.0451705  12.437  10.273   1.964  26.483
+        *NEW* (Placed in 3)                                     Known (#1)
+ Unconnected minimum 3 found its way to S set.
+
+ >>>>>  Path run for ts 2 ...
+ Plus  side of path:                     443 steps. Energy=    -12.94781157       time=       0.22
+ Minus side of path:                     420 steps. Energy=    -12.94781157       time=       0.21
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -12.9478116 0.70539          -12.2424254 0.70539          -12.9478116   4.605   3.082  17.058   3.048
+        Known (#2)                                              Known (#2)
+ Alternative path found between members of the F set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 2 >>>>>>>>>>>>>>>>>>>>> 3 minima and 2 ts are known >>>>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      2 steps with      1 missing connections, weight=    0.15169E+06
+ decide> The unconnected minima in the chain and their distances are:
+     2       11.93     3 
+ 
+
+ tryconnect> 460-iteration DNEB run for minima 2_F and 3_S using 23 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      1.420456823    
+ Time to go through NEB:    4.7639999999999993     
+ Double-ended search iterations= 460 RMS= 0.0337 Dev= 10.52% S= 16.89 time= 4.76
+ Following    2 images are candidates for TS:    8   19  
+ Converged to TS (number of iterations):         21
+ Converged to TS (number of iterations):          7
+ DNEB run yielded 2 true transition state(s) time=   2.34
+
+ >>>>>  Path run for ts 3 ...
+ Plus  side of path:                     417 steps. Energy=    -12.94781157       time=       0.21
+ Minus side of path:                     441 steps. Energy=    -12.94781157       time=       0.22
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -12.9478116 0.98006          -11.9677523 0.98006          -12.9478116   3.699   3.080  17.021   3.055
+        Known (#2)                                              Known (#2)
+ Alternative path found between members of the F set.
+
+ >>>>>  Path run for ts 4 ...
+ Plus  side of path:                     569 steps. Energy=    -10.23035521       time=       0.29
+ Minus side of path:                     738 steps. Energy=    -12.94781157       time=       0.37
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -10.2303552 0.19594          -10.0344163  2.9134          -12.9478116  14.007  12.106   3.454  15.054
+        Known (#3)                                              Known (#2)
+ Connected path found
+  ts        E+         Ets - E+          Ets       Ets - E-          E-          S       D      gamma   ~N
+   1       -1.0451705  8.1566           7.1114665  17.342         -10.2303552  12.437  10.273   1.964  26.483
+   4      -10.2303552 0.19594         -10.0344163  2.9134         -12.9478116  14.007  12.106   3.454  15.054
+
+ Number of TS in the path       =      2
+ Number of cycles               =      2
+
+ Elapsed time=                                21.48
+ OPTIM> # of energy calls=                          0 time=           0.00 %=  0.0
+ OPTIM> # of energy+gradient calls=             47046 time=          20.22 %= 94.1
+ OPTIM> # of energy+gradient+Hessian calls=         0 time=           0.00 %=  0.0

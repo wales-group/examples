@@ -1,0 +1,26 @@
+! PATHSAMPLE input to create an initial database from OPTIM path.info for LJ38
+! For further details, see the PATHSAMPLE documentation
+
+EXEC           /home/energy/workshop/binaries/A9OPTIM
+CPUS           1
+NATOMS         52
+SEED           1
+DIRECTION      AB
+CONNECTIONS    1
+TEMPERATURE    0.1
+PLANCK         9.536D-14
+TEMPERATURE    0.592
+
+PERMDIST 
+ETOL           1.0D-5
+GEOMDIFFTOL    0.1D0
+ITOL           0.1D0
+
+! STEP 1: creating the initial database from OPTIM path.info file
+STARTFROMPATH  path.info.initial 1 2
+CYCLES         0
+
+! STEP 2: run a Dijkstra analysis to identify the 'fastest path' (initially commented) 
+! DIJKSTRA       0
+! CYCLES         0
+AMBER9
