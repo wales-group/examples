@@ -1,5 +1,4 @@
 Starting serial execution
-NOTE: Binary only licensed for use at AlgoSB2015
  keywords> Final structures will be dumped in different formats (.rst, .xyz, .pdb)
  keyword> AMBER group rotation moves enabled
  keyword> Reading in atom groups for GROUPROTATION
@@ -129,7 +128,7 @@ inpcrd
           Amber 9  SANDER                              2006
           -------------------------------------------------------
 
-| Run on 11/23/2015 at 19:31:43
+| Run on 11/24/2015 at 17:41:28
   [-O]verwriting output
 
 File Assignments:
@@ -300,926 +299,334 @@ Run   1:     50000 steps with temperature scaled by  0.10000000E+01
 Maximum allowed energy rise during a minimisation=    0.1000000000E-03
 Target energies:        50.9510579500 
 Calculating initial energy
-Qu          0 E=                 NaN steps=  362 RMS= 0.75201E-06 Markov E=                 NaN t=        1.4
+Qu          0 E=     52.40966633     steps=  363 RMS= 0.58988E-06 Markov E=     52.40966633     t=        0.2
  mc> Storing cis/trans information for initial structure
 Starting MC run of      50000 steps
 Temperature will be multiplied by      1.00000000 at every step
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -26.152120575176337     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -31.948227081195846     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -26.152120575176347     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -31.948227081195842     
  GROUPROTATION> Rotating group 1_SER_C_CA by    17.377026398998911     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -12.905109644569672     
- GROUPROTATION> Rotating group 1_SER_CA_C by    24.940315671458453     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -38.338063104136189     
- sf344> in amberenergies: cold fusion detected, (actually not) checking distances   2244732255770.6177     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -12.905109644569674     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    24.940315671458411     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -38.338063104136182     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   2244730305174.8096     
 ENERGY=    -10000000.00    
  Cold fusion diagnosed - step discarded; energy and threshold=    -10000000.00        -1000000.000    
- sf344> in amberenergies: cold fusion detected, (actually not) checking distances   2244732255770.6177     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      1     2
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      2     3
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      3     4
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu          1 E=                 NaN steps=    0 RMS=  1.0000     Markov E=                 NaN t=        2.7
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   2244730305174.8096     
+Quench          1 converged to a transition state.
+Qu          1 E=     1000000.000     steps=    0 RMS=  1.0000     Markov E=     52.40966633     t=        0.2
  GROUPROTATION> Rotating group 2_LYS_CA_C by    14.173582119528742     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    27.895075440096225     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -7.4082587268710851     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -52.392415035634642     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -70.806020819377196     
-Qu          2 E=                 NaN steps=  343 RMS= 0.50948E-06 Markov E=                 NaN t=        4.2
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    27.895075440096221     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -7.4082587268710887     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -52.392415035634649     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -70.806020819377181     
+Qu          2 E=     53.02619715     steps=  341 RMS= 0.54609E-06 Markov E=     52.40966633     t=        0.3
  GROUPROTATION> Rotating group 2_LYS_CA_C by    2.5337944933327550     
- GROUPROTATION> Rotating group 1_SER_C_CA by    8.7747566989018217     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    41.094998007775914     
-Qu          3 E=                 NaN steps=  323 RMS= 0.36702E-06 Markov E=                 NaN t=        5.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by    37.017749445337714     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -5.7716810523989919     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -173.47697285372269     
-Qu          4 E=                 NaN steps=  323 RMS= 0.92384E-06 Markov E=                 NaN t=        7.1
- GROUPROTATION> Rotating group 2_LYS_CG_C by    10.112707419703977     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -9.4811882117084583     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -73.551814592022836     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -64.144265970414807     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    33.806165339000728     
-Qu          5 E=                 NaN steps=  355 RMS= 0.83560E-06 Markov E=                 NaN t=        8.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -8.0139839081253808     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    58.618331550200999     
- GROUPROTATION> Rotating group 1_SER_CA_C by    84.116989377192525     
-Qu          6 E=                 NaN steps=  345 RMS= 0.45117E-06 Markov E=                 NaN t=       10.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -10.611075538757325     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -6.4756978964590841     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -24.818185860690321     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    8.7747566989018200     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    41.094998007775892     
+Qu          3 E=     53.76513212     steps=  303 RMS= 0.92665E-06 Markov E=     53.02619715     t=        0.4
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    37.017749445337707     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -5.7716810523989936     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -173.47697285372263     
+Qu          4 E=     56.65476642     steps=  341 RMS= 0.41254E-06 Markov E=     53.02619715     t=        0.6
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    10.112707419703995     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -9.4811882117084600     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -73.551814592022865     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -64.144265970414821     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    33.806165339000707     
+Qu          5 E=     53.02619745     steps=  352 RMS= 0.62125E-06 Markov E=     53.02619715     t=        0.7
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -8.0139839081253825     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    58.618331550200992     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    84.116989377192510     
+Qu          6 E=     55.94346221     steps=  329 RMS= 0.96788E-06 Markov E=     53.02619745     t=        0.8
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -10.611075538757323     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -6.4756978964590859     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -24.818185860690324     
  GROUPROTATION> Rotating group 1_SER_C_CA by   -11.436627687739449     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      1     2
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu          7 E=                 NaN steps=  336 RMS= 0.43772E-06 Markov E=                 NaN t=       11.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -15.069431997903209     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -51.327916666732449     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -5.6301621885974011     
-Qu          8 E=                 NaN steps=  308 RMS= 0.46202E-06 Markov E=                 NaN t=       12.9
-check_chirality> ERROR -- inverted chiral carbon detected in residue      2
-  quench> CHIRALITY CHECK FAILED - discarding structure
-Qu          9 E=                 NaN steps=  351 RMS= 0.70573E-06 Markov E=                 NaN t=       14.4
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -24.052914096696011     
-Qu         10 E=                 NaN steps=  290 RMS= 0.77981E-06 Markov E=                 NaN t=       15.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    17.131556455238680     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -21.983473350980752     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -70.121268151523992     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    51.949415408544517     
- sf344> in amberenergies: cold fusion detected, (actually not) checking distances   927583990198.56384     
-ENERGY=    -10000000.00    
- Cold fusion diagnosed - step discarded; energy and threshold=    -10000000.00        -1000000.000    
- sf344> in amberenergies: cold fusion detected, (actually not) checking distances   927583990198.56384     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      1     2
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu         11 E=                 NaN steps=    0 RMS=  1.0000     Markov E=                 NaN t=       17.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -28.377593189856416     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -36.777341304602814     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    8.0224421642259376     
-Qu         12 E=                 NaN steps=  320 RMS= 0.59535E-06 Markov E=                 NaN t=       18.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -6.4989456934659566     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    70.180652025233840     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    2.5538816224051955     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -48.612391254065606     
-Qu         13 E=                 NaN steps=  314 RMS= 0.57797E-06 Markov E=                 NaN t=       20.1
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -27.625606305494660     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -17.598884463138486     
-Qu         14 E=                 NaN steps=  322 RMS= 0.96537E-06 Markov E=                 NaN t=       21.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -1.7410373125896745     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    68.565439559229645     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -6.5301282094368229     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -5.7034258228774783     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -94.258317897135086     
- sf344> in amberenergies: cold fusion detected, (actually not) checking distances   59263894214.333176     
-ENERGY=    -10000000.00    
- Cold fusion diagnosed - step discarded; energy and threshold=    -10000000.00        -1000000.000    
- sf344> in amberenergies: cold fusion detected, (actually not) checking distances   59263894214.333176     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      1     2
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      2     3
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      3     4
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu         15 E=                 NaN steps=    0 RMS=  1.0000     Markov E=                 NaN t=       23.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -7.7328226543903034     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    23.669839388169279     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    20.881967125578679     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -8.7302048766077363     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -55.213863217138275     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -133.24671310482361     
-Qu         16 E=                 NaN steps=  469 RMS= 0.44200E-06 Markov E=                 NaN t=       24.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by    6.1744519735581882     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -14.447323900570703     
+Qu          7 E=     55.94346185     steps=  344 RMS= 0.65899E-06 Markov E=     53.02619745     t=        1.0
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -16.015182786487539     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -89.951800762447306     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    12.006206314729170     
+Qu          8 E=     53.27984918     steps=  334 RMS= 0.61756E-06 Markov E=     53.02619745     t=        1.1
+Qu          9 E=     53.27984939     steps=  301 RMS= 0.48104E-06 Markov E=     53.27984918     t=        1.2
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    2.2325688527863097     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -172.92258864436349     
+Qu         10 E=     53.14953912     steps=  336 RMS= 0.40350E-06 Markov E=     53.27984939     t=        1.4
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -4.3966946701961485     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -35.060634075762003     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    173.16471802848173     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    47.246914330862566     
+Qu         11 E=     52.97488411     steps=  341 RMS= 0.54254E-06 Markov E=     53.14953912     t=        1.5
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -14.188796594928212     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -14.710936521841132     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    13.370736940376563     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -178.23927271371343     
+Qu         12 E=     55.99737624     steps=  322 RMS= 0.60265E-06 Markov E=     52.97488411     t=        1.7
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    6.3847040560129864     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -162.04130418021870     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    32.345233912357486     
+Qu         13 E=     52.88763752     steps=  384 RMS= 0.56437E-06 Markov E=     52.97488411     t=        1.8
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -5.5251212610989313     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -58.662948210461650     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -49.757269677878448     
+Qu         14 E=     121.6486932     steps=  349 RMS= 0.79084E-06 Markov E=     52.88763752     t=        2.0
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    13.713087911845930     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -13.060256418873649     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -1.1406851645754943     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -47.129158948567543     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -38.774584858560154     
+Qu         15 E=     52.88763723     steps=  355 RMS= 0.56196E-06 Markov E=     52.88763752     t=        2.1
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    4.7339678776338552     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    52.204917813946693     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -17.460409753215469     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -11.042772643427657     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -66.623356552411806     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    20.998755250041587     
+Qu         16 E=     52.88763719     steps=  345 RMS= 0.58732E-06 Markov E=     52.88763723     t=        2.2
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -14.447323900570685     
  GROUPROTATION> Rotating group 1_SER_C_CA by   -4.7130809968537326     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    15.161795356028042     
-Qu         17 E=                 NaN steps=  267 RMS= 0.74860E-06 Markov E=                 NaN t=       26.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -11.706741447295011     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    15.161795356028041     
+Qu         17 E=     52.88763770     steps=  348 RMS= 0.62516E-06 Markov E=     52.88763719     t=        2.4
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -11.706741447295014     
  GROUPROTATION> Rotating group 2_LYS_CA_C by   -29.561719811151399     
- GROUPROTATION> Rotating group 1_SER_C_CA by    7.4298452437014113     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    7.4298452437014104     
  GROUPROTATION> Rotating group 2_LYS_CD_C by    85.029028879030392     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    30.431098521562753     
-Qu         18 E=                 NaN steps=  358 RMS= 0.81373E-06 Markov E=                 NaN t=       27.4
- GROUPROTATION> Rotating group 1_SER_C_CA by   -11.595728884340975     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    63.377817940630358     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      2     3
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu         19 E=                 NaN steps=  325 RMS= 0.62928E-06 Markov E=                 NaN t=       28.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    1.9872472241136130     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    30.431098521562749     
+Qu         18 E=     51.66211601     steps=  427 RMS= 0.66007E-06 Markov E=     52.88763770     t=        2.6
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -57.978644421704885     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    126.75563588126070     
+Qu         19 E=     51.70186591     steps=  331 RMS= 0.40956E-06 Markov E=     51.66211601     t=        2.7
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    1.9872472241136168     
  GROUPROTATION> Rotating group 2_LYS_CG_C by    65.388446270448824     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -6.5270713508984119     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    25.553975811064102     
-Qu         20 E=                 NaN steps=  364 RMS= 0.32614E-06 Markov E=                 NaN t=       30.3
- GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.38298464798533727     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -6.5270713508984164     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    25.553975811064099     
+Qu         20 E=     51.70186613     steps=  382 RMS= 0.49102E-06 Markov E=     51.70186591     t=        2.8
+ GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.38298464798533760     
  GROUPROTATION> Rotating group 2_LYS_CG_C by    35.548008166512375     
  GROUPROTATION> Rotating group 1_SER_C_CA by    11.957864930358591     
  GROUPROTATION> Rotating group 2_LYS_CD_C by   -77.101160489930763     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    46.286873291432634     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    46.286873291432627     
+Qu         21 E=     52.01734771     steps=  337 RMS= 0.56721E-06 Markov E=     51.70186613     t=        3.0
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    5.6470006055791711     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    11.461798262711399     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    12.953886254988138     
+Qu         22 E=     52.01734801     steps=  320 RMS= 0.79404E-06 Markov E=     52.01734771     t=        3.1
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    86.339279199896694     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -12.656835240699582     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -51.522020732883213     
+Qu         23 E=     54.51564564     steps=  369 RMS= 0.95809E-06 Markov E=     52.01734801     t=        3.2
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -70.742453336447312     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    9.6360580011568810     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    2.9218138313244664     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    43.535711420580839     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -114.42293715487180     
+Qu         24 E=     51.66211623     steps=  312 RMS= 0.86104E-06 Markov E=     52.01734801     t=        3.4
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -14.503154197954853     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    2.0877838659715193     
+Qu         25 E=     51.66211592     steps=  299 RMS= 0.49623E-06 Markov E=     51.66211623     t=        3.5
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    45.683139222219090     
 check_chirality> ERROR -- inverted chiral carbon detected in residue      3
   quench> CHIRALITY CHECK FAILED - discarding structure
-Qu         21 E=                 NaN steps=  331 RMS= 0.55959E-06 Markov E=                 NaN t=       31.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by    28.235003027895836     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    57.308991313557001     
-Qu         22 E=                 NaN steps=  318 RMS= 0.49385E-06 Markov E=                 NaN t=       33.1
- GROUPROTATION> Rotating group 2_LYS_CG_C by    7.5720030722889504     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    34.535711679958681     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -6.3284176203497928     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -15.456606219864968     
-Qu         23 E=                 NaN steps=  316 RMS= 0.68075E-06 Markov E=                 NaN t=       34.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by    3.2103075496403815     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -70.742453336447312     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    9.6360580011568722     
- GROUPROTATION> Rotating group 1_SER_C_CA by    2.9218138313244668     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    43.535711420580846     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -114.42293715487180     
- sf344> in amberenergies: cold fusion detected, (actually not) checking distances   102041464905.30840     
+Qu         26 E=     53.73771301     steps=  440 RMS= 0.55779E-06 Markov E=     51.66211592     t=        3.7
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    29.694286092351533     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    50.158242545743171     
+Qu         27 E=     51.66211629     steps=  332 RMS= 0.78370E-06 Markov E=     51.66211592     t=        3.8
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    74.852765349029994     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -28.485691761633134     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    112.33068423962385     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -20.080353531366839     
+Qu         28 E=     51.70186573     steps=  362 RMS= 0.88712E-06 Markov E=     51.66211629     t=        3.9
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -13.782159108356099     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    12.018610444696947     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    12.037629505466995     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    76.812554146320167     
+Qu         29 E=     51.70186578     steps=  324 RMS= 0.32526E-06 Markov E=     51.70186573     t=        4.1
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    11.959506914386846     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -76.708955439581700     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    1.9031238764609901     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    92.574204551841575     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    51.204522548976286     
+Qu         30 E=     54.77381279     steps=  360 RMS= 0.27113E-06 Markov E=     51.70186578     t=        4.2
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    13.023673552301574     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -67.674545479856548     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -9.2795658332633479     
+Qu         31 E=     51.78970136     steps=  338 RMS= 0.41339E-06 Markov E=     51.70186578     t=        4.3
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -16.085079224433684     
+Qu         32 E=     51.78970144     steps=  340 RMS= 0.44554E-06 Markov E=     51.78970136     t=        4.5
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -13.049593079174048     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    83.527076886565098     
+Qu         33 E=     52.77989731     steps=  312 RMS= 0.54170E-06 Markov E=     51.78970144     t=        4.6
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -14.401532441946822     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -64.374339929090539     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -125.25109228760780     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   205594519520.22098     
 ENERGY=    -10000000.00    
  Cold fusion diagnosed - step discarded; energy and threshold=    -10000000.00        -1000000.000    
- sf344> in amberenergies: cold fusion detected, (actually not) checking distances   102041464905.30840     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      1     2
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      3     4
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu         24 E=                 NaN steps=    0 RMS=  1.0000     Markov E=                 NaN t=       35.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -14.503154197954871     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    2.0877838659715202     
-Qu         25 E=                 NaN steps=  319 RMS= 0.58150E-06 Markov E=                 NaN t=       37.2
- GROUPROTATION> Rotating group 1_SER_CA_C by    152.27713074073029     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    37.919081280717876     
-Qu         26 E=                 NaN steps=  312 RMS= 0.96134E-06 Markov E=                 NaN t=       38.8
- GROUPROTATION> Rotating group 2_LYS_CD_C by    83.597070909571954     
- GROUPROTATION> Rotating group 1_SER_CA_C by    169.24483743516399     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    32.171557462097496     
-Qu         27 E=                 NaN steps=  410 RMS= 0.77088E-06 Markov E=                 NaN t=       40.5
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -28.485691761633145     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    22.466136847924762     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -6.6934511771222773     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -59.627968219410654     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    37.152161738146795     
-Qu         28 E=                 NaN steps=  324 RMS= 0.95382E-06 Markov E=                 NaN t=       42.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by    12.037629505466995     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    15.362510829264034     
-Qu         29 E=                 NaN steps=  319 RMS= 0.58183E-06 Markov E=                 NaN t=       43.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by    3.0666618547056959     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    9.5156193823049708     
- GROUPROTATION> Rotating group 1_SER_C_CA by    9.2574204551841586     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    85.340870914960476     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -34.246550819612352     
-Qu         30 E=                 NaN steps=  325 RMS= 0.66998E-06 Markov E=                 NaN t=       44.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by    7.7966097494956497     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -15.465943055438913     
- GROUPROTATION> Rotating group 1_SER_CA_C by    143.03626316432249     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    5.3391721382295323     
-Qu         31 E=                 NaN steps=  343 RMS= 0.75961E-06 Markov E=                 NaN t=       46.2
- GROUPROTATION> Rotating group 1_SER_CA_C by    49.826616868249928     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -12.327584474945985     
-Qu         32 E=                 NaN steps=  326 RMS= 0.92089E-06 Markov E=                 NaN t=       47.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by    16.705415377313020     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    27.204528632796482     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -38.439873688950854     
-Qu         33 E=                 NaN steps=  314 RMS= 0.39566E-06 Markov E=                 NaN t=       49.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -14.335400437493664     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    19.629696102638448     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -17.117252783168418     
- GROUPROTATION> Rotating group 1_SER_CA_C by    57.265493485723347     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -11.882416128743602     
-Qu         34 E=                 NaN steps=  337 RMS= 0.29755E-06 Markov E=                 NaN t=       50.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -5.8624916024298157     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -29.516589126614431     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -9.5987100819664750     
- GROUPROTATION> Rotating group 1_SER_C_CA by    3.6636049817683585     
-Qu         35 E=                 NaN steps=  346 RMS= 0.65579E-06 Markov E=                 NaN t=       51.9
- GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.68596320647735076     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    36.847566740044044     
- GROUPROTATION> Rotating group 1_SER_C_CA by    3.1251402316650574     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -65.305225642950404     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -114.42796427709014     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    48.869835350999949     
-Qu         36 E=                 NaN steps=  377 RMS= 0.71137E-06 Markov E=                 NaN t=       53.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -15.490130032599494     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    70.390106299957566     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -14.166405242359016     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -134.07239193788212     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -20.843396109167792     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   205594519520.22098     
+Quench         34 converged to a transition state.
+Qu         34 E=     1000000.000     steps=    0 RMS=  1.0000     Markov E=     51.78970144     t=        4.6
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -1.1731567243832819     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    3.5839598946027351     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -14.478098996898394     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -138.61832991252788     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -43.299202463282953     
+Qu         35 E=     55.53318161     steps=  360 RMS= 0.51518E-06 Markov E=     51.78970144     t=        4.8
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    12.303307237527878     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    2.9044603143778631     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    65.801942557781999     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -6.8596320647734910     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    22.108540044026423     
+Qu         36 E=     52.55657060     steps=  320 RMS= 0.54589E-06 Markov E=     51.78970144     t=        4.9
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -13.605730615505106     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    29.158627419492475     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -10.339577413359290     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -46.470390097798486     
+Qu         37 E=     51.78970128     steps=  389 RMS= 0.53174E-06 Markov E=     51.78970144     t=        5.0
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -32.472109293838756     
+Qu         38 E=     51.78970088     steps=  307 RMS= 0.66753E-06 Markov E=     51.78970128     t=        5.2
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -29.638897889578132     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -8.6030767562331860     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    24.113058662643446     
+Qu         39 E=     51.78970146     steps=  348 RMS= 0.50054E-06 Markov E=     51.78970088     t=        5.3
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -2.1125563993025267     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    58.196870978320270     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -29.437081182200032     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -9.4069576175529814     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -85.948191915725545     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -118.71403800229693     
+Qu         40 E=     54.26067240     steps=  410 RMS= 0.49924E-06 Markov E=     51.78970146     t=        5.5
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    5.2672089288535711     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -9.8176176965475435     
+Qu         41 E=     52.55656973     steps=  293 RMS= 0.84549E-06 Markov E=     51.78970146     t=        5.6
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -15.219949424542122     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -10.136002808457627     
+Qu         42 E=     53.13011203     steps=  311 RMS= 0.61836E-06 Markov E=     51.78970146     t=        5.7
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    62.830991610120101     
+ GROUPROTATION> Rotating group 1_SER_C_CA by  -0.63714559310842589     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    28.960770249702875     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   28584971458.417534     
+ENERGY=    -10000000.00    
+ Cold fusion diagnosed - step discarded; energy and threshold=    -10000000.00        -1000000.000    
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   28584971458.417534     
+Quench         43 converged to a transition state.
+Qu         43 E=     1000000.000     steps=    0 RMS=  1.0000     Markov E=     51.78970146     t=        5.7
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    78.706123623023245     
+Qu         44 E=     54.12052432     steps=  363 RMS= 0.57193E-06 Markov E=     51.78970146     t=        5.9
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    11.726222231281946     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    55.345617333763769     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    10.192650504109274     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -64.090377365679217     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    47.464750329576063     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -47.876487419407354     
+Qu         45 E=     55.40808547     steps=  388 RMS= 0.81580E-06 Markov E=     51.78970146     t=        6.0
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    71.864837828340953     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -4.3790278023800528     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    13.049366794588130     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    6.3587048043804000     
+Qu         46 E=     51.78970133     steps=  325 RMS= 0.55870E-06 Markov E=     51.78970146     t=        6.2
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -6.9796579273038279     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -10.844789021542672     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    28.599874409146874     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    162.15769678597920     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -48.347867063585355     
+Qu         47 E=     55.53318589     steps=  413 RMS= 0.58073E-06 Markov E=     51.78970133     t=        6.3
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -27.965103565553065     
+Qu         48 E=     51.78970109     steps=  313 RMS= 0.39274E-06 Markov E=     51.78970133     t=        6.4
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -8.2881957459426872     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -9.3658283857748028     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    65.381229458795588     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -52.203126905275063     
+Qu         49 E=     55.53318144     steps=  355 RMS= 0.47013E-06 Markov E=     51.78970109     t=        6.6
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -2.2678926198563092     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -3.7747517623852462     
+Qu         50 E=     51.78970384     steps=  300 RMS= 0.66334E-06 Markov E=     51.78970109     t=        6.7
+Acceptance ratio for previous     50 steps=  0.5600  FAC=  1.0500
+Steps are now:  STEP=    1.0500 Temperature is now:    0.8000
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -4.0799437632551996     
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -30.589077558903117     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -14.534397728949891     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    21.198913098953113     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   -32.408616217796904     
+Qu         51 E=     53.13011508     steps=  357 RMS= 0.53834E-06 Markov E=     51.78970384     t=        6.8
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -8.1825224474490295     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -8.6875970870965613     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    11.410343055459668     
+Qu         52 E=     51.78970418     steps=  310 RMS= 0.56625E-06 Markov E=     51.78970384     t=        7.0
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    7.4841072127479000     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -23.360411097399560     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -7.3216431949142722     
+Qu         53 E=     51.00541320     steps=  370 RMS= 0.89461E-06 Markov E=     51.78970418     t=        7.1
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    16.516408181030648     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by   -6.4747515003034231     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    10.438514027132959     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by   -40.593323898754768     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    53.482030057635640     
+Qu         54 E=     54.03304132     steps=  372 RMS= 0.85401E-06 Markov E=     51.00541320     t=        7.3
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    7.6149662489227099     
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    3.9992030649929604     
+ GROUPROTATION> Rotating group 1_SER_CA_C by    37.079480443155603     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    49.915234136450472     
+Qu         55 E=     54.03304053     steps=  319 RMS= 0.47301E-06 Markov E=     51.00541320     t=        7.4
+ GROUPROTATION> Rotating group 2_LYS_CA_C by   -1.7714100502525325     
+ GROUPROTATION> Rotating group 1_SER_C_CA by    15.678398570111273     
+ GROUPROTATION> Rotating group 2_LYS_CD_C by    10.028895406633167     
 check_chirality> ERROR -- inverted chiral carbon detected in residue      2
   quench> CHIRALITY CHECK FAILED - discarding structure
-Qu         37 E=                 NaN steps=  348 RMS= 0.72260E-06 Markov E=                 NaN t=       55.2
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -40.377424676169305     
-Qu         38 E=                 NaN steps=  310 RMS= 0.99329E-06 Markov E=                 NaN t=       56.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by    6.6854817195344003     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -4.4197975146738449     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -154.22182764207662     
-Qu         39 E=                 NaN steps=  379 RMS= 0.49252E-06 Markov E=                 NaN t=       58.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by    7.4500369466014602     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    65.347615434819872     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -1.5938232303364024     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    50.004404174883447     
-Qu         40 E=                 NaN steps=  324 RMS= 0.70764E-06 Markov E=                 NaN t=       59.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by    8.9009608953676480     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    86.817903700673725     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    11.208522654682843     
- GROUPROTATION> Rotating group 1_SER_C_CA by    16.523373135914280     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    10.853134400113138     
-Qu         41 E=                 NaN steps=  349 RMS= 0.52416E-06 Markov E=                 NaN t=       61.0
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -2.5015270384662451     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    14.931110896414172     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    21.653340140339225     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -31.400646255385006     
-Qu         42 E=                 NaN steps=  328 RMS= 0.91989E-06 Markov E=                 NaN t=       62.4
- GROUPROTATION> Rotating group 2_LYS_CG_C by    20.014184384873172     
- GROUPROTATION> Rotating group 1_SER_C_CA by    8.9656519116638993     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    2.0929182608213588     
-Qu         43 E=                 NaN steps=  304 RMS= 0.37777E-06 Markov E=                 NaN t=       63.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    10.909403873603997     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -9.2170090543244498     
- GROUPROTATION> Rotating group 1_SER_CA_C by    28.839636982173733     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -10.560646994648017     
-Qu         44 E=                 NaN steps=  324 RMS= 0.36721E-06 Markov E=                 NaN t=       65.1
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -60.836241836671512     
- GROUPROTATION> Rotating group 1_SER_C_CA by    6.3492953854848393     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -75.886386792450935     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -24.921143292428336     
-Qu         45 E=                 NaN steps=  330 RMS= 0.97081E-06 Markov E=                 NaN t=       66.5
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -63.465341581725838     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -24.516292077428741     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -6.1531204551585272     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    32.699159766696084     
-Qu         46 E=                 NaN steps=  337 RMS= 0.57029E-06 Markov E=                 NaN t=       68.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by    6.1735054968794802     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    13.929680308105912     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -24.664025880394263     
- GROUPROTATION> Rotating group 1_SER_CA_C by    60.323925505710619     
-Qu         47 E=                 NaN steps=  297 RMS= 0.55811E-06 Markov E=                 NaN t=       69.4
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -70.275657544416973     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -39.322309393540735     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -81.710946755391348     
-Qu         48 E=                 NaN steps=  410 RMS= 0.97679E-06 Markov E=                 NaN t=       70.9
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -13.825168557080710     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -10.834411022349125     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -50.298446730094923     
- GROUPROTATION> Rotating group 1_SER_CA_C by    132.73237587977340     
-Qu         49 E=                 NaN steps=  449 RMS= 0.54308E-06 Markov E=                 NaN t=       72.5
- GROUPROTATION> Rotating group 2_LYS_CG_C by    63.948590785224596     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    18.401077901439251     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -11.609522378983192     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    23.662140195258502     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    51.701426129756513     
-Qu         50 E=                 NaN steps=  323 RMS= 0.78888E-06 Markov E=                 NaN t=       73.8
-Acceptance ratio for previous     50 steps=  0.0000  FAC=  1.0500
-Steps are now:  STEP=    0.9524 Temperature is now:    0.8000
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -9.6237393867466299     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    4.1736552235653444E-002
- GROUPROTATION> Rotating group 2_LYS_CA_C by    11.383661405732784     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -5.8917438184814896     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -99.065167807661609     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -2.9422963836331597     
-Qu         51 E=                 NaN steps=  310 RMS= 0.71283E-06 Markov E=                 NaN t=       75.2
- GROUPROTATION> Rotating group 2_LYS_CG_C by    51.411051844941653     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -85.590426862610514     
-Qu         52 E=                 NaN steps=  305 RMS= 0.61270E-06 Markov E=                 NaN t=       76.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by    5.0703841901866982     
- GROUPROTATION> Rotating group 1_SER_C_CA by    3.0119358097032465     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    32.346807608440322     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -145.58211489707301     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -7.9156088353226579     
-Qu         53 E=                 NaN steps=  354 RMS= 0.85015E-06 Markov E=                 NaN t=       78.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -4.4970985278218132     
- GROUPROTATION> Rotating group 1_SER_C_CA by    2.5048744459613745     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -26.226102402179254     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    32.535767432227374     
-Qu         54 E=                 NaN steps=  310 RMS= 0.40572E-06 Markov E=                 NaN t=       79.3
- GROUPROTATION> Rotating group 2_LYS_CG_C by    19.022236865136023     
- GROUPROTATION> Rotating group 1_SER_C_CA by    11.553470304495503     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    44.294866983732618     
- GROUPROTATION> Rotating group 1_SER_CA_C by    32.348602789458162     
-check_chirality> ERROR -- inverted chiral carbon detected in residue      2
-  quench> CHIRALITY CHECK FAILED - discarding structure
-Qu         55 E=                 NaN steps=  354 RMS= 0.60610E-06 Markov E=                 NaN t=       80.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    11.497359049976364     
- GROUPROTATION> Rotating group 1_SER_C_CA by    1.8203101671432544     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    16.837950256376679     
-Qu         56 E=                 NaN steps=  323 RMS= 0.63859E-06 Markov E=                 NaN t=       82.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -10.568244693153618     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -32.062483342625683     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    33.883714191774096     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    30.670895853768535     
- GROUPROTATION> Rotating group 1_SER_CA_C by    148.86275819237494     
-check_chirality> ERROR -- inverted chiral carbon detected in residue      2
-  quench> CHIRALITY CHECK FAILED - discarding structure
-Qu         57 E=                 NaN steps=  357 RMS= 0.86010E-06 Markov E=                 NaN t=       83.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by    1.5861787600098456     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    10.743452674012712     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -4.1497234785131187     
-Qu         58 E=                 NaN steps=  300 RMS= 0.33823E-06 Markov E=                 NaN t=       85.0
- GROUPROTATION> Rotating group 2_LYS_CG_C by    88.473795611533660     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -7.3720165624799874     
-Qu         59 E=                 NaN steps=  320 RMS= 0.73875E-06 Markov E=                 NaN t=       86.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by    3.9607868181716688     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -13.923111579241885     
- GROUPROTATION> Rotating group 1_SER_CA_C by    53.467436504596265     
-Qu         60 E=                 NaN steps=  409 RMS= 0.66821E-06 Markov E=                 NaN t=       87.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -11.931086769257563     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -18.892500146934601     
- GROUPROTATION> Rotating group 1_SER_C_CA by  -0.46418661730634991     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -59.158377662760280     
-Qu         61 E=                 NaN steps=  332 RMS= 0.73532E-06 Markov E=                 NaN t=       89.3
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -9.2470477468067394     
- GROUPROTATION> Rotating group 1_SER_C_CA by    13.833304637760627     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -136.70595099650828     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    43.077738739053686     
-Qu         62 E=                 NaN steps=  327 RMS= 0.88668E-06 Markov E=                 NaN t=       90.6
- GROUPROTATION> Rotating group 2_LYS_CG_C by    67.322741909035997     
- GROUPROTATION> Rotating group 1_SER_C_CA by    16.422092053571504     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    35.379420053717872     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    30.582512258652049     
-Qu         63 E=                 NaN steps=  336 RMS= 0.37926E-06 Markov E=                 NaN t=       92.1
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -44.569711589529454     
-Qu         64 E=                 NaN steps=  314 RMS= 0.95128E-06 Markov E=                 NaN t=       93.5
- GROUPROTATION> Rotating group 2_LYS_CD_C by    76.701081095056963     
-Qu         65 E=                 NaN steps=  313 RMS= 0.45813E-06 Markov E=                 NaN t=       95.0
- GROUPROTATION> Rotating group 2_LYS_CD_C by    59.895468522411448     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -17.233354250829755     
-Qu         66 E=                 NaN steps=  317 RMS= 0.84091E-06 Markov E=                 NaN t=       96.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -4.7925764404899116     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    22.495327276209647     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    30.102916406256124     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    38.587575824493442     
-Qu         67 E=                 NaN steps=  339 RMS= 0.87460E-06 Markov E=                 NaN t=       97.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    15.635072690974814     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -33.514805445977593     
-Qu         68 E=                 NaN steps=  323 RMS= 0.47210E-06 Markov E=                 NaN t=       99.2
- GROUPROTATION> Rotating group 2_LYS_CD_C by    56.811690912590443     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -32.430614265170568     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -9.1751505443351817     
-Qu         69 E=                 NaN steps=  325 RMS= 0.90376E-06 Markov E=                 NaN t=      100.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by    17.268728615425236     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    3.8323739732540654     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -116.66580224361913     
-Qu         70 E=                 NaN steps=  307 RMS= 0.38700E-06 Markov E=                 NaN t=      101.9
- GROUPROTATION> Rotating group 1_SER_C_CA by   -4.7311081895053286     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    65.679075122686427     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -23.799767956262485     
-Qu         71 E=                 NaN steps=  328 RMS= 0.75056E-06 Markov E=                 NaN t=      103.3
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -26.025938570795404     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -95.621813608000835     
-Qu         72 E=                 NaN steps=  333 RMS= 0.77189E-06 Markov E=                 NaN t=      104.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by    42.640959123395191     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    13.233098337281362     
- GROUPROTATION> Rotating group 1_SER_CA_C by    22.825941593323645     
-Qu         73 E=                 NaN steps=  321 RMS= 0.73844E-06 Markov E=                 NaN t=      106.0
- GROUPROTATION> Rotating group 2_LYS_CG_C by    68.525392262789836     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    25.237794241576424     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    36.782427515171243     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -32.013319094298240     
-Qu         74 E=                 NaN steps=  340 RMS= 0.92565E-06 Markov E=                 NaN t=      107.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -12.805869810323253     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -3.0525708017230699     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -17.599344637867368     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -72.216938733991853     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    35.229544264534042     
-Qu         75 E=                 NaN steps=  303 RMS= 0.70300E-06 Markov E=                 NaN t=      108.8
- GROUPROTATION> Rotating group 1_SER_C_CA by    5.7702605337243176     
- GROUPROTATION> Rotating group 1_SER_CA_C by    132.18271170316297     
-Qu         76 E=                 NaN steps=  298 RMS= 0.82956E-06 Markov E=                 NaN t=      110.1
- GROUPROTATION> Rotating group 1_SER_C_CA by    12.755432963778322     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -44.227681987415124     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      1     2
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu         77 E=                 NaN steps=  354 RMS= 0.60989E-06 Markov E=                 NaN t=      111.6
- GROUPROTATION> Rotating group 2_LYS_CG_C by    2.0972224841737148     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -6.3429931102817756     
- GROUPROTATION> Rotating group 1_SER_C_CA by    14.459675914414179     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -37.486471300805057     
-Qu         78 E=                 NaN steps=  317 RMS= 0.54770E-06 Markov E=                 NaN t=      112.9
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -7.9227009333348661     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -53.812453926839233     
- GROUPROTATION> Rotating group 1_SER_C_CA by    7.7786329973652606     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -39.386586783791579     
-Qu         79 E=                 NaN steps=  336 RMS= 0.94407E-06 Markov E=                 NaN t=      114.3
- GROUPROTATION> Rotating group 2_LYS_CA_C by    6.3813823902064488     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    18.888502068815264     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -20.571166575223998     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -5.1633076587235163     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -88.335370626946428     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    32.872766408730477     
-Qu         80 E=                 NaN steps=  314 RMS= 0.62154E-06 Markov E=                 NaN t=      115.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -14.331729997163794     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -38.645877060594160     
-Qu         81 E=                 NaN steps=  331 RMS= 0.55415E-06 Markov E=                 NaN t=      117.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by    17.267445252429944     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -25.117442306604119     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -53.556047474176310     
-Qu         82 E=                 NaN steps=  354 RMS= 0.66055E-06 Markov E=                 NaN t=      118.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by    13.977353110556452     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    41.547403668942792     
-Qu         83 E=                 NaN steps=  334 RMS= 0.62608E-06 Markov E=                 NaN t=      119.9
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -63.784163357415302     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    20.416633416024311     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    11.402229581404077     
-Qu         84 E=                 NaN steps=  438 RMS= 0.69182E-06 Markov E=                 NaN t=      121.4
- GROUPROTATION> Rotating group 2_LYS_CG_C by    74.750341717774020     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    2.2846779897538907     
-Qu         85 E=                 NaN steps=  335 RMS= 0.58289E-06 Markov E=                 NaN t=      122.8
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -47.988970395005985     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    2.1558227632852960     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    24.186239424002761     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -3.8451122787173500     
-Qu         86 E=                 NaN steps=  339 RMS= 0.58559E-06 Markov E=                 NaN t=      124.2
- GROUPROTATION> Rotating group 2_LYS_CA_C by    4.7167537307363810E-002
- GROUPROTATION> Rotating group 2_LYS_CA_C by    21.952279501736299     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -52.766706489238615     
-Qu         87 E=                 NaN steps=  321 RMS= 0.61656E-06 Markov E=                 NaN t=      125.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -7.0817807386972609     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    22.290507129049491     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -9.7154144072299129     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    26.376019528768236     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -15.369848907348141     
-Qu         88 E=                 NaN steps=  304 RMS= 0.74418E-06 Markov E=                 NaN t=      127.0
- GROUPROTATION> Rotating group 2_LYS_CD_C by    40.596975076955644     
-Qu         89 E=                 NaN steps=  322 RMS= 0.74385E-06 Markov E=                 NaN t=      128.3
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -7.8996807802889855     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    52.606142432119327     
- GROUPROTATION> Rotating group 1_SER_C_CA by    14.824189371138328     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -23.091647829071857     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -7.8754277484588702     
-Qu         90 E=                 NaN steps=  362 RMS= 0.85104E-06 Markov E=                 NaN t=      129.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -79.578735792343764     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    22.594785121584955     
- GROUPROTATION> Rotating group 1_SER_C_CA by    17.790884576062030     
-Qu         91 E=                 NaN steps=  372 RMS= 0.58972E-06 Markov E=                 NaN t=      131.1
- GROUPROTATION> Rotating group 2_LYS_CG_C by    46.236227717951664     
- GROUPROTATION> Rotating group 1_SER_C_CA by    7.7576306232878327     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    8.4375083365525008     
-Qu         92 E=                 NaN steps=  325 RMS= 0.60225E-06 Markov E=                 NaN t=      132.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -8.8406108691865661     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -11.541027005457833     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -75.628101237517498     
-Qu         93 E=                 NaN steps=  342 RMS= 0.49571E-06 Markov E=                 NaN t=      133.9
-Qu         94 E=                 NaN steps=  332 RMS= 0.85931E-06 Markov E=                 NaN t=      135.2
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -10.492596226798131     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    9.8345990650616901     
- GROUPROTATION> Rotating group 1_SER_CA_C by    24.658765934615285     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    11.523922585655363     
-check_chirality> ERROR -- inverted chiral carbon detected in residue      2
-  quench> CHIRALITY CHECK FAILED - discarding structure
-Qu         95 E=                 NaN steps=  381 RMS= 0.68829E-06 Markov E=                 NaN t=      136.7
- GROUPROTATION> Rotating group 1_SER_C_CA by    17.288389674738355     
- GROUPROTATION> Rotating group 1_SER_CA_C by    59.391106910302049     
-Qu         96 E=                 NaN steps=  308 RMS= 0.50395E-06 Markov E=                 NaN t=      138.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by    16.046278328250700     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -11.767348501916533     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    58.329832572881472     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -15.844347817093343     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -40.898275449567500     
-Qu         97 E=                 NaN steps=  307 RMS= 0.60380E-06 Markov E=                 NaN t=      139.4
- GROUPROTATION> Rotating group 2_LYS_CG_C by    14.493074667606262     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   0.75436193058320000     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -79.415376019004270     
-Qu         98 E=                 NaN steps=  353 RMS= 0.62438E-06 Markov E=                 NaN t=      140.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -16.459954551431231     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    44.150132676499119     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -7.8345243305911518     
- GROUPROTATION> Rotating group 1_SER_C_CA by    7.8037579925134484     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -7.5576731602716283     
-Qu         99 E=                 NaN steps=  327 RMS= 0.43211E-06 Markov E=                 NaN t=      142.2
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -16.181339244105175     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -29.995671107146674     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    35.410250893421590     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -57.450788498323369     
- GROUPROTATION> Rotating group 1_SER_CA_C by    63.690922613531519     
-check_chirality> ERROR -- inverted chiral carbon detected in residue      3
-  quench> CHIRALITY CHECK FAILED - discarding structure
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      1     2
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu        100 E=                 NaN steps=  403 RMS= 0.84929E-06 Markov E=                 NaN t=      143.6
-Acceptance ratio for previous     50 steps=  0.0000  FAC=  1.0500
-Steps are now:  STEP=    0.9070 Temperature is now:    0.8000
- GROUPROTATION> Rotating group 2_LYS_CA_C by    5.3519715567648278     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    26.603694832215684     
- GROUPROTATION> Rotating group 1_SER_C_CA by    7.1218910638330764     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -42.490585330379616     
-Qu        101 E=                 NaN steps=  354 RMS= 0.96987E-06 Markov E=                 NaN t=      145.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by    15.971741315522126     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -33.144811227840023     
-Qu        102 E=                 NaN steps=  315 RMS= 0.78668E-06 Markov E=                 NaN t=      146.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -10.047142418865814     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -13.710276433624005     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    38.779667205112951     
- GROUPROTATION> Rotating group 1_SER_CA_C by    36.756871068470105     
-Qu        103 E=                 NaN steps=  302 RMS= 0.58961E-06 Markov E=                 NaN t=      147.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    9.1654573764182050     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    65.825609123787743     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -18.324752650582017     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    9.7631114628317768     
-Qu        104 E=                 NaN steps=  342 RMS= 0.64173E-06 Markov E=                 NaN t=      149.2
- GROUPROTATION> Rotating group 2_LYS_CA_C by    8.2176394852429855     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -17.332338661986043     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -55.815608841638479     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -43.726048381872609     
-Qu        105 E=                 NaN steps=  305 RMS= 0.69398E-06 Markov E=                 NaN t=      150.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.70331149161223061     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    13.857951226790350     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -35.542712419187453     
-Qu        106 E=                 NaN steps=  326 RMS= 0.84428E-06 Markov E=                 NaN t=      152.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by    17.166071683200869     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -86.927451949842677     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    24.861304532697261     
- GROUPROTATION> Rotating group 1_SER_CA_C by    120.98590762310083     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    9.5274426514018806     
-check_chirality> ERROR -- inverted chiral carbon detected in residue      2
-  quench> CHIRALITY CHECK FAILED - discarding structure
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      3     4
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu        107 E=                 NaN steps=  322 RMS= 0.75048E-06 Markov E=                 NaN t=      153.3
- GROUPROTATION> Rotating group 2_LYS_CG_C by    66.154140286060681     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -22.953978159027102     
- GROUPROTATION> Rotating group 1_SER_C_CA by    1.7930835582260705     
-Qu        108 E=                 NaN steps=  328 RMS= 0.57252E-06 Markov E=                 NaN t=      154.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by    15.233170842285165     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -61.344837939043401     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    5.4398392141585150     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    5.0017289518411996     
- GROUPROTATION> Rotating group 1_SER_CA_C by    174.57781023642093     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    45.416954080758870     
-Qu        109 E=                 NaN steps=  344 RMS= 0.49152E-06 Markov E=                 NaN t=      156.1
- GROUPROTATION> Rotating group 2_LYS_CD_C by    37.815015471583067     
- GROUPROTATION> Rotating group 1_SER_CA_C by    162.82183539387373     
-Qu        110 E=                 NaN steps=  332 RMS= 0.96191E-06 Markov E=                 NaN t=      157.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -3.6089424870099278     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    28.221605583547174     
- GROUPROTATION> Rotating group 1_SER_C_CA by    9.6981565193055985     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -72.009155510397306     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    47.659649010905135     
-Qu        111 E=                 NaN steps=  373 RMS= 0.57517E-06 Markov E=                 NaN t=      158.9
- GROUPROTATION> Rotating group 2_LYS_CG_C by    21.004029114802062     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    79.261848772897878     
-Qu        112 E=                 NaN steps=  327 RMS= 0.67233E-06 Markov E=                 NaN t=      160.3
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -12.446151492371296     
- GROUPROTATION> Rotating group 1_SER_CA_C by    51.808567564810069     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -25.611397421364465     
-Qu        113 E=                 NaN steps=  305 RMS= 0.33490E-06 Markov E=                 NaN t=      161.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -12.281956271027521     
- GROUPROTATION> Rotating group 1_SER_C_CA by    9.8805207631974667     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    7.7573129159212550     
- GROUPROTATION> Rotating group 1_SER_CA_C by    12.612438818289599     
-Qu        114 E=                 NaN steps=  310 RMS= 0.59833E-06 Markov E=                 NaN t=      163.0
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -1.5261198442355788     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    25.180115622402699     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -79.694459506973033     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    47.740783202850110     
-Qu        115 E=                 NaN steps=  316 RMS= 0.43694E-06 Markov E=                 NaN t=      164.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by    1.4111936003544074     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    69.471100410260476     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    1.0488599458743619     
-Qu        116 E=                 NaN steps=  306 RMS= 0.58611E-06 Markov E=                 NaN t=      165.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    15.254016206545822     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    85.452241103498764     
-Qu        117 E=                 NaN steps=  354 RMS= 0.35516E-06 Markov E=                 NaN t=      167.2
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -4.3302233793997909     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    21.981179068861938     
-Qu        118 E=                 NaN steps=  305 RMS= 0.81753E-06 Markov E=                 NaN t=      168.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -1.9733780727312096     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    80.663468778594890     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -81.594621317848137     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    44.066167894655635     
-Qu        119 E=                 NaN steps=  344 RMS= 0.43417E-06 Markov E=                 NaN t=      170.1
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -34.948011151233572     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -10.084468659913416     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -4.0439681671295125     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -1.2620133592259579     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -62.251351895404397     
-Qu        120 E=                 NaN steps=  327 RMS= 0.65030E-06 Markov E=                 NaN t=      171.5
- GROUPROTATION> Rotating group 1_SER_C_CA by   0.31040763260195398     
-Qu        121 E=                 NaN steps=  304 RMS= 0.96094E-06 Markov E=                 NaN t=      172.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    17.972231032758899     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    20.894070719091715     
- GROUPROTATION> Rotating group 1_SER_CA_C by    136.91893264550362     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -6.5573065144089817     
-Qu        122 E=                 NaN steps=  317 RMS= 0.82452E-06 Markov E=                 NaN t=      174.2
- GROUPROTATION> Rotating group 1_SER_C_CA by   -5.0664915357761684     
-Qu        123 E=                 NaN steps=  291 RMS= 0.53682E-06 Markov E=                 NaN t=      175.5
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -18.502360471308869     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -7.0034712071869123     
-Qu        124 E=                 NaN steps=  315 RMS= 0.61004E-06 Markov E=                 NaN t=      176.9
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -36.046732113500333     
- GROUPROTATION> Rotating group 1_SER_C_CA by    1.8723091879326268     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    27.817705026618711     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      2     3
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu        125 E=                 NaN steps=  323 RMS= 0.65114E-06 Markov E=                 NaN t=      178.3
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -14.622537652113706     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -55.372835525774676     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -87.498249884492296     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    52.711949063449502     
-Qu        126 E=                 NaN steps=  384 RMS= 0.59694E-06 Markov E=                 NaN t=      179.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -21.542885296937317     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -66.979331489314362     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    9.9993489050876967     
-Qu        127 E=                 NaN steps=  311 RMS= 0.59380E-06 Markov E=                 NaN t=      181.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.61675732762648294     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -79.327096834618871     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -6.5329961219083152     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -8.0857056112182111     
-Qu        128 E=                 NaN steps=  409 RMS= 0.47342E-06 Markov E=                 NaN t=      182.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by    50.501627068239465     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -25.356805172057872     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -39.409746873289485     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -36.820452285532461     
-Qu        129 E=                 NaN steps=  327 RMS= 0.31289E-06 Markov E=                 NaN t=      184.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -3.3997314466635471     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -20.163104279836645     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    26.029965375147960     
-Qu        130 E=                 NaN steps=  309 RMS= 0.69402E-06 Markov E=                 NaN t=      185.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by   0.86299680418366342     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -17.283977346942230     
-Qu        131 E=                 NaN steps=  294 RMS= 0.69311E-06 Markov E=                 NaN t=      186.8
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -55.930188250726815     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -21.308163899094719     
-Qu        132 E=                 NaN steps=  321 RMS= 0.69681E-06 Markov E=                 NaN t=      188.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -16.402894058019349     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    29.629020937977934     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    4.8220797811511424     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -50.357608712213668     
-Qu        133 E=                 NaN steps=  336 RMS= 0.75006E-06 Markov E=                 NaN t=      189.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -4.4459835583115330     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -62.659284735927223     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    27.605742296447612     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -9.2385954433622111     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    51.923856080564271     
-Qu        134 E=                 NaN steps=  317 RMS= 0.75190E-06 Markov E=                 NaN t=      190.9
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -1.2701480312864093     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    31.383296031651636     
- GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.24316568462256224     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -9.6551921185548650     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -18.303597243143930     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -173.20396263015382     
-check_chirality> ERROR -- inverted chiral carbon detected in residue      2
-  quench> CHIRALITY CHECK FAILED - discarding structure
-Qu        135 E=                 NaN steps=  344 RMS= 0.63904E-06 Markov E=                 NaN t=      192.3
- GROUPROTATION> Rotating group 2_LYS_CG_C by    29.526799314144402     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    13.870162316356343     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    14.073374180825475     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -6.1051058960190367     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    27.427806450615890     
-Qu        136 E=                 NaN steps=  318 RMS= 0.40581E-06 Markov E=                 NaN t=      193.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by    70.526169677293979     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -12.468007237319531     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -30.260057751391763     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    46.843572494059387     
-Qu        137 E=                 NaN steps=  304 RMS= 0.76837E-06 Markov E=                 NaN t=      195.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by    7.4705688555591312     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -123.18521707406539     
-Qu        138 E=                 NaN steps=  328 RMS= 0.27831E-06 Markov E=                 NaN t=      196.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -12.446725110503333     
- GROUPROTATION> Rotating group 1_SER_C_CA by    14.937556825323441     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    42.239926291781053     
-Qu        139 E=                 NaN steps=  316 RMS= 0.79958E-06 Markov E=                 NaN t=      197.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    2.3395167943179116     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -1.0163928692030488     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    7.2152385893643922     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -3.0579041410894967     
-Qu        140 E=                 NaN steps=  301 RMS= 0.60480E-06 Markov E=                 NaN t=      199.2
- GROUPROTATION> Rotating group 2_LYS_CA_C by    6.9543261633875568     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    43.768436136384508     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -32.210517997392877     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    14.424600562414726     
-Qu        141 E=                 NaN steps=  333 RMS= 0.40559E-06 Markov E=                 NaN t=      200.5
- GROUPROTATION> Rotating group 2_LYS_CG_C by    18.232943077006805     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    7.9557587588604992     
-Qu        142 E=                 NaN steps=  304 RMS= 0.54939E-06 Markov E=                 NaN t=      201.9
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -15.206090798359650     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    54.979524101607240     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -17.247853948004575     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    81.632517653353844     
- GROUPROTATION> Rotating group 1_SER_CA_C by    150.04648051266238     
-check_chirality> ERROR -- inverted chiral carbon detected in residue      2
-  quench> CHIRALITY CHECK FAILED - discarding structure
-Qu        143 E=                 NaN steps=  335 RMS= 0.94712E-06 Markov E=                 NaN t=      203.3
- GROUPROTATION> Rotating group 2_LYS_CG_C by    73.290698425283793     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -6.0990286023437372     
- GROUPROTATION> Rotating group 1_SER_CA_C by    173.94228576980780     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    47.014100997736669     
-Qu        144 E=                 NaN steps=  344 RMS= 0.60869E-06 Markov E=                 NaN t=      204.7
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -26.742332017954340     
- GROUPROTATION> Rotating group 1_SER_CA_C by    125.95652593457740     
-Qu        145 E=                 NaN steps=  298 RMS= 0.42975E-06 Markov E=                 NaN t=      206.0
- GROUPROTATION> Rotating group 1_SER_C_CA by   -4.6563902919714204     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -87.985014111229248     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -36.936535650501277     
-Qu        146 E=                 NaN steps=  323 RMS= 0.50478E-06 Markov E=                 NaN t=      207.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -2.9477589897998269     
- GROUPROTATION> Rotating group 1_SER_C_CA by    6.3645115590911931     
-Qu        147 E=                 NaN steps=  338 RMS= 0.66240E-06 Markov E=                 NaN t=      208.9
- GROUPROTATION> Rotating group 2_LYS_CG_C by    7.8183627489108893     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    4.7131892102344297     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -5.2419099336726527     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -20.291524304563954     
-Qu        148 E=                 NaN steps=  323 RMS= 0.81407E-06 Markov E=                 NaN t=      210.2
- GROUPROTATION> Rotating group 2_LYS_CA_C by    7.1568300205707569     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -43.520785074987764     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -81.566087706953837     
-Qu        149 E=                 NaN steps=  330 RMS= 0.40121E-06 Markov E=                 NaN t=      211.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by    12.783093168383656     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    26.519165933236888     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -31.302091895346180     
-Qu        150 E=                 NaN steps=  309 RMS= 0.54583E-06 Markov E=                 NaN t=      213.0
-Acceptance ratio for previous     50 steps=  0.0000  FAC=  1.0500
-Steps are now:  STEP=    0.8638 Temperature is now:    0.8000
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -3.7650695016570146     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -8.4131165189132258     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -50.901681961481039     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -96.670320337278028     
-Qu        151 E=                 NaN steps=  304 RMS= 0.46727E-06 Markov E=                 NaN t=      214.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by    15.626836084567575     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    60.940751323995428     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -17.932800920886390     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    31.019258718838717     
-Qu        152 E=                 NaN steps=  330 RMS= 0.60497E-06 Markov E=                 NaN t=      215.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -7.6709180293150645     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    57.649517263073548     
- GROUPROTATION> Rotating group 1_SER_CA_C by    173.83889026953125     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    42.693774343779758     
-Qu        153 E=                 NaN steps=  357 RMS= 0.58660E-06 Markov E=                 NaN t=      217.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -8.2033371192587019     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -12.996426378408261     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    23.773249298688601     
-Qu        154 E=                 NaN steps=  317 RMS= 0.86344E-06 Markov E=                 NaN t=      218.5
- GROUPROTATION> Rotating group 2_LYS_CA_C by    12.561851850791342     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    11.541781635387784     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    4.8420123969386628     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -1.2151899286575456     
- GROUPROTATION> Rotating group 1_SER_CA_C by    136.40855614955169     
-Qu        155 E=                 NaN steps=  297 RMS= 0.40953E-06 Markov E=                 NaN t=      219.9
- GROUPROTATION> Rotating group 2_LYS_CA_C by    2.6545821592786130     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    28.219225134248855     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -35.850002441758861     
-Qu        156 E=                 NaN steps=  295 RMS= 0.67782E-06 Markov E=                 NaN t=      221.3
- GROUPROTATION> Rotating group 2_LYS_CG_C by    74.361911916387413     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -39.186352672448486     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    31.204328989292495     
-Qu        157 E=                 NaN steps=  299 RMS= 0.71603E-06 Markov E=                 NaN t=      222.6
- GROUPROTATION> Rotating group 2_LYS_CA_C by    7.2999250401797076     
- GROUPROTATION> Rotating group 2_LYS_CG_C by    39.321828606457778     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -44.521108303614881     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -55.802871809885623     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    28.171325114831312     
-Qu        158 E=                 NaN steps=  357 RMS= 0.57722E-06 Markov E=                 NaN t=      224.0
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -81.094495486760493     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -17.564666397376524     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -30.959805885761412     
-Qu        159 E=                 NaN steps=  319 RMS= 0.44404E-06 Markov E=                 NaN t=      225.4
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -61.597974318841139     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    19.613382411274447     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -31.169381417861281     
- GROUPROTATION> Rotating group 1_SER_CA_C by    115.71879563756505     
-Qu        160 E=                 NaN steps=  338 RMS= 0.95915E-06 Markov E=                 NaN t=      226.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -8.6834121858478763     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -78.927138432136616     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -12.627934512894663     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -178.03650673363506     
-check_cistrans_protein>  WARNING -- cis (or deformed) peptide bond detected between residues      2     3
-  quench> WARNING: cis/trans differs from initial structure!
-  quench> CIS/TRANS CHECK FAILED - discarding structure
-Qu        161 E=                 NaN steps=  353 RMS= 0.69299E-06 Markov E=                 NaN t=      228.3
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -8.6958342238046011     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -7.0960244416443494     
-Qu        162 E=                 NaN steps=  311 RMS= 0.97954E-06 Markov E=                 NaN t=      229.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -12.474249058163146     
- GROUPROTATION> Rotating group 1_SER_C_CA by    4.0703250817538255     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    24.317426342695963     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -7.3657638443706697     
-Qu        163 E=                 NaN steps=  306 RMS= 0.86466E-06 Markov E=                 NaN t=      231.1
- GROUPROTATION> Rotating group 2_LYS_CG_C by    23.442494331930288     
- GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.29980249744860482     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -59.224531121654273     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -8.1555165687728728     
-Qu        164 E=                 NaN steps=  308 RMS= 0.48607E-06 Markov E=                 NaN t=      232.5
- GROUPROTATION> Rotating group 1_SER_C_CA by   0.74987696127085668     
- GROUPROTATION> Rotating group 1_SER_CA_C by    54.347075587253222     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -4.0967700254068573     
-Qu        165 E=                 NaN steps=  297 RMS= 0.58264E-06 Markov E=                 NaN t=      233.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    16.735721023030155     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -48.399590863285603     
- GROUPROTATION> Rotating group 1_SER_C_CA by    15.567779768761866     
- GROUPROTATION> Rotating group 1_SER_CA_C by    85.668118082582680     
- GROUPROTATION> Rotating group 2_LYS_CB_C by    36.320783054497703     
-Qu        166 E=                 NaN steps=  323 RMS= 0.62660E-06 Markov E=                 NaN t=      235.2
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -17.953589844969226     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    18.446102534695676     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -111.63566415110314     
-Qu        167 E=                 NaN steps=  328 RMS= 0.60471E-06 Markov E=                 NaN t=      236.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -17.505208852072244     
-Qu        168 E=                 NaN steps=  300 RMS= 0.89887E-06 Markov E=                 NaN t=      238.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -11.918304434301776     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -15.847219634154236     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -88.497385992602133     
-Qu        169 E=                 NaN steps=  343 RMS= 0.63034E-06 Markov E=                 NaN t=      239.5
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -75.163138215648189     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -78.405065862027641     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -119.45470605330135     
-Qu        170 E=                 NaN steps=  362 RMS= 0.73092E-06 Markov E=                 NaN t=      240.9
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -36.048732287283315     
- GROUPROTATION> Rotating group 1_SER_CA_C by    57.022036508832905     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -36.635045474208908     
-Qu        171 E=                 NaN steps=  327 RMS= 0.32748E-06 Markov E=                 NaN t=      242.4
- GROUPROTATION> Rotating group 2_LYS_CG_C by    86.812789181524835     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -39.477631204563600     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -149.52744797777203     
-Qu        172 E=                 NaN steps=  340 RMS= 0.65421E-06 Markov E=                 NaN t=      243.8
- GROUPROTATION> Rotating group 2_LYS_CA_C by    13.433290909997853     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -42.114633660080415     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -12.863288814638079     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -118.72038380454362     
-Qu        173 E=                 NaN steps=  311 RMS= 0.35886E-06 Markov E=                 NaN t=      245.2
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -3.3098318520993906     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -3.5713108645043468     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -50.407982253005095     
-Qu        174 E=                 NaN steps=  308 RMS= 0.79319E-06 Markov E=                 NaN t=      246.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -6.1091191794306132     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -79.860265067372339     
- GROUPROTATION> Rotating group 1_SER_C_CA by    4.3593180214196190     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -3.3263728365885674     
- GROUPROTATION> Rotating group 1_SER_CA_C by    113.73122652695767     
-Qu        175 E=                 NaN steps=  384 RMS= 0.88984E-06 Markov E=                 NaN t=      248.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.23623593006845675     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -14.739572340779265     
- GROUPROTATION> Rotating group 1_SER_C_CA by   0.44831770185042513     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -4.1957496166914323     
- GROUPROTATION> Rotating group 1_SER_CA_C by    178.74232926846648     
-Qu        176 E=                 NaN steps=  323 RMS= 0.33875E-06 Markov E=                 NaN t=      249.6
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -49.522683345950739     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    25.469916938538127     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    67.622119001712605     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -33.371762823139861     
-Qu        177 E=                 NaN steps=  352 RMS= 0.46974E-06 Markov E=                 NaN t=      251.0
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -1.1285910883849715     
- GROUPROTATION> Rotating group 1_SER_C_CA by    1.1496243367233343     
-Qu        178 E=                 NaN steps=  297 RMS= 0.86594E-06 Markov E=                 NaN t=      252.4
- GROUPROTATION> Rotating group 2_LYS_CG_C by    15.813619514141307     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -18.067835965554277     
- GROUPROTATION> Rotating group 1_SER_C_CA by    5.8053817991678738     
-Qu        179 E=                 NaN steps=  316 RMS= 0.44599E-06 Markov E=                 NaN t=      253.8
- GROUPROTATION> Rotating group 1_SER_C_CA by   -5.9514030402742479     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -127.93727894830776     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -41.589638985841319     
-Qu        180 E=                 NaN steps=  340 RMS= 0.84797E-06 Markov E=                 NaN t=      255.3
- GROUPROTATION> Rotating group 2_LYS_CA_C by    10.318560997868826     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -67.789057267151449     
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -28.894078235229728     
- GROUPROTATION> Rotating group 2_LYS_CD_C by   -29.147291385172188     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -96.532752943276861     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -34.569570510654074     
-Qu        181 E=                 NaN steps=  511 RMS= 0.57220E-06 Markov E=                 NaN t=      256.9
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -54.759394152659141     
- GROUPROTATION> Rotating group 1_SER_C_CA by    4.9881529239737761     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -179.91511253398409     
-Qu        182 E=                 NaN steps=  348 RMS= 0.42645E-06 Markov E=                 NaN t=      258.3
- GROUPROTATION> Rotating group 1_SER_C_CA by   -15.317164975956763     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    35.300614031298473     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -102.40494155895745     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -18.420667947736188     
-Qu        183 E=                 NaN steps=  355 RMS= 0.98749E-06 Markov E=                 NaN t=      259.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -3.3314000584355625     
- GROUPROTATION> Rotating group 2_LYS_CA_C by    22.071353145854822     
- GROUPROTATION> Rotating group 1_SER_C_CA by   -8.2166211786272232     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    42.152826561842858     
- GROUPROTATION> Rotating group 1_SER_CA_C by   -174.36627312528145     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -41.652918017415963     
-Qu        184 E=                 NaN steps=  320 RMS= 0.71760E-06 Markov E=                 NaN t=      261.1
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -15.444715850821652     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -64.812583835202489     
- GROUPROTATION> Rotating group 1_SER_C_CA by    5.7041215313318645     
- GROUPROTATION> Rotating group 2_LYS_CD_C by    35.290736765223450     
- GROUPROTATION> Rotating group 1_SER_CA_C by    89.227258323483255     
-Qu        185 E=                 NaN steps=  341 RMS= 0.78623E-06 Markov E=                 NaN t=      262.4
- GROUPROTATION> Rotating group 2_LYS_CA_C by  -0.53288544381892311     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -16.420298445134840     
- GROUPROTATION> Rotating group 2_LYS_CB_C by   -50.268885076842359     
-Qu        186 E=                 NaN steps=  317 RMS= 0.82104E-06 Markov E=                 NaN t=      263.7
- GROUPROTATION> Rotating group 2_LYS_CA_C by   -17.803251528325600     
- GROUPROTATION> Rotating group 2_LYS_CG_C by   -61.549563176971986     
- GROUPROTATION> Rotating group 1_SER_CA_C by    22.526673327145335     
-Qu        187 E=                 NaN steps=  342 RMS= 0.91275E-06 Markov E=                 NaN t=      265.1
+Qu         56 E=     52.92875231     steps=  405 RMS= 0.46094E-06 Markov E=     51.00541320     t=        7.6
+ GROUPROTATION> Rotating group 2_LYS_CG_C by    1.0411502085635327     
+ GROUPROTATION> Rotating group 1_SER_C_CA by   -13.054089565731621     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by    25.476011774587203     
+Qu         57 E=     51.00541326     steps=  322 RMS= 0.43310E-06 Markov E=     51.00541320     t=        7.7
+ GROUPROTATION> Rotating group 2_LYS_CA_C by    6.5621620739777953     
+ GROUPROTATION> Rotating group 1_SER_CA_C by   -161.70940882489441     
+ GROUPROTATION> Rotating group 2_LYS_CB_C by   0.17698741068686852     
+saveit> Target hit after              58 quenches           19519 function calls.
+saveit> Energy=       50.9510579482 target=       50.9510579500
+Qu         58 E=     50.95105795     steps=  359 RMS= 0.97485E-06 Markov E=     51.00541326     t=        7.8
+Acceptance ratio for run=     0.56000 Step=     1.05000 Angular step factor=     0.00000 T=     0.80000
+1 59 19519         7.8400000000
+Tightly converging the SAVE lowest energy minima found
+NOTE: these may NOT match the other output files - see below for a sorted list of Lowest minima
+Final Quench      1 energy=     50.95105823     steps=  120 RMS force=  0.9478307E-08 time=        7.89
+Final Quench      2 energy=     51.00541317     steps=   87 RMS force=  0.8574218E-08 time=        7.92
+Final Quench      3 energy=     51.66211599     steps=   53 RMS force=  0.9604042E-08 time=        7.95
+Final Quench      4 energy=     51.70186576     steps=   62 RMS force=  0.7332388E-08 time=        7.98
+Final Quench      5 energy=     51.78970129     steps=   47 RMS force=  0.8881180E-08 time=        8.00
+Final Quench      6 energy=     52.01734789     steps=   34 RMS force=  0.9606908E-08 time=        8.01
+Final Quench      7 energy=     52.40966627     steps=   44 RMS force=  0.8578032E-08 time=        8.04
+Final Quench      8 energy=     52.55657020     steps=   54 RMS force=  0.8861317E-08 time=        8.06
+Final Quench      9 energy=     52.77989722     steps=   63 RMS force=  0.8744594E-08 time=        8.09
+Final Quench     10 energy=     52.88763721     steps=   32 RMS force=  0.9982920E-08 time=        8.11
+Final Quench     11 energy=     52.97488416     steps=   65 RMS force=  0.8970493E-08 time=        8.14
+Final Quench     12 energy=     53.02619687     steps=   53 RMS force=  0.8549450E-08 time=        8.16
+Final Quench     13 energy=     53.13011201     steps=   63 RMS force=  0.8642460E-08 time=        8.19
+Final Quench     14 energy=     53.14953915     steps=   64 RMS force=  0.9973234E-08 time=        8.21
+Final Quench     15 energy=     53.27984949     steps=   78 RMS force=  0.8170888E-08 time=        8.25
+Final Quench     16 energy=     53.76513242     steps=   63 RMS force=  0.8294996E-08 time=        8.28
+Final Quench     17 energy=     54.03304029     steps=   50 RMS force=  0.9054365E-08 time=        8.30
+Final Quench     18 energy=     54.12052409     steps=   84 RMS force=  0.9086244E-08 time=        8.33
+Final Quench     19 energy=     54.26067219     steps=   80 RMS force=  0.8845011E-08 time=        8.36
+Final Quench     20 energy=     54.51564647     steps=   93 RMS force=  0.9181093E-08 time=        8.39
+After re-sorting, the lowest found minima are (lowest free energy subtracted if applicable):
+Lowest Minimum      1 Energy=      0.000000000    
+Lowest Minimum      2 Energy=     0.5435493369E-01
+Lowest Minimum      3 Energy=     0.7110577623    
+Lowest Minimum      4 Energy=     0.7508075235    
+Lowest Minimum      5 Energy=     0.8386430597    
+Lowest Minimum      6 Energy=      1.066289658    
+Lowest Minimum      7 Energy=      1.458608038    
+Lowest Minimum      8 Energy=      1.605511965    
+Lowest Minimum      9 Energy=      1.828838992    
+Lowest Minimum     10 Energy=      1.936578980    
+Lowest Minimum     11 Energy=      2.023825927    
+Lowest Minimum     12 Energy=      2.075138642    
+Lowest Minimum     13 Energy=      2.179053773    
+Lowest Minimum     14 Energy=      2.198480914    
+Lowest Minimum     15 Energy=      2.328791259    
+Lowest Minimum     16 Energy=      2.814074186    
+Lowest Minimum     17 Energy=      3.081982062    
+Lowest Minimum     18 Energy=      3.169465862    
+Lowest Minimum     19 Energy=      3.309613955    
+Lowest Minimum     20 Energy=      3.564588235    
+time elapsed                8.4 seconds
+Number of potential calls              20848
