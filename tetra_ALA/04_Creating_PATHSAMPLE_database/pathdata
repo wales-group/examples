@@ -1,4 +1,4 @@
-! PATHSAMPLE input to create an initial database from OPTIM path.info for LJ38
+! PATHSAMPLE input to create an initial database from OPTIM path.info for tetra-ALA
 ! For further details, see the PATHSAMPLE documentation
 
 EXEC           /home/energy/workshop/binaries/A9OPTIM
@@ -23,4 +23,5 @@ ITOL           0.1D0
 ! STEP 2: run a Dijkstra analysis to identify the 'fastest path' (initially commented) 
 DIJKSTRA       0
 CYCLES         0
+
 AMBER9

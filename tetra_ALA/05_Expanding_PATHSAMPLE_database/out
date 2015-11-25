@@ -1,0 +1,193 @@
+PATHSAMPLE version rUnversioned directory                                                 
+keywords> Distance tolerance for identifying atoms in the same orbit=        0.00100
+keywords> Number of groups of permutable atoms=     6
+keywords> group      1 contains      3 atoms with      0 additional atom sets:
+     1     3     4  
+keywords> group      2 contains      3 atoms with      0 additional atom sets:
+    12    13    14  
+keywords> group      3 contains      3 atoms with      0 additional atom sets:
+    22    23    24  
+keywords> group      4 contains      3 atoms with      0 additional atom sets:
+    32    33    34  
+keywords> group      5 contains      3 atoms with      0 additional atom sets:
+    42    43    44  
+keywords> group      6 contains      3 atoms with      0 additional atom sets:
+    50    51    52  
+main> WARNING - PERM set without perm.allow file in COPYFILES
+*************************************************************************************************
+debug printing is OFF
+Running on          1 processors for shared memory, single node setup
+Number of jobs per processor=         1
+Sleep times between OPTIM job submissions (s)=     1.000000000         1.000000000    
+finite system (not bulk)
+OPTIM system symbol: UN
+number of atoms=   52
+minimum number of connections for minima=         1
+maximum number of ts searches to achieve this minimum value=        10
+random number seed=         1
+initial perturbation parameter single-ended transition state searches=        0.90000
+energy difference  criterion for distinguishing stationary points=    0.1000000000E-04
+distance criterion for distinguishing stationary points=    0.1000000000E+00
+inertia difference criterion for setup check=    0.1000000000E+00
+sampling direction is a<-b
+OPTIM executable: /home/energy/workshop/binaries/A9OPTIM                                          
+Temperature=        0.59200
+Performing Dijkstra analysis to find the most important paths
+Rate calculation will iteratively remove minima with     0 connections or fewer
+path.info files will be read as min-sad-min triples
+Pairs of minima will be chosen for minima separated by fewer than       2 steps on either side of the largest barriers in the best SS path
+Pairs will not be recalculated unless we run out of possibilities
+Resetting EVCUT to 0.10E+21 for SI units; check it is appropriate for your system
+*************************************************************************************************
+setup> locations read for          1 min of type A
+setup> locations read for          1 min of type B
+setup> parameters read for         12 min
+setup> points for         12 minima read from file points.min
+tsdouble> Maximum number of ts increased to       20
+setup> parameters read for         18 ts
+main> time spent in setup=        0.00000
+getnconn> max connections:          3 for min          3 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        3 cycles; maximum=       7 disconnected=       0
+Dijkstra> steps to B region converged in        6 cycles; maximum=       8 disconnected=       0
+Dijkstra> Best path for min        7 and any A minimum, k^SS A<-B     374393.7433    
+       3       8       6       9      10      12       1       7
+Dijkstra> Best path between any B minimum and any A minimum:
+       3       8       6       9      10      12       1       7
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      374393.7433     for      7 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       3      -41.7229924014      13      -33.6627076722       8      -37.9782296582
+       8      -37.9782296582       8      -37.5226723783       6      -37.9728100102
+       6      -37.9728100102      15      -33.6176190692       9      -37.1738336534
+       9      -37.1738336534       9      -31.2736332346      10      -35.3093212066
+      10      -35.3093212066      18      -33.5205243121      12      -36.1555293799
+      12      -36.1555293799      14      -35.0747126047       1      -35.3503472284
+       1      -35.3503472284       7      -34.2706748149       7      -34.6022075799
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         13     4.315521986    
+                                          9     4.035687972    
+                                         15     3.556214584    
+                                         18     2.635005068    
+                                          8    0.4501376319    
+                                          7    0.3315327650    
+                                         14    0.2756346237    
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     7
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      24.27526683    
+Dijkstra> MFPT for fastest path: A<-B value=    0.2333203974E-07 B<-A value=    0.5056425567E-05
+Dijkstra> rates without conditional probability: A<-B value=     42859518.97     B<-A value=     197768.1639    
+Dijkstra> rates with    conditional probability: A<-B value=     42859518.97     B<-A value=     197768.1639    
+getspair> best path contains        8 minima
+sorted barriers on best path labelled according to the transition state:
+    13     4.315521986    
+     9     4.035687972    
+    15     3.556214584    
+    18     2.635005068    
+     8    0.4501376319    
+     7    0.3315327650    
+    14    0.2756346237    
+getspair> sorted list of       10 pairs with corresponding barrier height or minimum distance
+       3       8        4.31552
+       3       6        4.31552
+       9      10        4.03569
+       6      12        4.03569
+       6       9        3.55621
+       8      10        3.55621
+      10      12        2.63501
+       9       1        2.63501
+       8       6        0.45014
+       3       9        0.45014
+getspair> connecting minima        3 and        8 pairs used=       1 remaining=       9 total pairs=       0
+cycle2> analysing result of search        1 on CPU        1 for process id    10964
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getspair> connecting minima        3 and        6 pairs used=       2 remaining=       8 total pairs=       1
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        1 new min=       0 new ts=       2 total min=      12 total ts=      20
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search        2 on CPU        1 for process id    11010
+tsdouble> Maximum number of ts increased to       40
+getallpaths> writing data for new ts to ts.data
+getspair> connecting minima        9 and       10 pairs used=       3 remaining=       7 total pairs=       2
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        2 new min=       0 new ts=       1 total min=      12 total ts=      21
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search        3 on CPU        1 for process id    11038
+getspair> connecting minima        6 and       12 pairs used=       4 remaining=       6 total pairs=       3
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        3 new min=       0 new ts=       0 total min=      12 total ts=      21
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search        4 on CPU        1 for process id    11061
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getspair> connecting minima        6 and        9 pairs used=       5 remaining=       5 total pairs=       4
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        4 new min=       1 new ts=       5 total min=      13 total ts=      26
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search        5 on CPU        1 for process id    11087
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      2 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getspair> connecting minima        8 and       10 pairs used=       6 remaining=       4 total pairs=       5
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        5 new min=       2 new ts=       4 total min=      15 total ts=      30
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search        6 on CPU        1 for process id    11121
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getspair> connecting minima       10 and       12 pairs used=       7 remaining=       3 total pairs=       6
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        6 new min=       5 new ts=       8 total min=      20 total ts=      38
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search        7 on CPU        1 for process id    11146
+getspair> connecting minima        9 and        1 pairs used=       8 remaining=       2 total pairs=       7
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        7 new min=       0 new ts=       0 total min=      20 total ts=      38
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search        8 on CPU        1 for process id    11169
+getallpaths> writing data for new ts to ts.data
+getspair> connecting minima        8 and        6 pairs used=       9 remaining=       1 total pairs=       8
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        8 new min=       0 new ts=       1 total min=      20 total ts=      39
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search        9 on CPU        1 for process id    11192
+getspair> connecting minima        3 and        9 pairs used=      10 remaining=       0 total pairs=       9
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle        9 new min=       0 new ts=       0 total min=      20 total ts=      39
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       10 on CPU        1 for process id    11215
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      2 new minima to min.data
+tsdouble> Maximum number of ts increased to       80
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       10 new min=       2 new ts=       6 total min=      22 total ts=      45
+--------------------------------------------------------------------------------------------------------------
+main> CPU time spent iterating committor probability=     0.0000     s
+main> CPU time spent in Dijkstra                    =    0.40000E-02 s
+main> total CPU time spent in PATHSAMPLE            =    0.48000E-01 s

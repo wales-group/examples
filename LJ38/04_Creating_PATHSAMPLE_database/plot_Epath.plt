@@ -5,7 +5,7 @@
 # Set plot parameters
 se xla "Step along fastest path"
 se yla "Energy"
-se tit "Dijkstra fastest path between min.A and min.B"
+se tit "Dijkstra fastest path between min.A and min.B for LJ38"
 se grid
 unset key
 
