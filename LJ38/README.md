@@ -7,7 +7,7 @@ As a prerequisite, you will need to have compiled all three codes, plus the **di
 The source code for this can be found on the Wales group website [here](http://www-wales.ch.cam.ac.uk/svn.tar.bz2) or in *examples/utilities*.
 All should compile fine using **gfortran** and **cmake**.
 
-Visualisation is done with both **gnuplot** and **VMD** which can be obtained [here](http://www.ks.uiuc.edu/Research/vmd/)
+Visualisation is done with both **gnuplot** and **VMD**. **VMD** can be obtained [here](http://www.ks.uiuc.edu/Research/vmd/)
 
 These examples are practically focussed and as such, we won't be covering the theoretical basis of basin-hopping global optimisation or discrete path sampling.
 
@@ -16,7 +16,7 @@ Each example is stand-alone - you do not need to do them in order, although it m
 Expected output is provided for each, but bear in mind that it may not match yours 100% of the time.
 
 Where appropriate, annotated versions of input files are provided (*FILE_annotated*) describing their contents.
-These descriptions are not exhaustive so for more detail, see the documentation. 
+These descriptions are not exhaustive so for more detail, see the documentation.
 
 ### [Example 1 - Introducing GMIN](./01_Introducing_GMIN)
 
@@ -43,10 +43,10 @@ This includes:
 - using the doubly-nudged elastic band method (DNEB) to identify transition state candidates
 - refining transition states using a hybrid BFGS/eigenvector following approach and Rayleigh-Ritz minimisation
 - plotting the energy along the initial path
-- viewing the initial path using **VMD** where each LJ atoms is coloured by its pair energy
+- viewing the initial path using **VMD** where each LJ atom is coloured by its pair energy
 - producing the output file (*path.info*) that can be used as a starting point for **PATHSAMPLE** (see Example 4)
 
-### [Example 4 - Creating PATHSAMPLE database](./04_Creating_PATHSAMPLE_database) 
+### [Example 4 - Creating a PATHSAMPLE database](./04_Creating_PATHSAMPLE_database) 
 
 Using an **OPTIM** *path.info* file, initialise a **PATHSAMPLE** database to use for further sampling and calculating rates.
 This involves:
@@ -55,7 +55,7 @@ This involves:
 - running a Dijkstra analysis to identify the 'fastest path' and visualising it using **gnuplot**
 - creating a disconnectivity graph for the intial database using **disconnectionDPS**
 
-### [Example 5 - Expanding PATHSAMPLE database](./05_Expanding_PATHSAMPLE_database)
+### [Example 5 - Expanding a PATHSAMPLE database](./05_Expanding_PATHSAMPLE_database)
 
 Expand the initial LJ38 **PATHSAMPLE** database by smartly selecting minima to reconnect using the `UNTRAP` procedure.
 This involves:
