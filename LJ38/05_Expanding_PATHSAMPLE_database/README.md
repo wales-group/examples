@@ -75,7 +75,9 @@ As **PATHSAMPLE** acts as a driver for **OPTIM** (i.e. it starts **OPTIM** jobs)
 
 ## Step-by-step
 
-Before you start, take a minute to look through *pathdata_annotated* and *odata.connect_annotated* and make sure you understand roughly the purpose of each keyword.  
+Before you start, take a minute to look through *pathdata_annotated* and *odata.connect_annotated* and make sure you understand roughly the purpose of each keyword. 
+
+**WARNING:** when using **PATHSAMPLE** with `PERMDIST`, it is really important that you include it in both your *odata.connect* and *pathdata* files and that the values of `ETOL`/`EDIFFTOL`, `GEOMDIFFTOL` and `RANROT` are consistent between them. This also applies to the **OPTIM** *odata* files that were used to make the initial path in [Example 3](../03_Connecting_minima_with_OPTIM).
 
 You may also need to slightly alter your *pathdata* file to ensure that the `EXEC` keyword points to a valid **OPTIM** binary.
 
