@@ -66,6 +66,8 @@ be using them as we are simply setting up the database, but they are included as
 
 Before you start, take a minute to look through *pathdata_annotated* and make sure you understand roughly the purpose of each keyword.  
 
+**WARNING:** when using **PATHSAMPLE** with `PERMDIST`, it is really important that you include it in both your *odata.connect* and *pathdata* files and that the values of `ETOL`/`EDIFFTOL`, `GEOMDIFFTOL` and `RANROT` are consistent between them. This also applies to the **OPTIM** *odata* files that were used to make the initial path in [Example 3](../03_Connecting_minima_with_OPTIM).
+
 ### Creating the stationary point database
 
 We are first going to create the initial stationary point database by reading in the *path.info,initial* file from **OPTIM** using the `STARTFROMPATH` keyword. Your
@@ -102,8 +104,6 @@ CYCLES         0
 
 Note that if we were planning on expanding the database, we would need to alter the path after `EXEC` to point to your **OPTIM** binary. As we are not, it can be set
 to anything for now.
-
-**WARNING:** when using **PATHSAMPLE** with `PERMDIST`, it is really important that you include it in both your *odata.connect* and *pathdata* files and that the values of `ETOL`/`EDIFFTOL`, `GEOMDIFFTOL` and `RANROT` are consistent between them. This also applies to the **OPTIM** *odata* files that were used to make the initial path in [Example 3](../03_Connecting_minima_with_OPTIM).
 
 Assuming you have it somewhere in your *PATH*, we can create the database by running *PATHSAMPLE*:
 
