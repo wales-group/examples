@@ -8,8 +8,8 @@ All of these methods focus on ways of selecting pairs of minima in our database 
 choose pairs to reconnect that will reduce the overall length of the path between endpoints, while `SHORTCUT BARRIER` aims to find alternative connections to avoid
 the largest barriers between them. 
 
-In this example, we will be using `UNTRAP`, another of these methods that aims to reconnect minima similar in energy but seperated by large barriers - often referred
-to as kinetic traps. For more information all these and other methods, check the [PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE).  
+In this example, we will be using `UNTRAP`, another of these methods that aims to reconnect minima similar in energy but separated by large barriers - often referred
+to as kinetic traps. For more information on all these and other methods, check the [PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE).  
 
 ## Requirements
 In order to successfully follow this example, the following need to be in your *PATH*:
@@ -43,10 +43,10 @@ As **PATHSAMPLE** acts as a driver for **OPTIM** (i.e. it starts **OPTIM** jobs)
 
 ### PATHSAMPLE database files
 
-- *min.data* - 	Contains the energy, log product of vibrational frequencies, symmetry and moments of inertia for each minimum. A minimum is identified by its
+- *min.data* - 	Contains the energy, logarithm of the product of positive Hessian eigenvalues, symmetry and moments of inertia for each minimum. A minimum is identified by its
 		line number in this file
 
-- *ts.data* -	Contains the energy, log product of vibrational frequencies, symmetry, minima numbers that it connects and moments of intertia for each
+- *ts.data* -	Contains the energy, logarithm of the product of positive Hessian eigenvalues, symmetry, minima numbers that it connects and moments of intertia for each
 		transition state. A transition state is identified by its line number in this file
 
 - *points.min* -	Contains the coordinates for each minimum in a binary format to keep the file size low
@@ -87,7 +87,7 @@ Starting **PATHSAMPLE** and following the output can be achieved as follows:
 PATHSAMPLE > pathsample_untrap.out & ; tail -f pathsample_untrap.out
 ``` 
 
-Like **OPTIM**, **PATHSAMPLE** runs in `CYCLES` - each cycle starting the number of **OPTIM** jobs that fill the number of CPUs/GPUs available. This example is set up
+Like **OPTIM**, **PATHSAMPLE** runs in `CYCLES` - with each cycle starting the number of **OPTIM** jobs that fill the number of CPUs/GPUs available. This example is set up
 to run locally on a single core as specified by `CPUS 1` in *pathdata*. These **OPTIM** jobs are embarassingly parallel in that we can easily scale up the number 
 of jobs run at once with little penalty as they do not depend on each other. 
 
@@ -113,7 +113,7 @@ getallpaths> writing data for new ts to ts.data
 ```
 
 As each **OPTIM** run finishes, **PATHSAMPLE** analyses the minima and transition states found and checks to see if they match existing structures in the database
-using an energy (`ETOL`) and geometric (`GEOMDIFFTOL`) cutoff. If they are new, they are added to *min.data* and *ts.data* respectively and will be considered as
+using an energy (`ETOL`) and geometric (`GEOMDIFFTOL`) cutoff. If they are new, they are added to the database and will be considered as
 possible endpoints for reconnection in subsequent cycles. 
 
 - Print a summary of what was found during the cycle and the current database size:
@@ -124,10 +124,10 @@ cycle2> end of cycle        5 new min=       1 new ts=       2 total min=      1
 --------------------------------------------------------------------------------------------------------------
 ```
 
-**PATHSAMPLE** will continue to run until either all possible pairs have been tried or it runs out of `CYCLES`. It is quite robust to being interupted and
+**PATHSAMPLE** will continue to run until either all possible pairs have been tried or it runs out of `CYCLES`. It is quite robust to being interrupted and
 so can be stopped early and restarted as often as you like.
 
-**NOTE:** if you are using **PATHSAMPLE** on a compute cluster, take a look at the `PBS`/`SLURM` and `SSH` keywords on the 
+**NOTE:** if you are using **PATHSAMPLE** on a compute cluster, take a look at the `PBS` and `SSH` keywords on the 
 [PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE) for information on how to specify the number of **OPTIM** jobs to run in parallel.
 
 ### Creating a disconnectivity graph
@@ -166,10 +166,10 @@ a really important question....
 
 Knowing when to stop running **PATHSAMPLE** can be quite tricky to judge. For a system of any reasonable size, it is unrealistic to attempt to sample every minimum
 and transition state on the energy landscape so we have to find a way to judge 'convergence'. How you go about doing this depends very much on the goal of your work.
-Are you attempting to gain insight into a specific mechanism that has a known experimental rate? Maybe you would continue until you have hit that target. 
+Are you attempting to gain insight into a specific mechanism that has a known experimental rate? Maybe you would continue until the calculated kinetics no longer change significantly as new stationary points are added. 
 
 There is no 'right' answer to this question, which is why it's such a tough one. The advice we can give is to consider carefully your criteria for 'success' and 
-to leverage any experimental information e.g. melting point, rate or other experimental observable measureable that can be calculated using a structural order 
+to leverage any experimental information e.g. melting point, rate or other experimental observable that can be calculated using a structural order 
 parameter to construct a sensible measure for convergence.
 
 In this example, we're going to just stop after 50 `CYCLES` but will do so in the knowledge that we have almost certainly not explored enough!
@@ -195,4 +195,4 @@ getupair> sorted list of       11 pairs
 Generate a new disconnectivity graph using **disconnectionDPS** with these minima identified using `IDMIN` in *dinfo*. Check that you are happy that these minima
 make sense to be reconnected if we are trying to eliminate kinetic traps between our specified endpoints (minima 8 and 2). 
 
-Feel free to change the parameters of `UNTRAP` and add `DUMMYRUN` to *pathdata* and see how this affects the pairs being choosen. 
+Feel free to change the parameters of `UNTRAP` and add `DUMMYRUN` to *pathdata* and see how this affects the pairs being chosen. 
