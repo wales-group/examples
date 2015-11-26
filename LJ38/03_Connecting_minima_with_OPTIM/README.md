@@ -1,7 +1,7 @@
 # Example 3 - Connecting minima with OPTIM
 
-Among many other things, **OPTIM** can construct discrete paths, sequences of minima and transition states between two specified minima termed ‘endpoints’. Here we 
-take the two lowest energy minima were identified using **GMIN** in [Example 1](../01_Introducing_GMIN) and connect them. This can give us information about 
+Among many other things, **OPTIM** can construct discrete paths: sequences of minima and transition states between two specified minima termed ‘endpoints’. Here we 
+take the two lowest energy minima that were identified using **GMIN** in [Example 1](../01_Introducing_GMIN) and connect them. This can give us information about 
 the barriers between them and the rate of interconversion. 
 
 ## Requirements
@@ -126,9 +126,9 @@ Connected path found
 
 #### Output the connected pathway and associated files
 Once **OPTIM** has identified a connected pathway, it produces a set of output files including:
-  - *path.info* containing the coordinates and vibrational frequencies of all the minima and transition states found (not just those along the 
+  - *path.info* containing the coordinates and Hessian eigenvalues of all the minima and transition states found (not just those along the 
 final pathway) in min-ts-min triples. We will be using this file in [Example 4](../04_Creating_PATHSAMPLE_database)
-  - *path.xyz* containing the coordinates of just the minima and transition states along the pathway 
+  - *path.xyz* containing the coordinates of the minima and transition states along the pathway 
   - *EofS* containing the energy as a function of integrated path length
 
 ### Visualising the pathway using gnuplot

@@ -1,7 +1,7 @@
 # Example 4 - Creating PATHSAMPLE database 
 
 Once we have found an intial discrete pathway between minima (endpoints) of interest using **OPTIM**, we can create a **PATHSAMPLE** stationary point database
-and grow it using built in methods designed to create a kinetically relevent sample for further analysis.   
+and grow it using built-in methods designed to create a kinetically relevent sample for further analysis.   
 
 In this example, we will take the *path.info* file from [Example 3](../03_Connecting_minima_with_OPTIM) (here renamed as *path.info.initial*) and create a 
 **PATHSAMPLE** database. We will then check that the initial pathway is still present and create a disconnectivity graph to view the landscape it explores 
@@ -30,8 +30,8 @@ be using them as we are simply setting up the database, but they are included as
 				provided for reference only. For information on the full set of **PATHSAMPLE** keywords available, check the
 				[PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE)
 
-- *path.info.initial* -		The **OPTIM** output file from [Example 3](../03_Connecting_minima_with_OPTIM) that contains the energy, coordinates and vibrational 
-				frequencies of the minims and transition states found when making the initial connected pathway. We will be reading this file in to 
+- *path.info.initial* -		The **OPTIM** output file from [Example 3](../03_Connecting_minima_with_OPTIM) that contains the energy, coordinates and Hessian 
+				eigenvalues of the minima and transition states found when making the initial connected pathway. We will be reading this file in to 
 				create the **PATHSAMPLE** database
 
 ### OPTIM input files
@@ -59,8 +59,8 @@ be using them as we are simply setting up the database, but they are included as
 
 - *plot_Epath.plt* - 		**gnuplot** input file to plot the energy of the stationary points along the fastest path
 
-- *optim.out.initial* -		The **OPTIM** output from [Example 3](../03_Connecting_minima_with_OPTIM) where *path.info.initial* was created. Used to identify 
-				the endpoints by their energy below
+- *optim.out.initial* -		The **OPTIM** output from [Example 3](../03_Connecting_minima_with_OPTIM) where *path.info.initial* was created. Used below to identify 
+				the endpoints by their energy
 
 ## Step-by-step
 
@@ -139,15 +139,15 @@ getallpaths> writing data for new ts to ts.data
 
 The **PATHSAMPLE** database we have created here resides in four key files:
 
-- *min.data* - 	contains the energy, log product of vibrational frequencies, symmetry and moments of inertia for each minimum:
+- *min.data* - 	contains the energy, logarithm of the product of positive Hessian eigenvalues, symmetry and moments of inertia for each minimum:
 ```
      -169.403102763540545      520.527853268869080     1       58.8399774551       60.8497059222       67.7880496912
      -173.928426590627964      538.668902793976144    48       61.0912066056       61.0912067955       61.0912072523
      -169.205253906214921      512.433786480948584     1       56.5898755232       62.7391668556       69.2875369727
 ```
-When we refer to minima by a number from here on our e.g. minimum 2, that corresponds to line 2 of *min.data*.
+We can refer to minima by a number, e.g. minimum 2 corresponds to line 2 of *min.data*.
 
-- *ts.data* -	contains the energy, log product of vibrational frequencies, symmetry, minima numbers that it connects and moments of intertia for each
+- *ts.data* -	contains the energy, logarithm of the product of positive Hessian eigenvalues, symmetry, minima numbers that it connects and moments of inertia for each
 		transition state:
 ```
      -169.361945964207905      519.008500698187277         1         1         2       59.0685138227       61.0553599196       66.9277053042
@@ -185,7 +185,7 @@ corresponding *min.data* line number. In *min.A*, we currently have:
 This is saying that group A contains a single minimum, minimum 1.
 
 The initial contents of these files are defined by the arguments to the `STARTFROMPATH` keyword in *pathdata* and do not correspond to the endpoint states for our
-**OPTIM** pathway. Lets fix that!
+**OPTIM** pathway. Let's fix that!
 
 To do so, we need to find the line in *min.data* that corresponds to our end point structures. This is usually done by matching their energies by looking at the
 **OPTIM** output for the creating of *path.info.initial* which has been provided for convenience as *optim.out.initial*. Looking in this file we see that the 
@@ -205,7 +205,7 @@ As a result, we ignore this first set of energies and look for the output once t
  OPTIM> Final energy  =    -173.2523784     RMS force=    0.7113993280E-06
 ```
 
-These are the energies of our endpoints. Looking in min.data we can see that these match lines 2 and 8 so lets edit *min.A* and *min.B* to contain the correct 
+These are the energies of our endpoints. Looking in min.data we can see that these match lines 2 and 8 so let's edit *min.A* and *min.B* to contain the correct 
 information:
 
 *min.A*
@@ -230,7 +230,7 @@ Before we use **PATHSAMPLE** to further explore the landscape, we need to check 
 this is to perform a Dijkstra analysis to identify the path between the endpoints which makes the largest contribution to the steady state rate constant, often 
 termed the ‘fastest path’. 
 
-Do do this requires some editing of the *pathdata* file to uncomment the keywords involved in 'STEP 2' and comment out those in 'STEP 1'. The bottom of your 
+To do this requires some editing of the *pathdata* file to uncomment the keywords involved in 'STEP 2' and comment out those in 'STEP 1'. The bottom of your 
 *pathdata* file after these changes should look like this:
 ```
 ! STEP 1: creating the initial database from OPTIM path.info file
@@ -300,7 +300,7 @@ we use the disconnectivity graph representation. To do this, we use **disconnect
 
 Minima are divided into ‘superbasins’ at regular intervals specified by the `DELTA` keyword. Each minimum in the database is represented by a line that starts 
 from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged along the horizontal axis to produce 
-the clearest representation, so the horizontal axis has no physical meaning.
+the clearest representation, so the horizontal axis has no physical meaning. The vertical axis is potential energy.
 
 To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
 ```
