@@ -103,6 +103,8 @@ CYCLES         0
 Note that if we were planning on expanding the database, we would need to alter the path after `EXEC` to point to your **OPTIM** binary. As we are not, it can be set
 to anything for now.
 
+**WARNING:** when using **PATHSAMPLE** with `PERMDIST`, it is really important that you include it in both your *odata.connect* and *pathdata* files and that the values of `ETOL`/`EDIFFTOL`, `GEOMDIFFTOL` and `RANROT` are consistent between them!
+
 Assuming you have it somewhere in your *PATH*, we can create the database by running *PATHSAMPLE*:
 
 ```
