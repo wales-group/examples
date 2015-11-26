@@ -96,7 +96,7 @@ mu/sig of t, Q, V  are          1.12         1.27       737.86       702.99     
 Much better! 
 
 This nicely demonstrates the take home message of this example: the type (and size) of moves that are most effective depend a lot on the system you are 
-studying - both it's size and topology. Here, moves that exploit the symmetry of the system are much more effective than 'dumb' random Cartesian displacements.
+studying - both its size and topology. Here, moves that exploit the symmetry of the system are much more effective than 'dumb' random Cartesian displacements.
 
 ## Extension: using even more optimised input
 
