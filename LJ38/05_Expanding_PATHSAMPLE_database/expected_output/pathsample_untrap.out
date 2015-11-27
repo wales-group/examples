@@ -4,10 +4,6 @@ keywords> Number of groups of permutable atoms=     1
 keywords> group      1 contains     38 atoms with      0 additional atom sets:
      1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22
     23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38  
-keywords> NGT will calculate kSS, kNSS and kKMC
-keywords> NGT will switch to dense renormalisation scheme at threshold       0.3000
-keywords> NGT maximum square matrix size in dense phase= 11000
-keywords> NGT will use compressed row storage scheme beyond threshold       2.0000
 main> WARNING - PERM set without perm.allow file in COPYFILES
 *************************************************************************************************
 debug printing is OFF
@@ -24,8 +20,11 @@ initial perturbation parameter single-ended transition state searches=        0.
 energy difference  criterion for distinguishing stationary points=    0.1000000000E-05
 distance criterion for distinguishing stationary points=    0.2000000000E+00
 inertia difference criterion for setup check=    0.1000000000E+00
+sampling direction is a<-b
+OPTIM executable: /home/energy/workshop/binaries/OPTIM                                            
 Temperature=        0.10000
-Running new graph theory rate calculation on database
+Number of cycles for connections between local minima=      50
+No Pfold iterations
 Rate calculation will iteratively remove minima with     0 connections or fewer
 path.info files will be read as min-sad-min triples
 Pairs of minima will be chosen according to their lowest barrier to a minimum in a product superbasin
@@ -68,27 +67,27 @@ getupair> sorted list of       11 pairs
        1       2    0.1318716079E-01
        4       2    0.6112587941E-02
 getupair> connecting minima        8 and        2 pairs used=       1 remaining=      10 total pairs=       0
-cycle2> analysing result of search        1 on CPU        1 for process id      645
+cycle2> analysing result of search        1 on CPU        1 for process id    17293
 getupair> connecting minima       10 and        2 pairs used=       2 remaining=       9 total pairs=       1
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        1 new min=       0 new ts=       0 total min=      12 total ts=      11
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        2 on CPU        1 for process id      669
+cycle2> analysing result of search        2 on CPU        1 for process id    17314
 getupair> connecting minima        6 and        4 pairs used=       3 remaining=       8 total pairs=       2
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        2 new min=       0 new ts=       0 total min=      12 total ts=      11
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        3 on CPU        1 for process id      689
+cycle2> analysing result of search        3 on CPU        1 for process id    17335
 getupair> connecting minima        9 and        4 pairs used=       4 remaining=       7 total pairs=       3
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        3 new min=       0 new ts=       0 total min=      12 total ts=      11
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        4 on CPU        1 for process id      709
+cycle2> analysing result of search        4 on CPU        1 for process id    17356
 getupair> connecting minima        7 and        9 pairs used=       5 remaining=       6 total pairs=       4
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        4 new min=       0 new ts=       0 total min=      12 total ts=      11
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        5 on CPU        1 for process id      737
+cycle2> analysing result of search        5 on CPU        1 for process id    17375
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
@@ -96,22 +95,22 @@ getupair> connecting minima       12 and        4 pairs used=       6 remaining=
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        5 new min=       1 new ts=       2 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        6 on CPU        1 for process id      760
+cycle2> analysing result of search        6 on CPU        1 for process id    17394
 getupair> connecting minima        3 and        1 pairs used=       7 remaining=       4 total pairs=       6
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        6 new min=       0 new ts=       0 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        7 on CPU        1 for process id      779
+cycle2> analysing result of search        7 on CPU        1 for process id    17416
 getupair> connecting minima       11 and        4 pairs used=       8 remaining=       3 total pairs=       7
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        7 new min=       0 new ts=       0 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        8 on CPU        1 for process id      799
+cycle2> analysing result of search        8 on CPU        1 for process id    17437
 getupair> connecting minima        5 and       11 pairs used=       9 remaining=       2 total pairs=       8
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        8 new min=       0 new ts=       0 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        9 on CPU        1 for process id      820
+cycle2> analysing result of search        9 on CPU        1 for process id    17457
 getallpaths> WARNING failed consistency check for old ts      3 energy=    -168.2771069    
 getallpaths> +/- energies=    -172.877736411173        -168.415319534116    
 getallpaths> ts        3 minima are:     -168.415319534113        -170.992492629052    
@@ -119,13 +118,13 @@ getupair> connecting minima        1 and        2 pairs used=      10 remaining=
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle        9 new min=       0 new ts=       0 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       10 on CPU        1 for process id      843
+cycle2> analysing result of search       10 on CPU        1 for process id    17476
 getupair> connecting minima        4 and        2 pairs used=      11 remaining=       0 total pairs=      10
 pairsdouble> Maximum number of pairs tried increased to       20
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle       10 new min=       0 new ts=       0 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       11 on CPU        1 for process id      862
+cycle2> analysing result of search       11 on CPU        1 for process id    17495
 getbarrier> lowest minimum in product set lies at     -173.9284266    
 getbarrier> highest transition state lies at     -168.2771069    
 getupair> saved minima pairs and barriers:
@@ -152,47 +151,46 @@ getupair> connecting minima        6 and        1 pairs used=       1 remaining=
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle       11 new min=       0 new ts=       0 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       12 on CPU        1 for process id      887
+cycle2> analysing result of search       12 on CPU        1 for process id    17516
 getupair> connecting minima        9 and        1 pairs used=       2 remaining=       6 total pairs=      12
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle       12 new min=       0 new ts=       0 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       13 on CPU        1 for process id      922
+cycle2> analysing result of search       13 on CPU        1 for process id    17535
 getupair> connecting minima        7 and        4 pairs used=       3 remaining=       5 total pairs=      13
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle       13 new min=       0 new ts=       0 total min=      13 total ts=      13
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       14 on CPU        1 for process id      945
+cycle2> analysing result of search       14 on CPU        1 for process id    17554
 getallpaths> writing data for new ts to ts.data
-getallpaths> WARNING failed consistency check for old ts      2 energy=    -168.7591078    
-getallpaths> +/- energies=    -169.205253906215        -169.403102763541    
-getallpaths> ts        2 minima are:     -169.205253906215        -169.266920456807    
 getupair> connecting minima       12 and        1 pairs used=       4 remaining=       4 total pairs=      14
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle       14 new min=       0 new ts=       1 total min=      13 total ts=      14
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       15 on CPU        1 for process id      971
+cycle2> analysing result of search       15 on CPU        1 for process id    17573
 getupair> connecting minima        3 and        2 pairs used=       5 remaining=       3 total pairs=      15
 --------------------------------------------------------------------------------------------------------------
 cycle2> end of cycle       15 new min=       0 new ts=       0 total min=      13 total ts=      14
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       16 on CPU        1 for process id      991
+cycle2> analysing result of search       16 on CPU        1 for process id    17592
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
 getupair> connecting minima       13 and        4 pairs used=       6 remaining=       2 total pairs=      16
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       16 new min=       0 new ts=       0 total min=      13 total ts=      14
+cycle2> end of cycle       16 new min=       1 new ts=       1 total min=      14 total ts=      15
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       17 on CPU        1 for process id     1010
+cycle2> analysing result of search       17 on CPU        1 for process id    17611
 getallpaths> writing data for new ts to ts.data
 getupair> connecting minima       11 and        1 pairs used=       7 remaining=       1 total pairs=      17
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       17 new min=       0 new ts=       1 total min=      13 total ts=      15
+cycle2> end of cycle       17 new min=       0 new ts=       1 total min=      14 total ts=      16
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       18 on CPU        1 for process id     1031
+cycle2> analysing result of search       18 on CPU        1 for process id    17630
 getupair> connecting minima        5 and       13 pairs used=       8 remaining=       0 total pairs=      18
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       18 new min=       0 new ts=       0 total min=      13 total ts=      15
+cycle2> end of cycle       18 new min=       0 new ts=       0 total min=      14 total ts=      16
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       19 on CPU        1 for process id     1059
+cycle2> analysing result of search       19 on CPU        1 for process id    17649
 getbarrier> lowest minimum in product set lies at     -173.9284266    
 getbarrier> highest transition state lies at     -168.2771069    
 getupair> saved minima pairs and barriers:
@@ -202,269 +200,251 @@ getupair> saved minima pairs and barriers:
       12       2        0.1202516846
       13       2        0.0945529052
       11       2        0.0734672422
-       5       2        0.0157611566
-getupair> lowest minimum in product set lies at     -173.9284266    
-getupair> highest transition state lies at     -168.2771069    
-getupair> sorted list of        7 pairs
-       6       2    0.7643448619    
-       9       2    0.7432085695    
-       7       1    0.1328445317    
-      12       2    0.1202516846    
-      13       1    0.9455290517E-01
-      11       2    0.7346724223E-01
-       5       9    0.1576115657E-01
-getupair> connecting minima        6 and        2 pairs used=       1 remaining=       6 total pairs=      19
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       19 new min=       0 new ts=       0 total min=      13 total ts=      15
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       20 on CPU        1 for process id     1088
-getupair> connecting minima        9 and        2 pairs used=       2 remaining=       5 total pairs=      20
-pairsdouble> Maximum number of pairs tried increased to       40
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       20 new min=       0 new ts=       0 total min=      13 total ts=      15
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       21 on CPU        1 for process id     1127
-getupair> connecting minima        7 and        1 pairs used=       3 remaining=       4 total pairs=      21
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       21 new min=       0 new ts=       0 total min=      13 total ts=      15
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       22 on CPU        1 for process id     1166
-getupair> connecting minima       12 and        2 pairs used=       4 remaining=       3 total pairs=      22
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       22 new min=       0 new ts=       0 total min=      13 total ts=      15
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       23 on CPU        1 for process id     1191
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getupair> connecting minima       13 and        1 pairs used=       5 remaining=       2 total pairs=      23
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       23 new min=       1 new ts=       1 total min=      14 total ts=      16
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       24 on CPU        1 for process id     1223
-getupair> connecting minima       11 and        2 pairs used=       6 remaining=       1 total pairs=      24
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       24 new min=       0 new ts=       0 total min=      14 total ts=      16
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       25 on CPU        1 for process id     1243
-getupair> connecting minima        5 and        9 pairs used=       7 remaining=       0 total pairs=      25
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       25 new min=       0 new ts=       0 total min=      14 total ts=      16
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       26 on CPU        1 for process id     1262
-getbarrier> lowest minimum in product set lies at     -173.9284266    
-getbarrier> highest transition state lies at     -168.2771069    
-getupair> saved minima pairs and barriers:
-       7       2        0.1328445317
-      13       2        0.0945529052
       14       2        0.0298372995
        5       2        0.0157611566
 getupair> lowest minimum in product set lies at     -173.9284266    
 getupair> highest transition state lies at     -168.2771069    
-getupair> sorted list of        4 pairs
-       7       2    0.1328445317    
-      13      14    0.9455290517E-01
+getupair> sorted list of        8 pairs
+       6      14    0.7643448619    
+       9      14    0.7432085695    
+       7       1    0.1328445317    
+      12       2    0.1202516846    
+      13       1    0.9455290517E-01
+      11      14    0.7346724223E-01
       14       2    0.2983729952E-01
-       5       3    0.1576115657E-01
-getupair> connecting minima        7 and        2 pairs used=       1 remaining=       3 total pairs=      26
+       5       9    0.1576115657E-01
+getupair> connecting minima        6 and       14 pairs used=       1 remaining=       7 total pairs=      19
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       26 new min=       0 new ts=       0 total min=      14 total ts=      16
+cycle2> end of cycle       19 new min=       0 new ts=       0 total min=      14 total ts=      16
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       27 on CPU        1 for process id     1283
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-tsdouble> Maximum number of ts increased to       40
-getallpaths> writing data for new ts to ts.data
+cycle2> analysing result of search       20 on CPU        1 for process id    17670
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      2 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getupair> connecting minima        9 and       14 pairs used=       2 remaining=       6 total pairs=      20
+pairsdouble> Maximum number of pairs tried increased to       40
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       20 new min=       4 new ts=       3 total min=      18 total ts=      19
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       21 on CPU        1 for process id    17689
+getupair> connecting minima        7 and        1 pairs used=       3 remaining=       5 total pairs=      21
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       21 new min=       0 new ts=       0 total min=      18 total ts=      19
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       22 on CPU        1 for process id    17708
+getupair> connecting minima       12 and        2 pairs used=       4 remaining=       4 total pairs=      22
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       22 new min=       0 new ts=       0 total min=      18 total ts=      19
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       23 on CPU        1 for process id    17727
+getupair> connecting minima       13 and        1 pairs used=       5 remaining=       3 total pairs=      23
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       23 new min=       0 new ts=       0 total min=      18 total ts=      19
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       24 on CPU        1 for process id    17746
+getupair> connecting minima       11 and       14 pairs used=       6 remaining=       2 total pairs=      24
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       24 new min=       0 new ts=       0 total min=      18 total ts=      19
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       25 on CPU        1 for process id    17765
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getupair> connecting minima       14 and        2 pairs used=       7 remaining=       1 total pairs=      25
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       25 new min=       1 new ts=       1 total min=      19 total ts=      20
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       26 on CPU        1 for process id    17784
+getupair> connecting minima        5 and        9 pairs used=       8 remaining=       0 total pairs=      26
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       26 new min=       0 new ts=       0 total min=      19 total ts=      20
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       27 on CPU        1 for process id    17803
+tsdouble> Maximum number of ts increased to       40
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getbarrier> lowest minimum in product set lies at     -173.9284266    
+getbarrier> highest transition state lies at     -168.2616508    
+getupair> saved minima pairs and barriers:
+      19       2        0.8978671603
+      20       2        0.7666478381
+       6       2        0.7643448619
+       9       2        0.7432085695
+      17       2        0.1713890837
+       7       2        0.1328445317
+      13       2        0.0945529052
+      11       2        0.0734672422
+      18       2        0.0475248579
+       5       2        0.0157611566
+getupair> lowest minimum in product set lies at     -173.9284266    
+getupair> highest transition state lies at     -168.2616508    
+getupair> sorted list of       10 pairs
+      19       1    0.8978671603    
+      20       8    0.7666478381    
+       6      17    0.7643448619    
+       9      17    0.7432085695    
+      17       4    0.1713890837    
+       7      17    0.1328445317    
+      13      17    0.9455290517E-01
+      11      17    0.7346724223E-01
+      18       1    0.4752485791E-01
+       5       3    0.1576115657E-01
+getupair> connecting minima       19 and        1 pairs used=       1 remaining=       9 total pairs=      27
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       27 new min=       1 new ts=       1 total min=      20 total ts=      21
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       28 on CPU        1 for process id    17824
+getallpaths> writing data for new ts to ts.data
+getupair> connecting minima       20 and        8 pairs used=       2 remaining=       8 total pairs=      28
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       28 new min=       0 new ts=       1 total min=      20 total ts=      22
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       29 on CPU        1 for process id    17843
+getallpaths> writing data for new ts to ts.data
+getupair> connecting minima        6 and       17 pairs used=       3 remaining=       7 total pairs=      29
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       29 new min=       0 new ts=       1 total min=      20 total ts=      23
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       30 on CPU        1 for process id    17862
+getupair> connecting minima        9 and       17 pairs used=       4 remaining=       6 total pairs=      30
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       30 new min=       0 new ts=       0 total min=      20 total ts=      23
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       31 on CPU        1 for process id    17881
+getupair> connecting minima       17 and        4 pairs used=       5 remaining=       5 total pairs=      31
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       31 new min=       0 new ts=       0 total min=      20 total ts=      23
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       32 on CPU        1 for process id    17900
+getallpaths> writing data for new ts to ts.data
+getupair> connecting minima        7 and       17 pairs used=       6 remaining=       4 total pairs=      32
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       32 new min=       0 new ts=       1 total min=      20 total ts=      24
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       33 on CPU        1 for process id    17919
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      2 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      2 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 mindouble> Increasing maximum number of minima to       52
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
-getupair> connecting minima       13 and       14 pairs used=       2 remaining=       2 total pairs=      27
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       27 new min=      13 new ts=       9 total min=      27 total ts=      25
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       28 on CPU        1 for process id     1302
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getupair> connecting minima       14 and        2 pairs used=       3 remaining=       1 total pairs=      28
+getupair> connecting minima       13 and       17 pairs used=       7 remaining=       3 total pairs=      33
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       28 new min=       6 new ts=       5 total min=      33 total ts=      30
+cycle2> end of cycle       33 new min=      10 new ts=       8 total min=      30 total ts=      32
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       29 on CPU        1 for process id     1321
-getupair> connecting minima        5 and        3 pairs used=       4 remaining=       0 total pairs=      29
+cycle2> analysing result of search       34 on CPU        1 for process id    17938
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getupair> connecting minima       11 and       17 pairs used=       8 remaining=       2 total pairs=      34
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       29 new min=       0 new ts=       0 total min=      33 total ts=      30
+cycle2> end of cycle       34 new min=       2 new ts=       3 total min=      32 total ts=      35
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       30 on CPU        1 for process id     1340
+cycle2> analysing result of search       35 on CPU        1 for process id    17957
+getupair> connecting minima       18 and        1 pairs used=       9 remaining=       1 total pairs=      35
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       35 new min=       0 new ts=       0 total min=      32 total ts=      35
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       36 on CPU        1 for process id    17976
+getupair> connecting minima        5 and        3 pairs used=      10 remaining=       0 total pairs=      36
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       36 new min=       0 new ts=       0 total min=      32 total ts=      35
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       37 on CPU        1 for process id    17995
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getbarrier> lowest minimum in product set lies at     -173.9284266    
-getbarrier> highest transition state lies at     -167.0068577    
+getbarrier> highest transition state lies at     -167.3818401    
 getupair> saved minima pairs and barriers:
-      27       2        0.8306729864
-      26       2        0.8234917344
-      17       2        0.5126113443
-      25       2        0.3945217966
-      29       2        0.3726277790
-      31       2        0.3564046357
-      28       2        0.2823682239
-      34       2        0.2410532034
-      30       2        0.2258379518
-      18       2        0.0968048461
+      28       2        0.9920947000
+       6       2        0.7524236128
+       9       2        0.7314301332
+      20       2        0.7313148814
+      34       2        0.2326677088
+      17       2        0.1633105382
+       7       2        0.1328445317
       13       2        0.0945529052
+      33       2        0.0894446782
+      11       2        0.0662140852
+      18       2        0.0475248579
        5       2        0.0157611566
+      19       2        0.0075097270
+      31       2        0.0072739236
+      32       2        0.0071929749
 getupair> lowest minimum in product set lies at     -173.9284266    
-getupair> highest transition state lies at     -167.0068577    
-getupair> sorted list of       12 pairs
-      27       6    0.8306729864    
-      26      14    0.8234917344    
-      17       4    0.5126113443    
-      25      18    0.3945217966    
-      29       2    0.3726277790    
-      31       6    0.3564046357    
-      28      34    0.2823682239    
-      34       4    0.2410532034    
-      30      29    0.2258379518    
-      18       1    0.9680484607E-01
-      13      29    0.9455290517E-01
+getupair> highest transition state lies at     -167.3818401    
+getupair> sorted list of       15 pairs
+      28      31    0.9920947000    
+       6       2    0.7524236128    
+       9       2    0.7314301332    
+      20       4    0.7313148814    
+      34       4    0.2326677088    
+      17      14    0.1633105382    
+       7      20    0.1328445317    
+      13       6    0.9455290517E-01
+      33      19    0.8944467819E-01
+      11       2    0.6621408519E-01
+      18       2    0.4752485791E-01
        5      12    0.1576115657E-01
-getupair> connecting minima       27 and        6 pairs used=       1 remaining=      11 total pairs=      30
+      19       2    0.7509727048E-02
+      31      17    0.7273923617E-02
+      32       4    0.7192974938E-02
+getupair> connecting minima       28 and       31 pairs used=       1 remaining=      14 total pairs=      37
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       30 new min=       1 new ts=       2 total min=      34 total ts=      32
+cycle2> end of cycle       37 new min=       2 new ts=       3 total min=      34 total ts=      38
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       31 on CPU        1 for process id     1361
+cycle2> analysing result of search       38 on CPU        1 for process id    18016
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       26 and       14 pairs used=       2 remaining=      10 total pairs=      31
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       31 new min=       5 new ts=       8 total min=      39 total ts=      40
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       32 on CPU        1 for process id     1380
 tsdouble> Maximum number of ts increased to       80
 getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      2 new minima to min.data
 getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getupair> connecting minima       17 and        4 pairs used=       3 remaining=       9 total pairs=      32
+getupair> connecting minima        6 and        2 pairs used=       2 remaining=      13 total pairs=      38
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       32 new min=      10 new ts=       8 total min=      49 total ts=      48
+cycle2> end of cycle       38 new min=       9 new ts=       9 total min=      43 total ts=      47
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       33 on CPU        1 for process id     1400
-getupair> connecting minima       25 and       18 pairs used=       4 remaining=       8 total pairs=      33
+cycle2> analysing result of search       39 on CPU        1 for process id    18035
+getupair> connecting minima        9 and        2 pairs used=       3 remaining=      12 total pairs=      39
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       33 new min=       0 new ts=       0 total min=      49 total ts=      48
+cycle2> end of cycle       39 new min=       0 new ts=       0 total min=      43 total ts=      47
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       34 on CPU        1 for process id     1419
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> WARNING failed consistency check for old ts     49 energy=    -167.0542751    
-getallpaths> +/- energies=    -169.365932562420        -169.365171771014    
-getallpaths> ts       49 minima are:     -169.365171771013        -172.193176650735    
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getupair> connecting minima       29 and        2 pairs used=       5 remaining=       7 total pairs=      34
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       34 new min=       2 new ts=       2 total min=      51 total ts=      50
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       35 on CPU        1 for process id     1438
-getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       31 and        6 pairs used=       6 remaining=       6 total pairs=      35
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       35 new min=       0 new ts=       1 total min=      51 total ts=      51
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       36 on CPU        1 for process id     1457
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getupair> connecting minima       28 and       34 pairs used=       7 remaining=       5 total pairs=      36
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       36 new min=       1 new ts=       3 total min=      52 total ts=      54
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       37 on CPU        1 for process id     1476
-mindouble> Increasing maximum number of minima to      104
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       34 and        4 pairs used=       8 remaining=       4 total pairs=      37
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       37 new min=       2 new ts=       4 total min=      54 total ts=      58
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       38 on CPU        1 for process id     1495
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       30 and       29 pairs used=       9 remaining=       3 total pairs=      38
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       38 new min=       4 new ts=       5 total min=      58 total ts=      63
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       39 on CPU        1 for process id     1514
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       18 and        1 pairs used=      10 remaining=       2 total pairs=      39
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       39 new min=       2 new ts=       3 total min=      60 total ts=      66
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       40 on CPU        1 for process id     1533
-getupair> connecting minima       13 and       29 pairs used=      11 remaining=       1 total pairs=      40
+cycle2> analysing result of search       40 on CPU        1 for process id    18054
+getupair> connecting minima       20 and        4 pairs used=       4 remaining=      11 total pairs=      40
 pairsdouble> Maximum number of pairs tried increased to       80
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       40 new min=       0 new ts=       0 total min=      60 total ts=      66
+cycle2> end of cycle       40 new min=       0 new ts=       0 total min=      43 total ts=      47
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       41 on CPU        1 for process id     1552
+cycle2> analysing result of search       41 on CPU        1 for process id    18073
 getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
@@ -472,203 +452,86 @@ getallpaths> writing data for      2 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      2 new minima to min.data
 getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
+getallpaths> writing data for      1 new minima to min.data
+getupair> connecting minima       34 and        4 pairs used=       5 remaining=      10 total pairs=      41
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       41 new min=       6 new ts=       5 total min=      49 total ts=      52
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       42 on CPU        1 for process id    18092
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getupair> connecting minima        5 and       12 pairs used=      12 remaining=       0 total pairs=      41
+getupair> connecting minima       17 and       14 pairs used=       6 remaining=       9 total pairs=      42
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       41 new min=      14 new ts=       9 total min=      74 total ts=      75
+cycle2> end of cycle       42 new min=       1 new ts=       2 total min=      50 total ts=      54
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       42 on CPU        1 for process id     1571
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getbarrier> lowest minimum in product set lies at     -173.9284266    
-getbarrier> highest transition state lies at     -166.5411197    
-getupair> saved minima pairs and barriers:
-      24       2        5.5230292126
-      50       2        2.9734909891
-      37       2        2.0587538836
-      52       2        1.6436590669
-      48       2        1.0032203023
-      26       2        0.8234917344
-      35       2        0.7627644886
-      72       2        0.7450789685
-      71       2        0.6311798773
-      63       2        0.6241461323
-      38       2        0.6006852249
-      42       2        0.5331535399
-      36       2        0.5231055497
-      17       2        0.5126113443
-      51       2        0.5035636118
-      54       2        0.4173939296
-      25       2        0.3945217966
-      27       2        0.3683818282
-      23       2        0.3578675881
-      55       2        0.3549362035
-      58       2        0.3238821411
-      49       2        0.2466838566
-      34       2        0.2410532034
-      41       2        0.2239806650
-      53       2        0.2079933515
-      56       2        0.1713890837
-      40       2        0.1623762544
-      28       2        0.1406700776
-      75       2        0.1244032364
-      57       2        0.1232085496
-      31       2        0.1091043430
-      39       2        0.1015054785
-      18       2        0.0968048461
-      13       2        0.0945529052
-      30       2        0.0903862445
-      60       2        0.0708108735
-      59       2        0.0173295340
-       5       2        0.0157611566
-getupair> lowest minimum in product set lies at     -173.9284266    
-getupair> highest transition state lies at     -166.5411197    
-getupair> sorted list of       38 pairs
-      24      63     5.523029213    
-      50      51     2.973490989    
-      37       4     2.058753884    
-      52       4     1.643659067    
-      48       4     1.003220302    
-      26      18    0.8234917344    
-      35      56    0.7627644886    
-      72      29    0.7450789685    
-      71      29    0.6311798773    
-      63       2    0.6241461323    
-      38      56    0.6006852249    
-      42       1    0.5331535399    
-      36       4    0.5231055497    
-      17      55    0.5126113443    
-      51      58    0.5035636118    
-      54      56    0.4173939296    
-      25      12    0.3945217966    
-      27       4    0.3683818282    
-      23      42    0.3578675881    
-      55      56    0.3549362035    
-      58       4    0.3238821411    
-      49      56    0.2466838566    
-      34       1    0.2410532034    
-      41      49    0.2239806650    
-      53      31    0.2079933515    
-      56       4    0.1713890837    
-      40      34    0.1623762544    
-      28      31    0.1406700776    
-      75       4    0.1244032364    
-      57       4    0.1232085496    
-      31      29    0.1091043430    
-      39      56    0.1015054785    
-      18       4    0.9680484607E-01
-      13      63    0.9455290517E-01
-      30       2    0.9038624445E-01
-      60      28    0.7081087350E-01
-      59      30    0.1732953401E-01
-       5       4    0.1576115657E-01
-getupair> connecting minima       24 and       63 pairs used=       1 remaining=      37 total pairs=      42
+cycle2> analysing result of search       43 on CPU        1 for process id    18111
+getupair> connecting minima        7 and       20 pairs used=       7 remaining=       8 total pairs=      43
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       42 new min=       1 new ts=       2 total min=      75 total ts=      77
+cycle2> end of cycle       43 new min=       0 new ts=       0 total min=      50 total ts=      54
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       43 on CPU        1 for process id     1592
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> SKIPPING - vibrational frequency      107 of + minimum is     0.2659771244E-06
-getallpaths> SKIPPING - vibrational frequency      108 of + minimum is     0.1106924692E-07
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-tsdouble> Maximum number of ts increased to      160
+cycle2> analysing result of search       44 on CPU        1 for process id    18130
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       50 and       51 pairs used=       2 remaining=      36 total pairs=      43
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       43 new min=       3 new ts=       6 total min=      78 total ts=      83
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       44 on CPU        1 for process id     1611
-getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       37 and        4 pairs used=       3 remaining=      35 total pairs=      44
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       44 new min=       0 new ts=       1 total min=      78 total ts=      84
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       45 on CPU        1 for process id     1630
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
+mindouble> Increasing maximum number of minima to      104
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      2 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       52 and        4 pairs used=       4 remaining=      34 total pairs=      45
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       45 new min=       6 new ts=       7 total min=      84 total ts=      91
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       46 on CPU        1 for process id     1649
-getupair> connecting minima       48 and        4 pairs used=       5 remaining=      33 total pairs=      46
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       46 new min=       0 new ts=       0 total min=      84 total ts=      91
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       47 on CPU        1 for process id     1668
-getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> WARNING failed consistency check for old ts     47 energy=    -169.9612769    
-getallpaths> +/- energies=    -173.1343170        -171.3273614    
-getallpaths>  ts       47 minima are:     -171.342590178159        -173.134317008842    
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getupair> connecting minima       26 and       18 pairs used=       6 remaining=      32 total pairs=      47
+getupair> connecting minima       13 and        6 pairs used=       8 remaining=       7 total pairs=      44
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       47 new min=       7 new ts=       6 total min=      91 total ts=      97
+cycle2> end of cycle       44 new min=       4 new ts=       5 total min=      54 total ts=      59
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       48 on CPU        1 for process id     1687
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
+cycle2> analysing result of search       45 on CPU        1 for process id    18149
+getupair> connecting minima       33 and       19 pairs used=       9 remaining=       6 total pairs=      45
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       45 new min=       0 new ts=       0 total min=      54 total ts=      59
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       46 on CPU        1 for process id    18168
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      2 new minima to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      2 new minima to min.data
 getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       35 and       56 pairs used=       7 remaining=      31 total pairs=      48
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       48 new min=      12 new ts=       9 total min=     103 total ts=     106
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       49 on CPU        1 for process id     1707
 getallpaths> writing data for new ts to ts.data
-getupair> connecting minima       72 and       29 pairs used=       8 remaining=      30 total pairs=      49
+getallpaths> writing data for      2 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new minima to min.data
+getupair> connecting minima       11 and        2 pairs used=      10 remaining=       5 total pairs=      46
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       49 new min=       0 new ts=       1 total min=     103 total ts=     107
+cycle2> end of cycle       46 new min=       7 new ts=       6 total min=      61 total ts=      65
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       50 on CPU        1 for process id     1726
+cycle2> analysing result of search       47 on CPU        1 for process id    18187
+getupair> connecting minima       18 and        2 pairs used=      11 remaining=       4 total pairs=      47
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       47 new min=       0 new ts=       0 total min=      61 total ts=      65
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       48 on CPU        1 for process id    18206
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      2 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getupair> connecting minima        5 and       12 pairs used=      12 remaining=       3 total pairs=      48
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       48 new min=       2 new ts=       3 total min=      63 total ts=      68
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       49 on CPU        1 for process id    18225
+getallpaths> WARNING failed consistency check for old ts     36 energy=    -168.3417816    
+getallpaths> +/- energies=    -169.754552347451        -168.415319534115    
+getallpaths> ts       36 minima are:     -169.205837088828        -168.415319534113    
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 getallpaths> writing data for new ts to ts.data
+getupair> connecting minima       19 and        2 pairs used=      13 remaining=       2 total pairs=      49
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       50 new min=       1 new ts=       2 total min=     104 total ts=     109
+cycle2> end of cycle       49 new min=       1 new ts=       2 total min=      64 total ts=      70
+--------------------------------------------------------------------------------------------------------------
+cycle2> analysing result of search       50 on CPU        1 for process id    18244
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       50 new min=       0 new ts=       0 total min=      64 total ts=      70
 --------------------------------------------------------------------------------------------------------------
 main> CPU time spent iterating committor probability=     0.0000     s
-main> CPU time spent in NGT                          =     0.0000     s
-main> total CPU time spent in PATHSAMPLE            =     5.5840     s
+main> total CPU time spent in PATHSAMPLE            =     2.0200     s

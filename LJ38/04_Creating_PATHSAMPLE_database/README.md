@@ -306,7 +306,8 @@ the clearest representation, so the horizontal axis has no physical meaning. The
 
 To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
 ```
-disconnectionDPS; gv tree.ps
+disconnectionDPS
+gv tree.ps
 ```
 
 You should produce something like this:

@@ -86,7 +86,8 @@ You may also need to slightly alter your *pathdata* file to ensure that the `EXE
 Starting **PATHSAMPLE** and following the output can be achieved as follows:
 
 ```
-PATHSAMPLE > pathsample_untrap.out & ; tail -f pathsample_untrap.out
+PATHSAMPLE > pathsample_untrap.out &
+tail -f pathsample_untrap.out
 ``` 
 
 Like **OPTIM**, **PATHSAMPLE** runs in `CYCLES` - with each cycle starting the number of **OPTIM** jobs that fill the number of CPUs/GPUs available. This example is set up
@@ -146,7 +147,8 @@ along the horizontal axis to produce the clearest representation, so the horizon
 
 To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
 ```
-disconnectionDPS; gv tree.ps
+disconnectionDPS
+gv tree.ps
 ```
 You should produce something like this:
 

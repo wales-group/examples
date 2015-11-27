@@ -41,7 +41,8 @@ Before you start producing output, take a minute to look through *odata_annotate
 Assuming you have the binary somewhere in your *PATH*, running **OPTIM** and following the output is as simple as this:
 
 ```
-OPTIM > optim.out & ; tail -f optim.out
+OPTIM > optim.out & 
+tail -f optim.out
 ```
 
 The **OPTIM** output file we have created, *optim.out*, can be broken down into sections as follows:

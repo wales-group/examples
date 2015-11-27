@@ -35,8 +35,3 @@ ITOL           0.1D0
 UNTRAP         0.035 3.0
 ! run 50 connection cycles (50 x CPUS OPTIM jobs)
 CYCLES         50
-
-! use a graph transformation approach to calculate the rate constants
-! - minima with 0 connections are ignored
-! - the kinetic monte-carlo rate constants are also calculated (T)
-NGT 0 T
