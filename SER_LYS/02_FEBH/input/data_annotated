@@ -1,0 +1,72 @@
+! ALGORITHM SETUP
+
+! specify the RMS force convergence criteria for:
+! quenches (Qu) during the basin-hopping (BH) run
+SLOPPYCONV 1.0D-6
+! final quenches for the SAVE lowest energy minima
+TIGHTCONV 1.0D-8 
+
+! consider minima unique if they differ by less than 0.003 
+EDIFF 5.0D-5
+
+! set the max number of minimisation steps for sloppy and tight quenches
+MAXIT 10000 10000
+
+! set the maximum step size during the L-BFGS minimisation 
+MAXBFGS 0.2D0
+
+! set the maximum amount the energy is permitted to rise after an L-BFGS step 
+MAXERISE 1.0D-4
+
+! set the target Metropolis acceptance ratio to 0.4 
+ACCEPTRATIO 0.4
+
+! set the history size of the L-BFGS algorithm to 500
+UPDATES 500
+
+! tightly converge and output the 20 lowest energy structures
+SAVE 20
+
+! output additional files to aid analysis of the run:
+! produce best, markov and energy files containing those energies each quench
+TRACKDATA
+
+! produce a GMIN dump file for use with RESTORE every 6000 BH steps
+DUMPINT 6000
+
+! create AMBER specific .pdb and .rst files for each tightly converged minimum
+DUMPSTRUCTURES
+
+! SAMPLING PARAMETERS
+
+! set the temperature used when accepting and rejecting minima into the Markov
+! chain (multiples of kT in the underlying energy units)
+TEMPERATURE 0.8
+
+! specify that the free energy calculated using the harmonic superposition approach
+! should be used to accept or reject minima (free energy basin-hopping)
+! set the temperature to use in reduced units, where 1 kcal/mol = 504K 
+! 0.2 = 100.8K
+FEBH 0.2
+! alternative FEBH temperature to try
+! 0.6 = 302.4K
+! FEBH 0.6
+
+! tighten the RMS force convergence threshold until the separation of the zero eigenvalues 
+! is at least a factor of 1000. Stop the basin-hopping run after 10 attempts if the target
+! separation is not achieved
+MIN_ZERO_SEP 1.0D3 10
+
+! do 500 BH steps multiplying the temperate by 1.0 each step
+STEPS 500 1.0
+
+! generate new geometries each BH step by applying a random Cartesian displacement
+! of up to 1.0 to each LJ atom...
+STEP 1.0D0
+! ...and rotating atomic groups according to the probabilities and magnitudes 
+! defined in the atomgroups file every 1 step
+GROUPROTATION 1
+
+! specify that we are using the AMBER potential via an interface to AMBER 9
+! initial coordinates will be read from coords.inpcrd in AMBER restart (inpcrd) format
+AMBER9 coords.inpcrd inpcrd 

@@ -1,0 +1,82 @@
+! GROUPROTATION move input file as described in the GMIN documentation
+! Each group is defined by:
+! - a name (2_LYS_CA_C)
+! - two atoms that define the rotation axis (20 and 38)
+! - the number of rotatable atoms in the group (7)
+! - the maximum fraction of (+- pi) to rotate by (0.1)
+! - the probability of selecting the group each time (0.5)
+! - a list of atoms in the group, one per line
+GROUP 2_LYS_CA_C 20 38 7 0.1 0.5 
+39
+40
+41
+42
+43
+44
+45
+GROUP 2_LYS_CG_CD 25 28 9 0.5 0.5 
+29
+30
+31
+32
+33
+34
+35
+36
+37
+GROUP 2_LYS_CA_CB 20 22 15 0.2 0.5 
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+GROUP 1_SER_C_CA 16 9 14 0.1 0.5 
+1
+2
+3
+4
+5
+6
+7
+8
+10
+11
+12
+13
+14
+15
+GROUP 2_LYS_CD_CE 28 31 6 0.5 0.5 
+32
+33
+34
+35
+36
+37
+GROUP 1_SER_CA_CB 9 11 4 1.0 0.5 
+12
+13
+14
+15
+GROUP 2_LYS_CB_CG 22 25 12 0.3 0.5 
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
