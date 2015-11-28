@@ -1,6 +1,6 @@
 ! OPTIM input to find an initial discrete path between two LJ38 minima
 
-! use the connection algorithm of Trygubenko and Wales to find a path between the endpoints specified with:
+! use the connection algorithm of Carr, Trygubenko and Wales to find a path between the endpoints specified with:
 ! - a maximum of 100 connection cycles
 ! - only 1 connection attempt for any pair of local minima
 ! - DNEB image density of 20 (number of images = 20 x distance) 
@@ -21,8 +21,8 @@ NEBK 10.0
 DIJKSTRA 1
 
 ! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
-! as we are nor providing a perm.allow file, all atoms are considered to be identical
-PERMDIST
+! as we are not providing a perm.allow file, all atoms are considered to be identical
+PERMDIST 0.01D0
 ! try 5 random starting alignments as well as the standard one when using PERMDIST
 RANROT 5
 
@@ -51,7 +51,7 @@ BFGSTS  50 3 25 0.0001
 MAXSTEP 0.1
 ! the upper limit for the maximum hybrid eigenvector following step size
 MAXMAX  0.2
-! set the trust radius used in eiganvector following
+! set the trust radius used in eigenvector following
 TRAD 0.2
 ! do not calculate the Hessian during geometry optimisation. Rayleigh-Ritz minimisation is used instead
 ! to find the smallest eigenvalue and its eigenvector

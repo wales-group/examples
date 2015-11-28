@@ -20,8 +20,8 @@ CONNECTIONS    1
 TEMPERATURE    0.1
 
 ! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
-! as we are nor providing a perm.allow file, all atoms are considered to be identical
-PERMDIST 
+! as we are not providing a perm.allow file, all atoms are considered to be identical
+PERMDIST 0.01D0 
 ! try 5 random starting alignments as well as the standard one when using PERMDIST
 RANROT         5
 ! define the energy and distance cutoffs below which we assume structures are identical - matches odata.connect
