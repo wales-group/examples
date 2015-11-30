@@ -1,8 +1,57 @@
 # GMIN, OPTIM and PATHSAMPLE example input
 These directories contain example input and output for the **GMIN**, **OPTIM** and **PATHSAMPLE** codes developed in the Wales Group at the University of Cambridge.
 
+## Prerequisites
 
+In order to run through these examples, you will need to either use a build of the Wales Group VM, or have the following Ubuntu packages installed via `apt-get`:
 
+```
+sudo apt-get install vim build-essential gfortran cmake cmake-curses-gui git subversion csh bison flex libblas-dev liblapack-dev gnuplot-x11 gv
+```
+
+That should give you everything you need to compile the code (see below) and visualise the results of the examples.
+
+**NOTE:** Due to licensing issues, we cannot distribute the **AMBER** or **CHARMM** interfaced versions of our source code. If you have a license for either, contact
+[David Wales](mailto:dw34@cam.ac.uk) and request access to the restricted code.
+
+## Compiling GMIN, OPTIM and PATHSAMPLE
+
+**GMIN**, **OPTIM** and **PATHSAMPLE** can be easily compiled using **cmake**. Once you have obtained the source code from the Wales group website 
+[here](http://www-wales.ch.cam.ac.uk/svn.tar.bz2), you can uncompress it as follows: `tar xvfj svn.tar.bz2`
+
+You can then compile **GMIN** as follows:
+
+```
+cd GMIN
+mkdir build
+cd build
+FC=gfortran cmake ../source
+make -j
+```
+
+To see additional options for the compilation (including enabling the interfaces to **AMBER** and **CHARMM**) you can run ``ccmake .`` in your build directory.
+
+For **OPTIM**:
+
+```
+cd OPTIM
+mkdir build
+cd build
+FC=gfortran cmake ../source
+make -j
+```
+
+For **PATHSAMPLE**:
+
+```
+cd PATHSAMPLE
+mkdir build
+cd build
+FC=gfortran cmake ../source
+make -j
+```
+
+ADD EXAMPLE FOR A9GMIN
 
 ## Example systems
 
