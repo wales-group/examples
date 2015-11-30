@@ -1,0 +1,19 @@
+AMBER input file used to return the energy from sander when running GMIN
+ &cntrl
+! specify that we want to run a single point energy calculation, not molecular dynamics
+  imin   = 1,
+! ask for only a single cycle of steepest descent and conjugate gradient minimisation
+! this simply returns an energy and makes no change to the structure
+  ncyc = 1,
+  maxcyc = 1,
+! use the GB(OCB) Generalised Born implicit solvation approach
+  igb = 2, 
+! set the salt concentration for Debye-Hukel screening to 0.1 mol/L
+  saltcon=0.1,
+! do not use periodic boundary conditions
+  ntb    = 0,
+! do not use a non-bonded interaction cutoff
+  cut    = 999.99,
+! use a maximum GB radius of 25A
+  rgbmax = 25.0,
+ /

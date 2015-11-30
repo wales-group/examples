@@ -44,6 +44,10 @@ MAXBFGS 0.2 0.2
 STEPS    200
 
 ! transition states will be located using a hybrid BFGS/eigenvector following approach
+! - up to 50 iterations allowed in the calculation of the smallest Hessian eigenvalue
+! - up to 3 BFGS steps allowed in the subspace minimisation before eigenvalue convergence
+! - up to 25 BFGS steps allowed in the subspace minimisation after eigenvalue convergence
+! - 'RMS force' convergence criterion of 0.0001 for the calculation of the smallest non-zero Hessian eigenvalue
 BFGSTS  50 3 25 0.0001
 ! the maximum step size during hybrid eigenvector-following
 MAXSTEP 0.1

@@ -1,0 +1,102 @@
+! PATHSAMPLE input to expand the database for the tryptophan zipper peptide (trypzip)
+! For further details, see the PATHSAMPLE documentation
+
+! the path to the A9OPTIM binary to use
+EXEC           /home/energy/workshop/binaries/A9OPTIM
+! run A9OPTIM locally on a single core - modify as appropriate
+CPUS           1
+! the number of atoms in the system
+NATOMS         220
+! specify the random number seed, used to make stochastic alculations repeatable
+SEED           1
+! specify the direction of the pathway using spectroscopic convention i.e. AB = A<-B where A and B are the endpoints
+! in min.A and min.B respectively
+DIRECTION      AB
+! minimum number of connected minima to be found for new minimum
+CONNECTIONS    1
+! specify the temperature to use when calculating rate constants 
+! 0.592 kcal/mol = 298K
+TEMPERATURE    0.592
+! specify the value of Planck's constant in kcal/mol
+PLANCK         9.536D-14
+
+! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
+! the groups of atoms to be considered identical are described in the perm.allow file
+PERMDIST
+! define the energy and distance cutoffs below which we assume structures are identical - matches odata.connect
+ETOL           1.0D-4
+GEOMDIFFTOL    1.0D-1
+! additionally use a principal moment of inertia tensor difference criterion for distinguishing stationary points
+ITOL           1.0D1
+! reject any transition states of energy > -390 kcal/mol - used to prevent unphysical CH2 inversions occuring
+MAXTSENERGY    -390.0
+
+! STEP 1: examine the 'fastest path'
+! perform a Dijkstra analysis 
+DIJKSTRA 0
+! do not perform any connection cycles
+CYCLES 0
+
+! STEP 2: decide on a strategy to expand the database
+! regenerate the list of minima for subsequent connection attempts every (1) cycle
+PAIRLIST 1
+! uncomment to check minima being selected for connection without running A9OPTIM
+! DUMMYRUN
+
+! Option A - SHORTCUT x
+! try to reconnect minima further than x steps apart on the Dijkstra fastest path
+! SHORTCUT x
+! perform 10 connections cycles (10 x CPUS A9OPTIM runs)
+! CYCLES 10
+
+! Option B - SHORTCUT x BARRIER
+! try to connect minima less than x steps away from transition states with high barriers
+! on the Dijkstra fastest path
+! SHORTCUT x BARRIER
+! CYCLES 10
+
+! Option C - UNTRAP einc thresh (edeltamin) (elowbar) (ehighbar)
+! try to connect minima to eliminate kinetic traps - minima of low energy but high barriers to the product basin
+! - einc is the energy interval used in a disconnectivity analysis to define the product basin
+! - thresh is the maximum energy above the product minimum to consider connecting to
+! - edeltamin (optional) is substituted for the energy difference between candidate and product minima if larger than the energy difference
+! - elowbar (optional) sets a floor to the smallest barrier size considered to avoid issues with very small barriers  
+! - ehighbar(optional)  sets a maximum barrier height, above which minima will not be selected
+! e.g. UNTRAP 4.0 50
+! UNTRAP einc thresh (edeltamin) (elowbar) (ehighbar) 
+! CYCLES 10
+
+! Option D - FREEPAIRS x1 x2 x3
+! like UNTRAP, FREEPAIRS attempts to reconnect minima to reduce frustration
+! unlike UNTRAP, it uses regrouped (see REGROUPFREE) free energy barriers to select pairs 
+! - x1 corresponds to the free energy barrier height below which free energy minima are combined
+! - free energy minima that lie more than x2 units of energy above the global free energy minimum group are ignored
+! - x3 is the energy increment used in the superbasin analysis to estimate barriers. 
+! FREEPAIRS x1 x2 x3
+! CYCLES 10
+
+! Option E - CONNECTREGION min1 min2
+! CONNECTREGION runs double-ended transition state searches between minima whose minimum separation is less then dist 
+! pairs with an existing direct connection are ignored
+! - min1 and min2 specify the starting minima in the double loop over pairs e.g. CONNECTREGION 1 2 will consider all minima
+! CONNECTREGION min1 min2
+! CYCLES 10
+
+! Option F - ADDPATH path.info.x
+! add minima and transition states from A9OPTIM path.info files
+! this will require running separate A9OPTIM jobs with extracted minima as endpoints (see EXTRACTMIN)
+! rename your path.info file or alter the argument to the keyword below
+! ADDPATH path.info.toadd
+! CYCLES 0
+
+! STEP 3: check NGT rate
+! specify that a graph transformation approach should be used to the A->B and B->A calculate rate constants
+! minima with 0 connections or less are not considered
+! kinetic monte-carlo rate constants are not (F) calculated 
+! NGT 0 F
+! free energy minima where forward and backward free energy barriers are both less than 3.9 are combined into groups
+! REGROUPFREE 3.9
+! CYCLES 0
+
+! specify that we are using the AMBER potential via an interface to AMBER 9
+AMBER9
