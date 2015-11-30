@@ -1,7 +1,7 @@
 # Using GMIN, OPTIM and PATHSAMPLE to explore the energy landscape of tetra-ALA
 <img src="tetra_ALA_igb2_gmin.png" width="50%", height="50%">
 
-This set of examples explore applying **A9GMIN**, **A9OPTIM** and **PATHSAMPLE** to an alanine tetrapeptide.
+This set of examples explore applying **A9GMIN**, **A9OPTIM** and **PATHSAMPLE** to the tetra-ALA peptide (ALA-ALA-ALA-ALA).
 
 As a prerequisite, you will need to have compiled all three codes (or have access to binaries), plus the **disconnectionDPS** utility program. 
 The source code for **disconnectionDPS** can be found on the Wales group website [here](http://www-wales.ch.cam.ac.uk/svn.tar.bz2).
