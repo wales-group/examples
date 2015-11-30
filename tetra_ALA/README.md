@@ -5,12 +5,13 @@ This set of examples explore applying **A9GMIN**, **A9OPTIM** and **PATHSAMPLE**
 
 As a prerequisite, you will need to have compiled all three codes (or have access to binaries), plus the **disconnectionDPS** utility program. 
 The source code for **disconnectionDPS** can be found on the Wales group website [here](http://www-wales.ch.cam.ac.uk/svn.tar.bz2).
+
 Unfortunately due to licensing restrictions, we are not able to distribute the source code for **(A9/A12)GMIN** or **(A9/A12)OPTIM**.
+If you have an **AMBER** license - please contact [David Wales](mailto:dw34@cam.ac.uk) to request access to the **AMBER** specific source code.
 
 If you have the source code, all should compile fine using **gfortran** and **cmake**.
-If you have an AMBER license - contact [David Wales](mailto:dw34@cam.ac.uk) to request access to the **AMBER** specific source code.
 
-Visualisation is done with both **gnuplot** and **VMD**. **VMD** can be obtained [here](http://www.ks.uiuc.edu/Research/vmd/)
+Visualisation is done with both **gnuplot** and **VMD** which can be obtained [here](http://www.ks.uiuc.edu/Research/vmd/)
 
 These examples are practically focussed and as such, we won't be covering the theoretical basis of basin-hopping global optimisation or discrete path sampling.
 
