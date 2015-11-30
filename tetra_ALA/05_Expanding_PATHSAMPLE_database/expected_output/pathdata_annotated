@@ -1,0 +1,39 @@
+! PATHSAMPLE input to expand the database for tetra-ALA (ALA-ALA-ALA-ALA) using the SHORTCUT BARRIER approach
+! For further details, see the PATHSAMPLE documentation
+
+! the path to the A9OPTIM binary to use
+EXEC           /home/energy/workshop/binaries/A9OPTIM
+! run A9OPTIM locally on a single core - modify as appropriate
+CPUS           1
+! the number of atoms in the system
+NATOMS         52
+! specify the random number seed, used to make calculations repeatable
+SEED           1
+! specify the direction of the pathway using spectroscopic convention i.e. AB = A<-B where A and B are the endpoints
+! in min.A and min.B respectively
+DIRECTION      AB
+! minimum number of connected minima to be found for new minimum
+CONNECTIONS    1
+! specify the temperature to use when calculating rate constants 
+! 0.592 kcal/mol = 298K
+TEMPERATURE    0.592
+! specify the value of Planck's constant in kcal/mol
+PLANCK         9.536D-14
+
+! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
+! the groups of atoms to be considered identical are described in the perm.allow file
+PERMDIST 
+! define the energy and distance cutoffs below which we assume structures are identical - matches odata.connect
+ETOL           1.0D-5
+GEOMDIFFTOL    0.1D0
+! additionally use a principal moment of inertia tensor difference criterion for distinguishing stationary points
+ITOL           0.1D0
+
+! try to connect minima less than 2 steps away from transition states with high barriers
+! on the Dijkstra fastest path
+SHORTCUT 2 BARRIER 
+! perform 10 connections cycles (10 x CPUS A9OPTIM runs)
+CYCLES 10
+
+! specify that we are using the AMBER potential via an interface to AMBER 9
+AMBER9

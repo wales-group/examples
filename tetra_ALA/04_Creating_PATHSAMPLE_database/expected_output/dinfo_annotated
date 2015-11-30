@@ -1,0 +1,36 @@
+! disconnectionDPS input to generate a disconnectivity graph for trypzip
+! Further details and a full keyword listing can be found in the source code
+
+! REQUIRED KEYWORDS
+
+! the energy seperation used when performing the basin analysis  
+DELTA 0.5
+! the highest energy on the axis 
+FIRST -28.0
+! the number of levels at which to perform the basin analysis
+! also specifies the energy range, from FIRST to FIRST - (DELTA * LEVELS)  
+LEVELS 30
+! the PATHSAMPLE file containing the minima  
+MINIMA min.data
+! the PATHSAMPLE file containing the transition states
+TS ts.data
+
+! OPTIONAL KEYWORDS
+
+! ignore transition states above this energy 
+MAXTSENERGY 10.0
+! minima with 0 or fewer (!) connections are discarded
+NCONNMIN 0
+! connection analysis should be based on minimum 3 (the global minimum)  
+! may require changing if min.A contains something else - if in doubt remove 
+CONNECTMIN 3
+! attempt to place the branch containing the global minimum near the centre 
+CENTREGMIN
+! label minima 1 and 39 (the folded and unfolded endpoints) on the disconnectivity graph
+IDMIN 3
+IDMIN 7
+
+! label all minima in 5pt font - useful for identifying minima of interest to extract 
+! initially commented for clarity
+! IDENTIFY
+! LABELSIZE 5

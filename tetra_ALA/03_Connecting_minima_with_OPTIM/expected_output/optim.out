@@ -1,0 +1,662 @@
+NOTE: Binary only licensed for use at AlgoSB2015
+
+ OPTIM version 29516, Copyright (C) David J. Wales
+ OPTIM comes with ABSOLUTELY NO WARRANTY; for details supply WARRANTY as an input keyword.
+ This is free software, and you are welcome to redistribute it
+ under certain conditions; provide keyword COPYRIGHT to see the details.
+
+ getparams> input coordinates for AMBER9 system will be read from 
+start
+start               
+
+          -------------------------------------------------------
+          Amber 9  SANDER                              2006
+          -------------------------------------------------------
+
+| Run on 11/30/2015 at 15:57:10
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: min.in                                                                
+| MDOUT: min.out                                                               
+|INPCRD: coords.inpcrd                                                         
+|  PARM: coords.prmtop                                                         
+|RESTRT: coords.rst                                                            
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: coords.mdcrd                                                          
+|MDINFO: mdinfo                                                                
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+
+
+ Here is the input file:
+
+AMBER input file used to return the energy from sander when running GMIN       
+ &cntrl                                                                        
+  imin   = 1,                                                                  
+  ncyc = 1,                                                                    
+  maxcyc = 1,                                                                  
+  igb = 2,                                                                     
+  ntb    = 0,                                                                  
+  cut    = 999.99                                                              
+ /                                                                             
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+| New format PARM file being parsed.
+| Version =    1.000 Date = 10/13/15 Time = 12:43:38
+ NATOM  =      52 NTYPES =       7 NBONH =      27 MBONA  =      24
+ NTHETH =      58 MTHETA =      32 NPHIH =     106 MPHIA  =      87
+ NHPARM =       0 NPARM  =       0 NNB   =     258 NRES   =       6
+ NBONA  =      24 NTHETA =      32 NPHIA =      87 NUMBND =       8
+ NUMANG =      16 NPTRA  =      19 NATYP =       7 NPHB   =       0
+ IFBOX  =       0 NMXRS  =      10 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+ Implicit solvent radii are H(N)-modified Bondi radii (mbondi2)                                             
+
+|     Memory Use     Allocated
+|     Real                3512
+|     Hollerith            320
+|     Integer            22629
+|     Max Pairs              1
+|     nblistReal             0
+|     nblist Int             0
+|       Total              117 kbytes
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+ACE                                                                             
+
+General flags:
+     imin    =       1, nmropt  =       0
+     ifswitch=       0, fswitchbeta=  10.000
+ mdread> no continuous cutoff will be used for non-bonded terms
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       1, ntpr    =      50, ntrx    =       1, ntwr    =     500
+     iwrap   =       0, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       0, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       1, ntb     =       0, igb     =       2, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     = 999.99000, intdiel =   1.00000
+     saltcon =   0.00000, offset  =   0.09000, gbalpha=    0.80000
+     gbbeta  =   0.00000, gbgamma =   2.90912, surften =   0.00500
+     rdt     =   0.00000, rgbmax  =  25.00000
+     alpb  =        0
+     scnb    =   2.00000, scee    =   1.20000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  =       1, ncyc    =       1, ntmin   =       1
+     dx0     =   0.01000, drms    =   0.00010
+|  INFO: Old style inpcrd file read
+
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+ACE                                                                             
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:        0
+ getparams> Number of atoms (or variables)  determined as     52
+ keyword> Distance tolerance for distinguising atoms in the same orbit=        0.00100
+ keyword> Number of groups of permutable atoms=     6
+ fetchz> Hybrid EF/BFGS transition state search, maximum steps=5000
+         maximum tangent space steps=  20 or  200 when overlap is better than     0.999900
+ fetchz> Uphill mode is    0 for initial step and    0 after that
+ fetchz> No Hessian: Rayleigh-Ritz max steps=1000 RMS <       0.0100 and |% change|<     1.0    
+ fetchz> Hessian eigenvector in Rayleigh-Ritz scheme calculated using method    2
+
+ fetchz>  156 Cartesian coordinates will be optimised for   52 AMBER atoms
+
+ fetchz> Point group checked when RMS force <     0.00100000, highest symmetry axis tested for=  6
+ fetchz> Initial distance and eigenvalue tolerances in symmetry determination=     0.00010000     0.00010000
+ fetchz> Minimum number of optimization steps=     0
+ fetchz> Stationary point information will be printed to min.data
+ fetchz> Convergence criterion for LBFGS optimization: RMS force< 0.10000000E-05 maximum steps=  5000
+ fetchz> Maximum energy rise in LBFGS minimization=    0.1000000000E-03
+ fetchz> Number of updates in LBFGS=      100
+ fetchz> Number of updates in XLBFGS=   4
+ fetchz> Number of updates in mind=   4
+ fetchz> Initial guess for diagonal elements in LBFGS=     0.1000
+ fetchz> Initial guess for diagonal elements in XLBFGS=    0.1000
+ fetchz> Maximum step size in LBFGS energy minimization=     0.1000
+ fetchz> Maximum step size in XLBFGS=    0.2000
+ fetchz> Maximum step size in LBFGS neb image minimization=                 0.2000
+ fetchz> Step sizes will be scaled if the eigenvalue is positive in BFGSTS
+ fetchz> Warnings will be issued if atoms become closer than 0.5 units
+ fetchz> Coordinates for intermediate steps will not be dumped to file points
+
+
+ OPTIM> Using translational/rotational ev shift=     1000000.000    
+ OPTIM> Initial energy=    -34.60220758     RMS force=    0.3103087097E-04
+ OPTIM> Final energy  =    -41.72299240     RMS force=    0.3117591169E-04
+OPTIM> Bad endpoints supplied - RMS force too big!
+OPTIM> Acceptable RMS force would be less or equal to     0.1000000000E-05
+ mylbfgs> Resetting LBFGS minimiser
+ mylbfgs> Energy and RMS force=    -34.60220758        0.3103087097E-04 after      0 steps
+ mylbfgs> Energy and RMS force=    -34.60220758        0.2827417733E-04 after      1 steps, step:  0.15021E-07
+ mylbfgs> Energy and RMS force=    -34.60220758        0.4157159075E-05 after      2 steps, step:  0.17487E-06
+ mylbfgs> Energy and RMS force=    -34.60220758        0.3253153094E-05 after      3 steps, step:  0.25859E-07
+ mylbfgs> Energy and RMS force=    -34.60220758        0.3445455901E-05 after      4 steps, step:  0.10525E-06
+ mylbfgs> Energy and RMS force=    -34.60220758        0.4353068833E-05 after      5 steps, step:  0.52198E-07
+ mylbfgs> Energy and RMS force=    -34.60220758        0.1347407609E-05 after      6 steps, step:  0.22072E-07
+ mylbfgs> Energy and RMS force=    -34.60220758        0.8612671412E-06 after      7 steps, step:  0.99972E-08
+ mylbfgs> Final energy is   -34.602207579854849    
+ geopt> X component of inertia tensor=          282.0982559812
+ geopt> Y component of inertia tensor=         1007.9569413487
+ geopt> Z component of inertia tensor=         1161.5432943921
+ rotcon> Rotational constants (in cm-1) and principal moments of inertia: 
+        0.00903         0.01022         0.04169      1443.95605      5891.42113      6663.24391
+ symmetry> The full molecular point group is C1  .
+ symmetry> The largest Abelian subgroup of the full molecular point group is C1  .
+ symmetry> Distance tolerance=     0.00010 Inertia tolerance=     0.00010
+ symmetry> Order of full point group=     1
+
+ geopt>                          **** CONVERGED ****
+
+ mylbfgs> Resetting LBFGS minimiser
+ mylbfgs> Energy and RMS force=    -41.72299240        0.3117591169E-04 after      0 steps
+ mylbfgs> Energy and RMS force=    -41.72299240        0.2858957469E-04 after      1 steps, step:  0.15162E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.4445901774E-05 after      2 steps, step:  0.19201E-06
+ mylbfgs> Energy and RMS force=    -41.72299240        0.3333690639E-05 after      3 steps, step:  0.29673E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.2487093140E-05 after      4 steps, step:  0.88198E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.3298567146E-05 after      5 steps, step:  0.53836E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.1450526214E-05 after      6 steps, step:  0.12678E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.1167359428E-05 after      7 steps, step:  0.21599E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.1293186097E-05 after      8 steps, step:  0.24573E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.1197487184E-05 after      9 steps, step:  0.47734E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.3708436027E-05 after     10 steps, step:  0.82773E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.1059264885E-05 after     11 steps, step:  0.15175E-07
+ mylbfgs> Energy and RMS force=    -41.72299240        0.8757805512E-06 after     12 steps, step:  0.13097E-07
+ mylbfgs> Final energy is   -41.722992401350041    
+ geopt> X component of inertia tensor=          399.2854123818
+ geopt> Y component of inertia tensor=          500.2111629429
+ geopt> Z component of inertia tensor=          532.1985714057
+ rotcon> Rotational constants (in cm-1) and principal moments of inertia: 
+        0.01953         0.02150         0.02977      2021.94471      2799.77685      3082.41643
+ symmetry> The full molecular point group is C1  .
+ symmetry> The largest Abelian subgroup of the full molecular point group is C1  .
+ symmetry> Distance tolerance=     0.00010 Inertia tolerance=     0.00010
+ symmetry> Order of full point group=     1
+
+ geopt>                          **** CONVERGED ****
+
+ OPTIM> Initial energy=    -34.60220758     RMS force=    0.8612671412E-06
+ OPTIM> Final energy  =    -41.72299240     RMS force=    0.8757805512E-06
+ KeyConnect> Maximum cycles = 200, maximum images = 30
+ KeyConnect> Maximum attempts per pair of minima = 3, with increment image density of 0.50
+ KeyConnect> Image density = 2.00, iteration density = 20.00
+ KeyNEB> Initial and final NEB force constants     10.00000000        10.00000000     factor=    1.010000000    
+ KeyNEB> Number of images will vary depending on the separation of the endpoints
+ KeyGrad> Overall rotation and translation will NOT be removed
+ KeyGrad> Using doubly nudged elastic band gradient
+ KeyOutput> Transition state candidates will be optimized
+ KeyOutput> Concise printing during transition states optimization
+ KeyOutput> Transition state candidates are maxima along NEB
+ KeyMin> Maximal number of iterations will vary, depending on the number of images in the band
+ KeyMin> RMS convergence criterion is set to 0.01
+ KeyMin> L-BFGS minimization
+ KeyLBFGS> Maximum step size per image =     0.2000000000    
+ KeyLBFGS> 4 Hessian updates per iteration
+ KeyLBFGS> Guess for inverse Hessian diagonal elements =     0.1000000000E-02
+ KeyTau> Using Henkelman and Jonsson's improved tangent
+ KeyDecide> Cost function in Dijkstra algorithm is Exp[D]
+
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 1 >>>>>>>>>>>>>>>>>>>>> 2 minima and 0 ts are known >>>>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      1 steps with      1 missing connections, weight=    0.15291E+11
+ decide> The unconnected minima in the chain and their distances are:
+     2       23.45     1 
+ 
+
+ tryconnect> 600-iteration DNEB run for minima 1_S and 2_F using 30 images  (DNEB attempt #1)  ...
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   86492972452.011124     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   323735915973.38556     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   15015423523.594727     
+ Tau norm is zero! Probably image density is too big...
+  This is image #    16
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   86492972452.011124     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   323735915973.38556     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   15015423523.594727     
+ Tau norm is zero! Probably image density is too big...
+  This is image #    16
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   86492972452.011124     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   323735915973.38556     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   15015423523.594635     
+ Tau norm is zero! Probably image density is too big...
+  This is image #    16
+ lbfgs> Final DNEB force constant      10.00000000    
+ Time to go through NEB:    3.6000000000000004E-002
+ Double-ended search iterations= 2 RMS= 0.0000 Dev= 0.46% S= 23.50 time= 0.04
+ Following    2 images are candidates for TS:   13   18  
+ Converged to TS (number of iterations):         21
+ Converged to TS (number of iterations):         42
+ DNEB run yielded 2 true transition state(s) time=   7.16
+
+ >>>>>  Path run for ts 1 ...
+ Plus  side of path:                     801 steps. Energy=    -35.35034723       time=       0.32
+ Minus side of path:                     758 steps. Energy=    -35.35034723       time=       0.31
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -35.3503472 0.76181          -34.5885397 0.76181          -35.3503472   3.567   3.083  17.177   3.027
+        *NEW* (Placed in 3)                                     Known (#3)
+ Connection established between members of the U set.
+
+ >>>>>  Path run for ts 2 ...
+ Plus  side of path:                     666 steps. Energy=    -41.05834172       time=       0.26
+ Minus side of path:                     578 steps. Energy=    -41.72299240       time=       0.24
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -41.0583417 0.28986          -40.7684806 0.95451          -41.7229924   9.715   9.536   1.608  32.342
+        *NEW* (Placed in 4)                                     Known (#2)
+ Unconnected minimum 4 found its way to F set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 2 >>>>>>>>>>>>>>>>>>>>> 4 minima and 2 ts are known >>>>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      2 steps with      1 missing connections, weight=    0.83643E+09
+ decide> The unconnected minima in the chain and their distances are:
+     4       20.54     1 
+ 
+
+ tryconnect> 600-iteration DNEB run for minima 1_S and 4_F using 30 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      70.39988712    
+ Time to go through NEB:    6.7840000000000007     
+ Double-ended search iterations= 600 RMS= 0.9798 Dev= 9.95% S= 30.00 time= 6.78
+ Following    3 images are candidates for TS:   10   13   16  
+ Converged to TS (number of iterations):         17
+ Converged to TS (number of iterations):         25
+ Converged to TS (number of iterations):         25
+ DNEB run yielded 3 true transition state(s) time=   4.78
+ isnewts> transition state is the same as number        1 energy=      -34.5885397207
+ tryconnect> Try the path again for ts      1 with pushoff=    0.1000000000E-01
+ tryconnect> Transition state with energy      23.43708823     ignored
+
+ >>>>>  Path run for ts 3 ...
+ tryconnect> Trying this transition state path again with pushoff=    0.1000000000E-01
+ Plus  side of path:                     750 steps. Energy=    -35.35034723       time=       0.39
+ Minus side of path:                     830 steps. Energy=    -35.35034723       time=       0.34
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -35.3503472 0.76181          -34.5885397 0.76181          -35.3503472   3.567   3.084  17.158   3.031
+        Known (#3)                                              Known (#3)
+ Connection established between members of the U set.
+
+ >>>>>  Path run for ts 4 ...
+ Plus  side of path:                     841 steps. Energy=    -34.56580364       time=       0.37
+ Minus side of path:                     778 steps. Energy=    -34.64308186       time=       0.34
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -34.5658036  5.2502          -29.3156442  5.3274          -34.6430819  23.967  18.963   3.160  16.458
+        *NEW* (Placed in 5)                                     *NEW* (Placed in 6)
+ Connection established between members of the U set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 3 >>>>>>>>>>>>>>>>>>>>> 6 minima and 3 ts are known >>>>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      3 steps with      2 missing connections, weight=    0.11532E+10
+ decide> The unconnected minima in the chain and their distances are:
+     4       20.87     3     3        6.56     1 
+ 
+
+ tryconnect> 600-iteration DNEB run for minima 3_U and 4_F using 30 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      39.20129138    
+ Time to go through NEB:    7.3759999999999977     
+ Double-ended search iterations= 600 RMS= 1.3088 Dev= 10.00% S= 32.10 time= 7.38
+ Following    3 images are candidates for TS:   10   13   16  
+ Converged to TS (number of iterations):         22
+ Converged to TS (number of iterations):         36
+ Converged to TS (number of iterations):         26
+ DNEB run yielded 3 true transition state(s) time=   8.49
+
+ >>>>>  Path run for ts 5 ...
+ Plus  side of path:                     832 steps. Energy=    -35.35034723       time=       0.44
+ Minus side of path:                     809 steps. Energy=    -35.35034723       time=       0.44
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -35.3503472 0.36545          -34.9848968 0.36545          -35.3503472   3.544   3.078  17.034   3.053
+        Known (#3)                                              Known (#3)
+ Connection established between members of the U set.
+
+ >>>>>  Path run for ts 6 ...
+ Plus  side of path:                     742 steps. Energy=    -37.97281001       time=       0.34
+ Minus side of path:                     784 steps. Energy=    -34.56580364       time=       0.39
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.9728100  6.7707          -31.2020724  3.3637          -34.5658036  17.321  16.163   1.988  26.155
+        *NEW* (Placed in 7)                                     Known (#5)
+ Connection established between members of the U set.
+
+ >>>>>  Path run for ts 7 ...
+ Plus  side of path:                     690 steps. Energy=    -37.97281001       time=       0.34
+ Minus side of path:                     689 steps. Energy=    -37.97281001       time=       0.37
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.9728100 0.76777          -37.2050443 0.76777          -37.9728100   3.551   3.085  17.013   3.056
+        Known (#7)                                              Known (#7)
+ Connection established between members of the U set.
+
+ tryconnect> 260-iteration DNEB run for minima 1_S and 3_U using 13 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      1.168613344    
+ Time to go through NEB:    1.4279999999999973     
+ Double-ended search iterations= 260 RMS= 0.0988 Dev= 10.75% S= 8.94 time= 1.43
+ Following    2 images are candidates for TS:    4    7  
+ Converged to TS (number of iterations):          7
+ Converged to TS (number of iterations):         10
+ DNEB run yielded 2 true transition state(s) time=   1.23
+ isnewts> transition state is the same as number        1 energy=      -34.5885397207
+ tryconnect> Will not repeat search for TS      2 same as TS      1
+
+ >>>>>  Path run for ts 8 ...
+ Plus  side of path:                     747 steps. Energy=    -35.35034723       time=       0.38
+ Minus side of path:                     757 steps. Energy=    -34.60220758       time=       0.42
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -35.3503472  1.0797          -34.2706748 0.33153          -34.6022076   7.114   6.733   6.224   8.355
+        Known (#3)                                              Known (#1)
+ Unconnected minimum 3 found its way to S set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 4 >>>>>>>>>>>>>>>>>>>>> 7 minima and 7 ts are known >>>>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      3 steps with      2 missing connections, weight=    0.11430E+08
+ decide> The unconnected minima in the chain and their distances are:
+     2       16.18     7     7       13.64     3 
+ 
+
+ tryconnect> 600-iteration DNEB run for minima 2_F and 7_U using 30 images  (DNEB attempt #1)  ...
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   78833031311.595886     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   584864380262.77039     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   16673699416.708883     
+ Tau norm is zero! Probably image density is too big...
+  This is image #    18
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   78833031311.595886     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   584864380262.77039     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   16673699416.708883     
+ Tau norm is zero! Probably image density is too big...
+  This is image #    18
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   78833031311.595886     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   584864380262.77039     
+ sf344> in amberenergies: cold fusion detected, (actually not) checking distances   16673699416.708883     
+ Tau norm is zero! Probably image density is too big...
+  This is image #    18
+ lbfgs> Final DNEB force constant      10.00000000    
+ Time to go through NEB:    4.7999999999994714E-002
+ Double-ended search iterations= 2 RMS= 0.0000 Dev= 1.11% S= 16.25 time= 0.05
+ Following    2 images are candidates for TS:   15   20  
+ Converged to TS (number of iterations):         20
+ Converged to TS (number of iterations):         22
+ DNEB run yielded 2 true transition state(s) time=   3.26
+ tryconnect> Transition state with energy      17.36726174     ignored
+
+ >>>>>  Path run for ts 9 ...
+ Plus  side of path:                     674 steps. Energy=    -37.97822966       time=       0.28
+ Minus side of path:                     607 steps. Energy=    -37.97281001       time=       0.24
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.9782297 0.45556          -37.5226724 0.45014          -37.9728100   8.136   7.260   1.824  28.505
+        *NEW* (Placed in 8)                                     Known (#7)
+ Connection established between members of the U set.
+
+ tryconnect> 540-iteration DNEB run for minima 3_S and 7_U using 27 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      3.418498711    
+ Time to go through NEB:    5.8719999999999999     
+ Double-ended search iterations= 540 RMS= 0.2216 Dev= 13.95% S= 29.51 time= 5.87
+ Following    1 images are candidates for TS:   15  
+ Converged to TS (number of iterations):         21
+ DNEB run yielded 1 true transition state(s) time=   1.30
+
+ >>>>>  Path run for ts 10 ...
+ Plus  side of path:                     794 steps. Energy=    -37.17383365       time=       0.35
+ Minus side of path:                     725 steps. Energy=    -35.30932121       time=       0.31
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.1738337  5.9002          -31.2736332  4.0357          -35.3093212  12.977  12.343   1.864  27.901
+        *NEW* (Placed in 9)                                     *NEW* (Placed in 10)
+ Connection established between members of the U set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 5 >>>>>>>>>>>>>>>>>>>>> 10 minima and 9 ts are known >>>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      4 steps with      2 missing connections, weight=    0.82846E+07
+ decide> The unconnected minima in the chain and their distances are:
+     2       15.70     8     7       13.64     3 
+ 
+
+ tryconnect> 600-iteration DNEB run for minima 2_F and 8_U using 30 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      4.581115220    
+ Time to go through NEB:    7.3759999999999906     
+ Double-ended search iterations= 600 RMS= 0.5930 Dev= 16.98% S= 32.60 time= 7.38
+ Following    4 images are candidates for TS:    9   12   15   22  
+ Converged to TS (number of iterations):         19
+ Converged to TS (number of iterations):         65
+ Converged to TS (number of iterations):         22
+ Converged to TS (number of iterations):         13
+ DNEB run yielded 4 true transition state(s) time=   8.84
+
+ >>>>>  Path run for ts 11 ...
+ Plus  side of path:                     691 steps. Energy=    -41.05834172       time=       0.36
+ Minus side of path:                     688 steps. Energy=    -41.05834172       time=       0.33
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -41.0583417  3.7358          -37.3225277  3.7358          -41.0583417   4.311   3.080  17.070   3.046
+        Known (#4)                                              Known (#4)
+ Alternative path found between members of the F set.
+
+ >>>>>  Path run for ts 12 ...
+ Plus  side of path:                     811 steps. Energy=    -41.72299240       time=       0.41
+ Minus side of path:                     756 steps. Energy=    -37.12123416       time=       0.33
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -41.7229924  5.6171          -36.1058525  1.0154          -37.1212342  25.278  22.786   1.886  27.568
+        Known (#2)                                              *NEW* (Placed in 11)
+ Unconnected minimum 11 found its way to F set.
+
+ >>>>>  Path run for ts 13 ...
+ Plus  side of path:                     495 steps. Energy=    -41.72299240       time=       0.25
+ Minus side of path:                     516 steps. Energy=    -41.72299240       time=       0.22
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -41.7229924 0.36251          -41.3604830 0.36251          -41.7229924   3.566   3.079  17.056   3.049
+        Known (#2)                                              Known (#2)
+ Alternative path found between members of the F set.
+
+ >>>>>  Path run for ts 14 ...
+ Plus  side of path:                     704 steps. Energy=    -37.97822966       time=       0.35
+ Minus side of path:                     757 steps. Energy=    -41.72299240       time=       0.34
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.9782297  4.3155          -33.6627077  8.0603          -41.7229924  18.939  16.325   3.161  16.449
+        Known (#8)                                              Known (#2)
+ Unconnected minimum 8 found its way to F set.
+
+ tryconnect> 600-iteration DNEB run for minima 3_S and 7_F using 30 images  (DNEB attempt #2)  ...
+ lbfgs> Final DNEB force constant     0.3994903209    
+ Time to go through NEB:    7.2519999999999953     
+ Double-ended search iterations= 600 RMS= 0.1895 Dev= 9.43% S= 42.07 time= 7.25
+ Following    3 images are candidates for TS:    6   18   28  
+ Converged to TS (number of iterations):         12
+ Converged to TS (number of iterations):         18
+ Converged to TS (number of iterations):         10
+ DNEB run yielded 3 true transition state(s) time=   3.83
+ isnewts> transition state is the same as number        9 energy=      -37.5226723783
+ tryconnect> Try the path again for ts      3 with pushoff=    0.1000000000E-01
+
+ >>>>>  Path run for ts 15 ...
+ Plus  side of path:                     638 steps. Energy=    -36.15552938       time=       0.32
+ Minus side of path:                     745 steps. Energy=    -35.35034723       time=       0.32
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -36.1555294  1.0808          -35.0747126 0.27563          -35.3503472  12.519  12.134   1.798  28.915
+        *NEW* (Placed in 12)                                    Known (#3)
+ Unconnected minimum 12 found its way to S set.
+
+ >>>>>  Path run for ts 16 ...
+ Plus  side of path:                     808 steps. Energy=    -37.97281001       time=       0.34
+ Minus side of path:                     758 steps. Energy=    -37.17383365       time=       0.33
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.9728100  4.3552          -33.6176191  3.5562          -37.1738337  26.405  19.733   4.189  12.413
+        Known (#7)                                              Known (#9)
+ Unconnected minimum 9 found its way to F set.
+
+ >>>>>  Path run for ts 17 ...
+ tryconnect> Trying this transition state path again with pushoff=    0.1000000000E-01
+ Plus  side of path:                     634 steps. Energy=    -37.97281001       time=       0.28
+ Minus side of path:                     632 steps. Energy=    -37.97822966       time=       0.28
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.9728100 0.45014          -37.5226724 0.45556          -37.9782297   8.136   7.261   1.823  28.524
+        Known (#7)                                              Known (#8)
+ Alternative path found between members of the F set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 6 >>>>>>>>>>>>>>>>>>>>> 12 minima and 15 ts are known >>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      4 steps with      1 missing connections, weight=     99246.    
+ decide> The unconnected minima in the chain and their distances are:
+     8       11.51    12 
+ 
+
+ tryconnect> 460-iteration DNEB run for minima 8_F and 12_S using 23 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      1.566053647    
+ Time to go through NEB:    4.2360000000000042     
+ Double-ended search iterations= 460 RMS= 0.1098 Dev= 9.82% S= 24.05 time= 4.24
+ Following    1 images are candidates for TS:   12  
+ Converged to TS (number of iterations):         19
+ DNEB run yielded 1 true transition state(s) time=   1.37
+ isnewts> transition state is the same as number       10 energy=      -31.2736332346
+ tryconnect> Try the path again for ts      1 with pushoff=    0.1000000000E-01
+
+ >>>>>  Path run for ts 18 ...
+ tryconnect> Trying this transition state path again with pushoff=    0.1000000000E-01
+ Plus  side of path:                     694 steps. Energy=    -35.30932121       time=       0.37
+ Minus side of path:                     751 steps. Energy=    -37.17383365       time=       0.32
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -35.3093212  4.0357          -31.2736332  5.9002          -37.1738337  12.978  12.343   1.863  27.917
+        Known (#10)                                             Known (#9)
+ Alternative path found between members of the F set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 7 >>>>>>>>>>>>>>>>>>>>> 12 minima and 15 ts are known >>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      4 steps with      1 missing connections, weight=    0.19849E+06
+ decide> The unconnected minima in the chain and their distances are:
+     8       11.51    12 
+ 
+
+ tryconnect> 560-iteration DNEB run for minima 8_F and 12_S using 28 images  (DNEB attempt #2)  ...
+ lbfgs> Final DNEB force constant      1.726574146    
+ Time to go through NEB:    6.3200000000000074     
+ Double-ended search iterations= 560 RMS= 0.1776 Dev= 12.01% S= 33.08 time= 6.32
+ Following    2 images are candidates for TS:   11   16  
+ Converged to TS (number of iterations):         17
+ Converged to TS (number of iterations):         14
+ DNEB run yielded 2 true transition state(s) time=   2.79
+ isnewts> transition state is the same as number       16 energy=      -33.6176190692
+ tryconnect> Try the path again for ts      1 with pushoff=    0.1000000000E-01
+ isnewts> transition state is the same as number       10 energy=      -31.2736332346
+ tryconnect> Will not repeat search for TS      2 same as TS     10
+
+ >>>>>  Path run for ts 19 ...
+ tryconnect> Trying this transition state path again with pushoff=    0.1000000000E-01
+ Plus  side of path:                     748 steps. Energy=    -37.17383365       time=       0.38
+ Minus side of path:                     824 steps. Energy=    -37.97281001       time=       0.41
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.1738337  3.5562          -33.6176191  4.3552          -37.9728100  26.411  19.786   4.092  12.707
+        Known (#9)                                              Known (#7)
+ Alternative path found between members of the F set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 8 >>>>>>>>>>>>>>>>>>>>> 12 minima and 15 ts are known >>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      4 steps with      1 missing connections, weight=    0.29774E+06
+ decide> The unconnected minima in the chain and their distances are:
+     8       11.51    12 
+ 
+
+ tryconnect> 600-iteration DNEB run for minima 8_F and 12_S using 30 images  (DNEB attempt #3)  ...
+ lbfgs> Final DNEB force constant      6.139132535    
+ Time to go through NEB:    7.8079999999999927     
+ Double-ended search iterations= 600 RMS= 0.1845 Dev= 14.82% S= 26.30 time= 7.81
+ Following    1 images are candidates for TS:   17  
+ Converged to TS (number of iterations):         14
+ DNEB run yielded 1 true transition state(s) time=   1.06
+ isnewts> transition state is the same as number       10 energy=      -31.2736332346
+ tryconnect> Will not repeat search for TS      1 same as TS     10
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 9 >>>>>>>>>>>>>>>>>>>>> 12 minima and 15 ts are known >>>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      5 steps with      1 missing connections, weight=    0.76953E+06
+ decide> The unconnected minima in the chain and their distances are:
+     7       13.55    12 
+ 
+
+ tryconnect> 540-iteration DNEB run for minima 7_F and 12_S using 27 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      3.768894829    
+ Time to go through NEB:    6.0160000000000053     
+ Double-ended search iterations= 540 RMS= 0.1937 Dev= 11.30% S= 29.35 time= 6.02
+ Following    2 images are candidates for TS:    2   17  
+ Converged to TS (number of iterations):          8
+ Converged to TS (number of iterations):         19
+ DNEB run yielded 2 true transition state(s) time=   1.51
+ isnewts> transition state is the same as number       10 energy=      -31.2736332346
+ tryconnect> Will not repeat search for TS      2 same as TS     10
+
+ >>>>>  Path run for ts 20 ...
+ Plus  side of path:                     710 steps. Energy=    -37.97281001       time=       0.31
+ Minus side of path:                     673 steps. Energy=    -37.97281001       time=       0.31
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -37.9728100  3.7819          -34.1909494  3.7819          -37.9728100   3.549   3.080  17.069   3.046
+        Known (#7)                                              Known (#7)
+ Alternative path found between members of the F set.
+ >>>>>>>>>>>>>>>>>>>>> CONNECT CYCLE 10 >>>>>>>>>>>>>>>>>>>>> 12 minima and 16 ts are known >>>>>>>>>>>>>>>>>
+ decide> Shortest path in Dijkstra has      7 steps with      1 missing connections, weight=    0.97260E+06
+ decide> The unconnected minima in the chain and their distances are:
+     6       13.79    12 
+ 
+
+ tryconnect> 540-iteration DNEB run for minima 6_F and 12_S using 27 images  (DNEB attempt #1)  ...
+ lbfgs> Final DNEB force constant      3.418498711    
+ Time to go through NEB:    5.4000000000000057     
+ Double-ended search iterations= 540 RMS= 0.0507 Dev= 6.48% S= 16.24 time= 5.40
+ Following    2 images are candidates for TS:    4   14  
+ Converged to TS (number of iterations):         13
+ Converged to TS (number of iterations):          6
+ DNEB run yielded 2 true transition state(s) time=   1.28
+
+ >>>>>  Path run for ts 21 ...
+ Plus  side of path:                     721 steps. Energy=    -35.30932121       time=       0.34
+ Minus side of path:                     739 steps. Energy=    -35.30932121       time=       0.31
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -35.3093212 0.91353          -34.3957873 0.91353          -35.3093212   3.676   3.084  17.047   3.050
+        Known (#10)                                             Known (#10)
+ Alternative path found between members of the F set.
+
+ >>>>>  Path run for ts 22 ...
+ Plus  side of path:                     732 steps. Energy=    -36.15552938       time=       0.35
+ Minus side of path:                     699 steps. Energy=    -35.30932121       time=       0.29
+
+         E+        Ets - E+           Ets       Ets - E-           E-          S       D      gamma   ~N
+      -36.1555294  2.6350          -33.5205243  1.7888          -35.3093212  14.861  14.007   1.677  31.006
+        Known (#12)                                             Known (#10)
+ Connected path found
+  ts        E+         Ets - E+          Ets       Ets - E-          E-          S       D      gamma   ~N
+   8      -34.6022076 0.33153         -34.2706748  1.0797         -35.3503472   7.114   6.733   6.224   8.355
+   1      -35.3503472 0.76181         -34.5885397 0.76181         -35.3503472   3.567   3.083  17.177   3.027
+  15      -35.3503472 0.27563         -35.0747126  1.0808         -36.1555294  12.519  12.134   1.798  28.915
+  22      -36.1555294  2.6350         -33.5205243  1.7888         -35.3093212  14.861  14.007   1.677  31.006
+  10      -35.3093212  4.0357         -31.2736332  5.9002         -37.1738337  12.977  12.343   1.864  27.901
+  16      -37.1738337  3.5562         -33.6176191  4.3552         -37.9728100  26.405  19.733   4.189  12.413
+   7      -37.9728100 0.76777         -37.2050443 0.76777         -37.9728100   3.551   3.085  17.013   3.056
+   9      -37.9728100 0.45014         -37.5226724 0.45556         -37.9782297   8.136   7.260   1.824  28.505
+  14      -37.9782297  4.3155         -33.6627077  8.0603         -41.7229924  18.939  16.325   3.161  16.449
+  13      -41.7229924 0.36251         -41.3604830 0.36251         -41.7229924   3.566   3.079  17.056   3.049
+
+ Number of TS in the path       =     10
+ Number of cycles               =     10
+
+ Elapsed time=                               135.69
+ OPTIM> # of energy calls=                          0 time=           0.00 %=  0.0
+ OPTIM> # of energy+gradient calls=            329557 time=         126.49 %= 93.2
+ OPTIM> # of energy+gradient+Hessian calls=         0 time=           0.00 %=  0.0

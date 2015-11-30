@@ -1,0 +1,77 @@
+! OPTIM input to use with PATHSAMPLE and tetra-ALA (ALA-ALA-ALA-ALA)
+
+! use the connection algorithm of Carr, Trygubenko and Wales to find a path between the endpoints specified with:
+! - a maximum of 200 connection cycles
+! - 3 connection attempts for any pair of local minima
+! - DNEB image density of 2 (number of images = 2 x distance) 
+! - DNEB iteration density of 20 (optimisation iterations = 20 x number of images)
+! - a maximum of 30 DNEB images
+! - 0.5 additional images per connection attempt
+! for further details of the parameters, see the OPTIM documentation
+NEWCONNECT 200 3 2.0 20.0 30 0.5
+
+! specifies the value of the DNEB force constant to use between images 
+NEBK 10.0
+
+! specifies that a missing connection Dijkstra-based algorithm should be used to choose minima for connection in cycles of NEWCONNECT
+! the edge weights used are distances are exponentiated (watch out for overflow with large distances!)
+DIJKSTRA EXP
+
+! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
+! as we are not providing a perm.allow file, all atoms are considered to be identical
+PERMDIST 
+
+! define the energy and distance cutoffs below which we assume structures are identical
+EDIFFTOL  1.0D-5
+GEOMDIFFTOL  0.1D0
+
+! specify the RMS force convergence criterion for the L-BFGS minimiser 
+BFGSMIN  1.0D-6
+! set the history size of the L-BFGS algorithm to 100
+UPDATES 100
+! the size of step to take away from a stationary point of the wrong index if encountered
+PUSHOFF 0.1
+! if the provided endpoints have an RMS force greater than BFGSMIN, re-minimise them
+REOPTIMISEENDPOINTS
+! the maximum number of steps for any one L-BFGS minimisation
+BFGSSTEPS 5000
+! the maximum step size for both normal and Rayleigh-Ritz minimisation
+MAXBFGS 0.1
+! the maximum number of optimisation steps
+STEPS 5000
+
+! transition states will be located using a hybrid BFGS/eigenvector following approach
+! - up to 1000 iterations allowed in the calculation of the smallest Hessian eigenvalue
+! - up to 20 BFGS steps allowed in the subspace minimisation before eigenvalue convergence
+! - up to 200 BFGS steps allowed in the subspace minimisation after eigenvalue convergence
+! - 'RMS force' convergence criterion of 0.01 for the calculation of the smallest non-zero Hessian eigenvalue
+BFGSTS 1000 20 200 0.01
+! reject any transition states of energy > 10 kcal/mol - used to prevent unphysical CH2 inversions occuring
+MAXTSENERGY 10.0D0
+! the maximum step size during hybrid eigenvector-following
+MAXSTEP 0.1
+! the upper limit for the maximum hybrid eigenvector following step size
+MAXMAX  0.3
+! set the trust radius used in eigenvector following
+TRAD 0.2
+! reduce the maximum step size in BFGSTS if the smallest non-zero eigenvalue is positive
+CHECKNEGATIVE
+! do not calculate the Hessian during geometry optimisation. Rayleigh-Ritz minimisation is used instead
+! to find the smallest eigenvalue and its eigenvector
+NOHESS
+! specifies the second order central differences method in Rayleigh-Ritz BFGSTS using a formulation that minimises the rounding error
+USEDIAG 2
+
+! allow up to a 0.0001 rise in the energy during L-BFGS minimisation and 1.0 in the Rayleigh-Ritz ratio during BFGSTS
+MAXERISE 1.0D-4 1.0D0
+
+! create a path.info file containing info on every min-ts-min triple found, on and off pathway
+! this is often used as input for PATHSAMPLE to create a database 
+DUMPALLPATHS
+
+! create PATHSAMPLE min.data.info and path.info files to use in the next example
+DUMPDATA
+
+! specify that we are using the AMBER potential via an interface to AMBER 9
+! initial coordinates will be read from start in (x,y,z) format
+AMBER9 start

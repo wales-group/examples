@@ -1,5 +1,5 @@
-! PATHSAMPLE input to create an initial database from OPTIM path.info for tetra-ALA
-! For further details, see the PATHSAMPLE documentation
+! PATHSAMPLE input to create an initial database from A9OPTIM path.info for tetra-ALA (ALA-ALA-ALA-ALA)
+! For further details, see pathdata_annotated and the PATHSAMPLE documentation
 
 EXEC           /home/energy/workshop/binaries/A9OPTIM
 CPUS           1
@@ -7,16 +7,15 @@ NATOMS         52
 SEED           1
 DIRECTION      AB
 CONNECTIONS    1
-TEMPERATURE    0.1
-PLANCK         9.536D-14
 TEMPERATURE    0.592
+PLANCK         9.536D-14
 
 PERMDIST 
 ETOL           1.0D-5
 GEOMDIFFTOL    0.1D0
 ITOL           0.1D0
 
-! STEP 1: creating the initial database from OPTIM path.info file
+! STEP 1: creating the initial database from A9OPTIM path.info file
 STARTFROMPATH  path.info.initial 1 2
 CYCLES         0
 

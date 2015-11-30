@@ -1,4 +1,4 @@
-! disconnectionDPS input to generate a disconnectivity graph for tetra-ALA
+! disconnectionDPS input to generate a disconnectivity graph for trypzip
 ! For further details see dinfo_annotated - a full keyword listing can be found in the source code
 
 ! REQUIRED KEYWORDS
@@ -11,11 +11,12 @@ TS ts.data
 
 ! OPTIONAL KEYWORDS
 
+MAXTSENERGY 10.0
 NCONNMIN 0
 CONNECTMIN 3
 CENTREGMIN
 IDMIN 3
-IDMIN 7 
+IDMIN 7
 
 ! IDENTIFY
-! LABELSIZE 5 
+! LABELSIZE 5
