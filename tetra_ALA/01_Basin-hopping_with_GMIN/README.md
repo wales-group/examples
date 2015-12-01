@@ -1,4 +1,4 @@
-# Example 1 - Basin-hopping with GMINi
+# Example 1 - Basin-hopping with GMIN
 <img src="tetra_ALA_igb2_checks.png" width="50%", height="50%">
 
 **GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping global optimisation methodology. **A9GMIN** is simply a version of **GMIN**
