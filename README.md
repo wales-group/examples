@@ -241,3 +241,8 @@ make -jX
 cd DISCONNECT/source
 gfortran -o disconnectionDPS disconnectionDPS.f90
 ```
+
+### Compiling utility programs
+
+There are a few utility programs that you might need to specific examples. The code and compilation instructions for these can be found
+[here](./utilities).
