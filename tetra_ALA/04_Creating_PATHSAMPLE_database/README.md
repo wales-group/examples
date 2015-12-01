@@ -1,6 +1,6 @@
 # Example 4 - Creating PATHSAMPLE database 
 
-Once we have found an intial discrete pathway between minima (endpoints) of interest using **OPTIM**, we can create a **PATHSAMPLE** stationary point database
+Once we have found an intial discrete pathway between minima (endpoints) of interest using **A9OPTIM**, we can create a **PATHSAMPLE** stationary point database
 and grow it using built-in methods designed to create a kinetically relevent sample for further analysis.   
 
 In this example, we will take the *path.info* file from [Example 3](../03_Connecting_minima_with_OPTIM) (here renamed as *path.info.initial*) and create a 
@@ -17,7 +17,7 @@ In order to successfully follow this example, the following need to be in your *
 Both this directory and the backup in *./input* contain all the files you need to run **PATHSAMPLE** to create a database. The *./expected_output* subdirectory 
 contains output after all of the below steps have been followed. Your intermediate results may differ as a result.
 
-As **PATHSAMPLE** acts as a driver for **OPTIM** (i.e. it starts **OPTIM** jobs), there are also **OPTIM** input files present. In this example we will not actually
+As **PATHSAMPLE** acts as a driver for **A9OPTIM** (i.e. it starts **OPTIM** jobs), there are also **A9OPTIM** input files present. In this example we will not actually
 be using them as we are simply setting up the database, but they are included as in a normal use case, they would be present.
 
 ### PATHSAMPLE input files
@@ -30,17 +30,17 @@ be using them as we are simply setting up the database, but they are included as
 				provided for reference only. For information on the full set of **PATHSAMPLE** keywords available, check the
 				[PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE)
 
-- *path.info.initial* -		The **OPTIM** output file from [Example 3](../03_Connecting_minima_with_OPTIM) that contains the energy, coordinates and Hessian 
+- *path.info.initial* -		The **A9OPTIM** output file from [Example 3](../03_Connecting_minima_with_OPTIM) that contains the energy, coordinates and Hessian 
 				eigenvalues of the minima and transition states found when making the initial connected pathway. We will be reading this file in to 
 				create the **PATHSAMPLE** database
 
 ### OPTIM input files
 
-- *odata.connect* -		Contains the **OPTIM** keywords used for jobs started by **PATHSAMPLE**. Although we will not be using it in this example, it is
+- *odata.connect* -		Contains the **A9OPTIM** keywords used for jobs started by **PATHSAMPLE**. Although we will not be using it in this example, it is
 				included for completeness. 
 
 		
-- *odata.connect_annotated* -	The **OPTIM** keywords present in *odata.connect* are detailed in *odata.connect_annotated*. This is only present for reference and
+- *odata.connect_annotated* -	The **A9OPTIM** keywords present in *odata.connect* are detailed in *odata.connect_annotated*. This is only present for reference and
 				is not used in the current example as explained above. For information on the full set of keywords available, check the 
 				[OPTIM website](http://www-wales.ch.cam.ac.uk/OPTIM)
 
@@ -98,7 +98,7 @@ check that the energy does not change.
 
 - *plot_Epath.plt* - 		**gnuplot** input file to plot the energy of the stationary points along the fastest path
 
-- *optim.out.initial* -		The **OPTIM** output from [Example 3](../03_Connecting_minima_with_OPTIM) where *path.info.initial* was created. Used below to identify 
+- *optim.out.initial* -		The **A9OPTIM** output from [Example 3](../03_Connecting_minima_with_OPTIM) where *path.info.initial* was created. Used below to identify 
 				the endpoints by their energy
 
 ## Step-by-step
@@ -368,7 +368,7 @@ committor probability - great insight can be gained from exploring the structure
 
 ## Extension: identifying other minima of interest
 
-A very useful keyword for **disconnectionDPS** is `IDENTIFY`. This will label ALL minima on the disconnectivity graph, making it very easy to identify what might
+A very useful keyword for **disconnectionDPS** is `IDENTIFY`. This will label **all** minima on the disconnectivity graph, making it very easy to identify what might
 be an interesting structural feature, and then drill down to look at specific structures.
 
 Add the `IDENTIFY` keyword to your *dinfo* file and re-run **disconnectionDPS**. Take a look at the resulting tree and see if you can follow the steps of the
