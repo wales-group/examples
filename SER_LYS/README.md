@@ -12,7 +12,7 @@ If you have the source code, all should compile fine using **gfortran** and **cm
 
 Visualisation is done with both **gnuplot** and **VMD** which can be obtained [here](http://www.ks.uiuc.edu/Research/vmd/)
 
-These examples are practically focussed and as such, we won't be covering the theoretical basis of basin-hopping or how the free-energy is calculated.
+These examples are practically focussed and as such, we won't be covering the theoretical basis of basin-hopping or how the free energy is calculated.
 
 ## Contents
 Each example is stand-alone - you do not need to do them in order, although it may aid understanding to do so.

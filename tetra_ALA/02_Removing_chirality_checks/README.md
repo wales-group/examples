@@ -122,7 +122,7 @@ vmd -pdb lowest1.1.pdb
 
 It is hard to see the difference between the L and D forms of alanine unless you know what to look for. Helpfully **VMD** has a plugin to do the hard work for us. Navigate to the
 `Extensions > Modelling > Fix Chirality Errors` plugin via the menu and click the `Check structure` button. You will see that **VMD** has identified that the C-alpha centres of 
-residues 'ALA 2' and 'ALA 5' seem to be inverted. As **VMD** is counting our N-terminal `ACE` capping group as a residue, this actually corresponds to residues 1 and 4. 
+residues 'ALA 2' and 'ALA 5' seem to be inverted. As **VMD** is counting our N-terminal ACE capping group as a residue, this actually corresponds to residues 1 and 4. 
 
 If you click on one of the residue lines and then click the 'Show selected chiral centre' button, you can take a closer look at the affected centres. 
 
