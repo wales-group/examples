@@ -5,53 +5,20 @@ These directories contain example input and output for the **GMIN**, **OPTIM** a
 
 In order to run through these examples, you will need to either use a build of the Wales Group VM, or have the following Ubuntu packages installed via `apt-get`:
 
+- to compile the code
 ```
-sudo apt-get install vim build-essential gfortran cmake cmake-curses-gui git subversion csh bison flex libblas-dev liblapack-dev gnuplot-x11 gv
+sudo apt-get install build-essential gfortran cmake cmake-curses-gui csh bison flex libblas-dev liblapack-dev
 ```
 
-That should give you everything you need to compile the code (see below) and visualise the results of the examples.
-
-**NOTE:** Due to licensing issues, we cannot distribute the **AMBER** or **CHARMM** interfaced versions of our source code. If you have a license for either, contact
-[David Wales](mailto:dw34@cam.ac.uk) and request access to the restricted code.
+- utility programs for visualisation etc
+```
+sudo apt-get install vim git subversion gnuplot-x11 gv
+```
 
 ## Compiling GMIN, OPTIM and PATHSAMPLE
 
-**GMIN**, **OPTIM** and **PATHSAMPLE** can be easily compiled using **cmake**. Once you have obtained the source code from the Wales group website 
-[here](http://www-wales.ch.cam.ac.uk/svn.tar.bz2), you can uncompress it as follows: `tar xvfj svn.tar.bz2`
+Once you have the source cosde, **GMIN**, **OPTIM** and **PATHSAMPLE** can be easily compiled using **cmake**. Detailed instructions can be found [here](./COMPILATION.md). 
 
-You can then compile **GMIN** as follows:
-
-```
-cd GMIN
-mkdir build
-cd build
-FC=gfortran cmake ../source
-make -j
-```
-
-To see additional options for the compilation (including enabling the interfaces to **AMBER** and **CHARMM**) you can run ``ccmake .`` in your build directory.
-
-For **OPTIM**:
-
-```
-cd OPTIM
-mkdir build
-cd build
-FC=gfortran cmake ../source
-make -j
-```
-
-For **PATHSAMPLE**:
-
-```
-cd PATHSAMPLE
-mkdir build
-cd build
-FC=gfortran cmake ../source
-make -j
-```
-
-ADD EXAMPLE FOR A9GMIN
 
 ## Example systems
 
@@ -75,7 +42,7 @@ ADD EXAMPLE FOR A9GMIN
 <img src="SER_LYS/ser_lys_fe0.6_gmin.png" width="50%", height="50%">
 
 - Basin-hopping with **GMIN**
-- Free energy basin-hopping using **A9GMIN8** to investigate the effect of entropy
+- Free energy basin-hopping using **A9GMIN** to investigate the effect of entropy
 
 ### [trypzip](./trypzip) - a 12 residue tryptophan zipper (AMBER)
 <img src="trypzip/trypzip_endpoints.png" width="50%", height="50%">
@@ -83,4 +50,75 @@ ADD EXAMPLE FOR A9GMIN
 **CHALLENGE!**
 
 - Efficiently expand a **PATHSAMPLE** database for a provided initial folding path
-- Requires much trial and error! 
+- Requires much trial and error!
+
+## Compiling the Wales Group codes
+
+### Obtaining the source code
+
+The source code can be obtained from the Wales group website [here](http://www-wales.ch.cam.ac.uk/svn.tar.bz2) or using `wget` like so:
+
+```
+wget http://www-wales.ch.cam.ac.uk/svn.tar.bz2
+```
+
+**NOTE:** Due to licensing issues, we cannot distribute the **AMBER** or **CHARMM** interfaced versions of our source code. If you have a license for either, contact
+[David Wales](mailto:dw34@cam.ac.uk) and request access to the restricted code.
+
+Copy the tar file into a working directory and uncompress it as follows: 
+
+```
+tar xvfj svn.tar.bz2
+```
+
+Replace the file name as necessary should you have a version of the source containing the AMBER or CHARMM interface. Now, change directory until you see a set of folders including
+one for **GMIN**, one for **OPTIM** and one for **PATHSAMPLE**.
+
+### Compiling GMIN
+
+All **cmake** builds are 'out of source' i.e. we build the binary in a directory that does not contain the source code. As a result, the first thing we need to do is create
+a build directory and move into it (note the nifty shortcut!):
+
+```
+mkdir -p GMIN/build/gfortran
+cd !$
+```
+
+ 
+
+You can then compile **GMIN** as follows:
+
+```
+cd GMIN
+mkdir build
+cd build
+FC=gfortran cmake ../source
+make -j
+```
+
+To see additional options for the compilation (including enabling the interfaces to **AMBER** and **CHARMM**) you can run ``ccmake .`` in your build directory.
+If you make any changes here, make sure you 'configure' (`c`), 'exit' (`e`) and then 'generate' (`g`).
+
+For **OPTIM**:
+
+```
+cd OPTIM
+mkdir build
+cd build
+FC=gfortran cmake ../source
+make -j
+```
+
+For **PATHSAMPLE**:
+
+```
+cd PATHSAMPLE
+mkdir build
+cd build
+FC=gfortran cmake ../source
+make -j
+```
+
+
+
+ 

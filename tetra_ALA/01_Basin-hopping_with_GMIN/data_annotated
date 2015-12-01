@@ -11,7 +11,7 @@ SLOPPYCONV 1.0D-4
 TIGHTCONV 1.0D-6 
 
 ! Consider minima unique if they differ by less than 0.00001
-EDIFF 0.00001
+EDIFF 1.0D-5
 
 ! Set the max number of minimisation steps for sloppy and tight quenches
 MAXIT 1000 1000 
@@ -45,14 +45,14 @@ DUMPINT 6000
 ! chain (multiple of kT in the underlying energy units, here 1.0 kcal/mol = 504K)
 TEMPERATURE 1.0
 
-! Do 500 BH steps multiplying the temperature by 1.0 each step
-STEPS 500 1.0
+! Do 1000 BH steps multiplying the temperature by 1.0 each step
+STEPS 1000 1.0
 
 ! Generate new geometries each BH step by apply a random Cartesian displacement
 ! of up to 1.0 to each atom and no angular step (0.0)
 STEP 1.0 0.0
-! Perform a GROUPROTATION move every 5 steps (see atomgroups)
-GROUPROTATION 5 
+! Perform a GROUPROTATION move every 1 step (see atomgroups)
+GROUPROTATION 1 
 
 ! Produce additional output files when using AMBER including .pdb and .rst files for each SAVEd minimum
 DUMPSTRUCTURES
