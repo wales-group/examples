@@ -143,14 +143,16 @@ PAIRLIST 1
 
 ```
 
-The approach you use and the parameters you choose should be informed by the system you are studying. Withoug giving too much away, here are a few tips:
+The approach you use and the parameters you choose should be informed by the system you are studying. Without giving too much away, here are a few tips:
 
-- look at the initial path carefully - what are the barriers like?
+- look at the initial path carefully
 
 - you can run **disconnectionDPS** at any time (remember `IDENTIFY`?) to make a disconnectivity graph and view it with `gv`
 
-- if you want to manually connect two minima with **OPTIM** as for tetra-ALA [here](../tetra_ALA/03_Connecting_minima_with_OPTIM) and then add the resulting pathway back in, 
-look up the `EXTRACTMIN` keyword. 
+- you can extract minima from the **PATHSAMPLE** database using `EXTRACTMIN minid` in *pathdata*
+
+- if you extract two minima, you can connect them manually with **OPTIM** as for tetra-ALA [here](../tetra_ALA/03_Connecting_minima_with_OPTIM) and then add the resulting 
+pathway back into the database using `ADDPATH` 
 
 - the `DUMMYRUN` keyword is your friend, especially when tuning parameters for efficient selection - consider uncommenting it!
 
