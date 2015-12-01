@@ -2,7 +2,7 @@
 
 ! Optionally stop the GMIN run when the global minimum is found
 ! This is not enabled by default as you don't usually know it's energy!
-! TARGET -12.94781157
+! TARGET -41.72299240
 
 ! Specify the RMS force convergence criteria for:
 ! quenches (Qu) during the basin-hopping (BH) run
@@ -51,8 +51,8 @@ STEPS 1000 1.0
 ! Generate new geometries each BH step by apply a random Cartesian displacement
 ! of up to 1.0 to each atom and no angular step (0.0)
 STEP 1.0 0.0
-! Perform a GROUPROTATION move every 1 step (see atomgroups)
-GROUPROTATION 1 
+! Perform a GROUPROTATION move every 5 steps (see atomgroups)
+GROUPROTATION 5 
 
 ! Produce additional output files when using AMBER including .pdb and .rst files for each SAVEd minimum
 DUMPSTRUCTURES

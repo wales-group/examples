@@ -6,8 +6,8 @@ AMBER input file used to return the energy from sander when running GMIN
 ! this simply returns an energy and makes no change to the structure
   ncyc = 1,
   maxcyc = 1,
-! do not use an implicit solvation model (different for AMBER 12+)
-  igb = 0,
+! use the GB(OCB) Generalised Born implicit solvation approach
+  igb = 2,
 ! do not use periodic boundary conditions
   ntb    = 0,
 ! do not use a non-bonded interaction cutoff
