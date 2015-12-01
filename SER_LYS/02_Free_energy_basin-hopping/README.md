@@ -1,10 +1,10 @@
-# Example 1 - Free energy basin-hopping
+# Example 2 - Free energy basin-hopping
 
 As temperature rises, entropy plays an increasing role in determining structural stability. To study this effect, we calculate the local free energy associated with
 minima on the potential energy surface using the harmonic superposition approach. This is referred to as **free energy** basin-hopping.
 
-In this example we will perform free energy basin-hopping for the SER-LYS dipeptide at two temperatures. We will also look back at Example 1 and compare what we find to the results
-when entropy was not considered.
+In this example we will perform free energy basin-hopping for the SER-LYS dipeptide at two temperatures. We will also look back at [Example 1](../01_Basin-hopping_with_GMIN)
+and compare what we find to the results when entropy was not considered.
 
 ## Requirements
 In order to successfully follow this example, the following needs to be in your *PATH*:
@@ -58,9 +58,9 @@ check that the energy does not change.
 ## Step-by-step
 
 Before you start producing output, take a minute to look through *data_annotated* and make sure you understand roughly the purpose of each keyword. Pay special attention to the 
-keywords that were not used in Example 1, namely `FEBH` and `MIN_ZERO_SEP`.
+keywords that were not used in [Example 1](../01_Basin-hopping_with_GMIN), namely `FEBH` and `MIN_ZERO_SEP`.
 
-The *data* file is initially set up for an `FEBH` temperature of 0.2 kcal/mol = 100.8K. 
+The *data* file is initially set up for an `FEBH` temperature (distinct from the sampling `TEMPERATURE`) of 0.2 kcal/mol = 100.8K. 
 
 ### Running A9GMIN
 
@@ -83,7 +83,9 @@ tail -f output | grep Qu
 
 Although SER-LYS is a relatively small system, we are diagonalising the Hessian every step and so this could take a bit of time to run... 
 
-Because the contents of the *output* file for free energy basin-hopping is so similar to that for standard basin-hopping we covered in Example 1 we will not cover it in detail.
+Because the contents of the *output* file for free energy basin-hopping is so similar to that for standard basin-hopping we covered in [Example 1](../01_Basin-hopping_with_GMIN) we 
+will not cover it in detail.
+
 One important difference to note is that when the final quenches are printed, the free energies are given as both absolute values and relative to the lowest free energy minimum 
 found:
 
@@ -130,10 +132,11 @@ F          4          -69.591430265579    121.293296023998     51.701865758419  
 
 This includes the final quenches that are included in the *lowest* file, indicated by an `F` on the far left above.
 
-### Comparing the the lowest free and potential energy minimua using VMD
+### Comparing the lowest free and potential energy minimua using VMD
 <img src="ser_lys_PE_FE_minima.png" width="100%", height="100%">
 
-As we found the global potential energy minimum for SER-LYS in Example 1, we can load it with **VMD** to compare against the lowest free energy minimum found here:
+As we found the global potential energy minimum for SER-LYS in [Example 1](../01_Basin-hopping_with_GMIN), we can load it with **VMD** to compare against the lowest 
+free energy minimum found here:
 
 ```
 vmd -parm7 coords.prmtop -rst7 ../01_Basin-hopping_with_GMIN/expected_output/min1.1.rst -rst7 min1.1.rst
@@ -142,14 +145,43 @@ vmd -parm7 coords.prmtop -rst7 ../01_Basin-hopping_with_GMIN/expected_output/min
 This will load the potential and free energy (at 100.8K) global minima into a pseudo trajectory. To align them and make structural comparison easy, navigate to the 
 `Extensions > Analysis > RMSD Trajectory Tool` and click `RMSD` followed by `Align`. 
 
-When you now drag the slider in the 'VMD Main' window you should see that the structures are aligned and that the major difference between the global potential and free energy
+When you now drag the slider in the 'VMD Main' window you should see that the major difference between the global potential and free energy
 minima at 100.8K is the orientation of the serine sidechain.
 
-TO ADD - running at FEBH 0.6 and seeing the global minimum change in the free_energy files
+### The effect of raising the temperature
 
-Copy input into new dir and then run in there.
+As we raise the temperature, entropic contributions to the free energy become more important - so much so that the global free energy minimum can change. 
+To investigate this, we increase the `FEBH` temperature to 0.6 kcal/mol = 302.4K. To do this we need to create a new working directory to run **A9GMIN** in so that
+we don't overwrite our existing output, then copy in the required input files:
 
-**FEBH 0.2**
+```
+mkdir FEBH0.6
+cp input/* FEBH0.6
+cd FEBH0.6
+```
+
+In order to change the `FEBH` temperature, we need to uncomment/comment the appropriate lines in the *data* file so it contains the following:
+
+```
+! 0.2 = 100.8K
+! FEBH 0.2
+! alternative FEBH temperature to try
+! 0.6 = 302.4K
+FEBH 0.6
+``` 
+
+We now run **A9GMIN** as before:
+
+```
+A9GMIN &
+tail -f output | grep Qu
+```
+
+When the run completes, compare the *free_energy* output file to that produced when using `FEBH 0.2` originally. The first five final quenches from each should look
+similar to the below:
+
+
+**FEBH 0.2** (original)
 ```
 F          1          -70.132742641686    121.083797883653     50.951055241967     51.701868141212                73.4
 F          2          -70.259825853665    121.265236051398     51.005410197733     51.701868141212                73.4
@@ -159,7 +191,7 @@ F          5          -69.591667558088    121.308925593438     51.717258035349  
 ...
 ```
 
-**FEBH 0.6**
+**FEBH 0.6** (new)
 ```
 F          1          -67.824735491641    275.836948265714    208.012212774074    208.772287367176                75.3
 F          2          -70.132739747475    278.218802786771    208.086063039296    208.772287367176                75.3
@@ -169,13 +201,22 @@ F          5          -69.612016553637    277.955546792754    208.343530239117  
 ...
 ```
 
-Note change in PE (left column)
+The first thing to notice here is that the harmonic term and free energy are much higher at 302.4K. 
 
-Compare 0.2 and 0.6 structures using **VMD**
+As expected, looking at the potential energy for the lowest free energy minimum has changed from -70.13 to -67.82 kcal/mol, suggesting that the structure of the
+global free energy minimum has changed after we raised the temperature. We can confirm this by using **VMD** again and aligning the structures before with the 
+'RMSD Trajectory Tool' as before:
 
-## Extension: comparing the potential and free energy minimum at 302.4K
+```
+vmd -parm7 coords.prmtop -rst7 ../min1.1.rst -rst7 min1.1.rst
+```
+
+Due to the order in which we load the structures, frame 0 (the first structure) will correspond to the `FEBH 0.2` global free energy minimum. Looking at the difference between these
+two structures, can you suggest why the second (from `FEBH 0.6`) may be more entropically stabilised?
+
+## Extension: comparing the global potential and free energy minima at 302.4K
 
 Now that you have run free energy basin-hopping at 302.4K and seen the global minimum change, use **VMD** to compare the new free energy global minimum to the potential energy global
-minimum found in Example 1.
+minimum found in [Example 1](../01_Basin-hopping_with_GMIN).
 
 This just requires running a similar **VMD** command as above, but with a different path depending on where your results are.
