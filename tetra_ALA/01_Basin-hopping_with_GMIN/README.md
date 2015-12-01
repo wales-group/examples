@@ -21,7 +21,7 @@ The *./expected_output* subdirectories contain output from  succesful **A9GMIN**
 - *data_annotated* -	The keywords we are using in this example are detailed in *data_annotated*. While this file is not required to run **GMIN**, it is
 			provided for reference. For information on the full set of keywords available, check the [GMIN website](http://www-wales.ch.cam.ac.uk/GMIN)
 
-- *coords.prmtop* -	The symmetrised (!) **AMBER** topology file for tetra-ALA using parameters from the **AMBER** ff99SB force field
+- *coords.prmtop* -	The symmetrised (see the note below!) **AMBER** topology file for tetra-ALA using parameters from the **AMBER** ff99SB force field
 
 - *coords.inpcrd* -  	The starting coordinates for the tetra-ALA atoms in our system in **AMBER** restart format
 
@@ -57,7 +57,7 @@ check that the energy does not change.
 ## Step-by-step
 
 Before you start producing output, take a minute to look through *data_annotated* and make sure you understand roughly the purpose of each keyword. You will find
-some keywords are commented out, starting with ' !'. The input initially in the directory uses a Generalised Born implicit solvent (see `min.in_annotated`). 
+some keywords are commented out, starting with ' !'. The input initially in the directory uses a Generalised Born implicit solvent (see *min.in_annotated*). 
 
 ### Running A9GMIN
 
@@ -169,6 +169,8 @@ HB1        -2.7360937942       -3.0363172100        1.4489224609
 ...
 ```
 
+The `SAVE` lowest energy minima are also output as individual files in both PDB (*lowestX.1.pdb*) and **AMBER** restart (*minX.1.rst*) format for minimum X in ascending energy order.
+
 ### Visualising the progress of the basin-hopping run using gnuplot
 <img src="tetra_ALA_igb2_progress.png" width="100%", height="100%">
 
@@ -216,7 +218,7 @@ would for MD to align the minima, making it easy to compare them.
 As a learning exercise, it is interesting to investigate the effect of removing the implicit solvent and re-running **A9GMIN** for tetra-ALA *in vacuo*. The input to do this can
 be copied from the *input_vacuum* subdirectory.
 
-It is recommended thar you create a new directory to run this in so that once you are finished you an compare the minima you find *in vacuo* to those found when using the
+It is recommended that you create a new directory to run this in so that once you are finished you an compare the minima you find *in vacuo* to those found when using the
 Generalised Born implicit solvent.
 
 Finally, given your knowledge of the charge shielding effect of solvent, do the difference you see make chemical sense? 

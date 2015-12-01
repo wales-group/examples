@@ -63,7 +63,7 @@ check that the energy does not change.
 ## Step-by-step
 
 Before you start producing output, take a minute to look through *data_annotated* and make sure you understand roughly the purpose of each keyword. You will find
-some keywords are commented out, starting with ' !'. The input initially in the directory uses a Generalised Born implicit solvent (see `min.in_annotated`). 
+some keywords are commented out, starting with ' !'. The input initially in the directory uses a Generalised Born implicit solvent (see *min.in_annotated*). 
 
 The input is almost identical to that in Example 1 apart from the addition of the `NOCHIRALCHECKS` keyword.
 
@@ -112,7 +112,7 @@ Importantly we see that the energy of the putative global minimum is lower at -4
 L-ALA structure found previously at -41.723 kcal/mol.
 
 ### Visualising the mixed L/D global minimum with **VMD**
-<img src="tetra_ALA_igb2_allL_vs_LDmix.png" width="50%", height="50%">
+<img src="tetra_ALA_igb2_allL_vs_LDmix.png" width="100%", height="100%">
 
 We can load the structure of the lowest energy minimum into VMD using the *lowests1.1.pdb* file produced by **A9GMIN**:
 
@@ -130,6 +130,9 @@ If you're curious, see if you can see the atom ordering difference around the C-
 look straight down a bond in each case and count the order of atoms in a clockwise direction in both cases. 
 
 <img src="VMD_chirality.png" width="50%", height="50%">
+
+In the image at the top of this section, you can see the global minimum for the pure L form on the left and the mixed L/D form on the right with the inverted C-alphas highlighted
+in orange.
 
 ## Extension: does the same happen if we allow cis-peptide bonds?
 

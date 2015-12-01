@@ -2,7 +2,10 @@
 
 ! Optionally stop the GMIN run when the global minimum is found
 ! This is not enabled by default as you don't usually know it's energy!
-! TARGET -14.51727917
+! TARGET -15.33241091
+
+! Specify a seed for the random number generator to make stochastic moves repeatable 
+RANSEED 54321
 
 ! Disable chirality checks (not usually recommended!)
 NOCHIRALCHECKS
@@ -48,8 +51,8 @@ DUMPINT 6000
 ! chain (multiple of kT in the underlying energy units, here 1.0 kcal/mol = 504K)
 TEMPERATURE 1.0
 
-! Do 500 BH steps multiplying the temperature by 1.0 each step
-STEPS 500 1.0
+! Do 1000 BH steps multiplying the temperature by 1.0 each step
+STEPS 1000 1.0
 
 ! Generate new geometries each BH step by apply a random Cartesian displacement
 ! of up to 1.0 to each atom and no angular step (0.0)

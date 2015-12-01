@@ -1,5 +1,5 @@
-# GMIN, OPTIM and PATHSAMPLE example input
-These directories contain example input and output for the **GMIN**, **OPTIM** and **PATHSAMPLE** codes developed in the Wales Group at the University of Cambridge.
+# Getting started with GMIN, OPTIM and PATHSAMPLE
+These directories contain example input and output for the **GMIN**, **OPTIM** and **PATHSAMPLE** codes developed in the Wales Group at the University of Cambridge. 
 
 ## Prerequisites
 
