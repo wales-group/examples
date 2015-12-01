@@ -1,5 +1,5 @@
 # Example 1 - Basin-hopping with GMINi
-<img src="tetra_ALA_igb2_gmin.png" width="50%", height="50%">
+<img src="tetra_ALA_igb2_checks.png" width="50%", height="50%">
 
 **GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping global optimisation methodology. **A9GMIN** is simply a version of **GMIN**
 that is interfaced to the **AMBER 9** potential. Here we use it to find the ten lowest energy minima for the tetra-ALA peptide (ALA-ALA-ALA-ALA). 
@@ -82,7 +82,7 @@ As tetra-ALA is a relatively small system, this won't take too long to finish an
 
 First is *output*, containing a lot of information on how the job progressed. The basin-hopping procedure in **GMIN** can be broken down into three phases:
 
-1. Initial quench (Qu) and first basin-hopping steps
+- Initial quench (Qu) and first basin-hopping steps
 
 
 ```
@@ -102,7 +102,7 @@ The outcome of a Metropolis test using the energy of the current Markov minimum 
 minimum into the Markov chain or not. If it was accepted, this minimum will be used as a starting point from which to generate the next new geometry, otherwise we 
 base it on the previous step.
  
-2. First `GROUPROTATION` step and a chirality inversion
+- First `GROUPROTATION` step and a chirality inversion
 
 As we have `GROUPROTATION 5` in our *data* file, every 5 steps we rotate a random selection of groups as defined in *atomgroups* according to their selection probabilities
 and maximum rotational amplitudes. This is a large step and can cause significant disruption to the structure of our system. In this case, we see that the C-alpha of ALA4 has
@@ -122,7 +122,7 @@ Qu          5 E=    -40.40419870     steps=  696 RMS= 0.78655E-04 Markov E=    -
 
 We will look at this in more detail in the next example.
 
-3. `STEP` size adjustment to satisfy target acceptance ratio
+- `STEP` size adjustment to satisfy target acceptance ratio
 ```
 Qu         50 E=    -39.54147772     steps=  611 RMS= 0.95547E-04 Markov E=    -39.54147774     t=       12.6
 Acceptance ratio for previous     50 steps=  0.8400  FAC=  1.0500
@@ -134,7 +134,7 @@ Every 50 quenches, we compare the acceptance ratio for the Metropolis test to th
 are making - here random Cartesian perturbations, applied to all particles, of maximum size specified by `STEP` and rotations of groups of atoms by `GROUPROTATION` as defined in 
 *atomgroups* - to generate new geometries to move toward the target ratio.
 
-3. Final quenches and file output
+- Final quenches and file output
 ```
 Final Quench      1 energy=    -41.72299240     steps=  233 RMS force=  0.8646050E-06 time=      251.17
 Final Quench      2 energy=    -40.75329850     steps=  189 RMS force=  0.8797289E-06 time=      251.25
