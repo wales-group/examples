@@ -15,10 +15,7 @@ sudo apt-get install build-essential gfortran cmake cmake-curses-gui csh bison f
 sudo apt-get install vim git subversion gnuplot-x11 gv
 ```
 
-## Compiling GMIN, OPTIM and PATHSAMPLE
-
-Once you have the source cosde, **GMIN**, **OPTIM** and **PATHSAMPLE** can be easily compiled using **cmake**. Detailed instructions can be found [here](./COMPILATION.md). 
-
+Acquiring the source code for **GMIN**, **OPTIM** and **PATHSAMPLE** and compiling the code using **cmake** is discussed in detail below.
 
 ## Example systems
 
@@ -84,41 +81,153 @@ mkdir -p GMIN/build/gfortran
 cd !$
 ```
 
- 
-
-You can then compile **GMIN** as follows:
+In this example, we are going to build vanilla **GMIN** using **gfortran**. First, we run **cmake** specifying the compiler using the `FC` environment variable and the source
+directory:
 
 ```
-cd GMIN
-mkdir build
-cd build
-FC=gfortran cmake ../source
-make -j
+FC=gfortran cmake ../../source
+```
+
+You should see some output similar to the following:
+
+```
+energy@landscapes:~/workshop/code/GMIN/build/gfortran$ FC=gfortran cmake ../../source
+-- The C compiler identification is GNU 4.8.4
+-- The CXX compiler identification is GNU 4.8.4
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- The Fortran compiler identification is GNU
+-- Check for working Fortran compiler: /usr/bin/gfortran
+-- Check for working Fortran compiler: /usr/bin/gfortran  -- works
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Checking whether /usr/bin/gfortran supports Fortran 90
+-- Checking whether /usr/bin/gfortran supports Fortran 90 -- yes
+FC_PROGNAME = gfortran
+Compiler switch = gfortran
+Setting initial values for compiler flags
+CMAKE_Fortran_COMPILER = /usr/bin/gfortran
+/home/energy/workshop/code/CMakeModules/FindMYBLAS.cmake: creating BLAS library.
+/home/energy/workshop/code/CMakeModules/FindMYLAPACK.cmake: creating LAPACK library.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/energy/workshop/code/GMIN/build/gfortran
 ```
 
 To see additional options for the compilation (including enabling the interfaces to **AMBER** and **CHARMM**) you can run ``ccmake .`` in your build directory.
-If you make any changes here, make sure you 'configure' (`c`), 'exit' (`e`) and then 'generate' (`g`).
+If you make any changes here, make sure you 'configure' (`c`), 'exit' (`e`) and then 'generate' (`g`). Pressing `q` will quit without making changes.
 
-For **OPTIM**:
-
-```
-cd OPTIM
-mkdir build
-cd build
-FC=gfortran cmake ../source
-make -j
-```
-
-For **PATHSAMPLE**:
+Assuming you didn't see any errors - you're now ready to compile **GMIN** as follows, replacing `X` with the number of cores (found by typing `nproc`). If in doubt, use 1:
 
 ```
-cd PATHSAMPLE
-mkdir build
-cd build
-FC=gfortran cmake ../source
-make -j
+make -jX
 ```
 
+This may take some time depending on how many cores you have available. When it's done, you should see a **GMIN** binary in the build directory:
 
+```
+...
+Scanning dependencies of target GMIN
+[100%] Building Fortran object CMakeFiles/GMIN.dir/main.F.o
+Linking Fortran executable GMIN
+[100%] Built target GMIN
+energy@landscapes:~/workshop/code/GMIN/build/gfortran$ ls
+CMakeCache.txt  cmake_install.cmake  GMIN           libgminlib.a   libmbpol     libmylapack.a  modules
+CMakeFiles      display_version.f90  libextralib.a  liblibmbpol.a  libmyblas.a  Makefile       porfuncs.f90
+```
 
- 
+Finally, move the binary into your `$PATH` so that you can run it anywhere by simply typing `GMIN`.
+
+If you have access to the **AMBER** or **CHARMM** interfaces source code or a different compiler, you may wish to build a different version of **GMIN**. A few examples for
+specific builds are provided here for reference, but this list is not comprehensive:
+
+- **A9GMIN** (GMIN with AMBER9) using the ifort compiler:
+```
+mkdir -p GMIN/builds/ifort_amber9
+cd !$
+FC=ifort cmake -DWITH_AMBER9=1 ../../source
+make -jX
+```
+
+- **C35GMIN** (GMIN with CHARMM 35) using the pgf90 compiler:
+```
+mkdir -p GMIN/builds/pgi_charmm35
+cd !$
+FC=pgf90 cmake -DWITH_CHARMM35=1 ../../source
+make -jX
+```
+
+- **CUDAGMIN** (GMIN leveraging GPU minimisation via the AMBER 12 interface) using the ifort compiler:
+```
+mkdir -p GMIN/builds/ifort_cuda
+cd !$
+FC=ifort cmake -DWITH_CUDA=1 ../../source
+make -jX
+```
+**NOTE:** requires the **CUDA** toolkit to be installed at version 5.5 or higher.
+
+### Compiling OPTIM
+
+Like **GMIN** above, **OPTIM** is easily compiled with **cmake**. Skipping straight to the examples (replace `X` by the number of cores to use):
+
+- **OPTIM** with the gfortran compiler
+```
+mkdir -p GMIN/build/gfortran
+cd !$
+FC=gfortran cmake ../../source
+make -jX
+```
+
+- **A12OPTIM** (OPTIM with AMBER12) using the ifort compiler:
+```
+mkdir -p OPTIM/builds/ifort_amber12
+cd !$
+FC=ifort cmake -DWITH_AMBER12=1 ../../source
+make -jX
+```
+
+- **C35OPTIM** (OPTIM with CHARMM 35) using the pgf90 compiler:
+```
+mkdir -p OPTIM/builds/pgi_charmm35
+cd !$
+FC=pgf90 cmake -DWITH_CHARMM35=1 ../../source
+make -jX
+```
+
+- **CUDAOPTIM** (OPTIM leveraging GPU via the AMBER 12 interface) using the ifort compiler:
+```
+mkdir -p OPTIM/builds/ifort_cuda5.5
+cd !$
+FC=ifort cmake -DWITH_CUDA=1 ../../source
+make -jX
+```
+**NOTE:** requires the **CUDA** toolkit to be installed at version 5.5 or higher.
+
+### Compiling PATHSAMPLE
+
+**PATHSAMPLE** has very limited build options as it does not interface with any specific potential. To ensure binary file formats are readable, you should be using the same
+compiler for both **OPTIM** and **PATHSAMAPLE**!
+
+Again replacing `X` with the number of cores in the examples below:
+
+- **PATHSAMPLE** using the gfortran compiler
+```
+mkdir -p PATHSAMPLE/builds/gfortran
+cd !$
+FC=gfortran cmake ../../source
+make -jX
+```
+
+- **PATHSAMPLE** using the NAG compiler
+```
+mkdir -p PATHSAMPLE/builds/nagfor
+cd !$
+FC=nagfor cmake ../../source
+make -jX
+```
