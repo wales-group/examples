@@ -203,7 +203,7 @@ F          5          -69.612016553637    277.955546792754    208.343530239117  
 
 The first thing to notice here is that the harmonic term and free energy are much higher at 302.4K. 
 
-As expected, looking at the potential energy for the lowest free energy minimum has changed from -70.13 to -67.82 kcal/mol, suggesting that the structure of the
+We also see that the potential energy for the lowest free energy minimum has changed from -70.13 to -67.82 kcal/mol, suggesting that the structure of the
 global free energy minimum has changed after we raised the temperature. We can confirm this by using **VMD** again and aligning the structures before with the 
 'RMSD Trajectory Tool' as before:
 
@@ -214,9 +214,12 @@ vmd -parm7 coords.prmtop -rst7 ../min1.1.rst -rst7 min1.1.rst
 Due to the order in which we load the structures, frame 0 (the first structure) will correspond to the `FEBH 0.2` global free energy minimum. Looking at the difference between these
 two structures, can you suggest why the second (from `FEBH 0.6`) may be more entropically stabilised?
 
-## Extension: comparing the global potential and free energy minima at 302.4K
+You can see a comparison of (from left to right) the global potential energy and free energy minima at 100.8 (`FEBH 0.2)` and 302.4K (`FEBH 0.6`) respectively. 
 
-Now that you have run free energy basin-hopping at 302.4K and seen the global minimum change, use **VMD** to compare the new free energy global minimum to the potential energy global
-minimum found in [Example 1](../01_Basin-hopping_with_GMIN).
 
-This just requires running a similar **VMD** command as above, but with a different path depending on where your results are.
+## Extension: what about lowering the `FEBH` temperature?
+
+Given that 1 kcal/mol = 504K, copy and edit the original input into new directories and run **A9GMIN** for some lower temperatures. Does the global free energy minimum change 
+again at any point? 
+
+If not - raise the temperature! Go crazy!  
