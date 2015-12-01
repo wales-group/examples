@@ -121,7 +121,8 @@ CMAKE_Fortran_COMPILER = /usr/bin/gfortran
 ```
 
 To see additional options for the compilation (including enabling the interfaces to **AMBER** and **CHARMM**) you can run ``ccmake .`` in your build directory.
-If you make any changes here, make sure you 'configure' (`c`), 'exit' (`e`) and then 'generate' (`g`). Pressing `q` will quit without making changes.
+If you make any changes here, make sure you 'configure' (`c`), 'exit' (`e`) and then 'generate' (`g`). You may need to do this twice for some builds. 
+Pressing `q` will quit without making changes.
 
 Assuming you didn't see any errors - you're now ready to compile **GMIN** as follows, replacing `X` with the number of cores (found by typing `nproc`). If in doubt, use 1:
 
@@ -202,7 +203,7 @@ make -jX
 
 - **CUDAOPTIM** (OPTIM leveraging GPU via the AMBER 12 interface) using the ifort compiler:
 ```
-mkdir -p OPTIM/builds/ifort_cuda5.5
+mkdir -p OPTIM/builds/ifort_cuda
 cd !$
 FC=ifort cmake -DWITH_CUDA=1 ../../source
 make -jX
