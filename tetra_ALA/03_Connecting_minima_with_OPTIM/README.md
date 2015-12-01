@@ -197,7 +197,9 @@ vmd -parm7 coords.prmtop -xyz path.xyz
 The **AMBER** topology file *coords.prmtop* is loaded to provide atom connectivity information that is missing in the *path.xyz* file.
 
 When you drag the slider in the 'VMD Main' window from left to right, you will see the structure move from the minimum in *start* and the global minimum in *final*. If you are
-paying attention, you might notice that some methyl groups appear to be spinning! Surely this isn't necessary? The *path.info* file actually contains **all** minima and transition
+paying attention, you might notice that some methyl groups appear to be spinning! Surely this isn't necessary?! 
+
+The *path.info* file actually contains **all** minima and transition
 states found during the **A9OPTIM** run, not just those on the initial discrete path between the endpoints. You will see in the next example that **PATHSAMPLE** sorts this out for
 us.
 

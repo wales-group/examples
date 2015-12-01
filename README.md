@@ -232,3 +232,12 @@ cd !$
 FC=nagfor cmake ../../source
 make -jX
 ```
+
+### Compiling disconnectionDPS
+
+**disconnectionDPS** is used to createdisconnectivity graphs from **PATHSAMPLE** databases. It can be compiled in a single step from the source as follows:
+
+```
+cd DISCONNECT/source
+gfortran -o disconnectionDPS disconnectionDPS.f90
+```
