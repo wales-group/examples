@@ -10,6 +10,6 @@ set key below
 se grid
 
 # Plot 'best' (current lowest energy), 'markov' (energy of structure in Markov chain) and 'energy' (energy of each quench)
-pl [][:-37] 'best' w l lw 2 linecolor rgb "red", \
+pl [][:-38] 'best' w l lw 2 linecolor rgb "red", \
    'markov' w l lw 2 linecolor rgb "blue", \
    'energy' w l lw 0.5 linecolor rgb "black"
