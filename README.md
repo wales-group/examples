@@ -3,7 +3,7 @@ These directories contain example input and output for the **GMIN**, **OPTIM** a
 
 ## Prerequisites
 
-In order to run through these examples, you will need to either use a build of the Wales Group VM, or have the following Ubuntu packages installed via `apt-get`:
+In order to run through these examples, you will need to either use a build of the Wales Group VM (available for VirtualBox [here](http://www-wales.ch.cam.ac.uk/VM/Wales_Group_VM.ova)), or have the following Ubuntu packages installed via `apt-get`:
 
 - to compile the code
 ```
