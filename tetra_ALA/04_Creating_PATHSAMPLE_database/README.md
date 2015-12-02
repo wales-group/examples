@@ -338,7 +338,7 @@ Unlike in [Example 3](../03_Connecting_minima_with_OPTIM), the plot seems to be 
 to themselves (go back and look at the plot for Example 3!):
 
 ```
-gnuplot -persist plot_Epath.png
+gnuplot -persist plot_Epath.plt
 ```
 
 <img src="tetra_ALA_initial_Epath.png" width="100%", height="100%">
