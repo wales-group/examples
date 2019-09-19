@@ -30,7 +30,7 @@ contains output from a succesful **OPTIM** run to give you an idea of what you w
 
 - *view_pathway.tcl* - 	TCL script used by **VMD** to load the pathway found by **OPTIM** and allows you to explore the changes that occur along it
 
-- *LJcolours.tcl* -	TCL script used by *view_pathway.tcl* to colour atoms along the pathway by their pair energies 	
+- *LJcolour.tcl* -	TCL script used by *view_pathway.tcl* to colour atoms along the pathway by their pair energies 	
 
 ## Step-by-step
 

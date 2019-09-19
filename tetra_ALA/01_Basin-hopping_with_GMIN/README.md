@@ -1,17 +1,17 @@
 # Example 1 - Basin-hopping with GMIN
 <img src="tetra_ALA_igb2_checks.png" width="50%", height="50%">
 
-**GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping global optimisation methodology. **A9GMIN** is simply a version of **GMIN**
-that is interfaced to the **AMBER 9** potential. Here we use it to find the ten lowest energy minima for the tetra-ALA peptide (ALA-ALA-ALA-ALA). 
+**GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping global optimisation methodology. **A12GMIN** is simply a version of **GMIN**
+that is interfaced to the **AMBER 12** potential. Here we use it to find the ten lowest energy minima for the tetra-ALA peptide (ALA-ALA-ALA-ALA). 
 
 ## Requirements
 In order to successfully follow this example, the following needs to be in your *PATH*:
-- an **A9GMIN** binary
+- an **A12GMIN** binary
 
 ## Directory contents
-This directory, and the backup you can find in the *./input_vacuum* and *./input_igb2* subdirectories, contain all the files you need to run **A9GMIN** for tetra-ALA both
+This directory, and the backup you can find in the *./input* subdirectory, contain all the files you need to run **A12GMIN** for tetra-ALA both
 *in vacuo* and using a Generalised Born implicit solvent model.
-The *./expected_output* subdirectories contain output from  succesful **A9GMIN** runs to give you an idea of what you will be producing, although your output may differ slightly.
+The *./expected_output* subdirectory contains output from succesful **A12GMIN** runs to give you an idea of what you will be producing, although your output may differ slightly.
 
 ### GMIN input files
 
@@ -59,11 +59,11 @@ check that the energy does not change.
 Before you start producing output, take a minute to look through *data_annotated* and make sure you understand roughly the purpose of each keyword. You will find
 some keywords are commented out, starting with ' !'. The input initially in the directory uses a Generalised Born implicit solvent (see *min.in_annotated*). 
 
-### Running A9GMIN
+### Running A12GMIN
 
-Assuming you have a **A9GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
+Assuming you have a **A12GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
 ```
-A9GMIN &
+A12GMIN &
 ```
 
 The output can then be view as follows:
@@ -169,7 +169,7 @@ HB1        -2.7360937942       -3.0363172100        1.4489224609
 ...
 ```
 
-The `SAVE` lowest energy minima are also output as individual files in both PDB (*lowestX.1.pdb*) and **AMBER** restart (*minX.1.rst*) format for minimum X in ascending energy order.
+The `SAVE` lowest energy minima are also output as individual files in both PDB (*coords.1.pdb*) and **AMBER** restart (*coords.1.rst*) format for minimum X in ascending energy order.
 
 ### Visualising the progress of the basin-hopping run using gnuplot
 <img src="tetra_ALA_igb2_progress.png" width="100%", height="100%">
@@ -195,12 +195,12 @@ the 'wrong' chirality. These are rejected by **GMIN**'s chirality checks, someth
 
 - from the .pdb files
 ```
-vmd -pdb lowest1.1.pdb
+vmd -pdb coords.1.pdb
 ```
 
 - from the .rst files
 ```
-vmd -parm7 coords.prmtop -rst7 min1.1.rst
+vmd -parm7 coords.prmtop -rst7 coords.1.rst
 ```
 
 Here we load the coordinates from the .rst file into the molecular topology we load from the **AMBER** topology file *coords.prmtop*. 
@@ -213,12 +213,6 @@ vmd -parm7 coords.prmtop -xyz lowest
 Here frame 0 is the lowest energy minimum with the energy rising along the 'trajectory'. Because **VMD** considers this a trajectory, you can use the 'RMSD Trajectory Tool' as you
 would for MD to align the minima, making it easy to compare them.
 
-## Extension: comparing the minima found *in vacuo*
+## Extension: optimising the search
 
-As a learning exercise, it is interesting to investigate the effect of removing the implicit solvent and re-running **A9GMIN** for tetra-ALA *in vacuo*. The input to do this can
-be copied from the *input_vacuum* subdirectory.
-
-It is recommended that you create a new directory to run this in so that once you are finished you an compare the minima you find *in vacuo* to those found when using the
-Generalised Born implicit solvent.
-
-Finally, given your knowledge of the charge shielding effect of solvent, do the difference you see make chemical sense? 
+Try using your knowledge from any of the previous examples and consult the online documentation to see if you can speed up the time required to find the global minimum. You can uncomment the `TARGET` keyword so the search stops as soon as the global minimum is found.

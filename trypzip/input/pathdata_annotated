@@ -1,9 +1,9 @@
 ! PATHSAMPLE input to expand the database for the tryptophan zipper peptide (trypzip)
 ! For further details, see the PATHSAMPLE documentation
 
-! the path to the A9OPTIM binary to use
-EXEC           /home/energy/workshop/binaries/A9OPTIM
-! run A9OPTIM locally on a single core - modify as appropriate
+! the path to the A12OPTIM binary to use
+EXEC           /home/energy/workshop/binaries/A12OPTIM
+! run A12OPTIM locally on a single core - modify as appropriate
 CPUS           1
 ! the number of atoms in the system
 NATOMS         220
@@ -40,13 +40,13 @@ CYCLES 0
 ! STEP 2: decide on a strategy to expand the database
 ! regenerate the list of minima for subsequent connection attempts every (1) cycle
 PAIRLIST 1
-! uncomment to check minima being selected for connection without running A9OPTIM
+! uncomment to check minima being selected for connection without running A12OPTIM
 ! DUMMYRUN
 
 ! Option A - SHORTCUT x
 ! try to reconnect minima further than x steps apart on the Dijkstra fastest path
 ! SHORTCUT x
-! perform 10 connections cycles (10 x CPUS A9OPTIM runs)
+! perform 10 connections cycles (10 x CPUS A12OPTIM runs)
 ! CYCLES 10
 
 ! Option B - SHORTCUT x BARRIER
@@ -83,8 +83,8 @@ PAIRLIST 1
 ! CYCLES 10
 
 ! Option F - ADDPATH path.info.x
-! add minima and transition states from A9OPTIM path.info files
-! this will require running separate A9OPTIM jobs with extracted minima as endpoints (see EXTRACTMIN)
+! add minima and transition states from A12OPTIM path.info files
+! this will require running separate A12OPTIM jobs with extracted minima as endpoints (see EXTRACTMIN)
 ! rename your path.info file or alter the argument to the keyword below
 ! ADDPATH path.info.toadd
 ! CYCLES 0
@@ -98,5 +98,5 @@ PAIRLIST 1
 ! REGROUPFREE 3.9
 ! CYCLES 0
 
-! specify that we are using the AMBER potential via an interface to AMBER 9
-AMBER9
+! specify that we are using the AMBER potential via an interface to AMBER 12
+AMBER12

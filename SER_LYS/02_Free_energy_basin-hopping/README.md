@@ -8,11 +8,11 @@ and compare what we find to the results when entropy was not considered.
 
 ## Requirements
 In order to successfully follow this example, the following needs to be in your *PATH*:
-- an **A9GMIN** binary
+- an **A12GMIN** binary
 
 ## Directory contents
-This directory, and the backup you can find in the *./input* *./input_igb2* subdirectory contains all the files you need to run **A9GMIN** for SER-LYS.
-The *./expected_output* subdirectory contains output from a succesful **A9GMIN** run to give you an idea of what you will be producing, although your output may differ slightly.
+This directory, and the backup you can find in the *./input* subdirectory contains all the files you need to run **A12GMIN** for SER-LYS.
+The *./expected_output* subdirectory contains output from a succesful **A12GMIN** run to give you an idea of what you will be producing, although your output may differ slightly.
 
 ### GMIN input files
 
@@ -60,13 +60,13 @@ check that the energy does not change.
 Before you start producing output, take a minute to look through *data_annotated* and make sure you understand roughly the purpose of each keyword. Pay special attention to the 
 keywords that were not used in [Example 1](../01_Basin-hopping_with_GMIN), namely `FEBH` and `MIN_ZERO_SEP`.
 
-The *data* file is initially set up for an `FEBH` temperature (distinct from the sampling `TEMPERATURE`) of 0.2 kcal/mol = 100.8K. 
+The *data* file is initially set up for an `FEBH` temperature (distinct from the sampling `TEMPERATURE`) of 0.5 kcal/mol = 251.6K. 
 
-### Running A9GMIN
+### Running A12GMIN
 
-Assuming you have a **A9GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
+Assuming you have a **A12GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
 ```
-A9GMIN &
+A12GMIN &
 ```
 
 The output can then be view as follows:
@@ -90,15 +90,15 @@ One important difference to note is that when the final quenches are printed, th
 found:
 
 ```
-Final Quench      1 energy=     50.95105524     steps=   76 RMS force=  0.9952739E-08 time=       73.40
-Final Quench      2 energy=     51.00541020     steps=   90 RMS force=  0.8708636E-08 time=       73.43
-Final Quench      3 energy=     51.66211600     steps=   61 RMS force=  0.8180983E-08 time=       73.46
+Final Quench      1 energy=    -41.38587901     steps=   68 RMS force=  0.7559131E-08 time=       97.11
+Final Quench      2 energy=    -41.31212951     steps=   84 RMS force=  0.8902073E-08 time=       97.23
+Final Quench      3 energy=    -40.90769222     steps=   56 RMS force=  0.8541320E-08 time=       97.35
 ...
-Final Quench     20 energy=     52.55657020     steps=   54 RMS force=  0.8861317E-08 time=       73.98
+Final Quench     20 energy=    -39.75600693     steps=   68 RMS force=  0.9807067E-08 time=       99.34
 After re-sorting, the lowest found minima are (lowest free energy subtracted if applicable):
-Lowest Minimum      1 Energy=      0.000000000
-Lowest Minimum      2 Energy=     0.5435495577E-01
-Lowest Minimum      3 Energy=     0.7110607618
+Lowest Minimum      1 Energy=      0.000000000    
+Lowest Minimum      2 Energy=     0.7374949959E-01
+Lowest Minimum      3 Energy=     0.4781867895    
 ...
 ```
 
@@ -106,27 +106,28 @@ It is the relative free energies that will appear in the *lowest* file:
 
 ```
           45
-Energy of minimum      1=     0.000000000     first found at step       58 after                19519 function calls
-HH31       -2.7958749515       -2.5952609373       -3.1617024780
-CH3        -2.3553734829       -1.6074586870       -3.0298850959
-HH32       -2.8767225384       -0.8909619190       -3.6642361483
+Energy of minimum      1=     0.000000000     first found at step      196 after                65709 function calls
+HH31        2.8767214682       -0.8909614326        3.6642364410
+CH3         2.3553733391       -1.6074586829        3.0298851522
+HH32        2.7958757429       -2.5952604914        3.1617026261
+...
 ```
 
-In addition to the standard **A9GMIN** output files that are produces, the file *free_energy* contains a concise summary of each quench, breaking out the potential energy and
+In addition to the standard **A12GMIN** output files that are produces, the file *free_energy* contains a concise summary of each quench, breaking out the potential energy and
 giving timing information:
 
 ```
-      Quench         Potential energy     Harmonic term        Free energy        Markov energy            Time
- ------------------  ------------------  ------------------  ------------------  ------------------  ------------------
-           0          -69.029146193808    121.438812526467     52.409666332659  ******************                 0.1
-           2          -68.413036332963    121.439233480901     53.026197147938     52.409666332659                 0.3
-           3          -67.645916314469    121.411048435983     53.765132121514     53.026197147938                 0.5
+      Quench         Potential energy     rot/vib terms        Free energy        Markov energy            Time
+ ------------------  ------------------  ------------------  ------------------  ------------------  ------------------ 
+           0        -69.0291461938       29.2523081444      -39.7768380494      0.100000000000+101                 0.3
+           1        -68.9643630227       29.0315931186      -39.9327699041      -39.7768380494                     0.5
+           2         68.0934278826       30.9114082863       99.0048361688      -39.9327699041                     0.6
+           3        -62.5297273405       29.0463249529      -33.4834023876      -39.9327699041                     0.8
 ...
-         500          -69.591427342571    121.293295483783     51.701868141212     51.701868866219                73.4
-F          1          -70.132742641686    121.083797883653     50.951055241967     51.701868141212                73.4
-F          2          -70.259825853665    121.265236051398     51.005410197733     51.701868141212                73.4
-F          3          -69.454336154515    121.116452158316     51.662116003802     51.701868141212                73.5
-F          4          -69.591430265579    121.293296023998     51.701865758419     51.701868141212                73.5
+         500        -61.6944640488       29.3692923254      -32.3251717235      -40.4600808185                    97.0
+F          1        -70.1327397475       28.7468607357      -41.3858790117      -40.4600808185                    97.1
+F          2        -70.2598229122       28.9476934001      -41.3121295121      -40.4600808185                    97.2
+F          3        -69.6120165536       28.7043243314      -40.9076922222      -40.4600808185                    97.3
 ...
 ```
 
@@ -139,7 +140,7 @@ As we found the global potential energy minimum for SER-LYS in [Example 1](../01
 free energy minimum found here:
 
 ```
-vmd -parm7 coords.prmtop -rst7 ../01_Basin-hopping_with_GMIN/expected_output/min1.1.rst -rst7 min1.1.rst
+vmd -parm7 coords.prmtop -rst7 ../01_Basin-hopping_with_GMIN/expected_output/coords.1.rst -rst7 coords.1.rst
 ```
 
 This will load the potential and free energy (at 100.8K) global minima into a pseudo trajectory. To align them and make structural comparison easy, navigate to the 
@@ -151,75 +152,75 @@ minima at 100.8K is the orientation of the serine sidechain.
 ### The effect of raising the temperature
 
 As we raise the temperature, entropic contributions to the free energy become more important - so much so that the global free energy minimum can change. 
-To investigate this, we increase the `FEBH` temperature to 0.6 kcal/mol = 302.4K. To do this we need to create a new working directory to run **A9GMIN** in so that
+To investigate this, we increase the `FEBH` temperature to 2.0 kcal/mol = 1006K. To do this we need to create a new working directory to run **A12GMIN** in so that
 we don't overwrite our existing output, then copy in the required input files:
 
 ```
-mkdir FEBH0.6
-cp input/* FEBH0.6
-cd FEBH0.6
+mkdir FEBH2.0
+cp input/* FEBH2.0
+cd FEBH2.0
 ```
 
 In order to change the `FEBH` temperature, we need to uncomment/comment the appropriate lines in the *data* file so it contains the following:
 
 ```
-! 0.2 = 100.8K
-! FEBH 0.2
+! 0.5 = 251.6K
+! FEBH 0.5
 ! alternative FEBH temperature to try
-! 0.6 = 302.4K
-FEBH 0.6
+! 2.0 = 1006K
+FEBH 2.0
 ``` 
 
-We now run **A9GMIN** as before:
+We now run **A12GMIN** as before:
 
 ```
-A9GMIN &
+A12GMIN &
 tail -f output | grep Qu
 ```
 
-When the run completes, compare the *free_energy* output file to that produced when using `FEBH 0.2` originally. The first five final quenches from each should look
+When the run completes, compare the *free_energy* output file to that produced when using `FEBH 0.5` originally. The first five final quenches from each should look
 similar to the below:
 
 
-**FEBH 0.2** (original)
+**FEBH 0.5** (original)
 ```
-F          1          -70.132742641686    121.083797883653     50.951055241967     51.701868141212                73.4
-F          2          -70.259825853665    121.265236051398     51.005410197733     51.701868141212                73.4
-F          3          -69.454336154515    121.116452158316     51.662116003802     51.701868141212                73.5
-F          4          -69.591430265579    121.293296023998     51.701865758419     51.701868141212                73.5
-F          5          -69.591667558088    121.308925593438     51.717258035349     51.701868141212                73.6
+F          1        -70.1327397475       28.7468607357      -41.3858790117      -40.4600808185                    97.1
+F          2        -70.2598229122       28.9476934001      -41.3121295121      -40.4600808185                    97.2
+F          3        -69.6120165536       28.7043243314      -40.9076922222      -40.4600808185                    97.3
+F          4        -69.4543361545       28.8211893256      -40.6331468289      -40.4600808185                    97.5
+F          5        -69.5914273426       29.0189104904      -40.5725168522      -40.4600808185                    97.6
 ...
 ```
 
-**FEBH 0.6** (new)
+**FEBH 2.0** (new)
 ```
-F          1          -67.824735491641    275.836948265714    208.012212774074    208.772287367176                75.3
-F          2          -70.132739747475    278.218802786771    208.086063039296    208.772287367176                75.3
-F          3          -68.700666537332    276.985067455812    208.284400918480    208.772287367176                75.3
-F          4          -67.434171329499    275.723431683199    208.289260353700    208.772287367176                75.3
-F          5          -69.612016553637    277.955546792754    208.343530239117    208.772287367176                75.3
+F          1        -68.3455658283      -249.266752706      -317.612318534      -316.596752843                    98.7
+F          2        -69.2735281825      -248.207507667      -317.481035850      -316.596752843                    98.8
+F          3        -68.8724987305      -248.530008125      -317.402506856      -316.596752843                    98.9
+F          4        -67.4884318245      -249.752431045      -317.240862869      -316.596752843                    99.1
+F          5        -67.0410418849      -250.066833469      -317.107875354      -316.596752843                    99.2
 ...
 ```
 
-The first thing to notice here is that the harmonic term and free energy are much higher at 302.4K. 
+The first thing to notice here is that the harmonic term is more significant at 1006K. 
 
-We also see that the potential energy for the lowest free energy minimum has changed from -70.13 to -67.82 kcal/mol, suggesting that the structure of the
+We also see that the potential energy for the lowest free energy minimum has changed from -70.13 to -68.35 kcal/mol, suggesting that the structure of the
 global free energy minimum has changed after we raised the temperature. We can confirm this by using **VMD** again and aligning the structures before with the 
 'RMSD Trajectory Tool' as before:
 
 ```
-vmd -parm7 coords.prmtop -rst7 ../min1.1.rst -rst7 min1.1.rst
+vmd -parm7 coords.prmtop -rst7 ../coords.1.rst -rst7 coords.1.rst
 ```
 
-Due to the order in which we load the structures, frame 0 (the first structure) will correspond to the `FEBH 0.2` global free energy minimum. Looking at the difference between these
-two structures, can you suggest why the second (from `FEBH 0.6`) may be more entropically stabilised?
+Due to the order in which we load the structures, frame 0 (the first structure) will correspond to the `FEBH 0.5` global free energy minimum. Looking at the difference between these
+two structures, can you suggest why the second (from `FEBH 2.0`) may be more entropically stabilised?
 
-You can see a comparison of (from left to right) the global potential energy and free energy minima at 100.8 (`FEBH 0.2)` and 302.4K (`FEBH 0.6`) respectively. 
+You can see a comparison of (from left to right) the global potential energy and free energy minima at 251.6 (`FEBH 0.5)` and 1006K (`FEBH 2.0`) respectively. 
 
 
 ## Extension: what about lowering the `FEBH` temperature?
 
-Given that 1 kcal/mol = 504K, copy and edit the original input into new directories and run **A9GMIN** for some lower temperatures. Does the global free energy minimum change 
+Given that 1 kcal/mol = 504K, copy and edit the original input into new directories and run **A12GMIN** for some lower temperatures. Does the global free energy minimum change 
 again at any point? 
 
 If not - raise the temperature! Go crazy!  

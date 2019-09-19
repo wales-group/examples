@@ -1,15 +1,15 @@
 # Example 3 - Connecting minima with OPTIM
 
-Among many other things, **A9OPTIM** can construct discrete paths: sequences of minima and transition states between two specified minima termed ‘endpoints’. Here we 
-take two low energy minima that were identified using **A9GMIN** in [Example 1](../01_Basin-hopping_with_GMIN) and connect them. This can give us information about 
+Among many other things, **A12OPTIM** can construct discrete paths: sequences of minima and transition states between two specified minima termed ‘endpoints’. Here we 
+take two low energy minima that were identified using **A12GMIN** in [Example 1](../01_Basin-hopping_with_GMIN) and connect them. This can give us information about 
 the barriers between them and the rate of interconversion. 
 
-**NOTE:** As with **A9GMIN**, **A9OPTIM** is simply a version of **OPTIM** that has access to the **AMBER** potential.
+**NOTE:** As with **A12GMIN**, **A12OPTIM** is simply a version of **OPTIM** that has access to the **AMBER** potential.
 
 ## Requirements
 In order to successfully follow this example, the following need to be in your *PATH*:
 
-- an **A9OPTIM** binary
+- an **A12OPTIM** binary
 
 ## Directory contents
 Both this directory and the backup in *./input* contain all the files you need to run **OPTIM** to connect two tetra-ALA minima. The *./expected_output* subdirectory 
@@ -18,7 +18,7 @@ contains output from a succesful **OPTIM** run to give you an idea of what you w
 
 ### OPTIM input files
 
-- *odata* -		Some input files are optional, but every **A9OPTIM** job requires an *odata* file containing the keywords used to specify 
+- *odata* -		Some input files are optional, but every **A12OPTIM** job requires an *odata* file containing the keywords used to specify 
 			what we would like the run to achieve. 
 		
 - *odata_annotated* -	The keywords we are using in this example are detailed in *odata_annotated*. While this file is not required to run **OPTIM**, it is
@@ -74,20 +74,20 @@ check that the energy does not change.
 
 Before you start producing output, take a minute to look through *odata_annotated* and make sure you understand roughly the purpose of each keyword.  
 
-### Generating an initial discrete path using A9OPTIM
+### Generating an initial discrete path using A12OPTIM
 
-Assuming you have the binary somewhere in your *PATH*, running **A9OPTIM** and following the output is as simple as this:
+Assuming you have the binary somewhere in your *PATH*, running **A12OPTIM** and following the output is as simple as this:
 
 ```
-A9OPTIM > optim.out & 
+A12OPTIM > optim.out & 
 tail -f optim.out
 ```
 
-The **A9OPTIM** output file we have created, *optim.out*, can be broken down into sections as follows:
+The **A12OPTIM** output file we have created, *optim.out*, can be broken down into sections as follows:
 
 #### Check endpoints and reoptimise if needed
 It is possible that the endpoint structures you supply are not converged to a tight enough RMS force to satisfy the `BFGSCONV` value specified in *odata*. In this
-case, **A9OPTIM** first tightly minimises them:
+case, **A12OPTIM** first tightly minimises them:
 ```
  OPTIM> Initial energy=    -34.60220758     RMS force=    0.3103087097E-04
  OPTIM> Final energy  =    -41.72299240     RMS force=    0.3117591169E-04
@@ -200,7 +200,7 @@ When you drag the slider in the 'VMD Main' window from left to right, you will s
 paying attention, you might notice that some methyl groups appear to be spinning! Surely this isn't necessary?! 
 
 The *path.info* file actually contains **all** minima and transition
-states found during the **A9OPTIM** run, not just those on the initial discrete path between the endpoints. You will see in the next example that **PATHSAMPLE** sorts this out for
+states found during the **A12OPTIM** run, not just those on the initial discrete path between the endpoints. You will see in the next example that **PATHSAMPLE** sorts this out for
 us.
 
 ## Extension: connecting the pure L and mixed L/D global minima
@@ -208,4 +208,4 @@ us.
 You would think that inverting two C-alpha centres to convert the pure L global minimum into the mixed L/D structure in Example 2 would be a high barrier process. To investigate,
 take the coordinates for the mixed L/D structure and use them to replace those in the *start* file. Don't forget to convert them into (x,y,z) format.
 
-Re-run **A9OPTIM** and see if you can make a connection. Visualise the initial path using **gnuplot** as before and see what the barriers look like!
+Re-run **A12OPTIM** and see if you can make a connection. Visualise the initial path using **gnuplot** as before and see what the barriers look like!

@@ -1,7 +1,7 @@
 # Using GMIN, OPTIM and PATHSAMPLE to explore the energy landscape of tetra-ALA
 <img src="tetra_ALA_igb2_gmin.png" width="50%", height="50%">
 
-This set of examples explore applying **A9GMIN**, **A9OPTIM** and **PATHSAMPLE** to the tetra-ALA peptide (ALA-ALA-ALA-ALA).
+This set of examples explore applying **A12GMIN**, **A12OPTIM** and **PATHSAMPLE** to the tetra-ALA peptide (ALA-ALA-ALA-ALA).
 
 As a prerequisite, you will need to have compiled all three codes (or have access to binaries), plus the **disconnectionDPS** utility program. 
 The source code for **disconnectionDPS** can be found on the Wales group website [here](http://www-wales.ch.cam.ac.uk/svn.tar.bz2).
@@ -24,7 +24,7 @@ These descriptions are not exhaustive so for more detail, see the documentation.
 
 ### [Example 1 - Basin-hopping with GMIN](./01_Basin-hopping_with_GMIN)
 
-Covers the basics of using **A9GMIN** for the tetra-ALA peptide, including:
+Covers the basics of using **A12GMIN** for the tetra-ALA peptide, including:
 
 - running basin-hopping to find the the 10 lowest energy minima *in vacuo* and with a Generalised Born implicit solvent
 - tracking the progress of a basin-hopping run using gnuplot
@@ -41,7 +41,7 @@ This example shows the limitations of using a force field parametrised for use w
 
 ### [Example 3 - Connecting minima with OPTIM](./03_Connecting_minima_with_OPTIM)
 
-Using **A9OPTIM**, create an initial discrete path between the two tetra-ALA minima. 
+Using **A12OPTIM**, create an initial discrete path between the two tetra-ALA minima. 
 This includes:
 - using the doubly-nudged elastic band method (DNEB) to identify transition state candidates
 - refining transition states using a hybrid BFGS/eigenvector following approach and Rayleigh-Ritz minimisation
@@ -51,9 +51,9 @@ This includes:
 
 ### [Example 4 - Creating a PATHSAMPLE database](./04_Creating_PATHSAMPLE_database) 
 
-Using an **A9OPTIM** *path.info* file, initialise a **PATHSAMPLE** database to use for further sampling and calculating rates.
+Using an **A12OPTIM** *path.info* file, initialise a **PATHSAMPLE** database to use for further sampling and calculating rates.
 This involves:
-- using the `STARTFROMPATH` procedure to read an **A9OPTIM** *path.info* file
+- using the `STARTFROMPATH` procedure to read an **A12OPTIM** *path.info* file
 - correctly setting the endpoints of interest in *min.A* and *min.B* by identifying them in *min.data*
 - running a Dijkstra analysis to identify the 'fastest path' and visualising it using **gnuplot**
 - creating a disconnectivity graph for the intial database using **disconnectionDPS**
@@ -62,5 +62,5 @@ This involves:
 
 Expand the initial tetra-ALA **PATHSAMPLE** database by smartly selecting minima to reconnect using the `SHORTCUT BARRIER` procedure.
 This involves:
-- using **PATHSAMPLE** to run **A9OPTIM** jobs that expand the initial database in a targeted way
+- using **PATHSAMPLE** to run **A12OPTIM** jobs that expand the initial database in a targeted way
 - creating a disconnectivity graph for the expanded database using **disconnectionDPS**

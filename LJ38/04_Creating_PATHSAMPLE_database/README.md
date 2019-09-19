@@ -304,10 +304,10 @@ Minima are divided into ‘superbasins’ at regular intervals specified by the 
 from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged along the horizontal axis to produce 
 the clearest representation, so the horizontal axis has no physical meaning. The vertical axis is potential energy.
 
-To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
+To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **evince**:
 ```
 disconnectionDPS
-gv tree.ps
+evince tree.ps
 ```
 
 You should produce something like this:

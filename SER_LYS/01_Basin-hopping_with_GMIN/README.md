@@ -1,15 +1,15 @@
 # Example 1 - Basin-hopping with GMIN
 
-**GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping global optimisation methodology. **A9GMIN** is simply a version of **GMIN**
-that is interfaced to the **AMBER 9** potential. Here we use it to find the twenty lowest **potential** energy minima for the SER-LYS dipeptide. 
+**GMIN** aims to efficiently locate the global minimum of a system by employing the basin-hopping global optimisation methodology. **A12GMIN** is simply a version of **GMIN**
+that is interfaced to the **AMBER 12** potential. Here we use it to find the twenty lowest **potential** energy minima for the SER-LYS dipeptide. 
 
 ## Requirements
 In order to successfully follow this example, the following needs to be in your *PATH*:
-- an **A9GMIN** binary
+- an **A12GMIN** binary
 
 ## Directory contents
-This directory, and the backup you can find in the *./input* *./input_igb2* subdirectory contains all the files you need to run **A9GMIN** for SER-LYS.
-The *./expected_output* subdirectory contains output from a succesful **A9GMIN** run to give you an idea of what you will be producing, although your output may differ slightly.
+This directory, and the backup you can find in the *./input* subdirectory contains all the files you need to run **A12GMIN** for SER-LYS.
+The *./expected_output* subdirectory contains output from a succesful **A12GMIN** run to give you an idea of what you will be producing, although your output may differ slightly.
 
 ### GMIN input files
 
@@ -56,11 +56,11 @@ check that the energy does not change.
 
 Before you start producing output, take a minute to look through *data_annotated* and make sure you understand roughly the purpose of each keyword. 
 
-### Running A9GMIN
+### Running A12GMIN
 
-Assuming you have a **A9GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
+Assuming you have a **A12GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
 ```
-A9GMIN &
+A12GMIN &
 ```
 
 The output can then be view as follows:
@@ -174,16 +174,16 @@ which are automatically rejected.
 
 - from the .pdb files
 ```
-vmd -pdb lowest1.1.pdb
+vmd -pdb coords.1.pdb
 ```
 
 - from the .rst files
 ```
-vmd -parm7 coords.prmtop -rst7 min1.1.rst
+vmd -parm7 coords.prmtop -rst7 coords.1.rst
 ```
 
 Here we load the coordinates from the .rst file into the molecular topology we load from the **AMBER** topology file *coords.prmtop*. 
-We can also view all of our saved minima as a pseudo trajectoory by directly loading the *lowest* file:
+We can also view all of our saved minima as a pseudo trajectory by directly loading the *lowest* file:
 
 ```
 vmd -parm7 coords.prmtop -xyz lowest
@@ -198,4 +198,4 @@ As a learning exercise, it is interesting to investigate the effect of varying t
 *data* file on the efficiency of the basin-hopping run. Some alternative values for each have been included in *data* but left commented out. Try a few different combinations,
 examining the difference in the **gnuplot** plot as before.
 
-You can simply re-run **A9GMIN** as above once you have made a change as the output files will be overwritten.
+You can simply re-run **A12GMIN** as above once you have made a change as the output files will be overwritten.

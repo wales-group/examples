@@ -4,7 +4,7 @@ Although identifying a single discrete path for a system can give us some inform
 missing many kinetically relevent states and as such, should be wary of drawing conclusions from our initial results. **PATHSAMPLE** provides a range of methods
 to allow us to efficiently expand our stationary point database to achieve a more kinetically relevent sample.
 
-All of these methods focus on ways of selecting pairs of minima in our database to connect using **A9OPTIM**. For example, the `SHORTCUT` method aims to
+All of these methods focus on ways of selecting pairs of minima in our database to connect using **A12OPTIM**. For example, the `SHORTCUT` method aims to
 choose pairs to reconnect that will reduce the overall length of the path between endpoints, while `UNTRAP` aims to reconnect minima similar in energy but separated by 
 large barriers - often referred to as kinetic traps
 
@@ -15,7 +15,7 @@ on all these and other methods, check the [PATHSAMPLE website](http://www-wales.
 In order to successfully follow this example, the following need to be in your *PATH*:
 
 - a **PATHSAMPLE** binary
-- an **A9OPTIM** binary
+- an **A12OPTIM** binary
 - a **disconnectionDPS** binary
 
 ## Directory contents
@@ -23,7 +23,7 @@ Both this directory and the backup in *./input* contain all the files you need t
 [Example 4](../04_Creating_PATHSAMPLE_database). The *./expected_output* subdirectory contains output after all of the below steps have been followed. Your 
 intermediate results may differ as a result.
 
-As **PATHSAMPLE** acts as a driver for **A9OPTIM** (i.e. it starts **A9OPTIM** jobs), there are also **A9OPTIM** input files present.
+As **PATHSAMPLE** acts as a driver for **A12OPTIM** (i.e. it starts **A12OPTIM** jobs), there are also **A12OPTIM** input files present.
 
 ### PATHSAMPLE input files
 
@@ -53,7 +53,7 @@ This script does not treat capping groups such as ACE and NME which will need to
 - *perm.allow_annotated* - Contains details of how the *perm.allow* groups are constructed. For more information, see the [OPTIM website](http://www-wales.ch.cam.ac.uk/OPTIM)   
 
 
-Both **PATHSAMPLE** and **A9OPTIM** need to be able to distinguish permutational isomers and so both require *perm.allow* to be present. 
+Both **PATHSAMPLE** and **A12OPTIM** need to be able to distinguish permutational isomers and so both require *perm.allow* to be present. 
 
 ### PATHSAMPLE database files
 
@@ -69,16 +69,16 @@ Both **PATHSAMPLE** and **A9OPTIM** need to be able to distinguish permutational
 
 ### OPTIM input files
 
-- *odata.connect* -		Contains the **A9OPTIM** keywords used for jobs started by **PATHSAMPLE**.
+- *odata.connect* -		Contains the **A12OPTIM** keywords used for jobs started by **PATHSAMPLE**.
  
 		
-- *odata.connect_annotated* -	The **A9OPTIM** keywords present in *odata.connect* are detailed in *odata.connect_annotated*.
+- *odata.connect_annotated* -	The **A12OPTIM** keywords present in *odata.connect* are detailed in *odata.connect_annotated*.
 				For information on the full set of keywords available, check the [OPTIM website](http://www-wales.ch.cam.ac.uk/OPTIM)
 
 - *coords.prmtop* -	The symmetrised (see the note below!) **AMBER** topology file for tetra-ALA using parameters from the **AMBER** ff99SB force field
 
 - *coords.inpcrd* -  	Coordinates for the tetra-ALA atoms in our system in **AMBER** restart format. These are only used to allocate arrays during setup and the coordinates
-			themselves are overwritten with those in *start.X* by **PATHSAMPLE** automatically as it starts **A9OPTIM** jobs in the next example
+			themselves are overwritten with those in *start.X* by **PATHSAMPLE** automatically as it starts **A12OPTIM** jobs in the next example
 
 - *start* -		The placeholder (x,y,z) tetra-ALA coordinates - in this case the higher energy of the two tetra-ALA minima. These are not used in the current example
 			but are included for completeness
@@ -108,7 +108,7 @@ Before you start, take a minute to look through *pathdata_annotated* and *odata.
 `ETOL`/`EDIFFTOL`, `GEOMDIFFTOL` and `RANROT` are consistent between them. This also applies to the **OPTIM** *odata* files that were used to make the initial path in 
 [Example 3](../03_Connecting_minima_with_OPTIM).
 
-You may also need to slightly alter your *pathdata* file to ensure that the `EXEC` keyword points to a valid **A9OPTIM** binary.
+You may also need to slightly alter your *pathdata* file to ensure that the `EXEC` keyword points to a valid **A12OPTIM** binary.
 
 ### Expanding the stationary point database
 
@@ -119,14 +119,14 @@ PATHSAMPLE > pathsample_shortcut_barrier.out &
 tail -f pathsample_shortcut_barrier.out
 ``` 
 
-Like **A9OPTIM**, **PATHSAMPLE** runs in `CYCLES` - with each cycle starting the number of **A9OPTIM** jobs that fill the number of CPUs/GPUs available. This example is set up
-to run locally on a single core as specified by `CPUS 1` in *pathdata*. These **A9OPTIM** jobs are embarassingly parallel in that we can easily scale up the number 
+Like **A12OPTIM**, **PATHSAMPLE** runs in `CYCLES` - with each cycle starting the number of **A12OPTIM** jobs that fill the number of CPUs/GPUs available. This example is set up
+to run locally on a single core as specified by `CPUS 1` in *pathdata*. These **A12OPTIM** jobs are embarassingly parallel in that we can easily scale up the number 
 of jobs run at once with little penalty as they do not depend on each other. 
 
-As **A9OPTIM** jobs can be starting and finishing in close proximity, the **PATHSAMPLE** output can become slightly fragmented. For clarity, a cycle is broken down
+As **A12OPTIM** jobs can be starting and finishing in close proximity, the **PATHSAMPLE** output can become slightly fragmented. For clarity, a cycle is broken down
 into the following stages:
 
-- Identify pairs of minima to connect and start **A9OPTIM** jobs for each:
+- Identify pairs of minima to connect and start **A12OPTIM** jobs for each:
 
 ```
 sorted barriers on best path labelled according to the transition state:
@@ -154,7 +154,7 @@ getspair> connecting minima        3 and        8 pairs used=       1 remaining=
 The order in which these pairs are selected depends on the metric being used. In this case, we select pairs according to the `SHORTCUT BARRIER` metric described above. As
 we are only using a single core (`CPUS 1`), only one pair is connected at a time. Feel free to change this if you have more cores available.
 
-- Analyse the minima and transition states that each **A9OPTIM** job returns and add anything new to the stationary point database:
+- Analyse the minima and transition states that each **A12OPTIM** job returns and add anything new to the stationary point database:
 
 ```
 cycle2> analysing result of search        4 on CPU        1 for process id    28665
@@ -167,7 +167,7 @@ getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for      1 new minima to min.data
 ```
 
-As each **A9OPTIM** run finishes, **PATHSAMPLE** analyses the minima and transition states found and checks to see if they match existing structures in the database
+As each **A12OPTIM** run finishes, **PATHSAMPLE** analyses the minima and transition states found and checks to see if they match existing structures in the database
 using an energy (`ETOL`) and geometric (`GEOMDIFFTOL`) cutoff. If they are new, they are added to the database and will be considered as
 possible endpoints for reconnection in subsequent cycles. 
 
@@ -182,7 +182,7 @@ cycle2> end of cycle        4 new min=       2 new ts=       4 total min=      1
 **PATHSAMPLE** will continue to run until either all possible pairs have been tried or it runs out of `CYCLES`. It is quite robust to being interrupted and
 so can be stopped early and restarted as often as you like.
 
-**NOTE:** if you are using **PATHSAMPLE** on a compute cluster, take a look at the `PBS` and `SSH` keywords on the 
+**NOTE:** if you are using **PATHSAMPLE** on a compute cluster, take a look at the `PBS`, `SSH` and `SLURM` keywords on the 
 [PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE) for information on how to specify the number of **OPTIM** jobs to run in parallel.
 
 ### Creating a disconnectivity graph
@@ -197,16 +197,16 @@ To recap, minima are divided into ‘superbasins’ at regular intervals specifi
 represented by a line that starts from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged 
 along the horizontal axis to produce the clearest representation, so the horizontal axis has no physical meaning.
 
-To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
+To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **evince**:
 ```
 disconnectionDPS
-gv tree.ps
+evince tree.ps
 ```
 You should produce something like this:
 
 <img src="tree_tetra_ALA_expanded.png" width="100%", height="100%">
 
-Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 3 and 7. If you have completed [Example 4](../04_Creating_PATHSAMPLE_database), 
+Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 6 and 10. If you have completed [Example 4](../04_Creating_PATHSAMPLE_database), 
 you will note that the landscape appears significantly more populated. To get a quick summary of the size of our now 
 expanded database, we use `wc -l min.data ts.data`:
 
@@ -247,6 +247,6 @@ sorted barriers on best path labelled according to the transition state:
 ```
 
 Generate a new disconnectivity graph using **disconnectionDPS** with these minima identified using `IDMIN` in *dinfo*. Check that you are happy that these minima
-make sense to be reconnected if we are trying to remove large barriers between our specified endpoints (minima 3 and 7). 
+make sense to be reconnected if we are trying to remove large barriers between our specified endpoints (minima 6 and 10). 
 
 Feel free to change the parameters of `SHORTCUT 2 BARRIER` and add `DUMMYRUN` to *pathdata* and see how this affects the pairs being chosen. 

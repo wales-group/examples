@@ -1,6 +1,6 @@
 # Example 4 - Creating PATHSAMPLE database 
 
-Once we have found an intial discrete pathway between minima (endpoints) of interest using **A9OPTIM**, we can create a **PATHSAMPLE** stationary point database
+Once we have found an intial discrete pathway between minima (endpoints) of interest using **A12OPTIM**, we can create a **PATHSAMPLE** stationary point database
 and grow it using built-in methods designed to create a kinetically relevent sample for further analysis.   
 
 In this example, we will take the *path.info* file from [Example 3](../03_Connecting_minima_with_OPTIM) (here renamed as *path.info.initial*) and create a 
@@ -17,7 +17,7 @@ In order to successfully follow this example, the following need to be in your *
 Both this directory and the backup in *./input* contain all the files you need to run **PATHSAMPLE** to create a database. The *./expected_output* subdirectory 
 contains output after all of the below steps have been followed. Your intermediate results may differ as a result.
 
-As **PATHSAMPLE** acts as a driver for **A9OPTIM** (i.e. it starts **OPTIM** jobs), there are also **A9OPTIM** input files present. In this example we will not actually
+As **PATHSAMPLE** acts as a driver for **A12OPTIM** (i.e. it starts **OPTIM** jobs), there are also **A12OPTIM** input files present. In this example we will not actually
 be using them as we are simply setting up the database, but they are included as in a normal use case, they would be present.
 
 ### PATHSAMPLE input files
@@ -30,24 +30,24 @@ be using them as we are simply setting up the database, but they are included as
 				provided for reference only. For information on the full set of **PATHSAMPLE** keywords available, check the
 				[PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE)
 
-- *path.info.initial* -		The **A9OPTIM** output file from [Example 3](../03_Connecting_minima_with_OPTIM) that contains the energy, coordinates and Hessian 
+- *path.info.initial* -		The **A12OPTIM** output file from [Example 3](../03_Connecting_minima_with_OPTIM) that contains the energy, coordinates and Hessian 
 				eigenvalues of the minima and transition states found when making the initial connected pathway. We will be reading this file in to 
 				create the **PATHSAMPLE** database
 
 ### OPTIM input files
 
-- *odata.connect* -		Contains the **A9OPTIM** keywords used for jobs started by **PATHSAMPLE**. Although we will not be using it in this example, it is
+- *odata.connect* -		Contains the **A12OPTIM** keywords used for jobs started by **PATHSAMPLE**. Although we will not be using it in this example, it is
 				included for completeness. 
 
 		
-- *odata.connect_annotated* -	The **A9OPTIM** keywords present in *odata.connect* are detailed in *odata.connect_annotated*. This is only present for reference and
+- *odata.connect_annotated* -	The **A12OPTIM** keywords present in *odata.connect* are detailed in *odata.connect_annotated*. This is only present for reference and
 				is not used in the current example as explained above. For information on the full set of keywords available, check the 
 				[OPTIM website](http://www-wales.ch.cam.ac.uk/OPTIM)
 
 - *coords.prmtop* -	The symmetrised (see the note below!) **AMBER** topology file for tetra-ALA using parameters from the **AMBER** ff99SB force field
 
 - *coords.inpcrd* -  	Coordinates for the tetra-ALA atoms in our system in **AMBER** restart format. These are only used to allocate arrays during setup and the coordinates
-			themselves are overwritten with those in *start.X* by **PATHSAMPLE** automatically as it starts **A9OPTIM** jobs in the next example
+			themselves are overwritten with those in *start.X* by **PATHSAMPLE** automatically as it starts **A12OPTIM** jobs in the next example
 
 - *start* -		The placeholder (x,y,z) tetra-ALA coordinates - in this case the higher energy of the two tetra-ALA minima. These are not used in the current example
 			but are included for completeness
@@ -98,7 +98,7 @@ check that the energy does not change.
 
 - *plot_Epath.plt* - 		**gnuplot** input file to plot the energy of the stationary points along the fastest path
 
-- *optim.out.initial* -		The **A9OPTIM** output from [Example 3](../03_Connecting_minima_with_OPTIM) where *path.info.initial* was created. Used below to identify 
+- *optim.out.initial* -		The **A12OPTIM** output from [Example 3](../03_Connecting_minima_with_OPTIM) where *path.info.initial* was created. Used below to identify 
 				the endpoints by their energy
 
 ## Step-by-step
@@ -111,14 +111,14 @@ Before you start, take a minute to look through *pathdata_annotated* and make su
 
 ### Creating the stationary point database
 
-We are first going to create the initial stationary point database by reading in the *path.info,initial* file from **A9OPTIM** using the `STARTFROMPATH` keyword. Your
+We are first going to create the initial stationary point database by reading in the *path.info,initial* file from **A12OPTIM** using the `STARTFROMPATH` keyword. Your
 *pathdata* file should look like this, with the keywords for 'STEP 1' uncommented:
 
 ```
-! PATHSAMPLE input to create an initial database from A9OPTIM path.info for tetra-ALA (ALA-ALA-ALA-ALA)
+! PATHSAMPLE input to create an initial database from A12OPTIM path.info for tetra-ALA (ALA-ALA-ALA-ALA)
 ! For further details, see pathdata_annotated and the PATHSAMPLE documentation
 
-EXEC           /home/energy/workshop/binaries/A9OPTIM
+EXEC           /home/energy/workshop/binaries/A12OPTIM
 CPUS           1
 NATOMS         52
 SEED           1
@@ -132,7 +132,7 @@ ETOL           1.0D-5
 GEOMDIFFTOL    0.1D0
 ITOL           0.1D0
 
-! STEP 1: creating the initial database from A9OPTIM path.info file
+! STEP 1: creating the initial database from A12OPTIM path.info file
 STARTFROMPATH  path.info.initial 1 2
 CYCLES         0
 
@@ -140,10 +140,10 @@ CYCLES         0
 ! DIJKSTRA       0
 ! CYCLES         0
 
-AMBER9
+AMBER12
 ```
 
-Note that if we were planning on expanding the database, we would need to alter the path after `EXEC` to point to your **A9OPTIM** binary. As we are not, it can be set
+Note that if we were planning on expanding the database, we would need to alter the path after `EXEC` to point to your **A12OPTIM** binary. As we are not, it can be set
 to anything for now.
 
 Assuming you have it somewhere in your *PATH*, we can create the database by running *PATHSAMPLE*:
@@ -208,9 +208,9 @@ We can refer to minima by a number, e.g. minimum 2 corresponds to line 2 of *min
 As for minima in *min.data*, transition states are identified by their line number in *ts.data*. This means that we can check how many minima and transition states
 we have in our database using `wc -l min.data ts.data`:
 ```
-  12 min.data
-  18 ts.data
-  30 total
+  48 min.data
+  63 ts.data
+  111 total
 ```
 
 - *points.min* -	contains the coordinates for each minimum in a binary format to keep the file size low
@@ -236,10 +236,10 @@ corresponding *min.data* line number. In *min.A*, we currently have:
 This is saying that group A contains a single minimum, minimum 1.
 
 The initial contents of these files are defined by the arguments to the `STARTFROMPATH` keyword in *pathdata* and do not correspond to the endpoint states for our
-**A9OPTIM** pathway. Let's fix that!
+**A12OPTIM** pathway. Let's fix that!
 
 To do so, we need to find the line in *min.data* that corresponds to our end point structures. This is usually done by matching their energies by looking at the
-**A9OPTIM** output for the creating of *path.info.initial* which has been provided for convenience as *optim.out.initial*. Looking in this file we see that the 
+**A12OPTIM** output for the creating of *path.info.initial* which has been provided for convenience as *optim.out.initial*. Looking in this file we see that the 
 energy of the endpoints appears twice. This is because they were reoptimised before being connected:
 ```
  OPTIM> Initial energy=    -34.60220758     RMS force=    0.3103087097E-04
@@ -256,19 +256,19 @@ geopt>                          **** CONVERGED ****
  OPTIM> Final energy  =    -41.72299240     RMS force=    0.8757805512E-06
 ```
 
-These are the energies of our endpoints. Looking in min.data we can see that these match lines 3 and 7 so let's edit *min.A* and *min.B* to contain the correct 
+These are the energies of our endpoints. Looking in min.data we can see that these match lines 6 and 10 so let's edit *min.A* and *min.B* to contain the correct 
 information:
 
 *min.A*
 ```
          1
-         3
+         6
 ```
 
 *min.B*
 ```
          1
-         7
+         10
 ```
 
 As well as defining the endpoint (product/reactant) states, we also need to define a direction between them. This is done using the `DIRECTION` keyword in
@@ -303,31 +303,35 @@ This should also be very fast as our database is very small. As we (hopefully!) 
 contain a summary in the form of sequential min-ts-min triples followed by a list of the downhill barriers in order of size:
  
 ```
-Dijkstra> Best path for min        7 and any A minimum, k^SS A<-B     374393.7433
-       3       8       6       9      10      12       1       7
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     1.181965134    
+       6       5      11       4       8      34      17      18      14      10
 Dijkstra> Best path between any B minimum and any A minimum:
-       3       8       6       9      10      12       1       7
-Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      374393.7433     for      7 transition states:
+       6       5      11       4       8      34      17      18      14      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      1.181965134     for      9 transition states:
 Dijkstra> Note that path is printed backwards starting with A, ending with B
                     E+                          Ets                         E-
-       3      -41.7229924014      13      -33.6627076722       8      -37.9782296582
-       8      -37.9782296582       8      -37.5226723783       6      -37.9728100102
-       6      -37.9728100102      15      -33.6176190692       9      -37.1738336534
-       9      -37.1738336534       9      -31.2736332346      10      -35.3093212066
-      10      -35.3093212066      18      -33.5205243121      12      -36.1555293799
-      12      -36.1555293799      14      -35.0747126047       1      -35.3503472284
-       1      -35.3503472284       7      -34.2706748149       7      -34.6022075799
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      10      -35.7486198152       4      -37.9728100102
+       4      -37.9728100102       5      -31.2020724372       8      -34.5658036376
+       8      -34.5658036376      43      -32.3234336139      34      -36.0052301475
+      34      -36.0052301475      63      -30.6963195127      17      -36.6039294733
+      17      -36.6039294733      16      -32.2598697288      18      -36.7091838691
+      18      -36.7091838691      20      -35.6025171972      14      -35.9281441274
+      14      -35.9281441274      15      -32.2662049080      10      -34.6022075798
 Dijkstra> Ordered downhill barriers,    ts        barrier
-                                         13     4.315521986
-                                          9     4.035687972
-                                         15     3.556214584
-                                         18     2.635005068
-                                          8    0.4501376319
-                                          7    0.3315327650
-                                         14    0.2756346237
+                                         55     6.869322602    
+                                         63     5.907609961    
+                                         16     4.449314140    
+                                          3     4.138528182    
+                                         43     3.681796534    
+                                          5     3.363731200    
+                                         15     2.336002672    
+                                         10     2.224190195    
+                                         20    0.3256269302
 ```
 
-As stated, this pathway is printed backwards, so start from the bottom right and read right to left - minimum 7 -> minimum 1 (via transition state 7) and so on.
+As stated, this pathway is printed backwards, so start from the bottom right and read right to left - minimum 10 -> minimum 14 (via transition state 15) and so on.
 
 ### Visualising the fastest path
 
@@ -352,17 +356,17 @@ Minima are divided into ‘superbasins’ at regular intervals specified by the 
 from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged along the horizontal axis to produce 
 the clearest representation, so the horizontal axis has no physical meaning. The vertical axis is potential energy.
 
-To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
+To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **evince**:
 ```
 disconnectionDPS
-gv tree.ps
+evince tree.ps
 ```
 
 You should produce something like this:
 
 <img src="tree_tetra_ALA_initial.png" width="100%", height="100%">
 
-Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 3 and 7 and can start to gain an understanding
+Using the `IDMIN` keyword in the *dinfo* file, we have labelled the endpoints, minima 6 and 10 and can start to gain an understanding
 of the underlying topology of the energy landscape for tetra-ALA. When combined with keywords that colour branches by an experimentally interesting order parameter, or
 committor probability - great insight can be gained from exploring the structure of these trees!
 

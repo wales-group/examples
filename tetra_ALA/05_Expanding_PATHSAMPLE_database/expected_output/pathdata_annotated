@@ -1,9 +1,9 @@
 ! PATHSAMPLE input to expand the database for tetra-ALA (ALA-ALA-ALA-ALA) using the SHORTCUT BARRIER approach
 ! For further details, see the PATHSAMPLE documentation
 
-! the path to the A9OPTIM binary to use
-EXEC           /home/energy/workshop/binaries/A9OPTIM
-! run A9OPTIM locally on a single core - modify as appropriate
+! the path to the A12OPTIM binary to use
+EXEC           /home/energy/workshop/binaries/A12OPTIM
+! run A12OPTIM locally on a single core - modify as appropriate
 CPUS           1
 ! the number of atoms in the system
 NATOMS         52
@@ -32,8 +32,8 @@ ITOL           0.1D0
 ! try to connect minima less than 2 steps away from transition states with high barriers
 ! on the Dijkstra fastest path
 SHORTCUT 2 BARRIER 
-! perform 10 connections cycles (10 x CPUS A9OPTIM runs)
+! perform 10 connections cycles (10 x CPUS A12OPTIM runs)
 CYCLES 10
 
-! specify that we are using the AMBER potential via an interface to AMBER 9
-AMBER9
+! specify that we are using the AMBER potential via an interface to AMBER 12
+AMBER12

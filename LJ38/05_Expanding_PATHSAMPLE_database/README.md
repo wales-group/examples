@@ -130,7 +130,7 @@ cycle2> end of cycle        5 new min=       1 new ts=       2 total min=      1
 **PATHSAMPLE** will continue to run until either all possible pairs have been tried or it runs out of `CYCLES`. It is quite robust to being interrupted and
 so can be stopped early and restarted as often as you like.
 
-**NOTE:** if you are using **PATHSAMPLE** on a compute cluster, take a look at the `PBS` and `SSH` keywords on the 
+**NOTE:** if you are using **PATHSAMPLE** on a compute cluster, take a look at the `PBS`, `SSH` and `SLURM` keywords on the 
 [PATHSAMPLE website](http://www-wales.ch.cam.ac.uk/PATHSAMPLE) for information on how to specify the number of **OPTIM** jobs to run in parallel.
 
 ### Creating a disconnectivity graph
@@ -145,10 +145,10 @@ To recap, minima are divided into ‘superbasins’ at regular intervals specifi
 represented by a line that starts from the superbasin the minimum belongs to, and terminates at the potential energy of that minimum. The lines are arranged 
 along the horizontal axis to produce the clearest representation, so the horizontal axis has no physical meaning.
 
-To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **gv**:
+To create and view a disconnectivity graph (often referred to as a 'tree') for your **PATHSAMPLE** database, simply run **disconnectionDPS** followed by **evince**:
 ```
 disconnectionDPS
-gv tree.ps
+evince tree.ps
 ```
 You should produce something like this:
 

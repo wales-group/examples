@@ -1,9 +1,9 @@
-! PATHSAMPLE input to create an initial database from A9OPTIM path.info for tetra-ALA (ALA-ALA-ALA-ALA)
+! PATHSAMPLE input to create an initial database from A12OPTIM path.info for tetra-ALA (ALA-ALA-ALA-ALA)
 ! For further details, see the PATHSAMPLE documentation
 
-! the path to the A9OPTIM binary to use
-EXEC           /home/energy/workshop/binaries/A9OPTIM
-! run A9OPTIM locally on a single core - modify as appropriate
+! the path to the A12OPTIM binary to use
+EXEC           /home/energy/workshop/binaries/A12OPTIM
+! run A12OPTIM locally on a single core - modify as appropriate
 CPUS           1
 ! the number of atoms in the system
 NATOMS         52
@@ -29,18 +29,18 @@ GEOMDIFFTOL    0.1D0
 ! additionally use a principal moment of inertia tensor difference criterion for distinguishing stationary points
 ITOL           0.1D0
 
-! STEP 1: creating the initial database from A9OPTIM path.info file
+! STEP 1: creating the initial database from A12OPTIM path.info file
 ! use the stationary points in path.info.initial to create an initial PATHSAMPLE database
 ! min.A and min.B are set to 1 and 2 as a baseline to be changed 
 STARTFROMPATH  path.info.initial 1 2
-! don't run any A9OPTIM connection cycles - we only want to set the database up at this point
+! don't run any A12OPTIM connection cycles - we only want to set the database up at this point
 CYCLES         0
 
 ! STEP 2: run a Dijkstra analysis to identify the 'fastest path' (initially commented) 
 ! perform a Dijkstra analysis, ignoring any minima with 0 or less connections
 ! DIJKSTRA       0
-! don't run any A9OPTIM connection cycles, we only want to identify the fastest path
+! don't run any A12OPTIM connection cycles, we only want to identify the fastest path
 ! CYCLES         0
 
-! specify that we are using the AMBER potential via an interface to AMBER 9
-AMBER9
+! specify that we are using the AMBER potential via an interface to AMBER 12
+AMBER12

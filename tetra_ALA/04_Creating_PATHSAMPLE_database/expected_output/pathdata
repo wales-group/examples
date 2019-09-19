@@ -1,7 +1,7 @@
-! PATHSAMPLE input to create an initial database from A9OPTIM path.info for tetra-ALA (ALA-ALA-ALA-ALA)
+! PATHSAMPLE input to create an initial database from A12OPTIM path.info for tetra-ALA (ALA-ALA-ALA-ALA)
 ! For further details, see pathdata_annotated and the PATHSAMPLE documentation
 
-EXEC           /home/energy/workshop/binaries/A9OPTIM
+EXEC           /home/energy/workshop/binaries/A12OPTIM
 CPUS           1
 NATOMS         52
 SEED           1
@@ -15,12 +15,12 @@ ETOL           1.0D-5
 GEOMDIFFTOL    0.1D0
 ITOL           0.1D0
 
-! STEP 1: creating the initial database from A9OPTIM path.info file
-STARTFROMPATH  path.info.initial 1 2
-CYCLES         0
-
-! STEP 2: run a Dijkstra analysis to identify the 'fastest path' (initially commented) 
-! DIJKSTRA       0
+! STEP 1: creating the initial database from A12OPTIM path.info file
+! STARTFROMPATH  path.info.initial 1 2
 ! CYCLES         0
 
-AMBER9
+! STEP 2: run a Dijkstra analysis to identify the 'fastest path' (initially commented) 
+DIJKSTRA       0
+CYCLES         0
+
+AMBER12

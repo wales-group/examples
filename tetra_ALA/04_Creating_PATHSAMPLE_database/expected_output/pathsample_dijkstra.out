@@ -1,5 +1,6 @@
 PATHSAMPLE version rUnversioned directory                                                 
 keywords> Distance tolerance for identifying atoms in the same orbit=        0.00100
+ keywords> Maximum number of secondary sets in perm.allow file=  3
 keywords> Number of groups of permutable atoms=     6
 keywords> group      1 contains      3 atoms with      0 additional atom sets:
      1     3     4  
@@ -30,7 +31,7 @@ energy difference  criterion for distinguishing stationary points=    0.10000000
 distance criterion for distinguishing stationary points=    0.1000000000E+00
 inertia difference criterion for setup check=    0.1000000000E+00
 sampling direction is a<-b
-OPTIM executable: /home/energy/workshop/binaries/A9OPTIM                                          
+OPTIM executable: /home/energy/workshop/binaries/A12OPTIM                                         
 Temperature=        0.59200
 Performing Dijkstra analysis to find the most important paths
 Rate calculation will iteratively remove minima with     0 connections or fewer
@@ -39,44 +40,54 @@ Resetting EVCUT to 0.10E+21 for SI units; check it is appropriate for your syste
 *************************************************************************************************
 setup> locations read for          1 min of type A
 setup> locations read for          1 min of type B
-setup> parameters read for         12 min
+mindouble> Increasing maximum number of minima to       52
+setup> parameters read for         48 min
 tsdouble> Maximum number of ts increased to       20
-setup> parameters read for         18 ts
-main> time spent in setup=        0.00000
-getnconn> max connections:          3 for min          3 # of zeros=         0 after removing minima with <          1
+tsdouble> Maximum number of ts increased to       40
+tsdouble> Maximum number of ts increased to       80
+setup> parameters read for         63 ts
+setup> Setting up ts pointers
+setup> Calculating rate constants
+DISTANCET,DISTANCETST,DISTANCETO1,DISTANCETO2=    F    F         1         1
+main> time spent in setup=        0.00102
+getnconn> max connections:          5 for min         18 # of zeros=         0 after removing minima with <          1
 RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
-Dijkstra> steps to A region converged in        3 cycles; maximum=       7 disconnected=       0
-Dijkstra> steps to B region converged in        6 cycles; maximum=       8 disconnected=       0
-Dijkstra> Best path for min        7 and any A minimum, k^SS A<-B     374393.7433    
-       3       8       6       9      10      12       1       7
+Dijkstra> steps to A region converged in        5 cycles; maximum=       9 disconnected=      15
+Dijkstra> steps to B region converged in        6 cycles; maximum=      10 disconnected=      15
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     1.181965134    
+       6       5      11       4       8      34      17      18      14      10
 Dijkstra> Best path between any B minimum and any A minimum:
-       3       8       6       9      10      12       1       7
-Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      374393.7433     for      7 transition states:
+       6       5      11       4       8      34      17      18      14      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      1.181965134     for      9 transition states:
 Dijkstra> Note that path is printed backwards starting with A, ending with B
                     E+                          Ets                         E-
-       3      -41.7229924014      13      -33.6627076722       8      -37.9782296582
-       8      -37.9782296582       8      -37.5226723783       6      -37.9728100102
-       6      -37.9728100102      15      -33.6176190692       9      -37.1738336534
-       9      -37.1738336534       9      -31.2736332346      10      -35.3093212066
-      10      -35.3093212066      18      -33.5205243121      12      -36.1555293799
-      12      -36.1555293799      14      -35.0747126047       1      -35.3503472284
-       1      -35.3503472284       7      -34.2706748149       7      -34.6022075799
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      10      -35.7486198152       4      -37.9728100102
+       4      -37.9728100102       5      -31.2020724372       8      -34.5658036376
+       8      -34.5658036376      43      -32.3234336139      34      -36.0052301475
+      34      -36.0052301475      63      -30.6963195127      17      -36.6039294733
+      17      -36.6039294733      16      -32.2598697288      18      -36.7091838691
+      18      -36.7091838691      20      -35.6025171972      14      -35.9281441274
+      14      -35.9281441274      15      -32.2662049080      10      -34.6022075798
 Dijkstra> Ordered downhill barriers,    ts        barrier
-                                         13     4.315521986    
-                                          9     4.035687972    
-                                         15     3.556214584    
-                                         18     2.635005068    
-                                          8    0.4501376319    
-                                          7    0.3315327650    
-                                         14    0.2756346237    
-Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     7
+                                         55     6.869322602    
+                                         63     5.907609961    
+                                         16     4.449314140    
+                                          3     4.138528182    
+                                         43     3.681796534    
+                                          5     3.363731200    
+                                         15     2.336002672    
+                                         10     2.224190195    
+                                         20    0.3256269302    
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     9
  HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
  prmformat=(12A4)  
  ATOMLABELS=
  HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
-Dijkstra> detailed balance, ratio should be one if SS applies:      24.27526683    
-Dijkstra> MFPT for fastest path: A<-B value=    0.2333203974E-07 B<-A value=    0.5056425567E-05
-Dijkstra> rates without conditional probability: A<-B value=     42859518.97     B<-A value=     197768.1639    
-Dijkstra> rates with    conditional probability: A<-B value=     42859518.97     B<-A value=     197768.1639    
-main> CPU time spent in Dijkstra                    =    0.48000E-01 s
-main> total CPU time spent in PATHSAMPLE            =    0.48000E-01 s
+Dijkstra> detailed balance, ratio should be one if SS applies:      6.968168354    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1114774662E-06 B<-A value=    0.8416345114E-04
+Dijkstra> rates without conditional probability: A<-B value=     8970422.756     B<-A value=     11881.64205    
+Dijkstra> rates with    conditional probability: A<-B value=     8970422.756     B<-A value=     11881.64205    
+main> CPU time spent in Dijkstra                    =    0.70060E-02 s
+main> total CPU time spent in PATHSAMPLE            =    0.80640E-02 s

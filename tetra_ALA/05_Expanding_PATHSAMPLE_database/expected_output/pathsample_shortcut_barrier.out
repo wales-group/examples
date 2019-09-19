@@ -1,5 +1,6 @@
 PATHSAMPLE version rUnversioned directory                                                 
 keywords> Distance tolerance for identifying atoms in the same orbit=        0.00100
+ keywords> Maximum number of secondary sets in perm.allow file=  3
 keywords> Number of groups of permutable atoms=     6
 keywords> group      1 contains      3 atoms with      0 additional atom sets:
      1     3     4  
@@ -30,161 +31,664 @@ energy difference  criterion for distinguishing stationary points=    0.10000000
 distance criterion for distinguishing stationary points=    0.1000000000E+00
 inertia difference criterion for setup check=    0.1000000000E+00
 sampling direction is a<-b
-OPTIM executable: /home/energy/workshop/binaries/A9OPTIM                                          
+OPTIM executable: /home/energy/workshop/binaries/A12OPTIM                                         
 Temperature=        0.59200
 Performing Dijkstra analysis to find the most important paths
 Rate calculation will iteratively remove minima with     0 connections or fewer
 path.info files will be read as min-sad-min triples
 Pairs of minima will be chosen for minima separated by fewer than       2 steps on either side of the largest barriers in the best SS path
-Pairs will not be recalculated unless we run out of possibilities
+Pairs will be recalculated every          1 cycles
 Resetting EVCUT to 0.10E+21 for SI units; check it is appropriate for your system
 *************************************************************************************************
 setup> locations read for          1 min of type A
 setup> locations read for          1 min of type B
-setup> parameters read for         12 min
-setup> points for         12 minima read from file points.min
+mindouble> Increasing maximum number of minima to       52
+setup> parameters read for         48 min
+setup> points for         48 minima read from file points.min
 tsdouble> Maximum number of ts increased to       20
-setup> parameters read for         18 ts
-main> time spent in setup=        0.00000
-getnconn> max connections:          3 for min          3 # of zeros=         0 after removing minima with <          1
+tsdouble> Maximum number of ts increased to       40
+tsdouble> Maximum number of ts increased to       80
+setup> parameters read for         63 ts
+setup> Setting up ts pointers
+setup> Checking ts moments of inertia
+setup> Calculating rate constants
+setup> Reading pairs.data
+pairsdouble> Maximum number of pairs tried increased to       20
+pairsdouble> Maximum number of pairs tried increased to       40
+setup>       20 pairs of minima already searched read from pairs.data
+DISTANCET,DISTANCETST,DISTANCETO1,DISTANCETO2=    F    F         1         1
+main> time spent in setup=        0.00278
+mysystem> grep -c start odata.connect > grepout
+getnconn> max connections:          5 for min         18 # of zeros=         0 after removing minima with <          1
 RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
-Dijkstra> steps to A region converged in        3 cycles; maximum=       7 disconnected=       0
-Dijkstra> steps to B region converged in        6 cycles; maximum=       8 disconnected=       0
-Dijkstra> Best path for min        7 and any A minimum, k^SS A<-B     374393.7433    
-       3       8       6       9      10      12       1       7
+Dijkstra> steps to A region converged in        5 cycles; maximum=       9 disconnected=      15
+Dijkstra> steps to B region converged in        6 cycles; maximum=      10 disconnected=      15
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     1.181965134    
+       6       5      11       4       8      34      17      18      14      10
 Dijkstra> Best path between any B minimum and any A minimum:
-       3       8       6       9      10      12       1       7
-Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      374393.7433     for      7 transition states:
+       6       5      11       4       8      34      17      18      14      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      1.181965134     for      9 transition states:
 Dijkstra> Note that path is printed backwards starting with A, ending with B
                     E+                          Ets                         E-
-       3      -41.7229924014      13      -33.6627076722       8      -37.9782296582
-       8      -37.9782296582       8      -37.5226723783       6      -37.9728100102
-       6      -37.9728100102      15      -33.6176190692       9      -37.1738336534
-       9      -37.1738336534       9      -31.2736332346      10      -35.3093212066
-      10      -35.3093212066      18      -33.5205243121      12      -36.1555293799
-      12      -36.1555293799      14      -35.0747126047       1      -35.3503472284
-       1      -35.3503472284       7      -34.2706748149       7      -34.6022075799
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      10      -35.7486198152       4      -37.9728100102
+       4      -37.9728100102       5      -31.2020724372       8      -34.5658036376
+       8      -34.5658036376      43      -32.3234336139      34      -36.0052301475
+      34      -36.0052301475      63      -30.6963195127      17      -36.6039294733
+      17      -36.6039294733      16      -32.2598697288      18      -36.7091838691
+      18      -36.7091838691      20      -35.6025171972      14      -35.9281441274
+      14      -35.9281441274      15      -32.2662049080      10      -34.6022075798
 Dijkstra> Ordered downhill barriers,    ts        barrier
-                                         13     4.315521986    
-                                          9     4.035687972    
-                                         15     3.556214584    
-                                         18     2.635005068    
-                                          8    0.4501376319    
-                                          7    0.3315327650    
-                                         14    0.2756346237    
-Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     7
+                                         55     6.869322602    
+                                         63     5.907609961    
+                                         16     4.449314140    
+                                          3     4.138528182    
+                                         43     3.681796534    
+                                          5     3.363731200    
+                                         15     2.336002672    
+                                         10     2.224190195    
+                                         20    0.3256269302    
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     9
  HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
  prmformat=(12A4)  
  ATOMLABELS=
  HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
-Dijkstra> detailed balance, ratio should be one if SS applies:      24.27526683    
-Dijkstra> MFPT for fastest path: A<-B value=    0.2333203974E-07 B<-A value=    0.5056425567E-05
-Dijkstra> rates without conditional probability: A<-B value=     42859518.97     B<-A value=     197768.1639    
-Dijkstra> rates with    conditional probability: A<-B value=     42859518.97     B<-A value=     197768.1639    
-getspair> best path contains        8 minima
+Dijkstra> detailed balance, ratio should be one if SS applies:      6.968168354    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1114774662E-06 B<-A value=    0.8416345114E-04
+Dijkstra> rates without conditional probability: A<-B value=     8970422.756     B<-A value=     11881.64205    
+Dijkstra> rates with    conditional probability: A<-B value=     8970422.756     B<-A value=     11881.64205    
+getspair> best path contains       10 minima
 sorted barriers on best path labelled according to the transition state:
-    13     4.315521986    
-     9     4.035687972    
-    15     3.556214584    
-    18     2.635005068    
-     8    0.4501376319    
-     7    0.3315327650    
-    14    0.2756346237    
-getspair> sorted list of       10 pairs with corresponding barrier height or minimum distance
-       3       8        4.31552
-       3       6        4.31552
-       9      10        4.03569
-       6      12        4.03569
-       6       9        3.55621
-       8      10        3.55621
-      10      12        2.63501
-       9       1        2.63501
-       8       6        0.45014
-       3       9        0.45014
-getspair> connecting minima        3 and        8 pairs used=       1 remaining=       9 total pairs=       0
-cycle2> analysing result of search        1 on CPU        1 for process id    28593
-getspair> connecting minima        3 and        6 pairs used=       2 remaining=       8 total pairs=       1
+    55     6.869322602    
+    63     5.907609961    
+    16     4.449314140    
+     3     4.138528182    
+    43     3.681796534    
+     5     3.363731200    
+    15     2.336002672    
+    10     2.224190195    
+    20    0.3256269302    
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+       8      18        5.90761
+getspair> connecting minima        8 and       18 pairs used=       1 remaining=       0 total pairs=      20
+ in forked pathsample job before exit
+cycle2> PID    16019 has finished with exit status      0
+cycle2> PID    16019 has finished on cpu        1
+cycle2> analysing result of search        1 on CPU        1 for process id    16019
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new min to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new min to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new min to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getnconn> max connections:          6 for min         18 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        5 cycles; maximum=       9 disconnected=      15
+Dijkstra> steps to B region converged in        6 cycles; maximum=      10 disconnected=      15
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     9.644573017    
+       6       5      11       4       8       1      21      17      18      14      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4       8       1      21      17      18      14      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      9.644573017     for     10 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      10      -35.7486198152       4      -37.9728100102
+       4      -37.9728100102       5      -31.2020724372       8      -34.5658036376
+       8      -34.5658036376      73      -31.6309271719       1      -34.6430818594
+       1      -34.6430818594      22      -34.5568594562      21      -35.3093212066
+      21      -35.3093212066      19      -33.0442280477      17      -36.6039294733
+      17      -36.6039294733      16      -32.2598697288      18      -36.7091838691
+      18      -36.7091838691      20      -35.6025171972      14      -35.9281441274
+      14      -35.9281441274      15      -32.2662049080      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                         16     4.449314140    
+                                          3     4.138528182    
+                                         19     3.559701426    
+                                          5     3.363731200    
+                                         73     3.012154688    
+                                         15     2.336002672    
+                                         10     2.224190195    
+                                         22    0.7524617504    
+                                         20    0.3256269302    
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=    10
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      7.953412625    
+Dijkstra> MFPT for fastest path: A<-B value=    0.4376176599E-07 B<-A value=    0.2894652313E-04
+Dijkstra> rates without conditional probability: A<-B value=     22850997.38     B<-A value=     34546.46334    
+Dijkstra> rates with    conditional probability: A<-B value=     22850997.38     B<-A value=     34546.46334    
+getspair> best path contains       11 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+    16     4.449314140    
+     3     4.138528182    
+    19     3.559701426    
+     5     3.363731200    
+    73     3.012154688    
+    15     2.336002672    
+    10     2.224190195    
+    22    0.7524617504    
+    20    0.3256269302    
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+      21      14        4.44931
+getspair> connecting minima       21 and       14 pairs used=       1 remaining=       0 total pairs=      21
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        1 new min=       0 new ts=       0 total min=      12 total ts=      18
+cycle2> end of cycle        1 new min=       3 new ts=      11 total min=      51 total ts=      74
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        2 on CPU        1 for process id    28619
-getspair> connecting minima        9 and       10 pairs used=       3 remaining=       7 total pairs=       2
+ in forked pathsample job before exit
+cycle2> PID    16049 has finished with exit status      0
+cycle2> PID    16049 has finished on cpu        1
+cycle2> analysing result of search        2 on CPU        1 for process id    16049
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getnconn> max connections:          6 for min         18 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        4 cycles; maximum=       9 disconnected=      15
+Dijkstra> steps to B region converged in        5 cycles; maximum=       8 disconnected=      15
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     7832.190430    
+       6       5      11       4       8       1      21      51       2      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4       8       1      21      51       2      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      7832.190430     for      9 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      10      -35.7486198152       4      -37.9728100102
+       4      -37.9728100102       5      -31.2020724372       8      -34.5658036376
+       8      -34.5658036376      73      -31.6309271719       1      -34.6430818594
+       1      -34.6430818594      22      -34.5568594562      21      -35.3093212066
+      21      -35.3093212066      78      -33.5205243120      51      -36.1555293799
+      51      -36.1555293799      79      -34.6329394590       2      -34.6410318506
+       2      -34.6410318506      77      -32.8038406492      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                          3     4.138528182    
+                                          5     3.363731200    
+                                         73     3.012154688    
+                                         78     2.635005068    
+                                         10     2.224190195    
+                                         77     1.798366931    
+                                         22    0.7524617504    
+                                         79    0.8092391567E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     9
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      2.601336972    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1172853321E-07 B<-A value=    0.2371931647E-04
+Dijkstra> rates without conditional probability: A<-B value=     85262153.61     B<-A value=     42159.73092    
+Dijkstra> rates with    conditional probability: A<-B value=     85262153.61     B<-A value=     42159.73092    
+getspair> best path contains       10 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+     3     4.138528182    
+     5     3.363731200    
+    73     3.012154688    
+    78     2.635005068    
+    10     2.224190195    
+    77     1.798366931    
+    22    0.7524617504    
+    79    0.8092391567E-02
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+       6      11        4.13853
+getspair> connecting minima        6 and       11 pairs used=       1 remaining=       0 total pairs=      22
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        2 new min=       0 new ts=       0 total min=      12 total ts=      18
+cycle2> end of cycle        2 new min=       0 new ts=       5 total min=      51 total ts=      79
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        3 on CPU        1 for process id    28642
-getspair> connecting minima        6 and       12 pairs used=       4 remaining=       6 total pairs=       3
+ in forked pathsample job before exit
+cycle2> PID    16078 has finished with exit status      0
+cycle2> PID    16078 has finished on cpu        1
+cycle2> analysing result of search        3 on CPU        1 for process id    16078
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new min to min.data
+tsdouble> Maximum number of ts increased to      160
+getallpaths> writing data for new ts to ts.data
+mindouble> Increasing maximum number of minima to      104
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new min to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      2 new min to min.data
+getnconn> max connections:          6 for min         18 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        4 cycles; maximum=       9 disconnected=      17
+Dijkstra> steps to B region converged in        5 cycles; maximum=       8 disconnected=      17
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     8062.121531    
+       6       5      11       4       8       1      21      51       2      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4       8       1      21      51       2      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      8062.121531     for      9 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      81      -36.0165123909       4      -37.9728100102
+       4      -37.9728100102       5      -31.2020724372       8      -34.5658036376
+       8      -34.5658036376      73      -31.6309271719       1      -34.6430818594
+       1      -34.6430818594      22      -34.5568594562      21      -35.3093212066
+      21      -35.3093212066      78      -33.5205243120      51      -36.1555293799
+      51      -36.1555293799      79      -34.6329394590       2      -34.6410318506
+       2      -34.6410318506      77      -32.8038406492      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                          3     4.138528182    
+                                          5     3.363731200    
+                                         73     3.012154688    
+                                         78     2.635005068    
+                                         81     1.956297619    
+                                         77     1.798366931    
+                                         22    0.7524617504    
+                                         79    0.8092391567E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     9
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      2.603810180    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1174317674E-07 B<-A value=    0.2372637323E-04
+Dijkstra> rates without conditional probability: A<-B value=     85155833.24     B<-A value=     42147.19166    
+Dijkstra> rates with    conditional probability: A<-B value=     85155833.24     B<-A value=     42147.19166    
+getspair> best path contains       10 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+     3     4.138528182    
+     5     3.363731200    
+    73     3.012154688    
+    78     2.635005068    
+    81     1.956297619    
+    77     1.798366931    
+    22    0.7524617504    
+    79    0.8092391567E-02
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+       4       8        3.36373
+getspair> connecting minima        4 and        8 pairs used=       1 remaining=       0 total pairs=      23
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        3 new min=       0 new ts=       0 total min=      12 total ts=      18
+cycle2> end of cycle        3 new min=       4 new ts=       5 total min=      55 total ts=      84
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        4 on CPU        1 for process id    28665
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-tsdouble> Maximum number of ts increased to       40
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getspair> connecting minima        6 and        9 pairs used=       5 remaining=       5 total pairs=       4
+ in forked pathsample job before exit
+cycle2> PID    16107 has finished with exit status      0
+cycle2> PID    16107 has finished on cpu        1
+cycle2> analysing result of search        4 on CPU        1 for process id    16107
+getnconn> max connections:          6 for min         18 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        4 cycles; maximum=       9 disconnected=      17
+Dijkstra> steps to B region converged in        5 cycles; maximum=       8 disconnected=      17
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     8062.121531    
+       6       5      11       4       8       1      21      51       2      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4       8       1      21      51       2      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      8062.121531     for      9 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      81      -36.0165123909       4      -37.9728100102
+       4      -37.9728100102       5      -31.2020724372       8      -34.5658036376
+       8      -34.5658036376      73      -31.6309271719       1      -34.6430818594
+       1      -34.6430818594      22      -34.5568594562      21      -35.3093212066
+      21      -35.3093212066      78      -33.5205243120      51      -36.1555293799
+      51      -36.1555293799      79      -34.6329394590       2      -34.6410318506
+       2      -34.6410318506      77      -32.8038406492      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                          3     4.138528182    
+                                          5     3.363731200    
+                                         73     3.012154688    
+                                         78     2.635005068    
+                                         81     1.956297619    
+                                         77     1.798366931    
+                                         22    0.7524617504    
+                                         79    0.8092391567E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     9
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      2.603810180    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1174317674E-07 B<-A value=    0.2372637323E-04
+Dijkstra> rates without conditional probability: A<-B value=     85155833.24     B<-A value=     42147.19166    
+Dijkstra> rates with    conditional probability: A<-B value=     85155833.24     B<-A value=     42147.19166    
+getspair> best path contains       10 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+     3     4.138528182    
+     5     3.363731200    
+    73     3.012154688    
+    78     2.635005068    
+    81     1.956297619    
+    77     1.798366931    
+    22    0.7524617504    
+    79    0.8092391567E-02
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+      11       1        3.36373
+getspair> connecting minima       11 and        1 pairs used=       1 remaining=       0 total pairs=      24
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        4 new min=       2 new ts=       4 total min=      14 total ts=      22
+cycle2> end of cycle        4 new min=       0 new ts=       0 total min=      55 total ts=      84
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        5 on CPU        1 for process id    28695
+ in forked pathsample job before exit
+cycle2> PID    16136 has finished with exit status      0
+cycle2> PID    16136 has finished on cpu        1
+cycle2> analysing result of search        5 on CPU        1 for process id    16136
 getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
+getallpaths> writing data for new ts to ts.data
+getallpaths> writing data for      1 new min to min.data
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getspair> connecting minima        8 and       10 pairs used=       6 remaining=       4 total pairs=       5
+getallpaths> writing data for      1 new min to min.data
+getnconn> max connections:          8 for min          4 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        4 cycles; maximum=       8 disconnected=      17
+Dijkstra> steps to B region converged in        5 cycles; maximum=       8 disconnected=      17
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     7941.254789    
+       6       5      11       4       8       1      21      51       2      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4       8       1      21      51       2      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      7941.254789     for      9 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      81      -36.0165123909       4      -37.9728100102
+       4      -37.9728100102       5      -31.2020724372       8      -34.5658036376
+       8      -34.5658036376      73      -31.6309271719       1      -34.6430818594
+       1      -34.6430818594      22      -34.5568594562      21      -35.3093212066
+      21      -35.3093212066      78      -33.5205243120      51      -36.1555293799
+      51      -36.1555293799      79      -34.6329394590       2      -34.6410318506
+       2      -34.6410318506      77      -32.8038406492      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                          3     4.138528182    
+                                          5     3.363731200    
+                                         73     3.012154688    
+                                         78     2.635005068    
+                                         81     1.956297619    
+                                         77     1.798366931    
+                                         22    0.7524617504    
+                                         79    0.8092391567E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     9
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      2.603810180    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1174317674E-07 B<-A value=    0.2372637323E-04
+Dijkstra> rates without conditional probability: A<-B value=     85155833.24     B<-A value=     42147.19166    
+Dijkstra> rates with    conditional probability: A<-B value=     85155833.24     B<-A value=     42147.19166    
+getspair> best path contains       10 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+     3     4.138528182    
+     5     3.363731200    
+    73     3.012154688    
+    78     2.635005068    
+    81     1.956297619    
+    77     1.798366931    
+    22    0.7524617504    
+    79    0.8092391567E-02
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+       8       1        3.01215
+getspair> connecting minima        8 and        1 pairs used=       1 remaining=       0 total pairs=      25
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        5 new min=       2 new ts=       4 total min=      16 total ts=      26
+cycle2> end of cycle        5 new min=       2 new ts=       4 total min=      57 total ts=      88
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        6 on CPU        1 for process id    28718
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      1 new minima to min.data
+ in forked pathsample job before exit
+cycle2> PID    16167 has finished with exit status      0
+cycle2> PID    16167 has finished on cpu        1
+cycle2> analysing result of search        6 on CPU        1 for process id    16167
 getallpaths> writing data for new ts to ts.data
 getallpaths> writing data for new ts to ts.data
-getspair> connecting minima       10 and       12 pairs used=       7 remaining=       3 total pairs=       6
+getnconn> max connections:          8 for min          4 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        4 cycles; maximum=       8 disconnected=      17
+Dijkstra> steps to B region converged in        5 cycles; maximum=       8 disconnected=      17
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     3144.935821    
+       6       5      11       4      22      21      51       2      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4      22      21      51       2      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      3144.935821     for      8 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      81      -36.0165123909       4      -37.9728100102
+       4      -37.9728100102      87      -34.9344530169      22      -37.1738336533
+      22      -37.1738336533      21      -31.2736332346      21      -35.3093212066
+      21      -35.3093212066      78      -33.5205243120      51      -36.1555293799
+      51      -36.1555293799      79      -34.6329394590       2      -34.6410318506
+       2      -34.6410318506      77      -32.8038406492      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                          3     4.138528182    
+                                         21     4.035687972    
+                                         78     2.635005068    
+                                         87     2.239380636    
+                                         81     1.956297619    
+                                         77     1.798366931    
+                                         79    0.8092391567E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     8
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      3.708374079    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1090174103E-07 B<-A value=    0.1546562252E-04
+Dijkstra> rates without conditional probability: A<-B value=     91728467.67     B<-A value=     64659.53753    
+Dijkstra> rates with    conditional probability: A<-B value=     91728467.67     B<-A value=     64659.53753    
+getspair> best path contains        9 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+     3     4.138528182    
+    21     4.035687972    
+    78     2.635005068    
+    87     2.239380636    
+    81     1.956297619    
+    77     1.798366931    
+    79    0.8092391567E-02
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+      22      21        4.03569
+getspair> connecting minima       22 and       21 pairs used=       1 remaining=       0 total pairs=      26
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        6 new min=       5 new ts=       8 total min=      21 total ts=      34
+cycle2> end of cycle        6 new min=       0 new ts=       2 total min=      57 total ts=      90
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        7 on CPU        1 for process id    28743
-getspair> connecting minima        9 and        1 pairs used=       8 remaining=       2 total pairs=       7
---------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        7 new min=       0 new ts=       0 total min=      21 total ts=      34
---------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        8 on CPU        1 for process id    28766
+ in forked pathsample job before exit
+cycle2> PID    16196 has finished with exit status      0
+cycle2> PID    16196 has finished on cpu        1
+cycle2> analysing result of search        7 on CPU        1 for process id    16196
 getallpaths> writing data for new ts to ts.data
-getspair> connecting minima        8 and        6 pairs used=       9 remaining=       1 total pairs=       8
+getnconn> max connections:          8 for min          4 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        4 cycles; maximum=       8 disconnected=      17
+Dijkstra> steps to B region converged in        5 cycles; maximum=       8 disconnected=      17
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     3144.935821    
+       6       5      11       4      22      21      51       2      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4      22      21      51       2      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      3144.935821     for      8 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      81      -36.0165123909       4      -37.9728100102
+       4      -37.9728100102      87      -34.9344530169      22      -37.1738336533
+      22      -37.1738336533      21      -31.2736332346      21      -35.3093212066
+      21      -35.3093212066      78      -33.5205243120      51      -36.1555293799
+      51      -36.1555293799      79      -34.6329394590       2      -34.6410318506
+       2      -34.6410318506      77      -32.8038406492      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                          3     4.138528182    
+                                         21     4.035687972    
+                                         78     2.635005068    
+                                         87     2.239380636    
+                                         81     1.956297619    
+                                         77     1.798366931    
+                                         79    0.8092391567E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     8
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      3.708374079    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1090174103E-07 B<-A value=    0.1546562252E-04
+Dijkstra> rates without conditional probability: A<-B value=     91728467.67     B<-A value=     64659.53753    
+Dijkstra> rates with    conditional probability: A<-B value=     91728467.67     B<-A value=     64659.53753    
+getspair> best path contains        9 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+     3     4.138528182    
+    21     4.035687972    
+    78     2.635005068    
+    87     2.239380636    
+    81     1.956297619    
+    77     1.798366931    
+    79    0.8092391567E-02
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+       4      51        4.03569
+getspair> connecting minima        4 and       51 pairs used=       1 remaining=       0 total pairs=      27
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        8 new min=       0 new ts=       1 total min=      21 total ts=      35
+cycle2> end of cycle        7 new min=       0 new ts=       1 total min=      57 total ts=      91
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search        9 on CPU        1 for process id    28789
-getspair> connecting minima        3 and        9 pairs used=      10 remaining=       0 total pairs=       9
+ in forked pathsample job before exit
+cycle2> PID    16225 has finished with exit status      0
+cycle2> PID    16225 has finished on cpu        1
+cycle2> analysing result of search        8 on CPU        1 for process id    16225
+getallpaths> writing data for new ts to ts.data
+getnconn> max connections:          8 for min          4 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        4 cycles; maximum=       8 disconnected=      17
+Dijkstra> steps to B region converged in        5 cycles; maximum=       8 disconnected=      17
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     3144.935821    
+       6       5      11       4      22      21      51       2      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4      22      21      51       2      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      3144.935821     for      8 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      81      -36.0165123909       4      -37.9728100102
+       4      -37.9728100102      87      -34.9344530169      22      -37.1738336533
+      22      -37.1738336533      21      -31.2736332346      21      -35.3093212066
+      21      -35.3093212066      78      -33.5205243120      51      -36.1555293799
+      51      -36.1555293799      79      -34.6329394590       2      -34.6410318506
+       2      -34.6410318506      77      -32.8038406492      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                          3     4.138528182    
+                                         21     4.035687972    
+                                         78     2.635005068    
+                                         87     2.239380636    
+                                         81     1.956297619    
+                                         77     1.798366931    
+                                         79    0.8092391567E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     8
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      3.708374079    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1090174103E-07 B<-A value=    0.1546562252E-04
+Dijkstra> rates without conditional probability: A<-B value=     91728467.67     B<-A value=     64659.53753    
+Dijkstra> rates with    conditional probability: A<-B value=     91728467.67     B<-A value=     64659.53753    
+getspair> best path contains        9 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+     3     4.138528182    
+    21     4.035687972    
+    78     2.635005068    
+    87     2.239380636    
+    81     1.956297619    
+    77     1.798366931    
+    79    0.8092391567E-02
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+      21      51        2.63501
+getspair> connecting minima       21 and       51 pairs used=       1 remaining=       0 total pairs=      28
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle        9 new min=       0 new ts=       0 total min=      21 total ts=      35
+cycle2> end of cycle        8 new min=       0 new ts=       1 total min=      57 total ts=      92
 --------------------------------------------------------------------------------------------------------------
-cycle2> analysing result of search       10 on CPU        1 for process id    28812
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for      2 new minima to min.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-getallpaths> writing data for new ts to ts.data
-tsdouble> Maximum number of ts increased to       80
-getallpaths> writing data for new ts to ts.data
+ in forked pathsample job before exit
+cycle2> PID    16255 has finished with exit status      0
+cycle2> PID    16255 has finished on cpu        1
+cycle2> analysing result of search        9 on CPU        1 for process id    16255
+getnconn> max connections:          8 for min          4 # of zeros=         0 after removing minima with <          1
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+Dijkstra> steps to A region converged in        4 cycles; maximum=       8 disconnected=      17
+Dijkstra> steps to B region converged in        5 cycles; maximum=       8 disconnected=      17
+Dijkstra> Best path for min       10 and any A minimum, k^SS A<-B     3144.935821    
+       6       5      11       4      22      21      51       2      10
+Dijkstra> Best path between any B minimum and any A minimum:
+       6       5      11       4      22      21      51       2      10
+Dijkstra> Largest contribution to SS rate constant A<-B for any A and B is      3144.935821     for      8 transition states:
+Dijkstra> Note that path is printed backwards starting with A, ending with B
+                    E+                          Ets                         E-
+       6      -41.7229924014       3      -36.5063561299       5      -40.6448843122
+       5      -40.6448843122      55      -34.3645542064      11      -41.2338768086
+      11      -41.2338768086      81      -36.0165123909       4      -37.9728100102
+       4      -37.9728100102      87      -34.9344530169      22      -37.1738336533
+      22      -37.1738336533      21      -31.2736332346      21      -35.3093212066
+      21      -35.3093212066      78      -33.5205243120      51      -36.1555293799
+      51      -36.1555293799      79      -34.6329394590       2      -34.6410318506
+       2      -34.6410318506      77      -32.8038406492      10      -34.6022075798
+Dijkstra> Ordered downhill barriers,    ts        barrier
+                                         55     6.869322602    
+                                          3     4.138528182    
+                                         21     4.035687972    
+                                         78     2.635005068    
+                                         87     2.239380636    
+                                         81     1.956297619    
+                                         77     1.798366931    
+                                         79    0.8092391567E-02
+Dijkstra> dumping minima and transition state coordinates to file redopoints, steps=     8
+ HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 
+ prmformat=(12A4)  
+ ATOMLABELS=
+ HH31CH3 HH32HH33C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CA  HA  CB  HB1 HB2 HB3 C   O   N   H   CH3 HH31HH32HH33
+Dijkstra> detailed balance, ratio should be one if SS applies:      3.708374079    
+Dijkstra> MFPT for fastest path: A<-B value=    0.1090174103E-07 B<-A value=    0.1546562252E-04
+Dijkstra> rates without conditional probability: A<-B value=     91728467.67     B<-A value=     64659.53753    
+Dijkstra> rates with    conditional probability: A<-B value=     91728467.67     B<-A value=     64659.53753    
+getspair> best path contains        9 minima
+sorted barriers on best path labelled according to the transition state:
+    55     6.869322602    
+     3     4.138528182    
+    21     4.035687972    
+    78     2.635005068    
+    87     2.239380636    
+    81     1.956297619    
+    77     1.798366931    
+    79    0.8092391567E-02
+getspair> sorted list of        1 pairs with corresponding barrier height or minimum distance
+      22       2        2.63501
+getspair> connecting minima       22 and        2 pairs used=       1 remaining=       0 total pairs=      29
 --------------------------------------------------------------------------------------------------------------
-cycle2> end of cycle       10 new min=       2 new ts=       6 total min=      23 total ts=      41
+cycle2> end of cycle        9 new min=       0 new ts=       0 total min=      57 total ts=      92
+--------------------------------------------------------------------------------------------------------------
+ in forked pathsample job before exit
+cycle2> PID    16284 has finished with exit status      0
+cycle2> PID    16284 has finished on cpu        1
+cycle2> analysing result of search       10 on CPU        1 for process id    16284
+--------------------------------------------------------------------------------------------------------------
+cycle2> end of cycle       10 new min=       0 new ts=       0 total min=      57 total ts=      92
 --------------------------------------------------------------------------------------------------------------
 main> CPU time spent iterating committor probability=     0.0000     s
-main> CPU time spent in Dijkstra                    =    0.40000E-02 s
-main> total CPU time spent in PATHSAMPLE            =    0.64000E-01 s
+main> CPU time spent in Dijkstra                    =    0.12566     s
+main> total CPU time spent in PATHSAMPLE            =    0.19629     s

@@ -37,6 +37,15 @@ DUMPINT 6000
 ! create AMBER specific .pdb and .rst files for each tightly converged minimum
 DUMPSTRUCTURES
 
+! Turn on chirality checks: structures with a chiral centre inverted are rejected
+SETCHIRAL
+
+! Turn on cis-trans checks: structures with an isomerised peptide bond are rejected
+NOCISTRANS
+
+! Set the value of the Planck constant. SI units for AMBER12.
+PLANCK 6.626D-34
+
 ! SAMPLING PARAMETERS
 
 ! set the temperature used when accepting and rejecting minima into the Markov
@@ -55,7 +64,7 @@ FEBH 0.2
 ! tighten the RMS force convergence threshold until the separation of the zero eigenvalues 
 ! is at least a factor of 1000. Stop the basin-hopping run after 10 attempts if the target
 ! separation is not achieved
-MIN_ZERO_SEP 1.0D3 10
+! MIN_ZERO_SEP 1.0D3 10
 
 ! do 500 BH steps multiplying the temperate by 1.0 each step
 STEPS 500 1.0
@@ -67,6 +76,6 @@ STEP 1.0D0
 ! defined in the atomgroups file every 1 step
 GROUPROTATION 1
 
-! specify that we are using the AMBER potential via an interface to AMBER 9
+! specify that we are using the AMBER potential via an interface to AMBER 12
 ! initial coordinates will be read from coords.inpcrd in AMBER restart (inpcrd) format
-AMBER9 coords.inpcrd inpcrd 
+AMBER12 coords.inpcrd inpcrd 

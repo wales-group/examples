@@ -3,7 +3,7 @@
 Many amino acids are chiral and the vast majority found in proteins are in the so called L-form e.g. L-ALA. Unlike in molecular dynamics, it is quite possible that during a
 basin-hopping run we invert a chiral centre while exploring the energy landscape. In this case, the C-alpha atoms in tetra-ALA could invert to give D-ALA residues. 
 
-By default, as we wish to only explore the space of L amino acids, **A9GMIN** checks to ensure that all residues are still L rather than the mirror image D-form
+By default, as we wish to only explore the space of L amino acids, **A12GMIN** checks to ensure that all residues are still L rather than the mirror image D-form
 before considering a new minimum for acceptance into the Markov chain. 
 
 However using common molecular mechanics force fields like **AMBER** and disabling these checks, we can see that sometimes a mixture of L and D amino acids can actually be lower in
@@ -12,12 +12,12 @@ potential energy than a purely L structure. We will investigate this here by com
 
 ## Requirements
 In order to successfully follow this example, the following needs to be in your *PATH*:
-- an **A9GMIN** binary
+- an **A12GMIN** binary
 
 ## Directory contents
-This directory, and the backup you can find in the *./input_vacuum* and *./input_igb2* subdirectories, contain all the files you need to run **A9GMIN** for tetra-ALA both
-*in vacuo* and using a Generalised Born implicit solvent model.
-The *./expected_output* subdirectories contain output from  succesful **A9GMIN** runs to give you an idea of what you will be producing, although your output may differ slightly.
+This directory, and the backup you can find in the *./input* subdirectory, contain all the files you need to run **A12GMIN** for tetra-ALA
+using a Generalised Born implicit solvent model.
+The *./expected_output* subdirectory contains output from succesful **A12GMIN** runs to give you an idea of what you will be producing, although your output may differ slightly.
 
 ### GMIN input files
 
@@ -67,11 +67,11 @@ some keywords are commented out, starting with ' !'. The input initially in the 
 
 The input is almost identical to that in Example 1 apart from the addition of the `NOCHIRALCHECKS` keyword.
 
-### Running A9GMIN without chirality checks
+### Running A12GMIN without chirality checks
 
-Assuming you have a **A9GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
+Assuming you have a **A12GMIN** binary somewhere in your *PATH*, starting the basin-hopping run is as simple as executing it in the directory containing the input files:
 ```
-A9GMIN &
+A12GMIN &
 ```
 
 The output can then be view as follows:
@@ -88,7 +88,7 @@ tail -f output | grep Qu
 
 tetra-ALA is a relatively small system, this won't take too long to finish! 
 
-As the input for this example is almost identical to that for Example 1, we will not cover the details of the **A9GMIN** output files here, other than to note that you will
+As the input for this example is almost identical to that for Example 1, we will not cover the details of the **A12GMIN** output files here, other than to note that you will
 **not** see the `check_chirality> ERROR -- inverted chiral carbon detected in residue X` this time as the checks have been disabled.
 
 ### Visualising the progress of the basin-hopping run using gnuplot
@@ -108,21 +108,21 @@ As in Example 1, you can see that the energy of some quenches spikes well above 
 However, unlike Example 1 where we imposed the chirality checks, you do **not** see the energy dip below the Markov and best energy. This is because we are now accepting these
 lower energy mixed L/D structures into the Markov chain. 
 
-Importantly we see that the energy of the putative global minimum is lower at -43.378 kcal/mol when we allow a mixture of L and D alanine residues as compared to the purely
+Importantly we see that the energy of the putative global minimum is lower at -42.026 kcal/mol when we allow a mixture of L and D alanine residues as compared to the purely
 L-ALA structure found previously at -41.723 kcal/mol.
 
 ### Visualising the mixed L/D global minimum with **VMD**
 <img src="tetra_ALA_igb2_allL_vs_LDmix.png" width="100%", height="100%">
 
-We can load the structure of the lowest energy minimum into VMD using the *lowests1.1.pdb* file produced by **A9GMIN**:
+We can load the structure of the lowest energy minimum into VMD using the *coords.1.pdb* file produced by **A12GMIN**:
 
 ```
-vmd -pdb lowest1.1.pdb
+vmd -pdb coords.1.pdb
 ```
 
 It is hard to see the difference between the L and D forms of alanine unless you know what to look for. Helpfully **VMD** has a plugin to do the hard work for us. Navigate to the
 `Extensions > Modelling > Fix Chirality Errors` plugin via the menu and click the `Check structure` button. You will see that **VMD** has identified that the C-alpha centres of 
-residues 'ALA 2' and 'ALA 5' seem to be inverted. As **VMD** is counting our N-terminal ACE capping group as a residue, this actually corresponds to residues 1 and 4. 
+residues 'ALA 4' and 'ALA 5' seem to be inverted. As **VMD** is counting our N-terminal ACE capping group as a residue, this actually corresponds to residues 3 and 4. 
 
 If you click on one of the residue lines and then click the 'Show selected chiral centre' button, you can take a closer look at the affected centres. 
 
@@ -136,10 +136,10 @@ in orange.
 
 ## Extension: does the same happen if we allow cis-peptide bonds?
 
-In addition to repeating the above using the *in vacuo* input in the *input_vacuum* subdirectory - it might be interesting to see what happens if we relax another of **GMIN**'s 
+It might be interesting to see what happens if we relax another of **GMIN**'s 
 checks - the restriction that all peptide bonds (other than for proline) must be 'trans', i.e with the N-H and C=O bonds pointing in opposite directions.
 
-To check, add the `CISTRANS` keyword to your *data* file and re-run **A9GMIN**. Take a look at the lowest energy minima found by loading the *lowest* file using **VMD** and see
+To check, add the `CISTRANS` keyword to your *data* file and re-run **A12GMIN**. Take a look at the lowest energy minima found by loading the *lowest* file using **VMD** and see
 if the peptide bonds are still trans!
 
 As a reminder, you can easily load the `SAVE` lowest energy minima found as follows:

@@ -20,13 +20,13 @@ Unlike other examples, this challenge is not designed to be something you can co
 In order to successfully attempt this challenge, the following need to be in your *PATH*:
 
 - a **PATHSAMPLE** binary
-- an **A9OPTIM** binary
+- an **A12OPTIM** binary
 - a **disconnectionDPS** binary
 
 ## Directory contents
 Both this directory and the backup in *./input* contain all the files you need to run **PATHSAMPLE** to expand the database 
 
-As **PATHSAMPLE** acts as a driver for **A9OPTIM** (i.e. it starts **A9OPTIM** jobs), there are also **A9OPTIM** input files present.
+As **PATHSAMPLE** acts as a driver for **A12OPTIM** (i.e. it starts **A12OPTIM** jobs), there are also **A12OPTIM** input files present.
 
 ### PATHSAMPLE input files
 
@@ -54,7 +54,7 @@ SCRIPTS/make_perm.allow/perm-pdb.py file.pdb AMBER
 - *perm.allow_annotated* - Contains details of how the *perm.allow* groups are constructed. For more information, see the [OPTIM website](http://www-wales.ch.cam.ac.uk/OPTIM)   
 
 
-Both **PATHSAMPLE** and **A9OPTIM** need to be able to distinguish permutational isomers and so both require *perm.allow* to be present. 
+Both **PATHSAMPLE** and **A12OPTIM** need to be able to distinguish permutational isomers and so both require *perm.allow* to be present. 
 
 ### PATHSAMPLE database files
 
@@ -70,16 +70,16 @@ Both **PATHSAMPLE** and **A9OPTIM** need to be able to distinguish permutational
 
 ### OPTIM input files
 
-- *odata.connect* -		Contains the **A9OPTIM** keywords used for jobs started by **PATHSAMPLE**.
+- *odata.connect* -		Contains the **A12OPTIM** keywords used for jobs started by **PATHSAMPLE**.
  
 		
-- *odata.connect_annotated* -	The **A9OPTIM** keywords present in *odata.connect* are detailed in *odata.connect_annotated*.
+- *odata.connect_annotated* -	The **A12OPTIM** keywords present in *odata.connect* are detailed in *odata.connect_annotated*.
 				For information on the full set of keywords available, check the [OPTIM website](http://www-wales.ch.cam.ac.uk/OPTIM)
 
 - *coords.prmtop* -	The symmetrised (see the note below!) **AMBER** topology file for trypzip using parameters from the **AMBER** ff99SB force field
 
 - *coords.inpcrd* -  	Coordinates for the trypzip atoms in our system in **AMBER** restart format. These are only used to allocate arrays during setup and the coordinates
-			themselves are overwritten with those in *start.X* by **PATHSAMPLE** automatically as it starts **A9OPTIM** jobs in the next example
+			themselves are overwritten with those in *start.X* by **PATHSAMPLE** automatically as it starts **A12OPTIM** jobs in the next example
 
 - *start* -		Placeholder trypzip coordinates that are also overwritten with those in *start.X* by **PATHSAMPLE**.
 
@@ -103,7 +103,7 @@ Both **PATHSAMPLE** and **A9OPTIM** need to be able to distinguish permutational
 ## Getting started
 
 Before you start, take a minute to look through *pathdata_annotated* and *odata.connect_annotated* and make sure you understand roughly the purpose of each keyword. 
-You may also need to slightly alter your *pathdata* file to ensure that the `EXEC` keyword points to a valid **A9OPTIM** binary.
+You may also need to slightly alter your *pathdata* file to ensure that the `EXEC` keyword points to a valid **A12OPTIM** binary.
 
 The **PATHSAMPLE** input in *pathdata* is initially set up to perform a Dijkstra analysis, returning the fastest path:
 <img src="trypzip_initial_path.png" width="100%", height="100%">
@@ -151,7 +151,7 @@ The approach you use and the parameters you choose should be informed by the sys
 
 - you can extract minima from the **PATHSAMPLE** database using `EXTRACTMIN minid` in *pathdata*
 
-- if you extract two minima, you can connect them manually with **OPTIM** as for tetra-ALA [here](../tetra_ALA/03_Connecting_minima_with_OPTIM) and then add the resulting 
+- if you extract two minima, you can connect them manually with **A12OPTIM** as for tetra-ALA [here](../tetra_ALA/03_Connecting_minima_with_OPTIM) and then add the resulting 
 pathway back into the database using `ADDPATH` 
 
 - the `DUMMYRUN` keyword is your friend, especially when tuning parameters for efficient selection - consider uncommenting it!

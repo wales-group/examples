@@ -29,17 +29,17 @@ Acquiring the source code for **GMIN**, **OPTIM** and **PATHSAMPLE** and compili
 
 ### [tetra-ALA](./tetra_ALA) - an alanine polypeptide (AMBER)
 <img src="tetra_ALA/tetra_ALA_igb2_gmin.png" width="50%", height="50%">
-- Basin-hopping with **A9GMIN**
+- Basin-hopping with **A12GMIN**
 - Investigating the effect of removing C-alpha chirality checks 
-- Connecting minima with a discrete path using **A9OPTIM**
-- Setting up a **PATHSAMPLE** database using an **A9OPTIM** *path.info* file
+- Connecting minima with a discrete path using **A12OPTIM**
+- Setting up a **PATHSAMPLE** database using an **A12OPTIM** *path.info* file
 - Expanding a **PATHSAMPLE** database in a targeted way
 
 ### [SER-LYS](./SER_LYS) - a capped dipeptide (AMBER)
 <img src="SER_LYS/ser_lys_fe0.6_gmin.png" width="50%", height="50%">
 
 - Basin-hopping with **GMIN**
-- Free energy basin-hopping using **A9GMIN** to investigate the effect of entropy
+- Free energy basin-hopping using **A12GMIN** to investigate the effect of entropy
 
 ### [trypzip](./trypzip) - a 12 residue tryptophan zipper (AMBER)
 <img src="trypzip/trypzip_endpoints.png" width="50%", height="50%">
@@ -148,11 +148,11 @@ Finally, move the binary into your `$PATH` so that you can run it anywhere by si
 If you have access to the **AMBER** or **CHARMM** interfaces source code or a different compiler, you may wish to build a different version of **GMIN**. A few examples for
 specific builds are provided here for reference, but this list is not comprehensive:
 
-- **A9GMIN** (GMIN with AMBER9) using the ifort compiler:
+- **A12GMIN** (GMIN with AMBER12) using the ifort compiler:
 ```
-mkdir -p GMIN/builds/ifort_amber9
+mkdir -p GMIN/builds/ifort_amber12
 cd !$
-FC=ifort cmake -DWITH_AMBER9=1 ../../source
+FC=ifort cmake -DWITH_AMBER12=1 ../../source
 make -jX
 ```
 
