@@ -1,4 +1,4 @@
-# Example 1 - Removing the chirality checks
+# Example 2 - Removing the chirality checks
 
 Many amino acids are chiral and the vast majority found in proteins are in the so called L-form e.g. L-ALA. Unlike in molecular dynamics, it is quite possible that during a
 basin-hopping run we invert a chiral centre while exploring the energy landscape. In this case, the C-alpha atoms in tetra-ALA could invert to give D-ALA residues. 
