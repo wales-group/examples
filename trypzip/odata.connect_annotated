@@ -18,9 +18,10 @@ NEBK 10.0
 DIJKSTRA EXP
 
 ! when aligning structures, minimise the distance between stationary points with respect to permutational isomerisation
-! as we are not providing a perm.allow file, all atoms are considered to be identical
-PERMDIST 
-
+! if we do not provide a perm.allow file, all atoms are considered to be identical, which is an error for amber
+LPERMDIST 11 0.5 5.0 0.06
+! how to step off a transition state to do the pathways
+PUSHOPT 0.1 0.0001 100
 ! define the energy and distance cutoffs below which we assume structures are identical
 EDIFFTOL 1.0D-4
 GEOMDIFFTOL 0.1D0
@@ -30,7 +31,7 @@ BFGSMIN  1.0D-6
 ! set the history size of the L-BFGS algorithm to 1500
 UPDATES 1500
 ! the size of step to take away from a stationary point of the wrong index if encountered
-PUSHOFF 0.1
+
 ! if the provided endpoints have an RMS force greater than BFGSMIN, re-minimise them
 REOPTIMISEENDPOINTS
 ! the maximum number of steps for any one L-BFGS minimisation
@@ -52,8 +53,6 @@ MAXSTEP 0.1
 MAXMAX  0.3
 ! set the trust radius used in eigenvector following
 TRAD 0.2
-! reduce the maximum step size in BFGSTS if the smallest non-zero eigenvalue is positive
-CHECKNEGATIVE
 ! do not calculate the Hessian during geometry optimisation. Rayleigh-Ritz minimisation is used instead
 ! to find the smallest eigenvalue and its eigenvector
 NOHESS
