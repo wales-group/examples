@@ -42,7 +42,7 @@ echo "Running GMIN for 38 LJ atoms from 100 random starting geometries"
 echo "Random number seeds start from $2"
 echo
 
-# loop to start 100 GMIN jobs 
+# loop to start 100 GMIN jobs
 while ($count <= 100)
    # use rancoords to generate initial coordinates
    echo $natoms $radius -$seed > randata
@@ -51,18 +51,18 @@ while ($count <= 100)
    # start GMIN
    echo "Starting run $count"
    $exec output >& extra_out.$count
-   # extract the number of quenches, number of potential calls and time taken from the output 
-   echo `grep hit output | head -1 | sed -e 's/[a-zA-Z]//g' -e 's/[a-zA-Z]//g' -e 's/\.//' -e 's/>//'` \
-        `grep time= output | tail -1 | sed 's/.*time=//'` >> hits
+   # extract the number of quenches, number of potential calls and time taken from the output
+   echo `grep -a hit output | head -1 | sed -e 's/[a-zA-Z]//g' -e 's/[a-zA-Z]//g' -e 's/\.//' -e 's/>//'` \
+        `grep -a time= output | tail -1 | sed 's/.*time=//'` >> hits
    # back up initial coordinates and output
    mv coords coords.$count
    mv output $directory.output.$natoms.$count
    # increment counter variable and seed
    @ count +=1
-   @ seed +=1 
+   @ seed +=1
 end
 
-# construct a smooth distribution for the time taken (t), number of quenches (Q) and number 
+# construct a smooth distribution for the time taken (t), number of quenches (Q) and number
 # of potential calls (V) and return the mean and standard deviation for each
 gminconv2 < hits > temp ; head -1 temp > pdf
 rm temp
