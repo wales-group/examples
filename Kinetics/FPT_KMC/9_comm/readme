@@ -1,0 +1,21 @@
+Files needed to compute first passage time distributions within the nine community landscape
+Using kinetic monte carlo (stochastic)
+"pathdata" file tells PATHSAMPLE how to run
+The data required to plot the FPT distribution can be found in output
+In order to view the useful lines separately use:
+'grep "KMC steps in time" output > KMC.steps'
+This will output the useful lines
+You can go further and take the useful columns
+awk '{print $6 " " $11 " " $14}' KMC.steps > KMC.data
+First columns of KMC.data: The number of kMC steps taken during one kMC path A<-B (let's call this X)
+Second column: The total time taken to do those X steps
+Third column: The expected number of kMC steps (=number of kMC steps if leapfrog is off)
+We now have a set of times taken for the transition A<-B.
+This can be plotted as a histogram using the python script provided.
+
+Things to think about:
+- How does the FPT distribution produced change if you run fewer or more kMCs?
+-- kMC is a stochastic method. The result should converge towards the deterministic result from eigendecomposition.
+- Do you notice how slow the program gets if you reduce the temperature?
+
+

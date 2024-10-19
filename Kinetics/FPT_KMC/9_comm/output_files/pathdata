@@ -1,0 +1,8 @@
+TEMPERATURE 5.0 ! Change the temperature and see how the FPT changes 
+NOPOINTS ! PATHSAMPLE doesn't try to read points.min and points.ts
+DEBUG ! Required to print data to output file
+
+KMC 50000 1.0 0 ! Compute FPT using kinetic Monte Carlo
+! 10000 runs, doesn't use leapfrog, removes minima with 0 connections
+NATOMS 1 ! Dummy line, Needs to exist
+

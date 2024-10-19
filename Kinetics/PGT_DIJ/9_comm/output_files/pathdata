@@ -1,0 +1,7 @@
+TEMPERATURE 1.0 ! Change the temperature and see how the FPT changes 
+NOPOINTS ! PATHSAMPLE doesn't try to read points.min and points.ts
+
+! DIJKSTRALIST
+NGTKEEPLIST ! Performs partial GT, keeps the minima listed in NGTkeeplist
+NGT 0 T 1.1D0 1 100.1D0 ! Performs Graph Transformation
+NATOMS 1 ! Dummy line, Needs to exist

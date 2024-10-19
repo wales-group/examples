@@ -1,0 +1,94 @@
+PATHSAMPLE version rUnversioned directory                                                 
+keywords> NGT will calculate kSS, kNSS and k true
+keywords> NGT will switch to dense renormalisation scheme at threshold       1.1000
+keywords> NGT maximum square matrix size in dense phase=     1
+keywords> NGT will use compressed row storage scheme beyond threshold     100.1000
+keyword> Rate constants will be calculated each cycle for temperatures:
+        1.00000
+*************************************************************************************************
+debug printing is OFF
+Running on          1 processors for shared memory, single node setup
+Number of jobs per processor=         1
+Sleep times between OPTIM job submissions (s)=     1.000000000         1.000000000    
+finite system (not bulk)
+OPTIM system symbol: UN
+number of atoms or variables=    1
+minimum number of connections for minima=         0
+maximum number of ts searches to achieve this minimum value=        10
+random number seed=         1
+initial perturbation parameter single-ended transition state searches=        0.90000
+energy difference  criterion for distinguishing stationary points=    0.1000000000E-07
+distance criterion for distinguishing stationary points=    0.1000000000E+00
+inertia difference criterion for setup check=    0.1000000000E-02
+Temperature=        1.00000
+Running new graph theory rate calculation on database
+Rate calculation will iteratively remove minima with     0 connections or fewer
+path.info files will be read as min-sad-min triples
+*************************************************************************************************
+setup> locations read for          1 min of type A
+setup> locations read for          1 min of type B
+mindouble> Increasing maximum number of minima to       52
+mindouble> Increasing maximum number of minima to      104
+mindouble> Increasing maximum number of minima to      208
+mindouble> Increasing maximum number of minima to      416
+mindouble> Increasing maximum number of minima to      832
+mindouble> Increasing maximum number of minima to     1664
+setup> parameters read for        994 min
+tsdouble> Maximum number of ts increased to       20
+tsdouble> Maximum number of ts increased to       40
+tsdouble> Maximum number of ts increased to       80
+tsdouble> Maximum number of ts increased to      160
+tsdouble> Maximum number of ts increased to      320
+tsdouble> Maximum number of ts increased to      640
+tsdouble> Maximum number of ts increased to     1280
+tsdouble> Maximum number of ts increased to     2560
+tsdouble> Maximum number of ts increased to     5120
+setup> parameters read for       4320 ts
+setup> Setting up ts pointers
+setup> Calculating rate constants
+main> time spent in setup=        0.01128
+getratescycle>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+getnconn> max connections:         19 for min        170 # of zeros=         0 after removing minima with <          1
+regroup> Setting connectivities of A and B minima to      -38
+regroup> regrouping gives        1 A min and        1 B min for a threshold of    -0.1797693135+309
+regroup> WARNING - regroup reorders the minima A, then B, then I from highest to lowest connected
+RATECONST_SETUP>       0 minima with        0 connections or fewer will not be considered
+NGT> about to try and allocate  0.0Gb of RAM for      994 minima, maximum connectivity     20
+NGTrealloc> allocating temporary array size         0.13552 Mb; maximum connections=      20 remaining nodes=     847
+NGTrealloc> allocating new array size               0.40656 Mb; maximum connections=      60 remaining nodes=     847
+NGTrealloc> allocating temporary array size         0.32112 Mb; maximum connections=      60 remaining nodes=     669
+NGTrealloc> allocating new array size               0.71182 Mb; maximum connections=     133 remaining nodes=     669
+NGTrealloc> allocating temporary array size         0.57030 Mb; maximum connections=     133 remaining nodes=     536
+NGTrealloc> allocating new array size               1.20064 Mb; maximum connections=     280 remaining nodes=     536
+NGTrealloc> allocating temporary array size         0.96992 Mb; maximum connections=     280 remaining nodes=     433
+NGTrealloc> allocating new array size               2.04030 Mb; maximum connections=     589 remaining nodes=     433
+ 
+NGT> for A minimum                                      1 C_{Ba}, tau_a, tau^I_a=    0.2931563673E-07     9078.022152         314.1565442    
+NGT> for A minimum        1 p_a/P_A, C_{Ba}*weight/tau_a, C_{Ba}*weight/tau^I_a =     1.000000000        0.3229297774E-11    0.9331537817E-10
+NGT> for B minimum                                      1 C_{Ab}, tau_b, tau^I_b=    0.4067542180        0.3058880729E+12     55.25948688    
+NGT> for B minimum        1 p_b/P_B, C_{Ab}*weight/tau_b, C_{Ab}*weight/tau^I_b =     1.000000000        0.1329748539E-11    0.7360803384E-02
+NGT> Peak array size for branching ratios=        0.00204 Gb
+NGT> For direction A<-B:  kNSS(A<-B)=    0.1329748539E-11 kNSS(B<-A) (detailed balance)=    0.1685766910E-19
+NGT> For direction B<-A:  kNSS(A<-B) (detailed balance)=    0.2547299968E-03 kNSS(B<-A)=    0.3229297774E-11
+NGT> detailed balance for kSS,  ratio should be one if SS applies:    1.000000000      
+NGT> detailed balance for kNSS, ratio should be one if SS applies:   0.5220227517E-0008
+NGT> kSS (A<-B)=  0.7360803384E-0002   kSS (B<-A)=  0.9331537817E-0010
+NGT> kNSS(A<-B)=  0.1329748539E-0011   kNSS(B<-A)=  0.3229297774E-0011 sum weight_b*tau^I_b/C_{Ab}=  0.7520218829E+0012 sum weight_a*tau^I_a/C_{Ba}=  0.3096648467E+0012
+NGT> Sum branching probability to all sinks for each A minimum
+NGT> For each A minimum remove all the other A sources
+NGT> for A minimum        1 P_{Ba}=    0.2931563673E-07 and time tau^F_a=        9078.022152    
+NGT> for A minimum        1 tau^F_a/P_{Ba} = T_{Ba}, p_a/P_A, weight/T_{Ba}=    0.3096648467E+12     1.000000000        0.3229297774E-11
+NGT> sum of A equilibrium probabilities is      1.000000000     rescaled B<-A MFPPT is     0.3096648467E+12
+NGT> Sum branching probability to all sinks for each A (really B) minimum
+NGT> doing B minimum        1
+NGT> for B minimum        1 P_{Ab}=    0.4067542180     and time tau^F_b=       0.3058880729E+12
+NGT> for B minimum        1 tau^F_b/P_{Ab} = T_{Ab}, p_b/P_B, weight/T_{Ab}=    0.7520218829E+12     1.000000000        0.1329748539E-11
+NGT> sum of B equilibrium probabilities is      1.000000000     rescaled A<-B MFPPT is     0.7520218829E+12
+NGT> rates from average over sources <1/passage time>
+NGT> k(A<-B)=  0.1329748539E-0011   k(B<-A)=  0.3229297774E-0011 MFPT(A<-B)=  0.7520218829E+0012   MFPT(B<-A)=  0.3096648467E+0012
+NGT> rates from 1/<MFPT> are k(A<-B)=  0.1329748539E-0011   k(B<-A)=  0.3229297774E-0011
+NGT> detailed balance for k, ratio should be one if SS applies:   0.5220227517E-0008
+ GETRATESCYCLE> RATESUNIT=          11  closed
+mysystem> mv NGT.rates NGT.rates.new
+main> CPU time spent in NGT                          =    0.58895E-01 s
+main> total CPU time spent in PATHSAMPLE            =    0.70404E-01 s

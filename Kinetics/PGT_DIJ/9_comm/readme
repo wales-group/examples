@@ -1,0 +1,25 @@
+This example runs through a simple partial Graph Transformation example based 
+on Dijkstra's algorithm, for the nine community landscape. 
+
+First we find Dijkstra's shortest path between our source(s) and sink(s)
+The keyword Dijkstra will find the shortest paths between all pairs of minima
+in the file DijkstraList
+Pathsample will output the following:
+onpath (the minima on the shortest paths)
+onpath.1 (the minima one step away from minima on the shortest paths)
+onpath.X (the minima X steps away from minima on the shortest paths)
+
+Next we run pGT to only keep the minima on the shortest path + 2, as well as the 
+minima at the bottom of trapping basins. 
+Copy globmin.txt, onpath, onpath.1 and onpath.2 into NGTkeeplist
+Now run pathsample using the NGT and NGTKEEPLIST keywords. 
+This will produce min.data.new, ts.data.new, min.A.new and min.B.new files
+Copy these files into a new directory and rename as min.data ts.data etc
+Compute the FPT on this reduced network.
+After pGT the keyword FREENERGY is used to tell pathsample to read in the min.data
+and ts.data files differently
+
+Check to see whether your FPT after pGT is the same as computing the FPT on 
+the full network.
+
+Can you reproduce for different min.A and min.B?

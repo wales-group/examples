@@ -1,0 +1,36 @@
+define_trap.py is a script that finds the minima of trapping basins
+It requires output from disconnectionDPS, and a trapping energy
+Minima are in a trap, if in order to leave their surroundings, 
+they need to overcome an energy barrier greater than the trapping energy
+Not all minima are in a trap
+The script outputs globmin.txt (the global minimum of each trap) and
+tX.txt, text files listing the minima within each trap
+Something to bear in mind:
+- If one funnel on an energy landscape splits into two funnels half way down, the minima
+at the bottom of the larger overall funnel will either be in smaller funnel A or smaller
+funnel B. 
+- However, minima near the top of the larger overall funnel will not be in a smaller funnel A
+or B. But they are still in a funnel, so still in an overall trap.
+- If the trapping energy is set low enough, such that smaller funnel A and smaller funnel B
+are traps in their own right, the code will define a third "trap" C, that consists of the minima
+within the larger funnel that are not within smaller funnel A or B.
+ 
+How to run:
+First run disconnectionDPS using the standard dinfo file
+Now run
+python3 define_traps.py 18 47 1 47
+With this trapping energy, the script will find 9 different trapping basins
+Now uncomment the TRMIN line in dinfo
+Re-run disconnectionDPS
+View tree.ps (Note your colour choices are likely to be different to mine)
+The tree is now coloured according to the traps
+The minima not in a trap are black
+Note: This is not how communities were found for the "Analysing Ill-Conditioned Markov Chains" paper
+
+The default disconnectionDPS may not contain enough colours for each trap to be coloured differently
+You can change the colour scheme in the disconnectionDPS code.
+Looks for every instance of CHOOSECOLOURS, and add more colours.
+There is more than one place where CHOOSECOLOURS is used. 
+Then use the CHOOSECOLOURS keyword in dinfo. 
+
+
