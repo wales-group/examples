@@ -1,0 +1,9 @@
+Files needed to compute first passage time distributions within the nine community landscape
+"pathdata" file tells PATHSAMPLE how to run
+The FPT distribution for the transition A<-B can be found in waitlnpdfAB.1.0000000000 
+We normally plot in ln(t) rather than time, because rates are exponentially sensitive to energy barriers
+Try changing min.A and min.B files and the temperature to see how the FPT changes
+min.A and min.B files: First line is the number of minima in the file. Each subsequent line is the minima index. 
+You can have one than one minima in min.A and min.B
+Can you see how the FPT distribution computed begins to look garbage as the temperature is reduced?
+

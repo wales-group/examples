@@ -1,0 +1,15 @@
+TEMPERATURE 0.596
+NOPOINTS
+DEBUG
+RENORMREACTANT
+
+! need to specify Planck here to get proper free energy if rates have units
+NGT 0 T 1.1D0 1 100.1D0
+PRINTTAUGT
+! NGT 0 T 0.3D+0 1000 1.1D-4 ! 1.1D-4   standard no dense switch no compressed row storage
+NGTKEEPLIST
+! DIJKSTRALIST 0
+
+NATOMS 994
+CYCLES 0
+DIRECTION AB
